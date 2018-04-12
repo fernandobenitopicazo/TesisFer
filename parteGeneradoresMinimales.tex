@@ -1,0 +1,650 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+\pagestyle{empty}
+%: ----------------------- name of chapter  -------------------------
+\chapter{Generadores Minimales}
+\label{cap:generadoresMinimales} % top level followed by section, subsection
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+%\ifpdf
+%    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+%\else
+%   \graphicspath{{X/figures/EPS/}{X/figures/}}
+%\fi
+
+%: ----------------------- contents from here ------------------------
+
+
+\pagestyle{headings}
+
+\bigdrop{0pt}{5}{cmr10}El sistema de inferencia de \slfde \cite{Enciso2002,Cordero2012} y la salida del algoritmo \cierree se pueden usar para enumerar todos los conjuntos cerrados y todos los generadores minimales a partir de un conjunto de implicaciones y de atributos. Por tanto, el contenido de este capítulo va a estar muy ligado al anterior y muchos de los conceptos van a aparecer nuevamente.
+
+En el capítulo de introducción \ref{cap:introduccion} hablábamos de dos formas de representación del conocimiento: los sistemas de implicaciones y los retículos de conceptos. Asimismo, vimos que existen varios problemas y soluciones en cuanto a extraer ambas representaciones a partir de un \textit{dataset} de entrada. Sin embargo, en este momento vamos a tratar con un problema complementario que permite conectar ambas representaciones del conocimiento: la enumeración de todas los conjuntos cerrados de un conjunto dado de implicaciones. Además, proponemos un método para producir no sólo todos los conjuntos cerrados, sino también, para cada uno de ellos, su representante canónico, denominados generadores minimales.
+
+La importancia de los generadores mínimos está bien justificada por trabajos notables como el profundo estudio de Poelmans et al. \cite{Poelmans2013} o el de Qu et al. \cite{Qu2007}. Por otra parte, han sido utilizados como punto fundamental para construir bases, las cuales constituyen una representación compacta del conocimiento que permite un mejor rendimiento de los métodos de razonamiento basados en reglas \cite{Missaoui2010,Missaoui2012}. Todos los autores mencionados han considerado el \textit{dataset} como la entrada del problema, es decir, los generadores minimales y los conjuntos cerrados se infieren a partir de la información original. En \cite{Hamrouni2007,Nishio2012a} se proponen algunos métodos para resolver este problema.
+
+En nuestro caso, centrándonos una vez más en el tratamiento inteligente de los conjuntos de implicaciones, vamos a utilizarlas como los elementos para describir la información y además, como base del diseño de un método para enumerar todos los conjuntos cerrados y sus generadores minimales a partir de esta información, y no del \textit{dataset} original (como en los trabajos mencionados), lo cual, hasta donde sabemos, no existe trabajo previo al respecto. El nuevo método propuesto utiliza la \slfde y es una evolución de \cite{Cordero2012}. Este método trabaja sobre el conjunto de implicaciones aplicando unas reglas de inferencia y construyendo un espacio de búsqueda de árbol, lo cual como ya adelantamos al principio del capítulo, va a ser muy parecido a los árboles del caso de las claves minimales.
+
+La generación del sistema de implicaciones asociado a un operador de cierre es un problema difícil y el inverso también, teniendo una complejidad exponencial. Por lo tanto, nos vamos a enfocar en la definición de un método para resolver este problema y en el diseño de una implementación más eficiente, particularmente acercándonos al problema utilizando computación paralela.
+
+Por tanto, en este capítulo, tras una relacionar brevemente las implicaciones con los generadores minimales \ref{seccion:implicacionesGeneradoresMinimales}, pasaremos a una sección fundamental donde se exponen cada uno de los métodos analizados e implementados \ref{seccion:metodosGeneradoresMinimales}. Para cada uno de ellos se presenta su definición en forma de algoritmo y se acompaña de un ejemplo ilustrativo de su funcionamiento. Una vez presentados los métodos, en la sección \ref{seccion:resultadosGeneradoresMinimales} se presenta de forma más detallada los pruebas realizadas y los resultados obtenidos por cada método. De forma similar a lo que se presentó para el capítulo de claves, cerrarán el capítulo los experimentos y los resultados obtenidos, esta vez, sobre la arquitectura de computación paralela \ref{seccion:computacionParalelaGeneradoresMinimales}.
+
+
+\section{Implicaciones y generadores minimales}
+\label{seccion:implicacionesGeneradoresMinimales}
+Se dice que un sistema de implicaciones es completo para un operador de cierre si captura todo el conocimiento relacionado con ese operador (contexto), es decir, el sistema de implicaciones expresa en el lenguaje de la lógica todo el conocimiento relativo al cierre. Formalmente:
+
+\begin{definicion}
+Sea $c\colon 2^M\to 2^M$ un operador de cierre sobre $M$ y $\Sigma\subseteq \mathcal L_M$. El sistema de implicaciones $\Sigma$ se dice que es completo para $c$ si se verifica la siguiente equivalencia:
+$$
+\forall A\to B\in\mathcal L_M, \quad c\models A\to B\quad\text{si y sólo si }\quad \Sigma\models A\to B
+$$
+\end{definicion}
+
+
+De forma inmediata, cuando un sistema de implicaciones $\Sigma$ es completo para un operador de cierre $c$, su operador de cierre sintáctico coincide con $c$, es decir, $X^+_\Sigma = c(X) \ \ \forall X\subseteq M$.
+
+Como hemos mostrado, cualquier operador de cierre $c$ en $M$ puede asociarse con un sistema de implicaciones. Esta conexión establece una forma de gestionar el trabajo del operador de cierre $c$ por medio de su derivación sintáctica y, como consecuencia, se puede elaborar un método para realizar esta gestión. Pero, ¿qué pasa con la conexión inversa? Es decir, dado un conjunto de implicaciones, ¿es posible generar el operador de cierre $c$ asociado a él? Tal pregunta es el núcleo de esta parte de la tesis y su solución implica enumerar todos los conjuntos cerrados.
+
+Si tenemos que $X,Y \subseteq M$ satisfacen que $X = Y^+_\Sigma$, es habitual decir que $Y$ es un generador del conjunto cerrado $X$. Observe que cualquier subconjunto de $X$ que contiene $Y$ es también un generador de $X$. Dado que trabajamos con conjuntos finitos de atributos, el conjunto de los generadores de un conjunto cerrado se pueden caracterizar por sus generadores minimales.
+
+\begin{definicion}[Generador minimal]
+Sea $c\colon 2^M\to 2^M$ un operador de cierre, sea $C \subseteq M$ un conjunto cerrado, i.e. $c(C) = C$, y sea $A\subseteq M$. El conjunto $A$ se denomina generador minimal (en adelante, \textit{mingen}) para $C$ con respecto a $c$ si $c(A) = C$ y, $\forall X\subseteq A$, si $c(X) = C$, entonces $X = A$.  
+\end{definicion}
+
+
+\section{Métodos para calcular los generadores minimales}
+\label{seccion:metodosGeneradoresMinimales}
+En \cite{Cordero2012}, se utilizó la \slfde como herramienta para encontrar todos los generadores minimales a partir de un conjunto de implicaciones. El método emplea la función \ref{algoritmo:Cls} para guiar la búsqueda de nuevos candidatos de generador minimal. Concretamente, dado un conjunto de atributos $M$ y un sistema de implicaciones $\Sigma$, el método realiza un mapeo $mg_\Sigma\colon 2^M\to 2^{2^M}$ que satisface la siguiente condición.
+
+$$\forall X,Y\subseteq M$$
+
+\begin{center}
+$X\in mg_\Sigma(C)$ si y sólo si $C$ es cerrado para $(\ )^+_\Sigma$ y $X$ es un generador minimal para $C$.
+\end{center}
+
+\begin{ejemplo}
+Sea $\Sigma=\{a\to c, bc\to d, c\to ae, d\to e\}$, el mapeo $mg_\Sigma$ se describe como:
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}p{.5cm}p{.6cm}p{.6cm}p{.8cm}p{.9cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$ & $de$ & $ace$ & $bde$ &  $acde$ &   $abcde$   \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$ & $d$  & $a$ & $bd$ & $ad$ & $ab$ 
+\\
+& & & & & & $c$& &$cd$ & $bc$    
+\end{tabular}
+\end{center}
+
+En otro caso, $X$ no es cerrado y $mg_\Sigma(X)=\varnothing$. Nótese que $\varnothing$ es cerrado y $mg_{\Sigma}(\varnothing)=\{\varnothing\}$, i.e. $\varnothing$ es un generador minimal del conjunto cerrado $\varnothing$.
+\end{ejemplo}
+
+Los algoritmos que presentamos en esta sección deben usar la siguiente operación para este tipo de mapeos. Dados dos mapeos: $mg_1,mg_2\colon 2^M\to 2^{2^M}$, el mapeo $mg_1\sqcup mg_2\colon 2^M\to 2^{2^M}$ se define como:
+
+$$(mg_1\sqcup mg_2)(X)={\tt Minimals}(mg_1(X)\cup mg_2(X)) \ \ \forall X\subseteq M$$
+
+Por tanto, $Y\in (mg_1\sqcup mg_2)(X)$ sii $Y$ es un conjunto minimal de $mg_1(X)\cup mg_2(X)$ en $(2^M,\subseteq)$, i.e. $Y\in mg_1(X)\cup mg_2(X)$ y no existe otro conjunto de atributos $Z\in mg_1(X)\cup mg_2(X)$ tal que $Z\varsubsetneq Y$.
+
+Finalmente, con lo mostrado en esta sección, ya tenemos todas las herramientas necesarias para definir el método \textit{Minimal Generator}.
+
+\subsection{Método MinGen}
+El primer método de cálculo de los generadores minimales que hemos estudiado e implementado se introdujo originalmente en \cite{Cordero2012}. En nuestro caso, para la tesis lo describimos según la función \ref{algoritmo:minGen} y lo acompañamos de un ejemplo de aplicación en \ref{ejemplo:minGenBasico} 
+
+\begin{function}[h]
+\caption{MinGen($M$, Label, Guide, $\Sigma$)}
+\label{algoritmo:minGen}
+\small
+\DontPrintSemicolon
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\Input{Conjunto de atributos $M$. \\
+Un conjunto auxiliar para construir un generador minimal, Label.\\
+Un conjunto auxiliar para construir un conjunto cerrado, Guide.\\ 
+Un sistema de implicaciones $\Sigma$ en $M$.}
+\Output{El mapeo $mg_\Sigma$.}
+\Begin{
+	\ForEach{$X\subseteq M$}{
+	
+		\ \ $mg_\Sigma(X) := \varnothing$
+	}
+	\vspace{0.2cm}
+	(Guide, $\Sigma$) := {\tt Cls}(Guide, $\Sigma$)
+	
+	$M := M\smallsetminus$Guide
+	
+	\vspace{0.2cm}
+	$\mathrm{Premises} := \{A\subseteq M\mid  A\to B\in \Sigma\text{ for some }B\subseteq M\}$
+	ClosedSets$:=\{X\subseteq M\mid A\not\subseteq X \text{ for all }A\in \mathrm{Premises}\}$
+
+	\vspace{0.2cm}
+	\ForEach{$X\in \mathrm{ClosedSets}$}{
+	
+		\ \ $mg_\Sigma(\mathrm{Guide}\cup X) := \{\mathrm{Label}\cup X\}$
+	}
+	
+	\vspace{0.2cm}
+	\ForEach{$A\in \mathrm{Premises}$}{
+	
+		$mg_\Sigma := mg_\Sigma\sqcup\mathrm{MinGen}(M, \mathrm{Label}\cup A, \mathrm{Guide}\cup A, \Sigma)$
+	}
+	\Return $mg_\Sigma$
+}
+\end{function}
+
+La entrada de MinGen es un subconjunto de atributos de $M$ y un conjunto de implicaciones $\Sigma$. El resultado es el conjunto de conjuntos cerrados junto con todos los generadores minimlaes que los generan, es decir, $\{\langle C, mg_\Sigma(C)\rangle: C$ es un conjunto cerrado\} donde $mg_\Sigma(C)$ es el conjunto de generadores minimales $D$ que satisfacen $D^+_\Sigma = C$.
+
+\begin{ejemplo}
+\label{ejemplo:minGenBasico}
+Sea el sistema de implicaciones $\Sigma = \{a\to c, bc\to d, c\to ae, d\to e\}$. La función \ref{algoritmo:minGen}$(abcde,\varnothing,\varnothing,\Sigma)$ devuelve el siguiente resultado:  
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}p{.6cm}p{.8cm}p{.9cm}p{.6cm}p{.8cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$& $ace$ &  $acde$ &   $abcde$ & $de$ & $bde$  \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$& $a$ & $ad$ & $ab$ & $d$ & $bd$ 
+\\
+& & &  & & $c$ &$cd$ & $bc$&  &  
+\end{tabular}
+\end{center}
+
+El árbol de búsqueda que se va generando lo podemos ver en la Figura \ref{figura:arbolMinGenEjemplo} y la traza de ejecución la mostramos a continuación.
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics*[width=.95\textwidth,height=.27\textheight]{arbolMinGenEjemplo.png}
+	\end{center}
+	\caption{Árbol de búsqueda que genera el algoritmo \ref{algoritmo:minGen} para el Ejemplo \ref{ejemplo:minGenBasico}.}
+	\label{figura:arbolMinGenEjemplo}
+\end{figure}
+
+MinGen$(abcde,\varnothing,\varnothing,\{a\to c, bc\to d, c\to ae, d\to e\})$:
+\begin{center}
+Cls$(\varnothing,\Sigma)=(\varnothing,\{a\to c, bc\to d, c\to ae, d\to e\})$ y
+
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$ \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item[1] MinGen$(abcde,a,a,\{a\to c, bc\to d, c\to ae, d\to e\})$:
+\begin{center}
+Cls$(a,\{a\to c, bc\to d, c\to ae, d\to e\})=(ace,\{ b\to d\})$ y
+
+\begin{tabular}{p{1.6cm}|p{.6cm}p{.6cm}}
+$X$ & $ace$ & $acde$ \\
+\hline
+$mg_{\Sigma_1}(X)$ & $a$ & $ad$
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item[1.1] MinGen$(bd,ab,abce,\{b\to d\})$:
+\begin{center}
+Cls$(abce,\{b\to d\})=(abcde,\varnothing)$ y
+
+\begin{tabular}{p{1.8cm}|p{.8cm}}
+$X$ &  $abcde$ \\
+\hline
+$mg_{\Sigma_{1.1}}(X)$ & $ab$
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel 1: $mg_{\Sigma_1}:=mg_{\Sigma_1}\sqcup mg_{\Sigma_{1.1}}$ y entonces
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.6cm}p{.7cm}p{.8cm}}
+$X$ & $ace$ & $acde$ &  $abcde$ \\
+\hline
+$mg_{\Sigma_1}(X)$ & $a$ & $ad$ & $ab$
+\end{tabular}
+\end{center}
+
+\end{enumerate}
+Volvemos al nivel raiz: $mg_{\Sigma}:=mg_{\Sigma}\sqcup mg_{\Sigma_{1}}$ y 
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}p{.6cm}p{.7cm}p{.8cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$& $ace$ & $acde$ &  $abcde$ \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$& $a$ & $ad$ & $ab$
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item[2] MinGen$(abcde,bc,bc,\{a\to c, bc\to d, c\to ae, d\to e\})$:
+\begin{center}
+Cls$(bc,\{a\to c, bc\to d, c\to ae, d\to e\})=(abcde,\varnothing)$
+
+\begin{tabular}{p{1.6cm}|p{.8cm}}
+$X$ & $abcde$ \\
+\hline
+$mg_{\Sigma_2}(X)$ & $bc$
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel raiz: $mg_{\Sigma}:=mg_{\Sigma}\sqcup mg_{\Sigma_{2}}$ y 
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}p{.6cm}p{.8cm}p{.8cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$& $ace$ & $acde$ &  $abcde$ \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$& $a$ & $ad$ & $ab$
+\\
+& & &  & &  & & $bc$
+\end{tabular}
+\end{center}
+%=====
+
+\begin{enumerate}
+\item[3] MinGen$(abcde,c,c,\{a\to c, bc\to d, c\to ae, d\to e\})$:
+\begin{center}
+Cls$(c,\{a\to c, bc\to d, c\to ae, d\to e\})=(ace,\{ b\to d \})$ anyd
+
+\begin{tabular}{p{1.6cm}|p{.6cm}p{.6cm}}
+$X$ & $ace$ & $acde$ \\
+\hline
+$mg_{\Sigma_3}(X)$ & $c$ & $cd$
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item[3.1] MinGen$(bd,bc,abce,\{b\to d\})$:
+\begin{center}
+Cls$(abce,\{b\to d\})=(abcde,\varnothing)$ y
+
+\begin{tabular}{p{1.8cm}|p{.8cm}}
+$X$ &  $abcde$ \\
+\hline
+$mg_{\Sigma_{3.1}}(X)$ & $bc$
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel 3: $mg_{\Sigma_3}:=mg_{\Sigma_3}\sqcup mg_{\Sigma_{3.1}}$ y entonces
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.6cm}p{.8cm}p{.8cm}}
+$X$ & $ace$ & $acde$ &  $abcde$\\
+\hline
+$mg_{\Sigma_3}(X)$ & $c$ & $cd$& $bc$
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel raiz: $mg_{\Sigma}:=mg_{\Sigma}\sqcup mg_{\Sigma_{3}}$ y 
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}p{.6cm}p{.8cm}p{.9cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$& $ace$ &  $acde$ &   $abcde$   \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$& $a$ & $ad$ & $ab$ 
+\\
+& & &  & & $c$ &$cd$ & $bc$
+\end{tabular}
+\end{center}
+
+%=====
+\begin{enumerate}
+\item[4] MinGen$(abcde,d,d,\{a\to c, bc\to d, c\to ae, d\to e\})$:
+
+\begin{center}
+Cls$(d,\{a\to c, bc\to d, c\to ae, d\to e\})=(de,\{a\to c, c\to a\})$ y
+
+\begin{tabular}{p{1.6cm}|p{.6cm}p{.6cm}}
+$X$ & $de$ & $bde$ \\
+\hline
+$mg_{\Sigma_4}(X)$ & $d$ & $bd$
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item[4.1] MinGen$(abc,ad,ade,\{a\to c, c\to a\})$:
+
+\begin{center}
+Cls$(ade,\{a\to c, c\to a\})=(acde,\varnothing)$ y
+
+\begin{tabular}{p{1.8cm}|p{.8cm}p{.8cm}}
+$X$ &  $acde$&  $abcde$ \\
+\hline
+$mg_{\Sigma_{4.1}}(X)$ & $ad$& $abd$
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel 4: $mg_{\Sigma_4}:=mg_{\Sigma_4}\sqcup mg_{\Sigma_{4.1}}$ y entonces
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.6cm}p{.6cm}p{.8cm}p{.8cm}}
+$X$ & $de$ & $bde$ &  $acde$&  $abcde$ \\
+\hline
+$mg_{\Sigma_4}(X)$ & $d$ & $bd$ & $ad$& $abd$
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item[4.2] MinGen$(abc,cd,cde,\{a\to c, c\to a\})$:
+\begin{center}
+Cls$(cde,\{a\to c, c\to a\})=(acde,\varnothing)$ y
+
+\begin{tabular}{p{1.8cm}|p{.8cm}p{.8cm}}
+$X$ &  $acde$&  $abcde$ \\
+\hline
+$mg_{\Sigma_{4.2}}(X)$ & $cd$& $cbd$
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel 4: $mg_{\Sigma_4}:=mg_{\Sigma_4}\sqcup mg_{\Sigma_{4.2}}$ y entonces
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.5cm}p{.6cm}p{.8cm}p{.8cm}}
+$X$ & $de$ & $bde$ &  $acde$&  $abcde$ \\
+\hline
+$mg_{\Sigma_4}(X)$ & $d$ & $bd$ & $ad$& $abd$ 
+\\
+ &  & & $cd$& $cbd$ 
+\end{tabular}
+\end{center}
+\end{enumerate}
+Volvemos al nivel raiz: $mg_{\Sigma}:=mg_{\Sigma}\sqcup mg_{\Sigma_{4}}$ y efectivamente, obtenemos el resultado que habíamos adelantado
+\begin{center}
+\begin{tabular}{p{1.6cm}|p{.4cm}p{.3cm}p{.3cm}p{.5cm}p{.6cm}p{.8cm}p{.9cm}p{.6cm}p{.8cm}}
+$X$ & $\varnothing$ & $b$ & $e$ & $be$& $ace$ &  $acde$ &   $abcde$ & $de$ & $bde$  \\
+\hline
+$mg_\Sigma(X)$ &$\varnothing$ & $b$ & $e$ & $be$& $a$ & $ad$ & $ab$ & $d$ & $bd$ 
+\\
+& & &  & & $c$ &$cd$ & $bc$&  &  
+\end{tabular}
+\end{center}
+\end{ejemplo}
+
+\begin{ejemplo}
+\label{ejemplo:minGenGrande}
+Sea el conjunto de atributos $M = \{1, 2, 3, 4, 5\}$ y sea el sistema de implicaciones $\Sigma = \{5\to 4, 2\ 3\to 4, 2\ 4\to 3, 3\ 4\to 2, 1\ 4\to 2\ 3\ 5, 2\ 5\to 1\ 3\ 4, 3\ 5\to 1\ 2\ 4, 1\ 5\to 2\ 4, 1\ 2\ 3\to 4\ 5\}$. La función \ref{algoritmo:minGen}$(M,\varnothing,\varnothing,\Sigma)$ genera el árbol de búsqueda que muestra la Figura \ref{figura:arbolMinGenEjemploGrande} en el que los generadores minimales obtenidos están sombreados en color gris.  
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics*[width=1\textwidth,height=.7\textheight]{arbolMinGenEjemploGrande.png}
+	\end{center}
+	\caption{Árbol de búsqueda que genera el algoritmo \ref{algoritmo:minGen} para el Ejemplo \ref{ejemplo:minGenGrande}.}
+	\label{figura:arbolMinGenEjemploGrande}
+\end{figure}
+\end{ejemplo}
+
+El punto clave del algoritmo MinGen recae en el uso del cierre \cierree ya que utiliza las ventajas de la información adicional que proporciona, es decir, \cierree se usa no sólo para calcular generadores de conjuntos cerrados sino también conjuntos de implicaciones más pequeños que nos guían en la búsqueda de nuevos subconjuntos que resulten en generadores minimales.
+
+
+
+\subsection{Método MinGenPr}
+En esta sección presentamos una variante más avanzada del método MinGen anterior. Para ello, hemos incorporado un mecanismo de poda para evitar la generación de generadores minimales y cierres redundantes. El propósito de esta poda es verificar la información de cada nodo en el espacio de búsqueda, evitando la apertura de una rama completa. Esta reducción sólo puede llevarse a cabo si podemos garantizar que toda la información relativa a los generaciones minimales se genera en otras ramas. En la función \ref{algoritmo:minGenPr} esta estrategia de poda se implementa en la línea número \#1. Por lo tanto, para garantizar que la información generada en una rama sea supérflua, diseñamos una poda basada en el test de inclusión de conjuntos que involucra a todos los nodos del mismo nivel. En la Figura 2, se ilustra cómo funciona esta estrategia de poda aplicada al siguiente ejemplo:
+
+\begin{function}[h]
+\caption{MinGenPr($M$, Label, Guide, $\Sigma$)}
+\label{algoritmo:minGenPr}
+\small
+\DontPrintSemicolon
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\Input{Conjunto de atributos $M$. \\
+Un conjunto auxiliar para construir un generador minimal, Label.\\
+Un conjunto auxiliar para construir un conjunto cerrado, Guide.\\ 
+Un sistema de implicaciones $\Sigma$ en $M$.}
+\Output{El mapeo $mg_\Sigma$.}
+\Begin{
+	\ForEach{$X\subseteq M$}{
+	
+		\ \ $mg_\Sigma(X) := \varnothing$
+	}
+	\vspace{0.2cm}
+	(Guide, $\Sigma$) := {\tt Cls}(Guide, $\Sigma$)
+	
+	$M := M\smallsetminus$Guide
+	
+	\vspace{0.2cm}
+	$\mathrm{Premises} := {\tt Minimals}\{A\subseteq M\mid  A\to B\in \Sigma\text{ for some }B\subseteq M\}$
+	ClosedSets$:=\{X\subseteq M\mid A\not\subseteq X \text{ for all }A\in \mathrm{Premises}\}$
+
+	\vspace{0.2cm}
+	\ForEach{$X\in \mathrm{ClosedSets}$}{
+	
+		\ \ $mg_\Sigma(\mathrm{Guide}\cup X) := \{\mathrm{Label}\cup X\}$
+	}
+	
+	\vspace{0.2cm}
+	\ForEach{$A\in \mathrm{Premises}$}{
+	
+		$mg_\Sigma := mg_\Sigma\sqcup\mathrm{MinGenPr}(M, \mathrm{Label}\cup A, \mathrm{Guide}\cup A, \Sigma)$
+	}
+	\Return $mg_\Sigma$
+}
+\end{function}
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics*[width=.95\textwidth,height=.27\textheight]{arbolMinGenPr.png}
+	\end{center}
+	\caption{Árbol de búsqueda que genera el algoritmo \ref{algoritmo:minGenPr} para el Ejemplo \ref{ejemplo:minGenBasico}.}
+	\label{figura:arbolMinGenEjemplo}
+\end{figure}
+
+
+\begin{ejemplo}
+\label{ejemplo:minGenPr}
+Supongamos el mismo árbol de búsqueda que obteníamos en el Ejemplo \ref{ejemplo:minGenBasico}. La función \ref{algoritmo:minGenPr} $(abcde, \varnothing, \varnothing, \{a\to c, bc \to d, c \to ae , d \to e \}) $ aplica una estrategia de poda evitando abrir la rama cuya etiqueta es un superconjunto de otra rama en el mismo nivel. En concreto, la rama etiquetada $bc$ no se abre porque no es minimal en el conjunto $\{a, bc, c, d\} $. La Figura \ref{figura:arbolMinGenEjemplo} muestra el árbol de búsqueda delineando en gris la rama podada. En el Ejemplo \ref{ejemplo:minGenBasico} esta rama podada corresponde al ítem 2 de la traza mostrada.
+\end{ejemplo}
+
+
+
+
+\subsection{Método GenMinGen}
+Finalmente, en este caso proponemos una generalización de la estrategia de poda anterior al considerar el test de inclusión del subconjunto no sólo con la información de los nodos del mismo nivel, sino también con todos los generadores minimales calculados antes de la apertura de cada rama. Un paso más allá en esta estrategia de poda es aprovechar los generadores minimales ya calculados para aumentar el número de ramas que no es necesario abrir. Como muestra la función \ref{algoritmo:GenMinGen}, consideramos esta poda general en la línea \#1, y después, en la línea \#2 se construye la lista de premisas minimales consideradas en cada etapa.
+
+\begin{function}[h]
+\caption{GenMinGen($M$, Label, Guide, $\Sigma$)}
+\label{algoritmo:GenMinGen}
+\small
+\DontPrintSemicolon
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\Input{Conjunto de atributos $M$. \\
+Un conjunto auxiliar para construir un generador minimal, Label.\\
+Un conjunto auxiliar para construir un conjunto cerrado, Guide.\\ 
+Un sistema de implicaciones $\Sigma$ en $M$.}
+\Output{El mapeo $mg_\Sigma$.}
+\Begin{
+	\ForEach{$X\subseteq M$}{
+	
+		\ \ $mg_\Sigma(X) := \varnothing$
+	}
+	\vspace{0.2cm}
+	(Guide, $\Sigma$) := {\tt Cls}(Guide, $\Sigma$)
+	
+	$M := M\smallsetminus$Guide
+	
+	\vspace{0.2cm}
+	$\mathrm{Premises} := {\tt Minimals}\{A\subseteq M\mid  A\to B\in \Sigma\text{ for some }B\subseteq M\}$
+	ClosedSets$:=\{X\subseteq M\mid A\not\subseteq X \text{ for all }A\in \mathrm{Premises}\}$
+
+	\vspace{0.2cm}
+	\ForEach{$X\in \mathrm{ClosedSets}$}{
+	
+		\ \ $mg_\Sigma(\mathrm{Guide}\cup X) := \{\mathrm{Label}\cup X\}$
+	}
+	
+	\vspace{0.2cm}
+	\ForEach{$A\in \mathrm{Premises}$}{
+	
+		\nlset{[\#1]}   \If{there no exists $Y\in$ {\rm MinGenList} such that $Y\subseteq A$}{
+	
+												$mg_\Sigma := mg_\Sigma\sqcup \mathrm{MinGenPr}(M,\mathrm{Label}\cup A,\mathrm{Guide}\cup A,\Sigma,\mathrm{MinGenList})$
+										}
+	}
+	\nlset{[\#2]}
+	\textbf{add} $A$ \textbf{to} MinGenList
+	
+	\Return $mg_\Sigma$
+}
+\end{function}
+
+En la Figura \ref{figura:arbolGenMinGen} representamos el espacio de búsqueda correspondiente a la aplicación de la función \ref{algoritmo:GenMinGen} sobre el Ejemplo \ref{ejemplo:minGenBasico}. Hay que percatarse de que las ramas etiquetadas con $ad$ y $cd$ no se abren porque en el nivel anterior las etiquetas $a$ y $c$ ya se abrieron. En la salida de la función \ref{algoritmo:GenMinGen} los generadores minimales $ad$ y $cd$ aparecen en ramas anteriores mientras que $abd$ y $cbd$ no se computan porque no son realmente generadores minimales. Para verificarlo, podemos fijarnos en los ítems 4.1 y 4.2 de la traza de ejecución del Ejemplo \ref{ejemplo:minGenBasico} que corresponden a ramas superfluas.
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics*[width=.95\textwidth,height=.27\textheight]{arbolGenMinGen.png}
+	\end{center}
+	\caption{Árbol de búsqueda que genera el algoritmo \ref{algoritmo:GenMinGen} para el Ejemplo \ref{ejemplo:minGenBasico}.}
+	\label{figura:arbolGenMinGen}
+\end{figure}
+
+
+
+\section{Experimentos y resultados}
+\label{seccion:resultadosGeneradoresMinimales}
+En las secciones anteriores hemos presentado el método original de cálculo de generadores minimales \ref{algoritmo:minGen} junto con las dos mejoras de poda, \ref{algoritmo:minGenPr} y \ref{algoritmo:GenMinGen}, y se ha mostrado un ejemplo completo de ejecución. Ahora, presentamos una comparación global del rendimiento
+logrado por cada uno de ellos.
+
+Para ello, hemos desarrollado las implementaciones correspondientes para emplear los métodos sobre una batería de conjuntos de implicaciones generadas aleatoriamente. En aras de facilitar la legibilidad y el seguimiento de la comparativa realizada, acompañaremos los resultados obtenidos con varias tablas y gráficas.
+
+Para evaluar esta comparación, vamos a utilizar dos métricas diferentes, el tiempo de ejecución del algoritmo y el número de nodos en el árbol de búsqueda generado por el método. La razón de esta selección es idéntica a la expuesta para el caso de las claves minimales \ref{seccion:experimentosResultados} y que resumimos brevemente. El tiempo de ejecución surge como la medida clásica para probar el rendimiento, pero siempre está estrechamente relacionado con los recursos con los que estamos trabajando. El número de nodos del árbol representa una medida de la magnitud del problema y es independiente de la arquitectura hardware utilizada. Asimismo, debido a la naturaleza intrínseca del tiempo de ejecución, cada experimento ha sido repetido varias veces para poder obtener valores medios fiables.
+
+Para este experimento, en el que vamos a utilizar las implementaciones secuenciales de los algoritmos, todavía no es necesario hacer uso de recursos de supercomputación dado que los resultados se alcanzan en tiempos razonables. Entonces, la arquitectura hardware utilizada en este caso es: Intel(R) Core(TM) i7-6700HQ CPU 2.60Ghz, 8 Gb memoria RAM, ejecutándose sobre Windows 10.
+
+Hemos generado una batería de pruebas con diferentes entradas para evaluar la implementación secuencial y poder mostrar las mejoras de la poda de los métodos desarrollados. En concreto, el experimento se va a realizar sobre los siguientes dos tipos de conjuntos de datos:
+
+\begin{itemize}
+	\item Datos aleatorios. Hemos generado cinco ficheros de prueba, cada uno de ellos con 50 implicaciones construidas usando 50 atributos diferentes posibles. Las implicaciones se generan aleatoriamente. 
+	\item Datos reales. Hemos generado un fichero con información real tomada a partir de los datos almacenados en \textit{datasets} que podemos encontrar en la web como es el caso de los MovieLens \textit{datasets}\footnote{https://grouplens.org/datasets/movielens/} que se han usado en otras ocasiones en campos como la educación, investigación o industria \cite{Harper2016}. Entraremos en más detalles en relación a estos \textit{datasets} cuando lleguemos a la sección \ref{seccion:movieLensDatasets}, pero para completar la explicación de los ficheros de entrada de este experimento, podemos adelantar que vamos a tratar con un fichero cuyos atributos son los diferentes géneros cinematográficos almacenados en el \textit{dataset} de MovieLens (e.g. Acción, Aventura, Thriller, Comedia, ...) con un total de 19 atributos, y cuyas implicaciones serán relaciones entre ellos que nos proporcionan un conjunto $\Sigma$ final con un total de 245 implicaciones, lo cual supera sustancialmente el test aleatorio.
+\end{itemize}
+
+Dicho eso, podemos ver los resultados de los experimentos en  la Figura \ref{figura:experimentosSecuencial} y en la Tabla \ref{tabla:secuencial}, que está organizada en cuatro columnas cuya razón desglosamos a continuación:
+\begin{enumerate}
+	\item Identificador del archivo de entrada y el método utilizado para resolver.
+	\item Tiempo de ejecución (en segundos).
+	\item Número de nodos del árbol generado; nos da una indicación del tamaño del problema.
+	\item Número de generadores minimales obtenidos.
+\end{enumerate}
+
+\begin{table}[htbp]
+\scriptsize
+	\centering
+\begin{tabular}{lrrrrrr}
+%\hline\noalign{\smallskip}
+% & Attrib & Implications \\
+% & 50 & 50   \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Problema y Método & Total$_{t}$(s) & Nodos & MinGens \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+sequential-1-MinGen & 489 & 35.062 & 1.437\\
+sequential-1-MinGenPr & 108 & 7.734 & 1.437 \\
+sequential-1-GenMinGen & 97 & 6.714 & 1.437 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+sequential-2-MinGen & 53 & 32.408 & 271 \\
+sequential-2-MinGenPr & 8 & 4.670 & 271 \\
+sequential-2-GenMinGen & 7 & 3.922 & 271 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+sequential-3-MinGen & 41 & 7.518 & 688 \\
+sequential-3-MinGenPr & 9 & 1.642 & 688 \\
+sequential-3-GenMinGen & 9 & 1.611 & 688 & \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+sequential-4-MinGen & 693 & 52.067 & 1.444 \\
+sequential-4-MinGenPr & 179 & 12.802 & 1.444 \\
+sequential-4-GenMinGen & 148 & 11.014 & 1.444 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+sequential-5-MinGen & 10.647 & 496.521 & 2.941 \\
+sequential-5-MinGenPr & 1.897 & 72.470 & 2.941 \\
+sequential-5-GenMinGen & 1.071 & 42.957 & 2.941 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MovieLens10M-MinGen & 980 & 254.170 & 2.681 \\
+MovieLens10M-MinGenPr & 210 & 19.187 & 2.681 \\
+MovieLens10M-GenMinGen & 198 & 18.926 & 2.681 \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\caption{Resultados obtenidos por los métodos de generadores minimales en su implementación secuencial.}
+\label{tabla:secuencial}
+\end{table}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics*[width=.85\textwidth,height=.3\textheight]{sequentialExperimentsHorizontal.png}
+	\caption{Resultados de tiempos de ejecución (a) y número de nodos (b) para el experimento con las implementaciones secuenciales de los métodos. Se ha aplicado escala logarítmica a los ejes con la intención de favorecer la visibilidad de los resultados.}
+	\label{figura:experimentosSecuencial}
+\end{figure}
+
+A la luz de los resultados obtenidos, se aprecia fácilmente como las estrategias de poda reducen significativamente tanto el número de nodos como el tiempo de ejecución. Mención especial requiere el experimento `secuencial-5' ya que muestra cómo ambas métricas se han reducido drásticamente. El tiempo de ejecución se ha reducido de más de 10.000 segundos a menos de 2.000 segundos. Además, también es considerable la reducción con respecto al número de nodos que conlleva una menor necesidad de recursos en términos de memoria y almacenamiento. Finalmente, como era de prever, MinGen es superado por MinGenPr, y a su vez GenMinGen mejora este último. 
+
+Los resultados obtenidos son prometedores, pero una vez más recordemos que estamos tratando con una cantidad de información de entrada que, en otras ocasiones puede ser mucho más abundante. Por tanto, al igual que en el caso de las claves minimales, vamos a dar un paso más allá abordando el problema del cálculo de los generadores minimales con una estrategia paralela que nos permita aumentar el tamaño de los \textit{datasets} a la entrada.
+
+
+\section{Computación paralela y generadores minimales}
+\label{seccion:computacionParalelaGeneradoresMinimales}
+Hasta ahora, ya hemos mostrado las mejoras alcanzadas por las estrategias de poda dentro de los métodos de generadores minimales. Sin embargo, una vez que llega el momento de utilizar estos métodos sobre entradas de mayor tamaño, podemos deducir, a la luz de los resultados obtenidos, que los tiempos de ejecución de los métodos secuenciales serían difícilmente admisibles. No obstante, teniendo en cuenta que cada rama del árbol creado por los métodos constituye un problema en sí mismo, podemos pensar en resolverlos simultáneamente utilizando diferentes recursos. Esta visión del problema sobre una ejecución paralela, proporcionada por nuestros métodos basados en la lógica, nos da lugar a desarrollar una nueva versión del método de generadores minimales.
+
+Hemos desarrollado una implementación paralela de los métodos siguiendo el marco introducido por los autores en \cite{Benito-Picazo2016} y que es exactamente el mismo que el definido para el caso del cálculo de las claves minimales \ref{seccion:implementacion}. De forma breve, la implementación paralela se lleva a cabo en dos etapas, siguiendo el paradigma \textit{MapReduce} \cite{Dean2004}. La primera etapa divide el problema de entrada en varios subproblemas. Y la segunda, resuelve cada uno de los subproblemas de forma simultánea en los diferentes núcleos de computación y compone el resultado final combinando los resultados de los subproblemas. Podemos ver un esquema gráfico del proceso en la Figura \ref{figura:arquitecturaMapReduce}.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics*[width=1\textwidth,height=.5\textheight]{arquitecturaMapReduce.png}
+	\caption{Esquema de funcionamiento de la implementación paralela de los métodos de generadores minimales utilizando el paradigma \textit{MapReduce} \cite{Dean2004}.}
+	\label{figura:arquitecturaMapReduce}
+\end{figure}
+
+\vspace{0.3cm}
+
+Aunque \ref{algoritmo:GenMinGen} ha demostrado tener un mejor rendimiento que \ref{algoritmo:minGenPr} (y ambos a su vez un mejor rendimiento que \ref{algoritmo:minGen}), sólo vamos a desarrollar una versión paralela del método \ref{algoritmo:minGenPr}. Esto se debe al hecho de que no hay necesidad de comunicación entre los subproblemas cuando se usa el método \ref{algoritmo:minGenPr}. Sin embargo, cuando se usa \ref{algoritmo:GenMinGen}, recordemos que la poda aplicada depende de los resultados obtenidos previamente en cada subproblemas, ya que en cada paso, tenemos que comparar con el conjunto actual de generadores minimales generados hasta el momento. Esto rompe la filosofía \textit{MapReduce} de nuestra implementación, donde cada nodo del árbol (es decir, cada subproblema) está destinado a ser resuelto de forma independiente y sin existir comunicación entre los nodos del árbol.
+
+No obstante, incluso teniendo en cuenta que los mejores resultados entre los métodos de generadores minimales son los logrados por \ref{algoritmo:GenMinGen}, al introducir ahora la estrategia paralela, cambian las tornas. En efecto, los resultados de los métodos en su forma secuencial, incluso para \ref{algoritmo:GenMinGen} no pueden compararse con los números que podemos alcanzar cuando usamos computación paralela con \ref{algoritmo:minGenPr}. La computación paralela nos brinda la posibilidad de tratar con problemas de gran tamaño, lo cual es, en la mayoría de los casos, más valioso que posibles mejoras desarrolladas en versiones secuenciales.
+
+En primer lugar, debemos señalar que los recursos y la arquitectura concreta que se ha utilizado para ejecutar los experimentos paralelos es, una vez más, la que nos aporta el Centro de Supercomputación y Bioinnovación de la Universidad de Málaga\footnote{https://www.scbi.uma.es/}. En particular, para este experimento, hemos utilizado 32 nodos cluster SL230, contando con 16 núcleos y 64Gb de memoria RAM. Las comunicaciones se realizan a través de una red Infiniband Net FDR y en el momento de ejecución, cada uno de los núcleos está reservado, de forma exclusiva, para nuestro experimento.
+
+Centrándonos en los experimentos, esta vez, los archivos de entrada que vamos a usar van a alcanzar valores mucho mayores que para la prueba secuencial, concretamente, contarán con hasta 150 atributos y 150 implicaciones. Incluso con estos números, tres veces más altos que el experimento secuencial, pasar a la versión paralela nos reporta resultados en un tiempo admisible como podemos observar en los valores recogidos en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR}.
+
+\begin{table}[htbp]
+\scriptsize
+	\centering
+\begin{tabular}{lrrrrrr}
+\hline\noalign{\smallskip}
+ & Atrib & Implicaciones & BOV & Cores & \\
+ & 150 & 150 & 140 & 32 &  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Problema y Método  & Subp & Parcial$_{t}$(s) & Total$_{t}$(s) & Nodos & MinGens\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-1-secuencial & - & - & 43 & 374 & 216\\
+MinGenPr-1-paralelo & 11 & 2 & 3 & 374 & 216\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-2-secuencial & - & - & 17.352 & 54.375 & 6.273\\
+MinGenPr-2-paralelo & 347 & 140 & 179 & 54.375 & 6.273\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-3-secuencial & - & - & 31.882 & 68.531 & 6.529\\
+MinGenPr-3-paralelo & 822 & 1.638 & 1.665 & 68.531 & 6.529\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-4-secuencial & - & - & 4.612 & 25.477 & 2.478\\
+MinGenPr-4-paralelo & 344 & 350 & 364 & 25.477 & 2.478\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-5-secuencial & - & - & 1.585 & 12.522 & 1.159\\
+MinGenPr-5-paralelo & 168 & 235 & 237 & 12.522 & 1.159\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-6-secuencial & - & - & 1.653 & 8.110 & 1.436\\
+MinGenPr-6-paralelo & 79 & 20 & 25 & 8.110 & 1.436\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-7-secuencial & - & - & 107.238 & 262.621 & 9.113\\
+MinGenPr-7-paralelo & 1.754 & 758 & 967 & 262.621 & 9.113\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-8-secuencial & - & - & 61.381 & 257.267 & 5.538\\
+MinGenPr-8-paralelo & 966 & 253 & 464 & 257.267 & 5.538\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-9-secuencial & - & - & 372 & 1.726 & 683\\
+MinGenPr-9-paralelo & 24 & 4 & 6 & 1.726 & 683\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPr-10-secuencial & - & - & 7.484 & 45.962 & 2.969\\
+MinGenPr-10-paralelo & 277 & 131 & 169 & 45.962 & 2.969\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\caption{Comparación de resultados obtenido por las versión secuencial y paralela del método ref{algoritmo:MinGenPr} aplicado a problemas grandes.}
+\label{tabla:comparacionMinGenPrSEQPAR}
+\end{table}
+
+La información mostrada en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR} sigue la misma estructura que la Tabla \label{tabla:secuencial}, pero esta vez, debido a la estrategia paralela, se introducen nuevos parámetros. Por un lado, el encabezado incluye el número de atributos e implicaciones, el valor de parada (BOV) y la cantidad de núcleos utilizados. Por otro lado, el cuerpo de la tabla contiene seis columnas con la información de los valores del método que desglosamos a continuación:
+
+\begin{enumerate}
+	\item Nombre del problema y el método utilizado para resolverlo.
+	\item Número de subproblemas generados en la etapa primera del algoritmo.
+	\item Tiempo transcurrido para la etapa primera.
+	\item Tiempo total de ejecución (etapa parcial + etapa paralela).
+	\item Número de nodos del árbol.
+	\item Número de generadores minimales obtenidos.
+\end{enumerate}
+
+Optamos por mantener el número de nodos y la cantidad de generadores minimales en la tabla solamente con la intención de tener una idea del tamaño del problema, ya que es obvio que ambos implementaciones logran los mismos números.
+
+Como conclusión, gracias a la aplicación de la implementación paralela, se han podido reducir los tiempos de ejecución de horas y días (experimentos `MinGenPr-\{2,3,7,8,10\}-secuencial') a sólo unos pocos minutos. En otras palabras, la computación paralela nos permite tratar con conjuntos de datos de gran tamaño dentro de unos márgenes de tiempo admisibles.
+
+
+% =====================================================================
+% =====================================================================
+% =====================================================================

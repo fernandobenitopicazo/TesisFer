@@ -1,0 +1,77 @@
+\def\fileversion{0.30}
+\def\filedate{13 Sep 1993} \def\docdate{\filedate}
+\typeout{\space\space Style option: 'dropcaps' v\fileversion
+   \space\space <\filedate> \space\space (FJL)}%
+\def\yes{y }\def\no{n }\newif\ifarbsizes
+%
+%   LAS LINEAS SIGUIENTES SE OMITEN PARA QUE SE PUEDAN CREAR
+%   TAMA~NOS ARBITRARIOS PARA LAS FUENTES DE LETRA.
+%
+%   \message{*** Are arbitrary font sizes available [y/n] ? }
+%   \read-1 to \answer
+%   \ifx\answer\yes\arbsizestrue\else\arbsizesfalse\fi
+%
+%   SE ESCOGE POR DEFECTO LOS TAMA~NOS ARBITRARIOS
+%
+\arbsizestrue
+%
+\newcount\bigscale
+\ifarbsizes % \typeout{*** Good choice.}%
+   \newcount\wantedcount\newcount\actualcount
+   \newdimen\actualheight
+   \def\findsize#1#2{%
+      \bigscale=1000 \font\BIG=#1 scaled \bigscale
+      \setbox0=\hbox{\BIG #2\/}%
+      \actualheight=\ht0
+      \typeout{*** Needed height: \the\wantedheight,
+         \space Unscaled height: \the\actualheight}%
+      \wantedcount=\wantedheight \actualcount=\actualheight
+      \advance\actualcount by50 \divide\actualcount by100
+      \multiply\wantedcount by10
+      \divide\wantedcount by\actualcount
+         % ie \wantedcount:=1000*\wantedcount / \actualcount
+      \bigscale=\wantedcount \font\BIG=#1 scaled \bigscale
+      \setbox0=\hbox{\BIG #2\/}}%
+\else  %\typeout{*** OK, prepare for bad output...}%
+   \def\nextmagstep#1#2#3{\bigscale=#3\font\BIG=#1 scaled\bigscale
+      \setbox0=\hbox{\BIG #2\/}}%
+   \def\findsize#1#2{%
+      \typeout{*** Needed height: \the\wantedheight}%
+      \nextmagstep{#1}{#2}{\magstep0}%
+      \ifdim\ht0<\wantedheight\nextmagstep{#1}{#2}{\magstephalf}%
+      \ifdim\ht0<\wantedheight\nextmagstep{#1}{#2}{\magstep1}%
+      \ifdim\ht0<\wantedheight\nextmagstep{#1}{#2}{\magstep2}%
+      \ifdim\ht0<\wantedheight\nextmagstep{#1}{#2}{\magstep3}%
+      \ifdim\ht0<\wantedheight\nextmagstep{#1}{#2}{\magstep4}%
+      \ifdim\ht0<\wantedheight\nextmagstep{#1}{#2}{\magstep5}%
+      \fi\fi\fi\fi\fi\fi}
+\fi
+\newcount\down \newdimen\saveunitlength \newdimen\wantedheight
+\def\bigdrop#1#2#3#4{%
+   \saveunitlength=\unitlength \unitlength=\baselineskip
+   \setbox1=\hbox{\the\font I}%
+   \wantedheight=#2\baselineskip
+   \advance\wantedheight by -\baselineskip
+   \advance\wantedheight by \ht1
+   \findsize{#3}{#4}%
+   \advance\wantedheight by -\ht0%        only for typeout...
+   \typeout{*** #3 scaled \the\bigscale \space ==> height:
+      \the\ht0 \space (error: \the\wantedheight).}%
+   \hangindent=\wd0 \advance\hangindent by #1
+   \hangafter=-#2
+   \ifdim\dp0>0.25\baselineskip%       0pt?
+      \typeout{*** extra line(s) indented:
+               non-zero depth: \the\dp0}%
+      \loop\ifdim\dp0>\baselineskip
+         \advance\baselineskip by \baselineskip
+	 \advance\hangafter by -1
+      \repeat
+      \advance\hangafter by -1
+      \baselineskip=\unitlength
+   \fi
+   \noindent
+   \down=-#2 \advance\down by 1
+   \begin{picture}(0,0)%
+      \put(0,\down){\makebox(0,0)[br]{\box0}}%
+   \end{picture}%
+   \unitlength=\saveunitlength}

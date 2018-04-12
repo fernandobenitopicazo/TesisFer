@@ -1,0 +1,1472 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2017.2.26)  10 APR 2018 20:16
+entering extended mode
+**F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/TesisFer.tex
+(F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/TesisFer.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\tesis.cls
+
+LaTeX Warning: You have requested document class `tesis',
+               but the document class provides `book'.
+
+Document Class: book 1997/10/10 v1.3x Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\bk11.clo"
+File: bk11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\caption\caption.sty"
+Package: caption 2008/08/24 v3.1j Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\caption\caption3.sty"
+Package: caption3 2008/08/24 v3.1j caption3 kernel (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@indent=\dimen106
+\caption@parindent=\dimen107
+\caption@hangindent=\dimen108
+)
+\c@ContinuedFloat=\count88
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\babel\babel.sty"
+Package: babel 2008/07/06 v3.8l The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2008/07/06 v5.0e Spanish support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\babel\babel.def"
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen109
+)
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Spanish'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@spanish = a dialect from \language0
+\es@datefmt=\count90
+\es@quottoks=\toks15
+\es@quotdepth=\count91
+Package babel Info: Making " an active character on input line 490.
+Package babel Info: Making . an active character on input line 583.
+Package babel Info: Making < an active character on input line 628.
+Package babel Info: Making > an active character on input line 628.
+) ("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\inputenc.sty"
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\latin1.def"
+File: latin1.def 2006/05/05 v1.1b Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\etaremune\etaremune.sty"
+Package: etaremune 2005/06/01 v1.2 Reversed enumerate (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+\XKV@depth=\count92
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+\c@EM@itemctr=\count93
+\c@EM@etaremunectr=\count94
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2009/09/10 v6.78u Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ifxetex\ifxetex.sty"
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\oberdiek\hycolor.sty"
+Package: hycolor 2008/09/08 v1.4 Code for color options of hyperref/bookmark (H
+O)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\oberdiek\xcolor-patch.sty"
+Package: xcolor-patch 2008/09/08 xcolor patch
+))
+\@linkdim=\dimen110
+\Hy@linkcounter=\count95
+\Hy@pagecounter=\count96
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2009/09/10 v6.78u Hyperref: PDFDocEncoding definition (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\bitset.sty"
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\intcalc.sty"
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\bigintcalc.sty"
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2009/04/10 v0.4 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected on input line 144.
+)))
+\Fld@menulength=\count97
+\Field@Width=\dimen111
+\Fld@charsize=\dimen112
+\Field@toks=\toks20
+Package hyperref Info: Hyper figures OFF on input line 4346.
+Package hyperref Info: Link nesting OFF on input line 4351.
+Package hyperref Info: Hyper index ON on input line 4354.
+Package hyperref Info: backreferencing OFF on input line 4361.
+Package hyperref Info: Link coloring OFF on input line 4366.
+Package hyperref Info: Link coloring with OCG OFF on input line 4371.
+Package hyperref Info: PDF/A mode OFF on input line 4376.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count98
+\c@Item=\count99
+\c@Hfootnote=\count100
+)
+*hyperref using default driver hpdftex*
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2009/09/10 v6.78u Hyperref driver for pdfTeX
+\Fld@listcount=\count101
+)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\dropcaps.sty
+  Style option: 'dropcaps' v0.30  <13 Sep 1993>   (FJL)
+\bigscale=\count102
+\wantedcount=\count103
+\actualcount=\count104
+\actualheight=\dimen113
+\down=\count105
+\saveunitlength=\dimen114
+\wantedheight=\dimen115
+) ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks22
+\ex@=\dimen116
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen117
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count106
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count107
+\leftroot@=\count108
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count109
+\DOTSCASE@=\count110
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count111
+\c@MaxMatrixCols=\count112
+\dotsspace@=\muskip11
+\c@parentequation=\count113
+\dspbrk@lvl=\count114
+\tag@help=\toks23
+\row@=\count115
+\column@=\count116
+\maxfields@=\count117
+\andhelp@=\toks24
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks25
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+\Gread@gobject=\count118
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+\epsfxsize=\dimen127
+\epsfysize=\dimen128
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\eucal.sty"
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xy.sty"
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xy.tex" Bootstrap'ing:
+catcodes, docmode,
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyrecat.tex")
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyidioms.tex")
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen129
+\Y@c=\dimen130
+\U@c=\dimen131
+\D@c=\dimen132
+\L@c=\dimen133
+\R@c=\dimen134
+\Edge@c=\toks27
+\X@p=\dimen135
+\Y@p=\dimen136
+\U@p=\dimen137
+\D@p=\dimen138
+\L@p=\dimen139
+\R@p=\dimen140
+\Edge@p=\toks28
+\X@origin=\dimen141
+\Y@origin=\dimen142
+\X@xbase=\dimen143
+\Y@xbase=\dimen144
+\X@ybase=\dimen145
+\Y@ybase=\dimen146
+\X@min=\dimen147
+\Y@min=\dimen148
+\X@max=\dimen149
+\Y@max=\dimen150
+\lastobjectbox@=\box28
+\zerodotbox@=\box29
+\almostz@=\dimen151
+ direction,
+\d@X=\dimen152
+\d@Y=\dimen153
+\K@=\count119
+\KK@=\count120
+\Direction=\count121
+\K@dXdY=\dimen154
+\K@dYdX=\dimen155
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count122
+\quotPTK@=\dimen156
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks29
+\connectobjectbox@@=\box30
+ objects,
+\styletoks@=\toks30
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 1999/02/16 Xy-pic version 3.7
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyall.tex"
+ Xy-pic option: All features v.3.3
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xycurve.tex"
+ Xy-pic option: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count123
+\crvpts@=\toks31
+\splinebox@=\box31
+\splineval@=\dimen157
+\splinedepth@=\dimen158
+\splinetol@=\dimen159
+\splinelength@=\dimen160
+ circles,
+\L@=\dimen161
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyframe.tex"
+ Xy-pic option: Frame and Bracket extension v.3.7 loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xycmtip.tex"
+ Xy-pic option: Computer Modern tip extension v.3.3
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xytips.tex"
+ Xy-pic option: More Tips extension v.3.3 loaded) loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyline.tex"
+ Xy-pic option: Line styles extension v.3.6
+\xylinethick@=\dimen162
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyrotate.tex"
+ Xy-pic option: Rotate and Scale extension v.3.3 loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xycolor.tex"
+ Xy-pic option: Colour extension v.3.3 loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xymatrix.tex"
+ Xy-pic option: Matrix feature v.3.4
+\Row=\count124
+\Col=\count125
+\queue@=\toks32
+\queue@@=\toks33
+\qcount@=\count126
+\qcount@@=\count127
+\matrixsize@=\count128
+ loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xyarrow.tex"
+ Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\generic\xypic\xygraph.tex"
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip46
+\f@ncyO@elh=\skip47
+\f@ncyO@erh=\skip48
+\f@ncyO@olh=\skip49
+\f@ncyO@orh=\skip50
+\f@ncyO@elf=\skip51
+\f@ncyO@erf=\skip52
+\f@ncyO@olf=\skip53
+\f@ncyO@orf=\skip54
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen163
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 285.
+LaTeX Info: Redefining \nocite on input line 356.
+Package: cite 2009/08/29  v 5.2
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\soul\soul.sty"
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks34
+\SOUL@lasttoken=\toks35
+\SOUL@cmds=\toks36
+\SOUL@buffer=\toks37
+\SOUL@token=\toks38
+\SOUL@spaceskip=\skip55
+\SOUL@ttwidth=\dimen164
+\SOUL@uldp=\dimen165
+\SOUL@ulht=\dimen166
+)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\programs.sty
+Package: programs 
+
+Document style `programs.sty' <1993,1994,1995>
+\@@programindent=\dimen167
+\@@defaultindent=\skip56
+\c@@@lineno=\count129
+\c@@@dummylineno=\count130
+\@@numlinelength=\skip57
+) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\keywords.sty
+Package: keywords 
+
+Document style `keywords.sty' <1993,1994,1995>
+) ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ltxmisc\cancel.sty"
+Package: cancel 2000/03/12 v2.1 Cancel math terms
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\tools\calc.sty"
+Package: calc 2005/08/06 v4.2 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count131
+\calc@Bcount=\count132
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count133
+\calc@Cskip=\skip60
+)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\underbr.sty)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\moreverb\moreverb.sty"
+Package: moreverb 2008/06/03 v2.3 `more' verbatim facilities
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks39
+\verbatim@line=\toks40
+\verbatim@in@stream=\read2
+)
+\verbatim@out=\write4
+\tab@position=\count134
+\tab@size=\count135
+\listing@line=\count136
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\units\nicefrac.sty"
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip61
+\L@UnitsRaiseTextstyle=\skip62
+\L@UnitsRaiseScriptstyle=\skip63
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+))
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks41
+\thm@bodyfont=\toks42
+\thm@headfont=\toks43
+\thm@notefont=\toks44
+\thm@headpunct=\toks45
+\thm@preskip=\skip64
+\thm@postskip=\skip65
+\thm@headsep=\skip66
+\dth@everypar=\toks46
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\wasysym\wasysym.sty"
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\tools\multicol.sty"
+Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
+\c@tracingmulticols=\count137
+\mult@box=\box32
+\multicol@leftmargin=\dimen170
+\c@unbalance=\count138
+\c@collectmore=\count139
+\doublecol@number=\count140
+\multicoltolerance=\count141
+\multicolpretolerance=\count142
+\full@width=\dimen171
+\page@free=\dimen172
+\premulticols=\dimen173
+\postmulticols=\dimen174
+\multicolsep=\skip67
+\multicolbaselineskip=\skip68
+\partial@page=\box33
+\last@line=\box34
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\c@columnbadness=\count143
+\c@finalcolumnbadness=\count144
+\last@try=\dimen175
+\multicolovershoot=\dimen176
+\multicolundershoot=\dimen177
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\tools\array.sty"
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen178
+\extrarowheight=\dimen179
+\NC@list=\toks47
+\extratabsurround=\skip69
+\backup@length=\skip70
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+\everycr=\toks48
+\minrowclearance=\skip71
+)
+LaTeX Info: Redefining \color on input line 702.
+\rownum=\count145
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup8
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count146
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\tools\xspace.sty"
+Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
+)
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (cfiorio@um2.fr)
+********************************************************
+\skiptotal=\skip72
+\skiplinenumber=\skip73
+\skiprule=\skip74
+\skiphlne=\skip75
+\skiptext=\skip76
+\skiplength=\skip77
+\algomargin=\skip78
+\skipalgocfslide=\skip79
+\algowidth=\dimen180
+\inoutsize=\dimen181
+\inoutindent=\dimen182
+\interspacetitleruled=\dimen183
+\interspacealgoruled=\dimen184
+\interspacetitleboxruled=\dimen185
+\algocf@inoutbox=\box58
+\algocf@inputbox=\box59
+\AlCapSkip=\skip80
+\AlCapHSkip=\skip81
+\algoskipindent=\skip82
+\algocf@nlbox=\box60
+\algocf@hangingbox=\box61
+\algocf@untilbox=\box62
+\algocf@skipuntil=\skip83
+\algocf@capbox=\box63
+\algoheightruledefault=\skip84
+\algoheightrule=\skip85
+\algotitleheightruledefault=\skip86
+\algotitleheightrule=\skip87
+\c@algocfline=\count147
+\c@algocfproc=\count148
+\c@algocf=\count149
+\algocf@algoframe=\box64
+\algocf@algobox=\box65
+)
+\c@cpt=\count150
+\c@theorem=\count151
+\c@demostracion=\count152
+\unidad=\dimen186
+\@indexfile=\write5
+
+Writing index file TesisFer.idx
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.aux
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\portada.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientoFrase.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientos.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\aportaciones.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\resumen.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\overview.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\introduccion.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteClavesMinimales.aux
+
+LaTeX Warning: Label `figura:arbolSST' multiply defined.
+
+) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteGeneradoresMinimales.aux
+
+LaTeX Warning: Label `figura:arbolMinGenEjemplo' multiply defined.
+
+
+LaTeX Warning: Label `tabla:secuencial' multiply defined.
+
+) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteSistemasRecomendacion.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\conclusiones.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 173.
+LaTeX Font Info:    ... okay on input line 173.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 173.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\oberdiek\refcount.sty"
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count153
+)
+LaTeX Info: Redefining \ref on input line 173.
+LaTeX Info: Redefining \pageref on input line 173.
+
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.out)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.out)
+\@outlinefile=\write6
+\AtBeginShipoutBox=\box66
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count154
+\scratchdimen=\dimen187
+\scratchbox=\box67
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen188
+\MPnumerator=\count158
+\everyMPtoPDFconversion=\toks50
+) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\portada.tex) [1
+
+
+
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}] [2
+
+
+]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientoFrase.tex [3
+
+]
+[4
+
+]) [5] [6
+
+
+] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientos.tex)pdfTeX warni
+ng (ext4): destination with the same identifier (name{page.i}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.200 \include{agradecimientos}
+                                [1
+
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.201 \clearemptydoublepage
+                            [2
+
+
+]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\wasysym\uwasy.fd"
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.24 ...xperimentos y resultados}{80}{section.4.3}
+                                                   [3
+
+])
+\tf@toc=\write7
+pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216 \clearemptydoublepage
+                            \cleardoublepage [4]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\aportaciones.texpdfTeX warning (ex
+t4): destination with the same identifier (name{page.v}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.19 	\item F
+             ernando Benito-Picazo, Pablo Cordero, Manuel Enciso, Ángel Mora...
+[5
+
+
+
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.vi}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.221 \include{aportaciones}
+                             [6]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\resumen.tex [7
+
+
+
+
+] [8] [9]
+Overfull \hbox (2.49725pt too wide) in paragraph at lines 44--45
+[]\OT1/cmr/m/n/10.95 Investigacion y prop-ues-ta de nuevas es-trate-gias de re
+-comen-dacion
+ []
+
+[10]
+Overfull \hbox (7.66809pt too wide) in paragraph at lines 48--49
+\OT1/cmr/m/n/10.95 pli-ca-ciones que per-mi-tan ver-i-ficar su fun-cionamien-to
+ so-bre grandes
+ []
+
+[11] [12] [13] [14] [15] [16]
+Overfull \hbox (4.44879pt too wide) in paragraph at lines 111--112
+\OT1/cmr/m/n/10.95 tuales, gru-pales, con-ver-sa-cionales, de fil-tra-do co-lab
+-o-ra-ti-vo, en-tre var-ios otros.
+ []
+
+[17]
+Underfull \vbox (badness 1735) has occurred while \output is active []
+
+ [18]
+[19] [20]) [21] [22
+
+
+] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\overview.tex
+[23
+
+
+] [24] [25]
+Overfull \hbox (1.21983pt too wide) in paragraph at lines 31--32
+[]\OT1/cmr/m/n/10.95 They are an op-ti-mal tool in terms of the ex-pres-sive-ne
+ss/computational
+ []
+
+[26] [27] [28] [29] [30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+[32] [33] [34] [35]) [36]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\introduccion.tex
+Cap\'{\i }tulo 1.
+[1
+
+
+
+
+
+
+] [2
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]) [14]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.tex
+Cap\'{\i }tulo 2.
+[15
+
+
+
+
+
+] [16
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[17]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
+ ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+ [18]
+Overfull \hbox (9.09476pt too wide) in paragraph at lines 77--78
+[]\OT1/cmr/m/n/10.95 El par de op-er-adores de derivacion con-sti-tuye una con
+exion anti-monotona
+ []
+
+[19] [20] [21]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 201.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (58.51682pt too wide) in paragraph at lines 192--201
+ [][] 
+ []
+
+<ejemploReticulo.png, id=808, 197.538pt x 180.675pt>
+File: ejemploReticulo.png Graphic file (type png)
+ <use ejemploReticulo.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 207.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (0.5417pt too wide) in paragraph at lines 223--236
+ [][] 
+ []
+
+
+Underfull \vbox (badness 5954) has occurred while \output is active []
+
+ [22 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/ejemploReticulo.png (PNG copy
+)>] [23]
+[24] [25] [26] [27]
+Overfull \hbox (28.81262pt too wide) in paragraph at lines 377--378
+[]\OT1/cmr/bx/n/10.95 Proposicion 2.2.9. []\OT1/cmr/m/it/10.95 Para cualquier 
+$\OML/cmm/m/it/10.95  $ \OT1/cmr/m/it/10.95 y $\OMS/cmsy/m/n/10.95 8\OML/cmm/m/
+it/10.95 X; Y \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 M$\OT1/cmr/m/it/10.95 ,
+ $\OML/cmm/m/it/10.95   \OMS/cmsy/m/n/10.95 ` \OML/cmm/m/it/10.95 X \OMS/cmsy/m
+/n/10.95 ! \OML/cmm/m/it/10.95 Y[]  \OMS/cmsy/m/n/10.95 [
+ []
+
+[28]
+Overfull \hbox (29.52194pt too wide) detected at line 406
+\OT1/cmr/m/n/10.95 ( )[] [] [] 2[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/m/n/10.95 2[]
+ \OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = []\OMS/cmsy/m/n/10.95 f\OML/cmm/m
+/it/10.95 Y \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 M \OMS/cmsy/m/n/10.95 j \
+OML/cmm/m/it/10.95 Y[]\OT1/cmr/m/n/10.95 []\OML/cmm/m/it/10.95 X \OMS/cmsy/m/n
+/10.95  \OML/cmm/m/it/10.95 Y\OMS/cmsy/m/n/10.95 g
+ []
+
+[29] [30]
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 47
+0.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 47
+1.
+
+[31]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[32] [33]) [34] [35
+
+
+
+
+] [36]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteClavesMinimales.tex
+Cap\'{\i }tulo 3.
+[37
+
+
+
+] [38
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[39]
+Overfull \hbox (1.38583pt too wide) in paragraph at lines 60--61
+[]\OT1/cmr/bx/n/10.95 Nota 3.0.23. []\OT1/cmr/m/it/10.95 Es de vi-tal im-por-ta
+n-cia men-cionar que aunque para averiguar
+ []
+
+[40] [41] [42] [43] [44] [45]
+<arbol897.png, id=1052, 508.90125pt x 261.97874pt>
+File: arbol897.png Graphic file (type png)
+ <use arbol897.png> [46]
+[47 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbol897.png>] [48]
+<aplicacionAlgoritmoCK.png, id=1091, 928.06725pt x 270.41025pt>
+File: aplicacionAlgoritmoCK.png Graphic file (type png)
+
+<use aplicacionAlgoritmoCK.png> [49]
+<ejemploSLFDMod.png, id=1100, 472.01344pt x 1156.32pt>
+File: ejemploSLFDMod.png Graphic file (type png)
+
+<use ejemploSLFDMod.png>
+
+LaTeX Warning: Float too large for page by 29.5183pt on input line 222.
+
+[50 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/aplicacionAlgoritmoCK.png>]
+[51 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/ejemploSLFDMod.png (PNG copy)>
+] <arbolSLFD.png, id=1120, 583.42969pt x 241.65282pt>
+File: arbolSLFD.png Graphic file (type png)
+ <use arbolSLFD.png>
+<arbolSLFDMod.png, id=1122, 506.6428pt x 222.8325pt>
+File: arbolSLFDMod.png Graphic file (type png)
+ <use arbolSLFDMod.png>
+[52 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSLFD.png (PNG copy)>]
+Overfull \hbox (6.2538pt too wide) in paragraph at lines 294--295
+[]\OT1/cmr/m/n/10.95 La lla-ma-da prin-ci-pal del Al-go-rit-mo []3.1[] debe ser
+ Clo-sure[]Keys($
+\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95  \OML/cmm/m/it/10.95 ; \U/msb/m/n/10.9
+5 ?\OML/cmm/m/it/10.95 ; \U/msb/m/n/10.95 ?$\OT1/cmr/m/n/10.95 ).
+ []
+
+[53 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSLFDMod.png (PNG copy)>]
+Overfull \hbox (6.70302pt too wide) in paragraph at lines 301--302
+[]\OT1/cmr/bx/it/10.95 D\OT1/cmr/bx/n/10.95 emostracion 1. []\OT1/cmr/m/it/10.
+95 En primer lu-gar, la ter-mi-nacion del al-go-rit-mo esta garan-
+ []
+
+[54] <arbolSST.png, id=1170, 709.4505pt x 370.986pt>
+File: arbolSST.png Graphic file (type png)
+ <use arbolSST.png>
+<arbolCK.png, id=1172, 696.80325pt x 240.29774pt>
+File: arbolCK.png Graphic file (type png)
+ <use arbolCK.png>
+Overfull \hbox (0.27686pt too wide) in paragraph at lines 331--332
+\OT1/cmr/m/n/10.95 meto-dos para di-vidir el prob-le-ma orig-i-nal en in-stan-
+cias atomi-cas que pueden
+ []
+
+
+Overfull \hbox (6.39058pt too wide) in paragraph at lines 331--332
+\OT1/cmr/m/n/10.95 re-sol-verse por sep-a-ra-do en un tiem-po ra-zon-able y con
+ los re-cur-sos disponibles.
+ []
+
+
+Overfull \hbox (1.12851pt too wide) in paragraph at lines 331--332
+\OT1/cmr/m/n/10.95 los re-sul-ta-dos in-di-vid-uales obtenidos para ca-da una d
+e esas in-stan-cias atomi-
+ []
+
+[55 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSST.png (PNG copy)>]
+<diagramaParalelo.png, id=1183, 488.42474pt x 165.61874pt>
+File: diagramaParalelo.png Graphic file (type png)
+
+<use diagramaParalelo.png> [56 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arb
+olCK.png (PNG copy)>] [57 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/diagrama
+Paralelo.png (PNG copy)>] [58] [59] [60]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 462.
+ [61] [62]
+<totalTimesGraphics.png, id=1246, 518.6878pt x 338.76563pt>
+File: totalTimesGraphics.png Graphic file (type png)
+
+<use totalTimesGraphics.png>
+<nodesGraphics.png, id=1248, 514.17094pt x 327.47343pt>
+File: nodesGraphics.png Graphic file (type png)
+
+<use nodesGraphics.png>) [63] [64] [65 <F:/Dropbox/DoctoradoMalaga/EnCurso/Tesi
+sFer/totalTimesGraphics.png (PNG copy)> <F:/Dropbox/DoctoradoMalaga/EnCurso/Tes
+isFer/nodesGraphics.png (PNG copy)>] [66
+
+
+]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteGeneradoresMinimales.tex
+Cap\'{\i }tulo 4.
+[67
+
+
+
+] [68
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[69]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+[71] [72] [73] <arbolMinGenEjemplo.png, id=1333, 463.13025pt x 181.8795pt>
+File: arbolMinGenEjemplo.png Graphic file (type png)
+
+<use arbolMinGenEjemplo.png>
+Overfull \hbox (4.25284pt too wide) in paragraph at lines 176--177
+[]|$\OML/cmm/m/it/10.95 acde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 187--188
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (1.40782pt too wide) in paragraph at lines 196--196
+[]|$\OML/cmm/m/it/10.95 acde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 196--197
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+[74 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolMinGenEjemplo.png (PNG co
+py)>]
+Overfull \hbox (1.40782pt too wide) in paragraph at lines 206--206
+[]|$\OML/cmm/m/it/10.95 acde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 206--207
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 217--218
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 226--227
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (4.25284pt too wide) in paragraph at lines 241--242
+[]|$\OML/cmm/m/it/10.95 acde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 252--253
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 261--262
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+[75]
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 298--299
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 307--308
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 318--319
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+
+Overfull \hbox (3.26175pt too wide) in paragraph at lines 327--328
+[]|$\OML/cmm/m/it/10.95 abcde$| 
+ []
+
+[76] <arbolMinGenEjemploGrande.png, id=1356, 428.19975pt x 410.13225pt>
+File: arbolMinGenEjemploGrande.png Graphic file (type png)
+
+<use arbolMinGenEjemploGrande.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<arbolMinGenPr.png, id=1365, 291.489pt x 115.632pt>
+File: arbolMinGenPr.png Graphic file (type png)
+ <use arbolMinGenPr.png>
+[77] [78 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolMinGenEjemploGrande.
+png (PNG copy)>] [79]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<arbolGenMinGen.png, id=1400, 292.09125pt x 112.62074pt>
+File: arbolGenMinGen.png Graphic file (type png)
+
+<use arbolGenMinGen.png> [80 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbol
+MinGenPr.png (PNG copy)>]
+Underfull \vbox (badness 5359) has occurred while \output is active []
+
+ [81]
+[82 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolGenMinGen.png (PNG copy)>
+]
+Overfull \hbox (2.56056pt too wide) in paragraph at lines 509--510
+[]\OT1/cmr/m/n/10.95 Numero de no-dos del arbol gen-er-a-do; nos da una in-di
+-cacion del tama~no
+ []
+
+<sequentialExperimentsHorizontal.png, id=1437, 426.393pt x 213.79875pt>
+File: sequentialExperimentsHorizontal.png Graphic file (type png)
+
+<use sequentialExperimentsHorizontal.png> [83] [84 <F:/Dropbox/DoctoradoMalaga/
+EnCurso/TesisFer/sequentialExperimentsHorizontal.png (PNG copy)>]
+Overfull \hbox (9.12846pt too wide) in paragraph at lines 564--564
+[]\OT1/cmr/bx/n/14.4 Computacion par-alela y gen-er-adores min-i-males 
+ []
+
+[85] <arquitecturaMapReduce.png, id=1466, 422.17725pt x 286.671pt>
+File: arquitecturaMapReduce.png Graphic file (type png)
+
+<use arquitecturaMapReduce.png> [86 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFe
+r/arquitecturaMapReduce.png (PNG copy)>] [87] [88]) [89] [90
+
+
+] [91
+
+] [92]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteSistemasRecomendacion.tex
+Cap\'{\i }tulo 5.
+[93
+
+
+
+] [94
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+[96] [97] [98] [99] [100] [101] [102]
+Cap\'{\i }tulo 6.
+[103
+
+
+] [104
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[105]
+Underfull \vbox (badness 4024) has occurred while \output is active []
+
+ [106]
+Overfull \hbox (9.67764pt too wide) in paragraph at lines 148--149
+\OT1/cmr/m/n/10.95 elige un atrib-u-to con el que re-alizar la busque-da. En p
+rin-ci-pio, \OT1/cmr/m/it/10.95 sicumaRS
+ []
+
+[107] <diagramaSecuenciasicumaRS.png, id=1693, 319.1925pt x 363.15675pt>
+File: diagramaSecuenciasicumaRS.png Graphic file (type png)
+
+<use diagramaSecuenciasicumaRS.png> [108] [109 <F:/Dropbox/DoctoradoMalaga/EnCu
+rso/TesisFer/diagramaSecuenciasicumaRS.png>]
+<esquemaConversacional.png, id=1714, 672.111pt x 429.40425pt>
+File: esquemaConversacional.png Graphic file (type png)
+
+<use esquemaConversacional.png>
+Overfull \hbox (8.43732pt too wide) in paragraph at lines 206--207
+[]\OT1/cmr/m/n/10.95 Como con-se-cuen-cia, va-mos a ten-er un con-jun-to de atr
+ib-u-tos \OT1/cmr/m/it/10.95 U = \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/it/10.95 Abier
+to,
+ []
+
+[110] [111 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/esquemaConversacional.p
+ng (PNG copy)>]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 249.
+ [112] [113] [114] [115] [116]
+Cap\'{\i }tulo 7.
+[117
+
+
+] [118
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[119] [120] [121] [122]
+<experimentoMovieLens10M.png, id=1812, 318.59026pt x 513.71925pt>
+File: experimentoMovieLens10M.png Graphic file (type png)
+
+<use experimentoMovieLens10M.png>
+
+LaTeX Warning: Float too large for page by 34.67407pt on input line 439.
+
+[123] [124 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoMovieLens10M
+.png (PNG copy)>] [125] [126]
+<experimentoHotelesQualifica.png, id=1849, 276.43275pt x 453.49425pt>
+File: experimentoHotelesQualifica.png Graphic file (type png)
+
+<use experimentoHotelesQualifica.png>
+
+LaTeX Warning: Float too large for page by 34.70758pt on input line 534.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127]
+[128 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoHotelesQualifica.p
+ng (PNG copy)>] <poisRoma.png, id=1864, 613.0905pt x 311.36325pt>
+File: poisRoma.png Graphic file (type png)
+
+<use poisRoma.png> [129] [130 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/pois
+Roma.png (PNG copy)>] [131]
+<experimentoPOIsMundial.png, id=1885, 262.581pt x 417.35925pt>
+File: experimentoPOIsMundial.png Graphic file (type png)
+
+<use experimentoPOIsMundial.png>
+
+LaTeX Warning: Float too large for page by 34.70282pt on input line 587.
+
+[132] [133 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoPOIsMundial.
+png (PNG copy)>]
+Overfull \hbox (4.50179pt too wide) in paragraph at lines 627--628
+[]\OT1/cmr/m/n/10.95 En ca-so de que quer-amos obten-er in-for-ma-cion de-tal-
+la-da de ca-da anomala
+ []
+
+[134]) [135] [136
+
+
+]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\conclusiones.tex
+Cap\'{\i }tulo 8.
+[137
+
+
+
+] [138
+
+]
+*** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
+*** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
+[139] [140] [141] [142] [143] [144] [145]) [146]
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.ind)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.lof [147
+
+
+
+
+
+]
+Overfull \hbox (7.12071pt too wide) in paragraph at lines 25--25
+ \OT1/cmr/m/n/10.95 de los meto-dos de gen-er-adores min-i-males uti-lizan-do 
+el paradig- 
+ []
+
+)
+\tf@lof=\write8
+ [148] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.lot
+Overfull \hbox (14.35988pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/10.95 men-tar el numero de nucleos disponibles para la im-ple-m
+entacion 
+ []
+
+[149
+
+
+])
+\tf@lot=\write9
+ [150] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.bbl [151
+
+
+]
+[152] [153] [154] [155] [156]
+Underfull \hbox (badness 2310) in paragraph at lines 297--301
+[]\OT1/cmr/m/sc/10.95 Guigues, J. L., and Duquenne, V.  \OT1/cmr/m/n/10.95 Fami
+lles min-i-males
+ []
+
+[157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167]) [168]
+[169] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.aux
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\portada.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientoFrase.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientos.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\aportaciones.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\resumen.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\overview.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\introduccion.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteClavesMinimales.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteGeneradoresMinimales.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteSistemasRecomendacion.aux)
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\conclusiones.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 13601 strings out of 495285
+ 191454 string characters out of 3179878
+ 355586 words of memory out of 3000000
+ 15784 multiletter control sequences out of 15000+200000
+ 26538 words of font info for 110 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 41i,20n,75p,2085b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program File
+s (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (
+x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86
+)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/M
+iKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTe
+X 2.8/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.
+8/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fo
+nts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1
+/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/publ
+ic/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/
+amsfonts/cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/ams
+fonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfo
+nts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts
+/cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb>
+Output written on TesisFer.pdf (211 pages, 3461611 bytes).
+PDF statistics:
+ 2372 PDF objects out of 2487 (max. 8388607)
+ 589 named destinations out of 1000 (max. 500000)
+ 524 words of extra memory for PDF output out of 10000 (max. 10000000)
+

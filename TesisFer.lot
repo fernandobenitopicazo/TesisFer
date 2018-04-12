@@ -1,0 +1,29 @@
+\select@language {english}
+\select@language {spanish}
+\select@language {spanish}
+\addvspace {10\p@ }
+\select@language {spanish}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Ejemplo de contexto formal utilizando datos reales del sector hotelero\relax }}{19}{table.caption.16}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Ejemplo de contexto formal b\'asico\relax }}{22}{table.2.2}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Conceptos formales a partir de la representaci\'on del contexto formal.\relax }}{23}{table.caption.17}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Tabla de pel\IeC {\'\i }culas\relax }}{41}{table.caption.24}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Intentos de mejorar los tiempos de ejecuci\'on en base a aumentar el n\'umero de n\'ucleos disponibles para la implementaci\'on paralela.\relax }}{61}{table.caption.37}
+\contentsline {table}{\numberline {3.3}{\ignorespaces M\'etodos paralelos aplicados a problemas grandes (I)\relax }}{62}{table.caption.38}
+\contentsline {table}{\numberline {3.4}{\ignorespaces M\'etodos paralelos aplicados a problemas grandes (II)\relax }}{64}{table.caption.39}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Resultados obtenidos por los m\'etodos de generadores minimales en su implementaci\'on secuencial.\relax }}{84}{table.caption.49}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Comparaci\'on de resultados obtenido por las versi\'on secuencial y paralela del m\'etodo ref{algoritmo:MinGenPr} aplicado a problemas grandes.\relax }}{88}{table.caption.52}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Extracto del \textit {dataset} Auto MPG Data Set de la UCI\relax }}{107}{table.caption.53}
+\contentsline {table}{\numberline {6.2}{\ignorespaces \textit {Dataset} de restaurantes (extracto)\relax }}{110}{table.caption.56}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Desglose paso a paso del di\'alogo entre el usuario y \textit {sicumaRS}.\relax }}{113}{table.caption.57}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Extracto del \textit {dataset} MovieLens 10M.\relax }}{121}{table.caption.61}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados del di\'alogo entre \textit {sicumaRS} y el usuario sobre el \textit {dataset} MovieLens 10M.\relax }}{122}{table.caption.62}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Hoteles Costa del Sol \textit {dataset} (extracto)\relax }}{126}{table.caption.64}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Resultados del di\'alogo entre \textit {sicumaRS} y el usuario sobre el \textit {dataset} Hoteles Costa del Sol\relax }}{127}{table.caption.65}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Diseases \& Symptoms dataset (extract)\relax }}{134}{table.caption.69}
+\addvspace {10\p@ }
