@@ -3,8 +3,6 @@ A level-1 auxiliary file: portada.aux
 A level-1 auxiliary file: agradecimientoFrase.aux
 A level-1 auxiliary file: agradecimientos.aux
 A level-1 auxiliary file: aportaciones.aux
-A level-1 auxiliary file: resumen.aux
-A level-1 auxiliary file: overview.aux
 A level-1 auxiliary file: introduccion.aux
 A level-1 auxiliary file: preliminares.aux
 A level-1 auxiliary file: parteClavesMinimales.aux
@@ -13,11 +11,11 @@ A level-1 auxiliary file: parteSistemasRecomendacion.aux
 A level-1 auxiliary file: conclusiones.aux
 The style file: acm.bst
 Database file #1: biblioTesis.bib
-I was expecting a `,' or a `}'---line 211 of file biblioTesis.bib
+I was expecting a `,' or a `}'---line 269 of file biblioTesis.bib
  : keywords = "
  :             Recommender systems, Collaborative filtering, MAE/RMSE, Evaluation",
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 3655 of file biblioTesis.bib
+I was expecting an "="---line 3713 of file biblioTesis.bib
  : ARTICLE 
  :         NUMBER = {245},
 I'm skipping whatever remains of this entry

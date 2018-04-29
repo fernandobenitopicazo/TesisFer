@@ -43,11 +43,6 @@
 \newblock In {\em TPDL\/} (2013), vol.~8092 of {\em Lecture Notes in Computer
   Science}, Springer, pp.~396--400.
 
-\bibitem{Belohlavek2016}
-{\sc Belohlavek, R., Cordero, P., Enciso, M., Mora, A., and Vychodil, V.}
-\newblock Automated prover for attribute dependencies in data with grades.
-\newblock {\em Int. J. Approx. Reasoning 70}, C (Mar. 2016), 51--67.
-
 \bibitem{Benito-Picazo2013PFC}
 {\sc Benito-Picazo, F.}
 \newblock {\em Minimal Key-Par. Una versión paralela de los algoritmos de
@@ -147,6 +142,13 @@
 {\sc Codd, E.~F.}
 \newblock A relational model of data for large shared data banks.
 \newblock {\em Commun. ACM 13}, 6 (1970), 377--387.
+
+\bibitem{Codocedo2015}
+{\sc Codocedo, V., and Napoli, A.}
+\newblock Formal concept analysis and information retrieval -- a survey.
+\newblock In {\em Formal Concept Analysis\/} (Cham, 2015), J.~Baixeries,
+  C.~Sacarea, and M.~Ojeda-Aciego, Eds., Springer International Publishing,
+  pp.~61--77.
 
 \bibitem{Cohen2001}
 {\sc Cohen, E., Datar, M., Fujiwara, S., Gionis, A., Indyk, P., Motwani, R.,
@@ -355,6 +357,14 @@
 \newblock Functional dependencies in horn theories.
 \newblock {\em Artificial Intelligence 108}, 1 (1999), 1 -- 30.
 
+\bibitem{Ignatov2015}
+{\sc Ignatov, D.~I.}
+\newblock Introduction to formal concept analysis and its applications in
+  information retrieval and related fields.
+\newblock In {\em Information Retrieval\/} (Cham, 2015), P.~Braslavski,
+  N.~Karpov, M.~Worring, Y.~Volkovich, and D.~I. Ignatov, Eds., Springer
+  International Publishing, pp.~42--141.
+
 \bibitem{Isinkaye2015}
 {\sc Isinkaye, F., Folajimi, Y., and Ojokoh, B.}
 \newblock Recommendation systems: Principles, methods and evaluation.
@@ -493,13 +503,6 @@
 \newblock In {\em Procs of the 17th Int Joint Conf on AI, IJCAI, Seattle,
   Washington, USA, August 4-10, 2001\/} (2001), pp.~993--998.
 
-\bibitem{Miao2014}
-{\sc Miao, X.}
-\newblock Big data and smart grid.
-\newblock In {\em Proceedings of the 2014 International Conference on Big Data
-  Science and Computing\/} (New York, NY, USA, 2014), BigDataScience '14, ACM,
-  pp.~26:1--26:2.
-
 \bibitem{Mimouni2015}
 {\sc Mimouni, N., Nazarenko, A., and Salotti, S.}
 \newblock {\em A Conceptual Approach for Relational IR: Application to Legal
@@ -518,11 +521,6 @@
 {\sc Missaoui, R., Nourine, L., and Renaud, Y.}
 \newblock Computing implications with negation from a formal context.
 \newblock {\em Fundam. Inf. 115}, 4 (Dec. 2012), 357--375.
-
-\bibitem{Mitchell1997}
-{\sc Mitchell, T.~M.}
-\newblock {\em Machine Learning}, 1~ed.
-\newblock McGraw-Hill, Inc., New York, NY, USA, 1997.
 
 \bibitem{Mora2012}
 {\sc Mora, A., Cordero, P., Enciso, M., Fortes, I., and Aguilera, G.}
@@ -750,14 +748,6 @@
 \newblock In {\em UMAP Workshops\/} (2011), L.~Ardissono and T.~Kuflik, Eds.,
   vol.~7138 of {\em Lecture Notes in Computer Science}, Springer, pp.~60--70.
 
-\bibitem{TRABELSI2011}
-{\sc Trabelsi, W., Wilson, N., Bridge, D., and Ricci, F.}
-\newblock {Preference Dominance Reasoning for Conversational Recommender
-  Systems: a Comparison Between a Comparative Preferences and a Sum of Weights
-  Approach}.
-\newblock {\em International Journal on Artificial Intelligence Tools 20}, 04
-  (2011), 591--616.
-
 \bibitem{TrabelsiWBR11}
 {\sc Trabelsi, W., Wilson, N., Bridge, D.~G., and Ricci, F.}
 \newblock Preference dominance reasoning for conversational recommender
@@ -779,13 +769,6 @@
 \newblock In {\em International Conference on Formal Concept Analysis
   (ICFCA)\/} (2008), vol.~4933 of {\em Lecture Notes in Computer Science},
   Springer, pp.~182--198.
-
-\bibitem{Wang2006}
-{\sc Wang, J., and He, K.}
-\newblock Towards representing fca-based ontologies in semantic web rule
-  language.
-\newblock In {\em The Sixth IEEE International Conference on Computer and
-  Information Technology (CIT'06)\/} (2006), IEEE Computer Society, p.~41.
 
 \bibitem{Wastl98a}
 {\sc Wastl, R.}
@@ -858,6 +841,12 @@
   systems.
 \newblock {\em Knowledge-Based Systems 96\/} (2016), 96 -- 103.
 
+\bibitem{Zhang2015}
+{\sc Zhang, W., Du, Y.~J., and Song, W.}
+\newblock Recommender system with formal concept analysis.
+\newblock In {\em 2015 International Conference on Information and
+  Communications Technologies (ICT 2015)\/} (April 2015), pp.~1--6.
+
 \bibitem{Zhang2013}
 {\sc Zhang, X.-L., Lee, T. M.~D., and Pitsilis, G.}
 \newblock Securing recommender systems against shilling attacks using
@@ -884,5 +873,10 @@
 \newblock In {\em Proceedings of the 21st Annual International ACM SIGIR
   Conference on Research and Development in Information Retrieval\/} (New York,
   NY, USA, 1998), SIGIR '98, ACM, pp.~307--314.
+
+\bibitem{Zou2017}
+{\sc Zou, C., Zhang, D., Wan, J., Hassan, M.~M., and Lloret, J.}
+\newblock Using concept lattice for personalized recommendation system design.
+\newblock {\em IEEE Systems Journal 11}, 1 (March 2017), 305--314.
 
 \end{thebibliography}

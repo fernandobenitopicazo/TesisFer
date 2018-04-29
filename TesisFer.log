@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2017.2.26)  10 APR 2018 20:16
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2017.2.26)  29 APR 2018 12:39
 entering extended mode
 **F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/TesisFer.tex
 (F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/TesisFer.tex
@@ -702,8 +702,6 @@ Writing index file TesisFer.idx
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientoFrase.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientos.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\aportaciones.aux)
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\resumen.aux)
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\overview.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\introduccion.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteClavesMinimales.aux
@@ -719,24 +717,24 @@ LaTeX Warning: Label `tabla:secuencial' multiply defined.
 
 ) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteSistemasRecomendacion.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\conclusiones.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 189.
+LaTeX Font Info:    ... okay on input line 189.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 173.
+Package hyperref Info: Link coloring OFF on input line 189.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -746,8 +744,8 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count153
 )
-LaTeX Info: Redefining \ref on input line 173.
-LaTeX Info: Redefining \pageref on input line 173.
+LaTeX Info: Redefining \ref on input line 189.
+LaTeX Info: Redefining \pageref on input line 189.
 
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.out)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.out)
@@ -787,7 +785,7 @@ ng (ext4): destination with the same identifier (name{page.i}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 \include{agradecimientos}
+l.216 \include{agradecimientos}
                                 [1
 
 
@@ -796,33 +794,33 @@ l.200 \include{agradecimientos}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.201 \clearemptydoublepage
+l.217 \clearemptydoublepage
                             [2
 
 
 ]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 9.
+LaTeX Font Info:    Try loading font information for U+msa on input line 8.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 9.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 8.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 9.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 8.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\wasysym\uwasy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 9.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 8.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -830,7 +828,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 ...xperimentos y resultados}{80}{section.4.3}
+l.25 ...omendaci\'on Conversacionales}{93}{part.2}
                                                    [3
 
 ])
@@ -839,7 +837,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.216 \clearemptydoublepage
+l.232 \clearemptydoublepage
                             \cleardoublepage [4]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\aportaciones.texpdfTeX warning (ex
 t4): destination with the same identifier (name{page.v}) has been already used,
@@ -857,53 +855,8 @@ l.19 	\item F
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.221 \include{aportaciones}
+l.237 \include{aportaciones}
                              [6]
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\resumen.tex [7
-
-
-
-
-] [8] [9]
-Overfull \hbox (2.49725pt too wide) in paragraph at lines 44--45
-[]\OT1/cmr/m/n/10.95 Investigacion y prop-ues-ta de nuevas es-trate-gias de re
--comen-dacion
- []
-
-[10]
-Overfull \hbox (7.66809pt too wide) in paragraph at lines 48--49
-\OT1/cmr/m/n/10.95 pli-ca-ciones que per-mi-tan ver-i-ficar su fun-cionamien-to
- so-bre grandes
- []
-
-[11] [12] [13] [14] [15] [16]
-Overfull \hbox (4.44879pt too wide) in paragraph at lines 111--112
-\OT1/cmr/m/n/10.95 tuales, gru-pales, con-ver-sa-cionales, de fil-tra-do co-lab
--o-ra-ti-vo, en-tre var-ios otros.
- []
-
-[17]
-Underfull \vbox (badness 1735) has occurred while \output is active []
-
- [18]
-[19] [20]) [21] [22
-
-
-] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\overview.tex
-[23
-
-
-] [24] [25]
-Overfull \hbox (1.21983pt too wide) in paragraph at lines 31--32
-[]\OT1/cmr/m/n/10.95 They are an op-ti-mal tool in terms of the ex-pres-sive-ne
-ss/computational
- []
-
-[26] [27] [28] [29] [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
-[32] [33] [34] [35]) [36]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\introduccion.tex
 Cap\'{\i }tulo 1.
 [1
@@ -918,34 +871,44 @@ Cap\'{\i }tulo 1.
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]) [14]
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.tex
+
+Overfull \hbox (5.26103pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/10.95 Podemos con-sid-er-ar FCA co-mo una teora matematica y 
+una metodologa
+ []
+
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+[14]) [15] [16
+
+
+] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.tex
 Cap\'{\i }tulo 2.
-[15
+[17
 
 
 
-
-
-] [16
+] [18
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[17]
+[19]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
  ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
- [18]
+ [20]
 Overfull \hbox (9.09476pt too wide) in paragraph at lines 77--78
 []\OT1/cmr/m/n/10.95 El par de op-er-adores de derivacion con-sti-tuye una con
 exion anti-monotona
  []
 
-[19] [20] [21]
+[21] [22] [23]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 201.
@@ -956,7 +919,7 @@ Overfull \hbox (58.51682pt too wide) in paragraph at lines 192--201
  [][] 
  []
 
-<ejemploReticulo.png, id=808, 197.538pt x 180.675pt>
+<ejemploReticulo.png, id=494, 197.538pt x 180.675pt>
 File: ejemploReticulo.png Graphic file (type png)
  <use ejemploReticulo.png>
 
@@ -972,9 +935,9 @@ Overfull \hbox (0.5417pt too wide) in paragraph at lines 223--236
 
 Underfull \vbox (badness 5954) has occurred while \output is active []
 
- [22 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/ejemploReticulo.png (PNG copy
-)>] [23]
-[24] [25] [26] [27]
+ [24 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/ejemploReticulo.png (PNG copy
+)>] [25]
+[26] [27] [28] [29]
 Overfull \hbox (28.81262pt too wide) in paragraph at lines 377--378
 []\OT1/cmr/bx/n/10.95 Proposicion 2.2.9. []\OT1/cmr/m/it/10.95 Para cualquier 
 $\OML/cmm/m/it/10.95  $ \OT1/cmr/m/it/10.95 y $\OMS/cmsy/m/n/10.95 8\OML/cmm/m/
@@ -983,7 +946,7 @@ it/10.95 X; Y \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 M$\OT1/cmr/m/it/10.95 ,
 /n/10.95 ! \OML/cmm/m/it/10.95 Y[]  \OMS/cmsy/m/n/10.95 [
  []
 
-[28]
+[30]
 Overfull \hbox (29.52194pt too wide) detected at line 406
 \OT1/cmr/m/n/10.95 ( )[] [] [] 2[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/m/n/10.95 2[]
  \OML/cmm/m/it/10.95 X[] \OT1/cmr/m/n/10.95 = []\OMS/cmsy/m/n/10.95 f\OML/cmm/m
@@ -992,7 +955,7 @@ OML/cmm/m/it/10.95 Y[]\OT1/cmr/m/n/10.95 []\OML/cmm/m/it/10.95 X \OMS/cmsy/m/n
 /10.95  \OML/cmm/m/it/10.95 Y\OMS/cmsy/m/n/10.95 g
  []
 
-[29] [30]
+[31] [32]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 47
 0.
@@ -1001,58 +964,57 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 47
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 47
 1.
 
-[31]
+[33]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32] [33]) [34] [35
+[34] [35]) [36] [37
 
 
 
 
-] [36]
+] [38]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteClavesMinimales.tex
 Cap\'{\i }tulo 3.
-[37
+[39
 
 
 
-] [38
+] [40
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[39]
+[41]
 Overfull \hbox (1.38583pt too wide) in paragraph at lines 60--61
 []\OT1/cmr/bx/n/10.95 Nota 3.0.23. []\OT1/cmr/m/it/10.95 Es de vi-tal im-por-ta
 n-cia men-cionar que aunque para averiguar
  []
 
-[40] [41] [42] [43] [44] [45]
-<arbol897.png, id=1052, 508.90125pt x 261.97874pt>
+[42] [43] [44] [45] [46] [47]
+<arbol897.png, id=743, 508.90125pt x 261.97874pt>
 File: arbol897.png Graphic file (type png)
- <use arbol897.png> [46]
-[47 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbol897.png>] [48]
-<aplicacionAlgoritmoCK.png, id=1091, 928.06725pt x 270.41025pt>
+ <use arbol897.png> [48]
+[49 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbol897.png>] [50]
+<aplicacionAlgoritmoCK.png, id=786, 928.06725pt x 270.41025pt>
 File: aplicacionAlgoritmoCK.png Graphic file (type png)
 
-<use aplicacionAlgoritmoCK.png> [49]
-<ejemploSLFDMod.png, id=1100, 472.01344pt x 1156.32pt>
+<use aplicacionAlgoritmoCK.png> [51]
+<ejemploSLFDMod.png, id=794, 472.01344pt x 1156.32pt>
 File: ejemploSLFDMod.png Graphic file (type png)
-
-<use ejemploSLFDMod.png>
+ <use ejemploSLFDMod.png>
 
 LaTeX Warning: Float too large for page by 29.5183pt on input line 222.
 
-[50 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/aplicacionAlgoritmoCK.png>]
-[51 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/ejemploSLFDMod.png (PNG copy)>
-] <arbolSLFD.png, id=1120, 583.42969pt x 241.65282pt>
+[52 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/aplicacionAlgoritmoCK.png>]
+[53 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/ejemploSLFDMod.png (PNG copy)>
+] <arbolSLFD.png, id=814, 583.42969pt x 241.65282pt>
 File: arbolSLFD.png Graphic file (type png)
  <use arbolSLFD.png>
-<arbolSLFDMod.png, id=1122, 506.6428pt x 222.8325pt>
+<arbolSLFDMod.png, id=816, 506.6428pt x 222.8325pt>
 File: arbolSLFDMod.png Graphic file (type png)
  <use arbolSLFDMod.png>
-[52 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSLFD.png (PNG copy)>]
+[54 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSLFD.png (PNG copy)>]
 Overfull \hbox (6.2538pt too wide) in paragraph at lines 294--295
 []\OT1/cmr/m/n/10.95 La lla-ma-da prin-ci-pal del Al-go-rit-mo []3.1[] debe ser
  Clo-sure[]Keys($
@@ -1060,16 +1022,16 @@ Overfull \hbox (6.2538pt too wide) in paragraph at lines 294--295
 5 ?\OML/cmm/m/it/10.95 ; \U/msb/m/n/10.95 ?$\OT1/cmr/m/n/10.95 ).
  []
 
-[53 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSLFDMod.png (PNG copy)>]
+[55 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSLFDMod.png (PNG copy)>]
 Overfull \hbox (6.70302pt too wide) in paragraph at lines 301--302
 []\OT1/cmr/bx/it/10.95 D\OT1/cmr/bx/n/10.95 emostracion 1. []\OT1/cmr/m/it/10.
 95 En primer lu-gar, la ter-mi-nacion del al-go-rit-mo esta garan-
  []
 
-[54] <arbolSST.png, id=1170, 709.4505pt x 370.986pt>
+[56] <arbolSST.png, id=866, 709.4505pt x 370.986pt>
 File: arbolSST.png Graphic file (type png)
  <use arbolSST.png>
-<arbolCK.png, id=1172, 696.80325pt x 240.29774pt>
+<arbolCK.png, id=868, 696.80325pt x 240.29774pt>
 File: arbolCK.png Graphic file (type png)
  <use arbolCK.png>
 Overfull \hbox (0.27686pt too wide) in paragraph at lines 331--332
@@ -1089,45 +1051,44 @@ Overfull \hbox (1.12851pt too wide) in paragraph at lines 331--332
 e esas in-stan-cias atomi-
  []
 
-[55 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSST.png (PNG copy)>]
-<diagramaParalelo.png, id=1183, 488.42474pt x 165.61874pt>
+[57 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolSST.png (PNG copy)>]
+<diagramaParalelo.png, id=878, 488.42474pt x 165.61874pt>
 File: diagramaParalelo.png Graphic file (type png)
 
-<use diagramaParalelo.png> [56 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arb
-olCK.png (PNG copy)>] [57 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/diagrama
-Paralelo.png (PNG copy)>] [58] [59] [60]
+<use diagramaParalelo.png> [58 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arb
+olCK.png (PNG copy)>] [59 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/diagrama
+Paralelo.png (PNG copy)>] [60] [61] [62]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 462.
- [61] [62]
-<totalTimesGraphics.png, id=1246, 518.6878pt x 338.76563pt>
+ [63] [64]
+<totalTimesGraphics.png, id=941, 518.6878pt x 338.76563pt>
 File: totalTimesGraphics.png Graphic file (type png)
 
 <use totalTimesGraphics.png>
-<nodesGraphics.png, id=1248, 514.17094pt x 327.47343pt>
+<nodesGraphics.png, id=943, 514.17094pt x 327.47343pt>
 File: nodesGraphics.png Graphic file (type png)
-
-<use nodesGraphics.png>) [63] [64] [65 <F:/Dropbox/DoctoradoMalaga/EnCurso/Tesi
-sFer/totalTimesGraphics.png (PNG copy)> <F:/Dropbox/DoctoradoMalaga/EnCurso/Tes
-isFer/nodesGraphics.png (PNG copy)>] [66
+ <use nodesGraphics.png>) [65] [66] [67 <F:/Dropbox/DoctoradoMalaga/EnCurso/Tes
+isFer/totalTimesGraphics.png (PNG copy)> <F:/Dropbox/DoctoradoMalaga/EnCurso/Te
+sisFer/nodesGraphics.png (PNG copy)>] [68
 
 
 ]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteGeneradoresMinimales.tex
 Cap\'{\i }tulo 4.
-[67
+[69
 
 
 
-] [68
+] [70
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[69]
+[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70]
-[71] [72] [73] <arbolMinGenEjemplo.png, id=1333, 463.13025pt x 181.8795pt>
+ [72]
+[73] [74] [75] <arbolMinGenEjemplo.png, id=1029, 463.13025pt x 181.8795pt>
 File: arbolMinGenEjemplo.png Graphic file (type png)
 
 <use arbolMinGenEjemplo.png>
@@ -1150,7 +1111,7 @@ Overfull \hbox (3.26175pt too wide) in paragraph at lines 196--197
 []|$\OML/cmm/m/it/10.95 abcde$| 
  []
 
-[74 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolMinGenEjemplo.png (PNG co
+[76 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolMinGenEjemplo.png (PNG co
 py)>]
 Overfull \hbox (1.40782pt too wide) in paragraph at lines 206--206
 []|$\OML/cmm/m/it/10.95 acde$| 
@@ -1186,7 +1147,7 @@ Overfull \hbox (3.26175pt too wide) in paragraph at lines 261--262
 []|$\OML/cmm/m/it/10.95 abcde$| 
  []
 
-[75]
+[77]
 Overfull \hbox (3.26175pt too wide) in paragraph at lines 298--299
 []|$\OML/cmm/m/it/10.95 abcde$| 
  []
@@ -1206,62 +1167,62 @@ Overfull \hbox (3.26175pt too wide) in paragraph at lines 327--328
 []|$\OML/cmm/m/it/10.95 abcde$| 
  []
 
-[76] <arbolMinGenEjemploGrande.png, id=1356, 428.19975pt x 410.13225pt>
+[78] <arbolMinGenEjemploGrande.png, id=1052, 428.19975pt x 410.13225pt>
 File: arbolMinGenEjemploGrande.png Graphic file (type png)
 
 <use arbolMinGenEjemploGrande.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<arbolMinGenPr.png, id=1365, 291.489pt x 115.632pt>
+<arbolMinGenPr.png, id=1061, 291.489pt x 115.632pt>
 File: arbolMinGenPr.png Graphic file (type png)
  <use arbolMinGenPr.png>
-[77] [78 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolMinGenEjemploGrande.
-png (PNG copy)>] [79]
+[79] [80 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolMinGenEjemploGrande.
+png (PNG copy)>] [81]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<arbolGenMinGen.png, id=1400, 292.09125pt x 112.62074pt>
+<arbolGenMinGen.png, id=1097, 292.09125pt x 112.62074pt>
 File: arbolGenMinGen.png Graphic file (type png)
 
-<use arbolGenMinGen.png> [80 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbol
+<use arbolGenMinGen.png> [82 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbol
 MinGenPr.png (PNG copy)>]
 Underfull \vbox (badness 5359) has occurred while \output is active []
 
- [81]
-[82 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolGenMinGen.png (PNG copy)>
+ [83]
+[84 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/arbolGenMinGen.png (PNG copy)>
 ]
 Overfull \hbox (2.56056pt too wide) in paragraph at lines 509--510
 []\OT1/cmr/m/n/10.95 Numero de no-dos del arbol gen-er-a-do; nos da una in-di
 -cacion del tama~no
  []
 
-<sequentialExperimentsHorizontal.png, id=1437, 426.393pt x 213.79875pt>
+<sequentialExperimentsHorizontal.png, id=1135, 426.393pt x 213.79875pt>
 File: sequentialExperimentsHorizontal.png Graphic file (type png)
 
-<use sequentialExperimentsHorizontal.png> [83] [84 <F:/Dropbox/DoctoradoMalaga/
+<use sequentialExperimentsHorizontal.png> [85] [86 <F:/Dropbox/DoctoradoMalaga/
 EnCurso/TesisFer/sequentialExperimentsHorizontal.png (PNG copy)>]
 Overfull \hbox (9.12846pt too wide) in paragraph at lines 564--564
 []\OT1/cmr/bx/n/14.4 Computacion par-alela y gen-er-adores min-i-males 
  []
 
-[85] <arquitecturaMapReduce.png, id=1466, 422.17725pt x 286.671pt>
+[87] <arquitecturaMapReduce.png, id=1164, 422.17725pt x 286.671pt>
 File: arquitecturaMapReduce.png Graphic file (type png)
 
-<use arquitecturaMapReduce.png> [86 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFe
-r/arquitecturaMapReduce.png (PNG copy)>] [87] [88]) [89] [90
+<use arquitecturaMapReduce.png> [88 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFe
+r/arquitecturaMapReduce.png (PNG copy)>] [89] [90]) [91] [92
 
 
-] [91
+] [93
 
-] [92]
+] [94]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteSistemasRecomendacion.tex
 Cap\'{\i }tulo 5.
-[93
+[95
 
 
 
-] [94
+] [96
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
@@ -1269,32 +1230,32 @@ Cap\'{\i }tulo 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [95]
-[96] [97] [98] [99] [100] [101] [102]
+ [97]
+[98] [99] [100] [101] [102] [103] [104]
 Cap\'{\i }tulo 6.
-[103
+[105
 
 
-] [104
+] [106
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[105]
+[107]
 Underfull \vbox (badness 4024) has occurred while \output is active []
 
- [106]
+ [108]
 Overfull \hbox (9.67764pt too wide) in paragraph at lines 148--149
 \OT1/cmr/m/n/10.95 elige un atrib-u-to con el que re-alizar la busque-da. En p
 rin-ci-pio, \OT1/cmr/m/it/10.95 sicumaRS
  []
 
-[107] <diagramaSecuenciasicumaRS.png, id=1693, 319.1925pt x 363.15675pt>
+[109] <diagramaSecuenciasicumaRS.png, id=1406, 319.1925pt x 363.15675pt>
 File: diagramaSecuenciasicumaRS.png Graphic file (type png)
 
-<use diagramaSecuenciasicumaRS.png> [108] [109 <F:/Dropbox/DoctoradoMalaga/EnCu
+<use diagramaSecuenciasicumaRS.png> [110] [111 <F:/Dropbox/DoctoradoMalaga/EnCu
 rso/TesisFer/diagramaSecuenciasicumaRS.png>]
-<esquemaConversacional.png, id=1714, 672.111pt x 429.40425pt>
+<esquemaConversacional.png, id=1426, 672.111pt x 429.40425pt>
 File: esquemaConversacional.png Graphic file (type png)
 
 <use esquemaConversacional.png>
@@ -1304,31 +1265,31 @@ ib-u-tos \OT1/cmr/m/it/10.95 U = \OMS/cmsy/m/n/10.95 f\OT1/cmr/m/it/10.95 Abier
 to,
  []
 
-[110] [111 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/esquemaConversacional.p
+[112] [113 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/esquemaConversacional.p
 ng (PNG copy)>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 249.
- [112] [113] [114] [115] [116]
+ [114] [115] [116] [117] [118]
 Cap\'{\i }tulo 7.
-[117
+[119
 
 
-] [118
+] [120
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[119] [120] [121] [122]
-<experimentoMovieLens10M.png, id=1812, 318.59026pt x 513.71925pt>
+[121] [122] [123] [124]
+<experimentoMovieLens10M.png, id=1526, 318.59026pt x 513.71925pt>
 File: experimentoMovieLens10M.png Graphic file (type png)
 
 <use experimentoMovieLens10M.png>
 
 LaTeX Warning: Float too large for page by 34.67407pt on input line 439.
 
-[123] [124 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoMovieLens10M
-.png (PNG copy)>] [125] [126]
-<experimentoHotelesQualifica.png, id=1849, 276.43275pt x 453.49425pt>
+[125] [126 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoMovieLens10M
+.png (PNG copy)>] [127] [128]
+<experimentoHotelesQualifica.png, id=1564, 276.43275pt x 453.49425pt>
 File: experimentoHotelesQualifica.png Graphic file (type png)
 
 <use experimentoHotelesQualifica.png>
@@ -1338,45 +1299,45 @@ LaTeX Warning: Float too large for page by 34.70758pt on input line 534.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [127]
-[128 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoHotelesQualifica.p
-ng (PNG copy)>] <poisRoma.png, id=1864, 613.0905pt x 311.36325pt>
+ [129]
+[130 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoHotelesQualifica.p
+ng (PNG copy)>] <poisRoma.png, id=1578, 613.0905pt x 311.36325pt>
 File: poisRoma.png Graphic file (type png)
 
-<use poisRoma.png> [129] [130 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/pois
-Roma.png (PNG copy)>] [131]
-<experimentoPOIsMundial.png, id=1885, 262.581pt x 417.35925pt>
+<use poisRoma.png> [131] [132 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/pois
+Roma.png (PNG copy)>] [133]
+<experimentoPOIsMundial.png, id=1600, 262.581pt x 417.35925pt>
 File: experimentoPOIsMundial.png Graphic file (type png)
 
 <use experimentoPOIsMundial.png>
 
 LaTeX Warning: Float too large for page by 34.70282pt on input line 587.
 
-[132] [133 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoPOIsMundial.
+[134] [135 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisFer/experimentoPOIsMundial.
 png (PNG copy)>]
 Overfull \hbox (4.50179pt too wide) in paragraph at lines 627--628
 []\OT1/cmr/m/n/10.95 En ca-so de que quer-amos obten-er in-for-ma-cion de-tal-
 la-da de ca-da anomala
  []
 
-[134]) [135] [136
+[136]) [137] [138
 
 
 ]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\conclusiones.tex
 Cap\'{\i }tulo 8.
-[137
+[139
 
 
 
-] [138
+] [140
 
 ]
 *** Needed height: 70.04218pt,  Unscaled height: 6.83331pt
 *** cmr10 scaled 10250 ==> height: 70.04156pt (error: 0.00061pt).
-[139] [140] [141] [142] [143] [144] [145]) [146]
+[141] [142] [143] [144] [145] [146] [147]) [148]
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.ind)
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.lof [147
+(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.lof [149
 
 
 
@@ -1390,35 +1351,33 @@ el paradig-
 
 )
 \tf@lof=\write8
- [148] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.lot
+ [150] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.lot
 Overfull \hbox (14.35988pt too wide) in paragraph at lines 12--12
  \OT1/cmr/m/n/10.95 men-tar el numero de nucleos disponibles para la im-ple-m
 entacion 
  []
 
-[149
+[151
 
 
 ])
 \tf@lot=\write9
- [150] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.bbl [151
+ [152] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.bbl [153
 
 
 ]
-[152] [153] [154] [155] [156]
-Underfull \hbox (badness 2310) in paragraph at lines 297--301
+[154] [155] [156] [157] [158]
+Underfull \hbox (badness 2310) in paragraph at lines 299--303
 []\OT1/cmr/m/sc/10.95 Guigues, J. L., and Duquenne, V.  \OT1/cmr/m/n/10.95 Fami
 lles min-i-males
  []
 
-[157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167]) [168]
-[169] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.aux
+[159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169]) [170]
+[171] (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\TesisFer.aux
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\portada.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientoFrase.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\agradecimientos.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\aportaciones.aux)
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\resumen.aux)
-(F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\overview.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\introduccion.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\preliminares.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisFer\parteClavesMinimales.aux)
@@ -1430,10 +1389,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13601 strings out of 495285
- 191454 string characters out of 3179878
- 355586 words of memory out of 3000000
- 15784 multiletter control sequences out of 15000+200000
+ 13536 strings out of 495285
+ 190280 string characters out of 3179878
+ 353507 words of memory out of 3000000
+ 15780 multiletter control sequences out of 15000+200000
  26538 words of font info for 110 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,20n,75p,2085b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1464,9 +1423,9 @@ nts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts
 /cm/cmtt9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/sy
 mbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on TesisFer.pdf (211 pages, 3461611 bytes).
+Output written on TesisFer.pdf (183 pages, 3359509 bytes).
 PDF statistics:
- 2372 PDF objects out of 2487 (max. 8388607)
- 589 named destinations out of 1000 (max. 500000)
- 524 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2077 PDF objects out of 2487 (max. 8388607)
+ 542 named destinations out of 1000 (max. 500000)
+ 516 words of extra memory for PDF output out of 10000 (max. 10000000)
 
