@@ -39,13 +39,12 @@ De forma más específica, un contexto formal se puede considerar como un grafo bi
 \hline
 Nombre del Hotel & AC & Bar & Gym & Internet & Masajes & Parking\\
 \hline
-Fuerte Estepona Suites & X & X & X & X & X & X\\
-Hotel Buenavista &  & X &  &  &  & X \\
-Hotel Paraiso & X & X &  &  &  & X \\
-Apts Marriot Playa &  &  &  & X &  &  \\
-Hotel Piedra Paloma &  & X &  &  &  & X \\
-Hostal Hospederia V Cent & X & X &  & X &  & X \\
-\ldots\\
+Fuerte Estepona Suites & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+Hotel Buenavista &  & \checkmark &  &  &  & \checkmark \\
+Hotel Paraiso & \checkmark & \checkmark &  &  &  & \checkmark \\
+Apts Marriot Playa &  &  &  & \checkmark &  &  \\
+Hotel Piedra Paloma &  & \checkmark &  &  &  & \checkmark \\
+Hostal Hospederia V Cent & \checkmark & \checkmark &  & \checkmark &  & \checkmark \\\ldots\\
 \hline
 \end{tabular}
 }
@@ -188,17 +187,18 @@ Los pares de conceptos en este orden parcial tienen una única máxima cota inferi
 \begin{minipage}{\textwidth}
   \begin{minipage}[b]{0.4\textwidth}
     \centering
+    \captionof{table}{Ejemplo de contexto formal básico}
     {\scriptsize
     \begin{tabular}{ccccc}\hline
             & adulto & joven & femenino & masculino \\ \hline
-       niño &  & X &  & X  \\
-       niña &  & X & X &  \\
-       hombre & X &  &  & X \\
-       mujer & X &  & X &  \\
+       niño &  & \checkmark &  & \checkmark  \\
+       niña &  & \checkmark & \checkmark &  \\
+       hombre & \checkmark &  &  & \checkmark \\
+       mujer & \checkmark &  & \checkmark &  \\
        \hline
       \end{tabular}
      }
-      \captionof{table}{Ejemplo de contexto formal básico}
+      %\captionof{table}{Ejemplo de contexto formal básico}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.4\textwidth}
@@ -224,12 +224,12 @@ Una alternativa gráfica de definir los conceptos formales es la siguiente. Desde
 \hline
 Modelo de coche & Consumo & Cilindrada & Movilidad & Potencia & Peso & Aceleración\\
 \hline
-Chevrolet Vega &  &  &  & X &  & X\\
-Toyota Corolla &  &  &  & X &  & \\
-Ford Pinto &  &  & X &  & X & \\
-Volkswagen Beetle & X &  & X & X & X & X \\
-Plymouth Satellite  & \cellcolor{blue!25}X & \cellcolor{blue!25}X & \cellcolor{blue!25}X &  &  & \cellcolor{blue!25}X \\
-Chevrolet Malibu & \cellcolor{blue!25}X & \cellcolor{blue!25}X & \cellcolor{blue!25}X &  &  & \cellcolor{blue!25}X \\
+Chevrolet Vega &  &  &  & \checkmark &  & \checkmark\\
+Toyota Corolla &  &  &  & \checkmark &  & \\
+Ford Pinto &  &  & \checkmark &  & \checkmark & \\
+Volkswagen Beetle & \checkmark &  & \checkmark & \checkmark & \checkmark & \checkmark \\
+Plymouth Satellite  & \cellcolor{gray!25}\checkmark & \cellcolor{gray!25}\checkmark & \cellcolor{gray!25}\checkmark &  &  & \cellcolor{gray!25}\checkmark \\
+Chevrolet Malibu & \cellcolor{gray!25}\checkmark & \cellcolor{gray!25}\checkmark & \cellcolor{gray!25}\checkmark &  &  & \cellcolor{gray!25}\checkmark \\
 \hline
 \end{tabular}
 }

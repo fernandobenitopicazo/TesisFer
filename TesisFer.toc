@@ -22,21 +22,25 @@
 \contentsline {subsection}{\numberline {4.2.3}M\'etodo GenMinGen}{81}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Experimentos y resultados}{82}{section.4.3}
 \contentsline {section}{\numberline {4.4}Computaci\'on paralela y generadores minimales}{87}{section.4.4}
-\contentsline {part}{II\hspace {1em}Sistemas de Recomendaci\'on Conversacionales}{93}{part.2}
-\contentsline {chapter}{\numberline {5}Sistemas de Recomendaci\'on}{95}{chapter.5}
-\contentsline {section}{\numberline {5.1}T\'ecnicas de recomendaci\'on}{98}{section.5.1}
-\contentsline {section}{\numberline {5.2}Problemas comunes}{101}{section.5.2}
-\contentsline {section}{\numberline {5.3}Evaluaci\'on de los sistemas de recomendaci\'on}{103}{section.5.3}
-\contentsline {chapter}{\numberline {6}Desarrollo de SR conversacional}{105}{chapter.6}
-\contentsline {section}{\numberline {6.1}Presentaci\'on: \textit {sicumaRS}}{107}{section.6.1}
-\contentsline {section}{\numberline {6.2}Funcionamiento}{109}{section.6.2}
-\contentsline {section}{\numberline {6.3}Medidas de evaluaci\'on}{116}{section.6.3}
-\contentsline {chapter}{\numberline {7}Experimentos realizados}{119}{chapter.7}
-\contentsline {section}{\numberline {7.1}MovieLens \textit {datasets}}{123}{section.7.1}
-\contentsline {section}{\numberline {7.2}Hoteles Costa del Sol \textit {dataset}}{127}{section.7.2}
-\contentsline {section}{\numberline {7.3}POIs Mundial \textit {dataset}}{131}{section.7.3}
-\contentsline {section}{\numberline {7.4}Enfermedades y S\IeC {\'\i }ntomas \textit {dataset}}{134}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusiones y Trabajos Futuros}{139}{chapter.8}
-\contentsline {chapter}{{\'Indice alfab\'etico}}{149}{section*.63}
-\contentsline {chapter}{{Lista de figuras}}{150}{chapter*.64}
-\contentsline {chapter}{{Lista de tablas}}{152}{chapter*.65}
+\contentsline {subsection}{\numberline {4.4.1}Algoritmo paralelo: \textit {MinGenPar}}{88}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}C\'alculo del valor de corte o \textit {BOV}}{91}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Estimaci\'on del n\'umero \'optimo de cores}{94}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Generadores minimales para un \textit {dataset} real}{95}{subsection.4.4.4}
+\contentsline {part}{II\hspace {1em}Sistemas de Recomendaci\'on Conversacionales}{101}{part.2}
+\contentsline {chapter}{\numberline {5}Sistemas de Recomendaci\'on}{103}{chapter.5}
+\contentsline {section}{\numberline {5.1}T\'ecnicas de recomendaci\'on}{106}{section.5.1}
+\contentsline {section}{\numberline {5.2}Problemas comunes}{109}{section.5.2}
+\contentsline {section}{\numberline {5.3}Evaluaci\'on de los sistemas de recomendaci\'on}{111}{section.5.3}
+\contentsline {chapter}{\numberline {6}Desarrollo de SR conversacional}{113}{chapter.6}
+\contentsline {section}{\numberline {6.1}Presentaci\'on: \textit {sicumaRS}}{115}{section.6.1}
+\contentsline {section}{\numberline {6.2}Funcionamiento}{117}{section.6.2}
+\contentsline {section}{\numberline {6.3}Medidas de evaluaci\'on}{124}{section.6.3}
+\contentsline {chapter}{\numberline {7}Experimentos realizados}{127}{chapter.7}
+\contentsline {section}{\numberline {7.1}MovieLens \textit {datasets}}{131}{section.7.1}
+\contentsline {section}{\numberline {7.2}Hoteles Costa del Sol \textit {dataset}}{135}{section.7.2}
+\contentsline {section}{\numberline {7.3}POIs Mundial \textit {dataset}}{139}{section.7.3}
+\contentsline {section}{\numberline {7.4}Enfermedades y S\IeC {\'\i }ntomas \textit {dataset}}{142}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusiones y Trabajos Futuros}{147}{chapter.8}
+\contentsline {chapter}{{\'Indice alfab\'etico}}{157}{section*.67}
+\contentsline {chapter}{{Lista de figuras}}{158}{chapter*.68}
+\contentsline {chapter}{{Lista de tablas}}{160}{chapter*.69}

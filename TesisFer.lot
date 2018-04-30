@@ -14,16 +14,19 @@
 \contentsline {table}{\numberline {3.4}{\ignorespaces M\'etodos paralelos aplicados a problemas grandes (II)\relax }}{66}{table.caption.31}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Resultados obtenidos por los m\'etodos de generadores minimales en su implementaci\'on secuencial.\relax }}{86}{table.caption.41}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Comparaci\'on de resultados obtenido por las versi\'on secuencial y paralela del m\'etodo ref{algoritmo:MinGenPr} aplicado a problemas grandes.\relax }}{90}{table.caption.44}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Comparaci\'on entre las versiones secuencial y paralela del algoritmo MinGenPar aplicado a problemas de gran tama\~no.\relax }}{97}{table.caption.45}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Experimentos utilizando diferentes valores de \textit {BOV} con la implementaci\'on paralela \textit {MinGenPar} sobre problemas de gran tama\~no.\relax }}{98}{table.caption.46}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Tiempos de ejecuci\'on (en segundos) de los resultados obtenidos incrementando el n\'umero de cores para la ejecuci\'on en paralelo.\relax }}{99}{table.caption.47}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Algoritmo \ref {algoritmo:funcionMinGenPar} aplicado sobre un \textit {dataset} real.\relax }}{99}{table.caption.48}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Extracto del \textit {dataset} Auto MPG Data Set de la UCI\relax }}{109}{table.caption.45}
-\contentsline {table}{\numberline {6.2}{\ignorespaces \textit {Dataset} de restaurantes (extracto)\relax }}{112}{table.caption.48}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Desglose paso a paso del di\'alogo entre el usuario y \textit {sicumaRS}.\relax }}{115}{table.caption.49}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Extracto del \textit {dataset} Auto MPG Data Set de la UCI\relax }}{117}{table.caption.49}
+\contentsline {table}{\numberline {6.2}{\ignorespaces \textit {Dataset} de restaurantes (extracto)\relax }}{120}{table.caption.52}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Desglose paso a paso del di\'alogo entre el usuario y \textit {sicumaRS}.\relax }}{123}{table.caption.53}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Extracto del \textit {dataset} MovieLens 10M.\relax }}{123}{table.caption.53}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados del di\'alogo entre \textit {sicumaRS} y el usuario sobre el \textit {dataset} MovieLens 10M.\relax }}{124}{table.caption.54}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Hoteles Costa del Sol \textit {dataset} (extracto)\relax }}{128}{table.caption.56}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Resultados del di\'alogo entre \textit {sicumaRS} y el usuario sobre el \textit {dataset} Hoteles Costa del Sol\relax }}{129}{table.caption.57}
-\contentsline {table}{\numberline {7.5}{\ignorespaces Diseases \& Symptoms dataset (extract)\relax }}{136}{table.caption.61}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Extracto del \textit {dataset} MovieLens 10M.\relax }}{131}{table.caption.57}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados del di\'alogo entre \textit {sicumaRS} y el usuario sobre el \textit {dataset} MovieLens 10M.\relax }}{132}{table.caption.58}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Hoteles Costa del Sol \textit {dataset} (extracto)\relax }}{136}{table.caption.60}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Resultados del di\'alogo entre \textit {sicumaRS} y el usuario sobre el \textit {dataset} Hoteles Costa del Sol\relax }}{137}{table.caption.61}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Diseases \& Symptoms dataset (extract)\relax }}{144}{table.caption.65}
 \addvspace {10\p@ }

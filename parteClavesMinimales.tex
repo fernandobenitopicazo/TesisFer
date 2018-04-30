@@ -333,8 +333,8 @@ Nuestra intención es aprovechar el diseño del Tableaux en nuestros métodos para 
 De esta forma, las implementaciones paralelas de los algoritmos funcionarán en dos etapas:
 
 \begin{enumerate}
-	\item \textbf{Código parcial.} Ejecuta el método de búsqueda de claves, en vez de construir el árbol entero, se detendrá en un cierto nivel determinado según un valor de corte (ver a continuación) generando un conjunto de sub-problemas, uno por nodo del árbol en ese nivel. El resultado de esta etapa es un conjunto de problemas de búsqueda de claves más simples.
-	\item \textbf{Código paralelo.} En esta segunda etapa, ejecutamos el algoritmo de búsqueda de claves sobre cada uno de los sub-problemas generados en la etapa anterior de forma paralelavy, al final, combinamos todas las soluciones para obtener todas las claves minimales.
+	\item \textbf{Etapa de división (secuencial).} Ejecuta el método de búsqueda de claves, en vez de construir el árbol entero, se detendrá en un cierto nivel determinado según un valor de corte (ver a continuación) generando un conjunto de sub-problemas, uno por nodo del árbol en ese nivel. El resultado de esta etapa es un conjunto de problemas de búsqueda de claves más simples.
+	\item \textbf{Etapa de resolución (paralela).} En esta segunda etapa, ejecutamos el algoritmo de búsqueda de claves sobre cada uno de los sub-problemas generados en la etapa anterior de forma paralelavy, al final, combinamos todas las soluciones para obtener todas las claves minimales.
 \end{enumerate}
 
 La Figura \ref{figura:diagramaParalelo} muestra un esquema conceptual de la estrategia paralela.
@@ -352,7 +352,7 @@ Como hemos mencionado, mediante la aplicación del código parcial, dividimos el p
 
 \subsection*{Valor de parada}
 \label{subseccion:BOV}
-Decidir el BOV es una labor crucial de la investigación actual debido a las siguientes consideraciones. Por un lado, si decidimos parar en un nivel cercano a la raíz del árbol seleccionando un BOV bajo, ciertamente estamos reduciendo el tiempo de ejecución de la etapa de división y sólo se crearán unos pocos subproblemas. Dado que el árbol no habría podido expandirse todavía, entonces no contaremos con suficiente material para ser gestionado en paralelo usando diferentes núcleos. Por otro lado, si detenemos la división de la etapa parcial llegados a un nivel más profundo del árbol y lejos de la raíz, la división seguramente creará una gran cantidad de subproblemas. Esta situación nos va a permitir resolver esos subproblemas usando múltiples núcleos pero, el tiempo de ejecución de la primera etapa seguramente sea mayor. Por lo tanto, hemos tendio que seleccionar BOV de forma empírica, ya que es realmente difícil averiguar el valor más adecuado simplemente analizando la información de entrada.
+Decidir el BOV es una labor crucial de la investigación actual debido a las siguientes consideraciones. Por un lado, si decidimos parar en un nivel cercano a la raíz del árbol seleccionando un BOV bajo, ciertamente estamos reduciendo el tiempo de ejecución de la etapa de división y sólo se crearán unos pocos subproblemas. Dado que el árbol no habría podido expandirse todavía, entonces no contaremos con suficiente material para ser gestionado en paralelo usando diferentes núcleos. Por otro lado, si detenemos la división de la etapa parcial llegados a un nivel más profundo del árbol y lejos de la raíz, la división seguramente creará una gran cantidad de subproblemas. Esta situación nos va a permitir resolver esos subproblemas usando múltiples núcleos pero, el tiempo de ejecución de la primera etapa seguramente sea mayor. Por lo tanto, hemos tenido que seleccionar BOV de forma empírica, ya que es realmente difícil averiguar el valor más adecuado simplemente analizando la información de entrada.
 
 En nuestro caso, como valor de parada que determina el nivel en el que la rama se considera atómica para ser tratada por la etapa paralela, usamos el cardinal del conjunto de implicaciones del nodo actual, ya que hemos observado que, cuanto mayor es, más larga \textit{suele ser} la rama. Sin embargo, en la etapa actual de la investigación, sólo podemos considerar eso como una tendencia, nunca una certeza.
 
@@ -388,7 +388,7 @@ Puede parecer que conseguir mejores resultados con la estrategia paralela descri
  & Implicaciones & Attrib & Parada \\
  & 150 & 150 & 140 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-Problema \& Método & Parcial$_{t}$(s) & Total$_{t}$(s) & Nodos & Cores & Ratio\\
+Problema \& Método & División$_{t}$(s) & Total$_{t}$(s) & Nodos & Cores & Ratio\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 150150-4-\sst & 581 & 885 & 55.211 & 32 & 62\\
 150150-4-\sck & 48 & 65 & 25.477 & 32 & 391\\
@@ -420,7 +420,7 @@ Entrando ya en los experimentos realizados, el primero resuelve una batería de p
  & Attrib & Implicaciones & Parada & Cores & \\
  & 100 & 100 & 90 & 32 &  \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-Problema \& Método  & Subp & Parcial$_{t}$(s) & Total$_{t}$(s) & Nodos & Ratio\\
+Problema \& Método  & Subp & División$_{t}$(s) & Total$_{t}$(s) & Nodos & Ratio\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 100100-1-\sst & 14 & 0 & 1 & 33 & 33\\
 100100-1-\sck & 0 & 0 & 0 & 15 & 15\\
@@ -477,7 +477,7 @@ Para el segundo experimento, seguimos la misma línea que el anterior y desarroll
  & Attrib & Implicaciones & Parada & Cores & \\
  & 150 & 150 & 140 & 32 &  \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-Problema \& Método  & Subp & Parcial$_{t}$(s) & Total$_{t}$(s) & Nodos & Ratio\\
+Problema \& Método  & Subp & División$_{t}$(s) & Total$_{t}$(s) & Nodos & Ratio\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 150150-1-\sst  & 165 & 6 & 14 & 911 & 65 \\
 150150-1-\sck & 11 & 2 & 3 & 374 & 124\\

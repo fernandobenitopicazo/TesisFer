@@ -513,6 +513,7 @@ Dicho eso, podemos ver los resultados de los experimentos en  la Figura \ref{fig
 \begin{table}[htbp]
 \scriptsize
 	\centering
+\caption{Resultados obtenidos por los métodos de generadores minimales en su implementación secuencial.}
 \begin{tabular}{lrrrrrr}
 %\hline\noalign{\smallskip}
 % & Attrib & Implications \\
@@ -545,7 +546,6 @@ MovieLens10M-MinGenPr & 210 & 19.187 & 2.681 \\
 MovieLens10M-GenMinGen & 198 & 18.926 & 2.681 \\
 \noalign{\smallskip}\hline
 \end{tabular}
-\caption{Resultados obtenidos por los métodos de generadores minimales en su implementación secuencial.}
 \label{tabla:secuencial}
 \end{table}
 
@@ -563,9 +563,21 @@ Los resultados obtenidos son prometedores, pero una vez más recordemos que estam
 
 \section{Computación paralela y generadores minimales}
 \label{seccion:computacionParalelaGeneradoresMinimales}
-Hasta ahora, ya hemos mostrado las mejoras alcanzadas por las estrategias de poda dentro de los métodos de generadores minimales. Sin embargo, una vez que llega el momento de utilizar estos métodos sobre entradas de mayor tamaño, podemos deducir, a la luz de los resultados obtenidos, que los tiempos de ejecución de los métodos secuenciales serían difícilmente admisibles. No obstante, teniendo en cuenta que cada rama del árbol creado por los métodos constituye un problema en sí mismo, podemos pensar en resolverlos simultáneamente utilizando diferentes recursos. Esta visión del problema sobre una ejecución paralela, proporcionada por nuestros métodos basados en la lógica, nos da lugar a desarrollar una nueva versión del método de generadores minimales.
+Hasta ahora, ya hemos mostrado las mejoras alcanzadas por las estrategias de poda dentro de los métodos de generadores minimales. Sin embargo, una vez que llega el momento de utilizar estos métodos sobre entradas de mayor tamaño, podemos deducir, a la luz de los resultados obtenidos, que los tiempos de ejecución de los métodos secuenciales serían difícilmente admisibles. No obstante, teniendo en cuenta que cada rama del árbol creado por los métodos constituye un problema en sí mismo, podemos pensar en resolverlos simultáneamente utilizando diferentes recursos. Esta visión del problema sobre una ejecución paralela, proporcionada por los métodos basados en la lógica, da lugar a desarrollar una nueva versión paralela del método de generadores minimales.
 
-Hemos desarrollado una implementación paralela de los métodos siguiendo el marco introducido por los autores en \cite{Benito-Picazo2016} y que es exactamente el mismo que el definido para el caso del cálculo de las claves minimales \ref{seccion:implementacion}. De forma breve, la implementación paralela se lleva a cabo en dos etapas, siguiendo el paradigma \textit{MapReduce} \cite{Dean2004}. La primera etapa divide el problema de entrada en varios subproblemas. Y la segunda, resuelve cada uno de los subproblemas de forma simultánea en los diferentes núcleos de computación y compone el resultado final combinando los resultados de los subproblemas. Podemos ver un esquema gráfico del proceso en la Figura \ref{figura:arquitecturaMapReduce}.
+Aunque \ref{algoritmo:GenMinGen} ha demostrado tener un mejor rendimiento que \ref{algoritmo:minGenPr} (y ambos a su vez un mejor rendimiento que \ref{algoritmo:minGen}), sólo vamos a desarrollar una versión paralela del método \ref{algoritmo:minGenPr}, que denominaremos \textit{MinGenPar}. Esto se debe al hecho de que no hay necesidad de comunicación entre los subproblemas cuando se usa el método \ref{algoritmo:minGenPr}. Sin embargo, cuando se usa \ref{algoritmo:GenMinGen}, recordemos que la poda aplicada depende de los resultados obtenidos previamente en cada subproblemas, ya que en cada paso, tenemos que comparar con el conjunto actual de generadores minimales generados hasta el momento. Esto rompe la filosofía \textit{MapReduce} de nuestra implementación, donde cada nodo del árbol (es decir, cada subproblema) está destinado a ser resuelto de forma independiente y sin existir comunicación entre los nodos del árbol.
+
+No obstante, incluso teniendo en cuenta que los mejores resultados entre los métodos de generadores minimales son los logrados por \ref{algoritmo:GenMinGen}, al introducir ahora la estrategia paralela, cambian las tornas. En efecto, los resultados de los métodos en su forma secuencial, incluso para \ref{algoritmo:GenMinGen} no pueden compararse con los números que podemos alcanzar cuando usamos computación paralela con \ref{algoritmo:minGenPr}. La computación paralela nos brinda la posibilidad de tratar con problemas de gran tamaño, lo cual es, en la mayoría de los casos, más valioso que posibles mejoras desarrolladas en versiones secuenciales.
+
+Antes de continuar, debemos señalar que los recursos y la arquitectura concreta que se ha utilizado para ejecutar los experimentos paralelos es, una vez más, la que nos aporta el Centro de Supercomputación y Bioinnovación de la Universidad de Málaga\footnote{https://www.scbi.uma.es/}. En particular, para este experimento, hemos utilizado 32 nodos cluster SL230, contando con 16 núcleos y 64GB de memoria RAM y 7 nodos cluster DL980, contando con 80 núcleos y 2TB de memoria RAM. Las comunicaciones se realizan a través de una red Infiniband Net FDR y QDR. En el momento de la ejecución de las pruebas, cada uno de los núcleos está reservado, de forma exclusiva, para nuestro experimento.
+
+\subsection{Algoritmo paralelo: \textit{MinGenPar}}
+\label{seccion:algoritmoParalelo}
+La implementación paralela del método de cálculo de generadores minimales \textit{MinGenPar} se ha desarrollado siguiendo el marco introducido por los autores en \cite{Benito-Picazo2016} y que es exactamente el mismo que el definido para el caso del cálculo de las claves minimales \ref{seccion:implementacion}. De forma breve, la implementación paralela se lleva a cabo en dos etapas, siguiendo el paradigma \textit{MapReduce} \cite{Dean2004}. 
+
+La primera etapa divide el problema de entrada en varios subproblemas equivalentes pero reducidos de la siguiente forma. Se utiliza un solo núcleo para construir el espacio de búsqueda hasta que se alcanza un cierto nivel de profundidad del árbol. El objetivo es dividir el problema original en varios problemas que puedan ser tratados por múltiples núcleos, desempeñando el papel de un procedimiento \textit{Map}. El proceso continúa hasta que el tamaño del nodo actual sea inferior a un tamaño determinado $\beta$ respecto al número de implicaciones.
+
+En la segunda etapa cada uno de estos subproblemas se resuelve en paralelo usando múltiples núcleos hasta que lleguemos a las hojas del árbol de búsqueda. Como último paso, se utiliza un solo núcleo para componer el resultado global, mezclando los diferentes resultados parciales de cada subproblema en uno final (etapa \textit{Reduce}). Este paso es imprescindible para eliminar redundancias y por tanto, obtener los generadores \textit{minimales}. Podemos ver un esquema gráfico del proceso en la Figura \ref{figura:arquitecturaMapReduce} y el pseudocódigo de la implementación \textit{MinGenPar} en \ref{algoritmo:funcionMinGenPar}.
 
 \begin{figure}[htbp]
 	\centering
@@ -574,62 +586,102 @@ Hemos desarrollado una implementación paralela de los métodos siguiendo el marco
 	\label{figura:arquitecturaMapReduce}
 \end{figure}
 
-\vspace{0.3cm}
+\begin{function}[h]
+\caption{MinGenPar($M$,Label,Guide,$\Sigma$,BOV) }
+\label{algoritmo:funcionMinGenPar}
+\small
+\DontPrintSemicolon
+\SetKwFor{If}{If}{then do in parallel}{end}
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\Input{Conjunto de atributos $M$. \\
+Un conjunto auxiliar para construir un generador minimal, Label.\\
+Un conjunto auxiliar para construir un conjunto cerrado, Guide.\\ 
+Un sistema de implicaciones $\Sigma$ en $M$.\\
+BOV: Break of Value for the splitting stage}
+\Output{El mapeo $mg_\Sigma$}
+\Begin{
+\lForEach{$X\subseteq M$}{
+	$mg_\Sigma(X):=\varnothing$
+	}
+(Guide,$\Sigma$):={\tt Cls}(Guide,$\Sigma$)\;
+$M:=M\smallsetminus$Guide\;
+$
+\mathrm{Premises}:={\tt Minimals}\{A\subseteq M\mid  A\to B\in \Sigma\text{ for some }B\subseteq M\}
+$\;
+ClosedSets$:=\{X\subseteq M\mid A\not\subseteq X \text{ for all }A\in \mathrm{Premises}\}$\;
+\lForEach{$X\in \mathrm{ClosedSets}$}{
+	$mg_\Sigma(\mathrm{Guide}\cup X):=\{\mathrm{Label}\cup X\}$
+	}
+%Compute $BOV= \mid \Sigma \mid $\;
+\If{$\mid \Sigma \mid \leq BOV$ }{ 
+\tcp{[MAP]} \ForEach{$A\in \mathrm{Premises}$}{ \tcp{[REDUCE]} 
+	$mg_\Sigma:=mg_\Sigma\sqcup\mathrm{MinGenRd}(M,\mathrm{Label}\cup A,\mathrm{Guide}\cup A,\Sigma)$
+}
+\Return $mg_\Sigma$
+}\Else{
+\tcp{[Splitting stage]}\ForEach{$A_k\in \mathrm{Premises}$}{
+	$mg_\Sigma^k = \mathrm{MinGenRdPar}(M,\mathrm{Label}\cup A_k,\mathrm{Guide}\cup A_k,\Sigma,BOV)$
+}
+\ForAll{$mg_\Sigma^k$}{
+\tcp{[REDUCE]}$mg_\Sigma:=mg_\Sigma\sqcup mg_\Sigma^k$\;
+}
+\Return $mg_\Sigma$
+}%end else
+}
 
-Aunque \ref{algoritmo:GenMinGen} ha demostrado tener un mejor rendimiento que \ref{algoritmo:minGenPr} (y ambos a su vez un mejor rendimiento que \ref{algoritmo:minGen}), sólo vamos a desarrollar una versión paralela del método \ref{algoritmo:minGenPr}. Esto se debe al hecho de que no hay necesidad de comunicación entre los subproblemas cuando se usa el método \ref{algoritmo:minGenPr}. Sin embargo, cuando se usa \ref{algoritmo:GenMinGen}, recordemos que la poda aplicada depende de los resultados obtenidos previamente en cada subproblemas, ya que en cada paso, tenemos que comparar con el conjunto actual de generadores minimales generados hasta el momento. Esto rompe la filosofía \textit{MapReduce} de nuestra implementación, donde cada nodo del árbol (es decir, cada subproblema) está destinado a ser resuelto de forma independiente y sin existir comunicación entre los nodos del árbol.
+\end{function}
 
-No obstante, incluso teniendo en cuenta que los mejores resultados entre los métodos de generadores minimales son los logrados por \ref{algoritmo:GenMinGen}, al introducir ahora la estrategia paralela, cambian las tornas. En efecto, los resultados de los métodos en su forma secuencial, incluso para \ref{algoritmo:GenMinGen} no pueden compararse con los números que podemos alcanzar cuando usamos computación paralela con \ref{algoritmo:minGenPr}. La computación paralela nos brinda la posibilidad de tratar con problemas de gran tamaño, lo cual es, en la mayoría de los casos, más valioso que posibles mejoras desarrolladas en versiones secuenciales.
+Para demostrar la mejora al pasar de la implementación secuencial a la paralela, esta vez vamos a realizar una serie de experimentos donde los archivos de entrada que vamos a usar van a alcanzar valores mucho mayores que para la prueba secuencial, concretamente, contarán con hasta 150 atributos y 150 implicaciones. 
 
-En primer lugar, debemos señalar que los recursos y la arquitectura concreta que se ha utilizado para ejecutar los experimentos paralelos es, una vez más, la que nos aporta el Centro de Supercomputación y Bioinnovación de la Universidad de Málaga\footnote{https://www.scbi.uma.es/}. En particular, para este experimento, hemos utilizado 32 nodos cluster SL230, contando con 16 núcleos y 64Gb de memoria RAM. Las comunicaciones se realizan a través de una red Infiniband Net FDR y en el momento de ejecución, cada uno de los núcleos está reservado, de forma exclusiva, para nuestro experimento.
-
-Centrándonos en los experimentos, esta vez, los archivos de entrada que vamos a usar van a alcanzar valores mucho mayores que para la prueba secuencial, concretamente, contarán con hasta 150 atributos y 150 implicaciones. Incluso con estos números, tres veces más altos que el experimento secuencial, pasar a la versión paralela nos reporta resultados en un tiempo admisible como podemos observar en los valores recogidos en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR}.
+No obstante, podemos comprobar que incluso con estos números, tres veces más altos que el experimento secuencial, la versión paralela nos reporta resultados en un tiempo admisible y que sobrepasan ampliamente a los obtenidos por su homóloga secuencial, como podemos observar en los valores recogidos en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR}.
 
 \begin{table}[htbp]
 \scriptsize
 	\centering
+\caption{Comparación entre las versiones secuencial y paralela del algoritmo MinGenPar aplicado a problemas de gran tamaño.}
+\label{tabla:comparacionMinGenPrSEQPAR}
 \begin{tabular}{lrrrrrr}
-\hline\noalign{\smallskip}
- & Atrib & Implicaciones & BOV & Cores & \\
- & 150 & 150 & 140 & 32 &  \\
+%\hline\noalign{\smallskip}
+% & Attrib & Implications & BOV & Cores & \\
+% & 150 & 150 & 140 & 32 &  \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-Problema y Método  & Subp & Parcial$_{t}$(s) & Total$_{t}$(s) & Nodos & MinGens\\
+Problema \& Método  & Subp & División$_{t}$(s) & Paralelo$_{t}$(s) & Total$_{t}$(s) & Nodos & MinGens\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-1-secuencial & - & - & 43 & 374 & 216\\
-MinGenPr-1-paralelo & 11 & 2 & 3 & 374 & 216\\
+MinGenPar-1-sequential & - & - & - & 43 & 374 & 216\\
+\cellcolor{gray!25}MinGenPar-1-parallel & 11 & 3 & 1 & \cellcolor{gray!25}4 & 374 & 216\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-2-secuencial & - & - & 17.352 & 54.375 & 6.273\\
-MinGenPr-2-paralelo & 347 & 140 & 179 & 54.375 & 6.273\\
+MinGenPar-2-sequential & - & - & - & 17.352 & 54.375 & 6.273\\
+\cellcolor{gray!25}MinGenPar-2-parallel & 347 & 220 & 55 & \cellcolor{gray!25}275 & 54.375 & 6.273\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-3-secuencial & - & - & 31.882 & 68.531 & 6.529\\
-MinGenPr-3-paralelo & 822 & 1.638 & 1.665 & 68.531 & 6.529\\
+MinGenPar-3-sequential & - & - & - & 33.338 & 68.531 & 6.529\\
+\cellcolor{gray!25}MinGenPar-3-parallel & 822 & 2.338 & 251 & \cellcolor{gray!25}2.589 & 68.531 & 6.529\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-4-secuencial & - & - & 4.612 & 25.477 & 2.478\\
-MinGenPr-4-paralelo & 344 & 350 & 364 & 25.477 & 2.478\\
+MinGenPar-4-sequential & - & - & - & 4.612 & 25.477 & 2.478\\
+\cellcolor{gray!25}MinGenPar-4-parallel & 344 & 350 & 97 & \cellcolor{gray!25}447 & 25.477 & 2.478\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-5-secuencial & - & - & 1.585 & 12.522 & 1.159\\
-MinGenPr-5-paralelo & 168 & 235 & 237 & 12.522 & 1.159\\
+MinGenPar-5-sequential & - & - & - & 1.585 & 12.522 & 1.159\\
+\cellcolor{gray!25}MinGenPar-5-parallel & 168 & 432 & 30 & \cellcolor{gray!25}462 & 12.522 & 1.159\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-6-secuencial & - & - & 1.653 & 8.110 & 1.436\\
-MinGenPr-6-paralelo & 79 & 20 & 25 & 8.110 & 1.436\\
+MinGenPar-6-sequential & - & - & - & 1.653 & 8.110 & 1.436\\
+\cellcolor{gray!25}MinGenPar-6-parallel & 79 & 35 & 7 & \cellcolor{gray!25}42 & 8.110 & 1.436\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-7-secuencial & - & - & 107.238 & 262.621 & 9.113\\
-MinGenPr-7-paralelo & 1.754 & 758 & 967 & 262.621 & 9.113\\
+MinGenPar-7-sequential & - & - & - & 107.238 & 262.621 & 9.113\\
+\cellcolor{gray!25}MinGenPar-7-parallel & 1.754 & 958 & 242 & \cellcolor{gray!25}1.200 & 262.621 & 9.113\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-8-secuencial & - & - & 61.381 & 257.267 & 5.538\\
-MinGenPr-8-paralelo & 966 & 253 & 464 & 257.267 & 5.538\\
+MinGenPar-8-sequential & - & - & - & 61.381 & 257.267 & 5.538\\
+\cellcolor{gray!25}MinGenPar-8-parallel & 966 & 253 & 188 & \cellcolor{gray!25}441 & 257.267 & 5.538\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-9-secuencial & - & - & 372 & 1.726 & 683\\
-MinGenPr-9-paralelo & 24 & 4 & 6 & 1.726 & 683\\
+MinGenPar-9-sequential & - & - & - & 372 & 1.726 & 683\\
+\cellcolor{gray!25}MinGenPar-9-parallel & 24 & 7 & 2 & \cellcolor{gray!25}9 & 1.726 & 683\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-MinGenPr-10-secuencial & - & - & 7.484 & 45.962 & 2.969\\
-MinGenPr-10-paralelo & 277 & 131 & 169 & 45.962 & 2.969\\
+MinGenPar-10-sequential & - & - & - & 7.484 & 45.962 & 2.969\\
+\cellcolor{gray!25}MinGenPar-10-parallel & 277 & 186 & 65 & \cellcolor{gray!25}251 & 45.962 & 2.969\\
 \noalign{\smallskip}\hline
 \end{tabular}
-\caption{Comparación de resultados obtenido por las versión secuencial y paralela del método ref{algoritmo:MinGenPr} aplicado a problemas grandes.}
-\label{tabla:comparacionMinGenPrSEQPAR}
 \end{table}
 
-La información mostrada en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR} sigue la misma estructura que la Tabla \label{tabla:secuencial}, pero esta vez, debido a la estrategia paralela, se introducen nuevos parámetros. Por un lado, el encabezado incluye el número de atributos e implicaciones, el valor de parada (BOV) y la cantidad de núcleos utilizados. Por otro lado, el cuerpo de la tabla contiene seis columnas con la información de los valores del método que desglosamos a continuación:
+La información mostrada en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR} sigue la misma estructura que la Tabla \ref{tabla:secuencial}, pero esta vez, debido a la estrategia paralela, se introducen nuevos parámetros. Por un lado, el encabezado incluye el número de atributos e implicaciones, el valor de parada (BOV) y la cantidad de núcleos utilizados. Por otro lado, el cuerpo de la tabla contiene seis columnas con la información de los valores del método que desglosamos a continuación:
 
 \begin{enumerate}
 	\item Nombre del problema y el método utilizado para resolverlo.
@@ -642,7 +694,139 @@ La información mostrada en la Tabla \ref{tabla:comparacionMinGenPrSEQPAR} sigue 
 
 Optamos por mantener el número de nodos y la cantidad de generadores minimales en la tabla solamente con la intención de tener una idea del tamaño del problema, ya que es obvio que ambos implementaciones logran los mismos números.
 
-Como conclusión, gracias a la aplicación de la implementación paralela, se han podido reducir los tiempos de ejecución de horas y días (experimentos `MinGenPr-\{2,3,7,8,10\}-secuencial') a sólo unos pocos minutos. En otras palabras, la computación paralela nos permite tratar con conjuntos de datos de gran tamaño dentro de unos márgenes de tiempo admisibles.
+Como conclusión, gracias a la aplicación de la implementación paralela, se han podido reducir los tiempos de ejecución de horas y días (experimentos `MinGenPr-\{2,3,7,8,10\}-secuencial') a sólo unos pocos minutos. En otras palabras, la computación paralela nos permite tratar con conjuntos de datos de gran tamaño dentro de unos márgenes de tiempo admisibles. No obstante, hay dos aspectos fundamentales que merecen un estudio propio: el cálculo del valor de corte o \textit{BOV} y la estimación del número idóneo de cores a utilizar en los experimentos; a ellos dedicamos los siguientes apartados.
+
+
+\subsection{Cálculo del valor de corte o \textit{BOV}}
+\label{seccion:calculoBOV}
+Para el caso de los generadores minimales nos encontramos con el mismo problema que en el caso de las claves minimales respecto al valor de corte de la etapa de división \label{subseccion:BOV}. En la primera etapa del algoritmo paralelo hay que decidir cuándo detener la expansión de una rama del árbol de búsqueda y generar el subproblema actual correspondiente para que se resuelva en paralelo posteriormente. Para ello, vamos a utilizar el \textit{BOV}, que representa el cardinal del conjunto de implicaciones del nodo actual. El \textit{BOV} se calcula como un porcentaje del tamaño de la entrada y debe ser estimado para equilibrar el trabajo realizado por cada núcleo al actuar en paralelo.
+
+Sin embargo, se nos presenta la misma problemática que en el caso de las claves minimales, es decir, si decidimos detenernos en un nivel cercano a la raíz del árbol seleccionando un \textit{BOV} bajo (es decir, un alto número de implicaciones), ciertamente estamos reduciendo el tiempo de ejecución de la etapa de división y sólo se crearían unos pocos subproblemas. En consecuencia, dado que el árbol no habría sido capaz de expandirse aún, no tendremos suficiente material para aprovechar la computación paralela usando diferentes núcleos. Por otro lado, si detenemos la división en un nivel lejos de la raíz, el proceso de división seguramente creará una gran cantidad de subproblemas que pueden sacar partido del paralelismo, pero el tiempo de ejecución de esta primera etapa seguramente crecerá. Esta tesitura es la que nos lleva a seleccionar un \textit{BOV} empíricamente, ya que es realmente difícil obtener el valor más óptimo con sólo analizar la entrada teóricamente. Sin embargo, después de hacer muchos experimentos, hay varios aspectos que vale la pena mencionar y esta sección se presenta con esa intención.
+
+Para explorar las situaciones que se pueden dar cuando elegimos diferentes valores de \textit{BOV}, hemos repetido nuestros experimentos paralelos usando diversos \textit{BOV}. Tomamos \textit{BOV} tales que la etapa de división alcance una mayor profundidad en el árbol, en concreto, utilizaremos 130 y 100 como valores de \textit{BOV}, es decir, el $\approx86.67\%$ y $\approx66.67\%$ del conjunto original de implicaciones, respectivamente. Esta selección de valores no se hace por casualidad sino con el objetivo de provocar ciertas situaciones que hemos encontrado después de llevar a cabo una gran cantidad de experimentos que analizaremos a continuación. Los resultados relativos a los tiempos de ejecución son muestran en la Tabla \ref{table:differentsBOVs}.
+
+\begin{table}[htbp]
+\scriptsize
+	\centering
+\caption{Experimentos utilizando diferentes valores de \textit{BOV} con la implementación paralela \textit{MinGenPar} sobre problemas de gran tamaño.}
+\label{table:differentsBOVs}
+\begin{tabular}{lrrr>{}rr}
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Problema & Subp & División$_{t}$(s) & Paralelo$_{t}$(s) & Total$_{t}$(s) & BOV\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-1 & 0 & 44 & - & 44 & 66.67\%\\
+ & 0 & 41 & - & 41 & 86.67\%\\
+ & 11 & 3 & 1 & \cellcolor{gray!25}4 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-2 & 0 & 18.533 & - & 18.533 & 66.67\%\\
+& 885 & 8.532 & 58 & 8.590 & 86.67\%\\
+ & 347 & 220 & 55 & \cellcolor{gray!25}275 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-3 & 0 & 33.377 & - & 33.377 & 66.67\%\\
+ & 0 & 33.285 & - & 33.285 & 86.67\%\\
+ & 822 & 2.338 & 251 & \cellcolor{gray!25}2.589 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-4 & 0 & 4.858 & - & 4.858 & 66.67\%\\
+ & 308 & 3.703 & 22 & 3.725 & 86.67\%\\
+ & 344 & 350 & 97 & \cellcolor{gray!25}447 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-5 & 0 & 1.601 & - & 1.601 & 66.67\%\\
+ & 0 & 1.547 & - & 1.547 & 86.67\%\\
+ & 168 & 432 & 30 & \cellcolor{gray!25}462 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-6 & 0 & 772 & - & 772 & 66.67\%\\
+ & 144 & 492 & 11 & 503 & 86.67\%\\
+ & 79 & 35 & 7 & \cellcolor{gray!25}42 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-7 & 0 & 167.451 & - & 167.451 & 66.67\%\\
+ & 5.412 & 96.433 & 295 & 96.728 & 86.67\%\\
+ & 1.754 & 958 & 242 & \cellcolor{gray!25}1.200 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-8 & 0 & 75.060 & - & 75.060 & 66.67\%\\
+ & 5.344 & 41.404 & 375 & 41.779 & 86.67\%\\
+ & 966 & 253 & 188 & \cellcolor{gray!25}441 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-9 & 0 & 82 & - & 82 & 66.67\%\\
+ & 24 & 42 & 2 & 44 & 86.67\%\\
+ & 24 & 7 & 2 & \cellcolor{gray!25}9 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenPar-10 & 0 & 9.438 & - & 9.438 & 66.67\%\\
+ & 697 & 6.569 & 50 & 6.619 & 86.67\%\\
+ & 277 & 186 & 65 & \cellcolor{gray!25}251 & \cellcolor{gray!25}93.33\%\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+A la luz de estos resultados, cabe destacar en primer lugar que, excepto para el problema MinGenPar-1 donde existe una diferencia sutil, todos los problemas se comportan peor con respecto al tiempo de ejecución cuando demoramos el punto de división. Para encontrar una explicación, ponemos nuestra atención en el número de
+subproblemas, donde van a surgir cuatro comportamientos diferentes cuando variamos el \textit{BOV}. Procedemos a enumerar cada uno de ellos con el apoyo de los resultados obtenidos en la Tabla \ref{table:differentsBOVs}.
+
+Sea $BOV_1$, $BOV_2$ dos $BOV$ diferentes para el mismo experimento tal que $BOV_1 > BOV_2$, y sea $Sp_1, Sp_2$ el número de subproblemas generados en cada ejecución, respectivamente. Entonces, pueden acontecer diferentes escenarios donde:
+
+\begin{enumerate}
+	\item $Sp_1 < Sp_2$. Esta puede ser la situación más natural ya que con $BOV_2 < BOV_1$ el algoritmo tiene más margen para expandir el árbol y generar más subproblemas. De esta forma, el paralelismo tomaría ventaja, pero al aumentar el tiempo necesario para dividir, el tiempo de ejecución global empeoraría. Los experimentos Problemas MinGenPar-\{2,6,7,8,10\} reflejan esta situación.
+	\item $Sp_1 > Sp_2$. Puede suceder que incluso profundizando en el árbol obtengamos menos nodos, es decir, menos subproblemas. Esto se debe a que hay ramas que terminan antes de alcanzar los $BOV$ y se resuelven dentro de la etapa de división, por lo que el tiempo de ejecución aumenta. Podemos ver este caso en el problema MinGenPar-4.
+	\item $Sp_1 \neq 0 \land Sp_2 = 0$. Siguiendo con el punto anterior, podemos caer en una situación extrema donde no se generan subproblemas dentro de la etapa de división porque cada rama del árbol termina antes del punto de división \textit{BOV}, por lo tanto el problema original se resuelve por completo dentro de la etapa de división sin alcanzar el escenario paralelo. Esta situación se puede considerar como el peor de los casos, ya que la implementación paralela funciona igual que la secuencial. Esto sucede para cada problema cuando se usa un $BOV \approx66.67\%$ y también en problemas como MinGenRd-\{1,3,5\} incluso con un $BOV \approx86.67\%$.
+	\item $Sp_1 = Sp_2$. Finalmente, aunque utilicemos diferentes $BOV$, podemos obtener el mismo número de subproblemas. Esto refleja una intrincada situación en la que los niveles inferiores del árbol pueden contar con el mismo número de nodos que los superiores. La cuestión clave es que cuando profundicemos en el árbol, podemos generar más nodos a medida que el árbol se expande y así crecerá el número de subproblemas, pero también pueden ser varias las ramas que terminan antes de seguir profundizando, y por lo tanto reduce el número de nodos. Por lo tanto, con estas adiciones y sustracciones, el cálculo global de subproblemas puede terminar en un empate aunque se utilicen diferentes $BOV$ como se muestra en el problema MinGenRd-9. Pero eso no es todo. El Problema MinGenRd-9 muestra, efectivamente, el mismo número de subproblemas para $BOV \approx93.33\%$ y $BOV \approx86.67\%$, sin embargo, el tiempo de ejecución no es el mismo, de hecho, es peor para un $BOV \approx86.67\%$ ya que hemos prolongado la etapa de división. 
+\end{enumerate}
+
+
+\subsection{Estimación del número óptimo de cores}
+\label{seccion:numeroCoresMinGen}
+Hasta ahora, podemos pensar que es sólo una cuestión de recursos el poder tratar con problemas de mayor tamaño y aún así obtener resultados dentro de un tiempo razonable. Sin embargo, no es tan obvio y este apartado está dedicado a analizar este hecho. Con este propósito, los problemas de gran tamaño usados anteriormente en la sección \ref{seccion:algoritmoParalelo} se analizarán nuevamente usando: 16, 32, 48, 64 y 80 núcleos cada vez. Los resultados se muestran en la Tabla \ref{table:speedup}.
+
+\begin{table}[htbp]
+\scriptsize
+	\centering
+\caption{Tiempos de ejecución (en segundos) de los resultados obtenidos incrementando el número de cores para la ejecución en paralelo.}
+\label{table:speedup}
+\begin{tabular}{lrrrrr}
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Problema & \multicolumn{5}{c}{Número de cores}\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+ & 16 & 32 & 48 & 64 & 80\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+MinGenRd-1 & 5 & 4 & \cellcolor{gray!25}3 & \cellcolor{gray!25}3 & \cellcolor{gray!25}3\\
+MinGenRd-2 & 310 & 275 & 199 & \cellcolor{gray!25}190 & 197\\
+MinGenRd-3 & 2.742 & 2.589 & 2.122 & 2.078 & \cellcolor{gray!25}2.075\\
+MinGenRd-4 & 512 & 447 & 444 & \cellcolor{gray!25}440 & 446\\
+MinGenRd-5 & 598 & 462 & \cellcolor{gray!25}416 & 445 & 442\\
+MinGenRd-6 & 50 & 42 & \cellcolor{gray!25}34 & 35 & \cellcolor{gray!25}34\\
+MinGenRd-7 & 1.457 & 1.200 & 1.078 & \cellcolor{gray!25}1.010 & 1.012\\
+MinGenRd-8 & 499 & 441 & 432 & 430 & \cellcolor{gray!25}425\\
+MinGenRd-9 & 9 & 9 & \cellcolor{gray!25}7 & \cellcolor{gray!25}7 & \cellcolor{gray!25}7\\
+MinGenRd-10 & 267 & 251 & 196 & \cellcolor{gray!25}194 & 195\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+Aunque los recursos son mejores ahora, los resultados no acompañan. Se puede ver que mejoramos el rendimiento mediante el uso de más núcleos (por ejemplo, de 16 a 64 núcleos), sin embargo, llega un momento donde no se obtiene mejora; los resultados son bastante similares para 48, 64 y 80 núcleos. Esto se debe al hecho de que hay varias ramas en el árbol (tal vez sólo una) que tarda mucho en terminar y por tanto, no importa cuánto mejoremos los recursos, el tiempo global sigue siendo casi el mismo. El problema es que por el momento, no podemos predecir si una rama resultará en una larga o corta. Esta situación detiene nuestras primeras intenciones de aumentar ciegamente la cantidad de recursos y muestra que, el número de núcleos para este problema se puede establecer en 64 como un valor óptimo, logrando un equilibrio entre los recursos necesarios y los beneficios obtenidos.
+
+
+\subsection{Generadores minimales para un \textit{dataset} real}
+\label{seccion:minGenMushroom}
+Para nalizar adecuadamente esta sección, traemos ahora los resultados obtenidos al aplicar el algoritmo de cálculo de generadores minimales a un conjunto de datos del mundo real. En particular, hemos elegido \textit{Mushroom Data Set}\footnote{https://archive.ics.uci.edu/ml/datasets/mushroom} accesible desde el sitio web de la Universidad de California, Irvine (UCI)\footnote{http://archive.ics.uci.edu/ml/}. Básicamente, este conjunto de datos incluye descripciones de hipotéticas muestras correspondientes a 8.124 especies de setas utilizando 22 atributos diferentes.
+
+En este conjunto de datos, se realiza una adaptación para convertir la información de entrada cuyo formato contempla múltiples valores, en información binaria de manera que pueda ser tratada por el algoritmo \ref{algoritmo:funcionMinGenPar}. Como resultado, obtenemos un \textit{dataset} con 126 atributos y un conjunto de implicaciones para este \textit{dataset} de 1.587. Queremos declarar que con tal número de implicaciones, la versión secuencial del algoritmo no termina. Para llevar a cabo este experimento usamos las conclusiones alcanzadas anteriormente, es decir, utilizaremos 64 núcleos diferentes y un $BOV \approx93.33\%$, es decir $BOV = 1.481$, ya que son ser los mejores valores para proceder.
+
+Los resultados de este experimento se muestran en la tabla \ref{table:mushroom}, donde se aprecia claramente la forma en que nuestro algoritmo cumple con las expectativas cuando se trata de un conjunto de datos de gran tamaño y del mundo real.
+
+\begin{table}[htbp]
+\scriptsize
+	\centering
+\caption{Algoritmo \ref{algoritmo:funcionMinGenPar} aplicado sobre un \textit{dataset} real.}
+\label{table:mushroom}
+\begin{tabular}{lrrrrrr}
+\hline\noalign{\smallskip}
+ & Atrib & Implicaciones & BOV & Cores & \\
+ & 126 & 1.587 & 1.481 & 64 &  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Problema \& Método  & Subp & División$_{t}$(s) & Paralelo$_{t}$(s) & Total$_{t}$(s) & Nodos & MinGens\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+%mushrooms-sequential & - & - & - & \cellcolor{gray!25}1.613 & 81.363 & 17.127\\
+mushrooms-parallel & 224 & 152 & 9 & \cellcolor{gray!25}161 & 81.363 & 17.127\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
 
 
 % =====================================================================
