@@ -1,0 +1,35 @@
+This is BibTeX, Version 0.99cThe top-level auxiliary file: F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\TesisCompendio.aux
+A level-1 auxiliary file: portada.aux
+A level-1 auxiliary file: agradecimientoFrase.aux
+A level-1 auxiliary file: agradecimientos.aux
+A level-1 auxiliary file: aportaciones.aux
+A level-1 auxiliary file: introduccion.aux
+A level-1 auxiliary file: preliminares.aux
+A level-1 auxiliary file: conclusiones.aux
+The style file: acm.bst
+Database file #1: biblioTesis.bib
+I was expecting a `,' or a `}'---line 269 of file biblioTesis.bib
+ : keywords = "
+ :             Recommender systems, Collaborative filtering, MAE/RMSE, Evaluation",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 3713 of file biblioTesis.bib
+ : ARTICLE 
+ :         NUMBER = {245},
+I'm skipping whatever remains of this entry
+Warning--empty title in AdomaviciusBook11
+Warning--empty publisher in Benito-Picazo2013PFC
+Warning--empty publisher in Benito-Picazo2014TFM
+Warning--empty booktitle in BorrasFPMVIORC11
+Warning--can't use both author and editor fields in Friedman2015
+Warning--can't use both author and editor fields in Gunawardana2015
+Warning--can't use both author and editor fields in Mimouni2015
+Warning--can't use both author and editor fields in Mora2004
+Warning--can't use both author and editor fields in Sali2004
+Warning--can't use both author and editor fields in Stumme2002
+Warning--can't use both author and editor fields in Sun2012
+Warning--can't use both author and editor fields in Wille1982
+Warning--can't use both author and editor fields in Wille2005
+Warning--can't use both author and editor fields in Wille2008
+Warning--empty journal in Yevtushenko2006
+Warning--empty journal in Yu2016
+(There were 2 error messages)

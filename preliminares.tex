@@ -344,7 +344,7 @@ En este punto es donde aparece la \slfde \cite{Mora2004}, que constituye un marc
 Las implicaciones se interpretan de forma conjuntiva, es decir, corresponden a las fórmulas $a_1\land \ldots\land a_n \to b_1\land \ldots\land b_m$ donde las proposiciones $a_1, \ldots  a_n,  b_1, \ldots, b_m$ son elementos del conjunto $M$. La interpretación es la siguiente:
 
 \begin{definicion}
-Sea $O$ y $M$ dos conjuntos finitos, que representan objetos y atributos respectivamente, y $I$ una relación en $O\times M$. Una implicación de \slfde, $X\to Y$, donde $X$ y $Y$ son subconjuntos de $M$, es válida en $I$ si y sólo si
+Sea $O$ y $M$ dos conjuntos finitos, que representan objetos y atributos respectivamente, y $I$ una relación en $O\times M$. Una implicación de \slfd, $X\to Y$, donde $X$ y $Y$ son subconjuntos de $M$, es válida en $I$ si y sólo si
 $$\{o\in O\mid (o,x_i)\in I\, \ \forall x_i\in X\}\subseteq \{o\in O\mid (o,y_j)\in I\, \ \forall j_i\in Y\}$$
 \end{definicion}
 
@@ -531,7 +531,7 @@ $\Sigma:=\varnothing$
 \end{function}
 
 
-Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier83}), la principal novedad y ventaja que aporta {\tt Cls} es que, de manera simultánea, también reducimos el número de implicaciones, guardando el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho nos coloca sin lugar a dudas en una posición privilegiada, ya que nos evita el elevado coste de un proceso de minería de datos para extraer el nuevo conjunto de implicaciones para el conjunto de datos reducido después de cada aplicación del método, algo imprescindible cuando se utilizan las implementaciones clásicas. En consecuencia, el proceso supera los costos de minería de datos preservando una complejidad lineal a lo largo del proceso.
+Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier83}), la principal novedad y ventaja que aporta {\tt Cls} es que, de manera simultánea, también reducimos el número de implicaciones, guardando el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho nos coloca sin lugar a dudas en una posición privilegiada, ya que nos evita el elevado coste de minería de datos para extraer el nuevo conjunto de implicaciones para el conjunto de datos reducido después de cada aplicación del método, algo imprescindible con las implementaciones clásicas. En consecuencia, el proceso supera los costos de minería de datos preservando una complejidad lineal a lo largo del proceso.
 
 Finalizamos este apartado mostrando un ejemplo de aplicación del algoritmo del cierre propuesto.
 
@@ -555,7 +555,7 @@ Guide &  & \multicolumn{4}{c}{\Sigma } \\
 $$
 %}%end small
 
-Por tanto, una vez finalizado la ejecución del algoritmo, obtenemos: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Gamma = \{b \to d\}$.
+Una vez finalizado la ejecución del algoritmo, obtenemos: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Gamma = \{b \to d\}$.
 \end{ejemplo}%
 
 % =====================================================================
