@@ -2,14 +2,14 @@
 \chapter{Preliminares}\label{cap:preliminares}
 \pagestyle{headings}
 
-\bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo vamos a introducir las principales ideas, definiciones y propiedades de FCA como marco de investigación principal sobre el que se sustenta el trabajo de investigación desarrollado. Procederemos de forma que consigamos que el texto sea autocontenido en la medida de lo posible. Más concretamente, se introducen los principales conceptos sobre conjuntos de implicaciones y conjuntos cerrados que serán necesarios a lo largo del documento para poder plasmar en detalle las contribuciones realizadas. La referencia principal de este campo de conocimiento viene de la mano de Wille y Ganter en \cite{Ganter1997}.
+\bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo vamos a introducir las principales ideas, definiciones y propiedades de FCA\index{Análisis Formal de Conceptos} como marco de investigación principal sobre el que se sustenta el trabajo de investigación desarrollado. Procederemos de forma que consigamos que el texto sea autocontenido en la medida de lo posible. Más concretamente, se introducen los principales conceptos sobre conjuntos de implicaciones y conjuntos cerrados que serán necesarios a lo largo del documento para poder plasmar en detalle las contribuciones realizadas. La referencia principal de este campo de conocimiento viene de la mano de Wille y Ganter en \cite{Ganter1997}.
 
 \section{Análisis de conceptos formales}
 De forma general, podemos considerar FCA como un método de análisis de datos que facilita la extracción de conocimiento y la posibilidad de poder razonar al respecto. Es un marco conceptual con el que: analizar, estructurar, visualizar y sobre todo, revelar el conocimiento subyacente a los datos utilizando, generalmente, técnicas de minería de datos. Existen varias de estas técnicas para actuar sobre conjuntos de objetos, conjuntos de atributos y las relaciones que se establecen entre ellos \cite{Stumme2002,Sun2012}.
 
 La característica principal de FCA es que, basado en sólidos fundamentos matemáticos, cubre una amplia gama de áreas de aplicación. Su motivación original fue la representación de retículos completos de objetos y sus propiedades por medio de contextos formales, que son tablas de datos que representan relaciones binarias entre objetos y atributos. Por otro lado, FCA puede verse como una alternativa razonable a la Teoría de Retículos en términos epistemológicos \cite{Wille2008}.
 
-El punto de partida de FCA es un \textbf{contexto formal}, lo cual nos conduce necesariamente a las dos siguientes definiciones.
+El punto de partida de FCA es un \textbf{contexto formal}\index{contexto formal}, lo cual nos conduce necesariamente a las dos siguientes definiciones.
 
 \begin{definicion}[Atributo]
 	Un atributo $A$ es un identificador para un elemento en un dominio $D$.
@@ -53,7 +53,7 @@ Hostal Hospederia V Cent & \checkmark & \checkmark &  & \checkmark &  & \checkma
 	Por tanto, vemos como el hotel \textit{Fuerte Estepona Suites} ofrece todos los servicios disponibles en el contexto, mientras que los \textit{Apts Marriot Playa} únicamente ofrecen el servicio de \textit{Internet}.
 \end{ejemplo}
 
-A partir del contexto formal, se definen dos operadores llamados operadores de derivación. 
+A partir del contexto formal, se definen dos operadores llamados operadores de derivación\index{operadores de derivación}. 
 
 \begin{definicion}[Operadores de derivación]
 	Dado un contexto formal $\mathbf{K} := (G,M,I)$, a continuación se definen dos funciones, denominadas operadores de derivación:
@@ -73,19 +73,19 @@ $$
 
 Ambas funciones se denotan con el mismo símbolo porque no hay lugar a confusión. El primero asigna a cada conjunto de objetos, el conjunto de atributos comunes a todos los objetos, y el segundo asigna, a cada conjunto de atributos, el conjunto de objetos que tienen todos estos atributos.
 
-El par de operadores de derivación constituye una conexión anti-monótona de Galois  \cite{Ore1944} con las consecuencias correspondientes, como que ambas composiciones son operadores de cierre, una de ellas en $(2^G,\subseteq)$ y la otra en $(2^M,\subseteq)$.
+El par de operadores de derivación constituye una conexión anti-monótona de Galois \cite{Ore1944} con las consecuencias correspondientes, como que ambas composiciones son operadores de cierre, una de ellas en $(2^G,\subseteq)$ y la otra en $(2^M,\subseteq)$.
 
-\begin{definicion}[Mapeo anti-monótono]
+\begin{definicion}[Mapeo anti-monótono]\index{Mapeo anti-monótono}
 	Sean $G$ y $M$ dos conjuntos no vacíos. Un mapeo de la forma $f : 2^G \to 2^M$ se dice anti-monótono si $A_1 \subseteq A_2$ implica que $f(A_2) \subseteq f(A_1) \ \ \forall A_1, A_2 \subseteq G$.
 \end{definicion}
 
-\begin{definicion}[Conexión de Galois]
+\begin{definicion}[Conexión de Galois]\index{Conexión de Galois}
 	Sean $G$ y $M$ dos conjuntos no vacíos. Un par (f,g) de dos mapeos $f : 2^G \to 2^M$ y $g : 2^G \to 2^M$ es una conexión de Galois entre $G$ y $M$ si, para cada $A \subseteq G$ y $B \subseteq M$ se cumple que:	$A \subseteq g(B)$ si y sólo si $B \subseteq f(A)$.
 \end{definicion}
 
 El operador de cierre $''$ (i.e. aplicar el operador de derivación $'$ dos veces) verifica algunas propiedades interesantes que serán fundamentales para poder desarrollar la teoría formal.
 
-\begin{definicion} [Operador de cierre]
+\begin{definicion}[Operador de cierre]\index{operador de cierre}
 	Dado un conjunto no vacío M, un operador de cierre sobre M es una función $()'' : 2^G \to 2^M$ que satisface las siguientes propiedades:
 	\begin{itemize}
 		\item Idempotente (ítems): $X'''' = X'' \quad \forall X \in 2^M$
@@ -96,7 +96,7 @@ El operador de cierre $''$ (i.e. aplicar el operador de derivación $'$ dos veces
 
 En general no se verifica que $X'' = X$ , no obstante, cuando un conjunto de objetos, $X \subseteq G$ verifica $X'' = X$, se llama conjunto cerrado. De manera análoga a los conjuntos de objetos, podemos hablar de conjuntos de atributos cerrados. El par $(M,'')$ se denomina sistema cierre y un conjunto $A \subseteq M$ se denomina conjunto cerrado para $''$ si es un punto fijo para $''$, es decir, $''(A)=A$. La idempotencia de los operadores de cierre nos lleva al hecho de que, para todo sistema de cierre $(M,'')$ y todo $A \subseteq M$, el conjunto $''(A)$ es cerrado para $''$.
 
-Además, los conjuntos cerrados definen lo que se denominan \textit{conceptos formales}. De forma general, un concepto formal, que constituye un punto clave en FCA, permite describir formalmente un hecho del modelo y caracterizar un conjunto de objetos por medio de los atributos que comparten y viceversa. 
+Además, los conjuntos cerrados\index{conjuntos cerrados} definen lo que se denominan \textit{conceptos formales}\index{concepto formal}. De forma general, un concepto formal, que constituye un punto clave en FCA, permite describir formalmente un hecho del modelo y caracterizar un conjunto de objetos por medio de los atributos que comparten y viceversa. 
 
 De forma más intuitiva, un par $(X,Y)$ es un concepto si se verifica que:
 \begin{itemize}
@@ -119,7 +119,7 @@ El conjunto de todos los conceptos formales de un contexto formal $K$ constituye
 
 Si $(X_1,Y_1)$ y $(X_2,Y_2)$ son conceptos, se define un orden parcial, $\leq$, de forma que $(X_1,Y_1) \leq (X_2,Y_2)$ si $X_1 \subseteq X_2$, o equivalentemente, si $Y_2 \subseteq Y_1$.
 
-Los pares de conceptos en este orden parcial tienen una única máxima cota inferior, que es el concepto generado por $X_1 \cap X_2$. De forma análoga, poseen una única mínima cota superior, el concepto generado por los atributos $Y_1 \cap Y_2$. Por medio de estas operaciones de cálculo del máximo y del mínimo de dos conceptos, se satisfacen los axiomas que definen un retículo. La Figura \ref{figura:ejemploReticulo} muestra un ejemplo básico de contexto formal y retículo de conceptos asociado.
+Los pares de conceptos en este orden parcial tienen una única máxima cota inferior, que es el concepto generado por $X_1 \cap X_2$. De forma análoga, poseen una única mínima cota superior, el concepto generado por los atributos $Y_1 \cap Y_2$. Por medio de estas operaciones de cálculo del máximo y del mínimo de dos conceptos, se satisfacen los axiomas que definen un retículo. La Figura \ref{figura:ejemploReticulo} muestra un ejemplo básico de contexto formal\index{contexto formal} y retículo de conceptos\index{retículo de concepto} asociado.
 
 %\begin{minipage}{0.2\textwidth}
 %	\begin{table*}[tb]
@@ -235,11 +235,11 @@ Chevrolet Malibu & \cellcolor{gray!25}\checkmark & \cellcolor{gray!25}\checkmark
 }
 \end{table*}
 
-Otra alternativa aparece en la representación como grafo bipartito, donde un concepto formal aparece como un subgrafo bipartito completo, es decir, aquel que tiene todas las aristas posibles. Las conexiones que se establecen en el retículo nos indican que el objeto $X$ tiene un atributo $Y$ si y sólo si existe un camino estrictamente creciente o estrictamente decreciente que permite ir de $X$ a $Y$ en el retículo.
+Otra alternativa aparece en la representación como grafo bipartito, donde un concepto formal\index{concepto formal} aparece como un subgrafo bipartito completo, es decir, aquel que tiene todas las aristas posibles. Las conexiones que se establecen en el retículo nos indican que el objeto $X$ tiene un atributo $Y$ si y sólo si existe un camino estrictamente creciente o estrictamente decreciente que permite ir de $X$ a $Y$ en el retículo.
 
-Por otro lado, otro concepto equivalente a las conexiones de Galois y los operadores de cierre en el marco de FCA es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta Tesis doctoral pues serán el mecanismo que nos permita abordar el problema del tratamiento eficiente de la información por medio de la lógica. Reflejan una forma relativamente sencilla de trasladar las relaciones lógicas que encontramos entre los atributos que poseen los objetos de nuestros datasets ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces} con una gestión muy eficiente y automatizada de la información. 
+Por otro lado, otro concepto equivalente a las conexiones de Galois\index{Conexión de Galois} y los operadores de cierre en el marco de FCA es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta Tesis doctoral pues serán el mecanismo que nos permita abordar el problema del tratamiento eficiente de la información por medio de la lógica. Reflejan una forma relativamente sencilla de trasladar las relaciones lógicas que encontramos entre los atributos que poseen los objetos de nuestros datasets ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules} con una gestión muy eficiente y automatizada de la información. 
 
-Un ejemplo básico del uso de implicaciones para reflejar información contenida en los datos podemos verlo utilizando la información de la Tabla \ref{table:hotelsExtract}. En ese ejemplo vemos que en ese dataset hay una relación que siempre se cumple y es la siguiente. Si el hotel provee servicio de aire acondicionado (AC) entonces tiene servicio de Parking. He ahí un claro ejemplo de regla \textit{si-entonces}, o en nuestro caso, de implicación, que se verifica en el contexto.
+Un ejemplo básico del uso de implicaciones para reflejar información contenida en los datos podemos verlo utilizando la información de la Tabla \ref{table:hotelsExtract}. En ese ejemplo vemos que en ese dataset hay una relación que siempre se cumple y es la siguiente. Si el hotel provee servicio de \textit{aire acondicionado (AC)} entonces tiene servicio de \textit{Parking}. He ahí un claro ejemplo de regla \textit{si-entonces}, o en nuestro caso, de implicación, que se verifica en el contexto.
 
 Este concepto de implicación es el que guía este trabajo otorgándonos un potencial para automatizar técnicas de razonamiento, con el beneficio que eso conlleva. Además, las implicaciones son elemento fundamental para el desarrollo de formas más eficientes que el retículo de conceptos de representación del conocimiento. 
 
@@ -247,7 +247,7 @@ Este concepto de implicación es el que guía este trabajo otorgándonos un potenci
 
 Por tanto, a partir de las implicaciones y de las propiedades básicas que verifican, podemos definir un cálculo lógico que nos permita realizar sistemas de deducción completos sobre el contexto actual. En cierto sentido, podríamos decir que hemos pasado de tener un conocimiento basado en ejemplos a disponer de un conocimiento abstracto que introduce sistemas de razonamiento más elaborados, partiendo únicamente de las observaciones concretas que hemos realizado, es decir, hemos aprendido reglas generales a partir de ejemplos.
 
-Para finalizar, podemos considerar a las implicaciones, las conexiones de Galois y los operadores de cierre, como distintas alternativas de tratar la información que se puede extraer de un contexto formal. No obstante, las conexiones de Galois y los retículos de conceptos permiten una representación gráfica, mientras que los operadores de cierre y los sistemas implicacionales nos facilitan el razonamiento por medio de la lógica.
+Para finalizar, podemos considerar a las implicaciones, las conexiones de Galois y los operadores de cierre, como distintas alternativas de tratar la información que se puede extraer de un contexto formal. No obstante, las conexiones de Galois y los retículos de conceptos permiten una representación gráfica, mientras que los operadores de cierre y los sistemas de implicaciones nos facilitan el razonamiento por medio de la lógica.
 
 En definitiva, todas estas nociones y propiedades son los fundamentos sobre los cuales se consolida FCA. Recordamos que la motivación original de FCA es la reestructuración de esta teoría utilizando la teoría matemática de conceptos y jerarquías con la intención de acercarse al raciocinio humano y facilitar las conexiones con las Lógicas Filosóficas del pensamiento \cite{Wille1982,Wille2005}.
 
@@ -255,7 +255,7 @@ En definitiva, todas estas nociones y propiedades son los fundamentos sobre los 
 
 \section{Lógica de Simplificación}
 \label{sec:logicaSimplificacion}
-Introducimos la lógica \slfde \cite{Enciso2002} describiendo sus cuatro pilares fundamentales: su lenguaje, su semántica, su sistema axiomático y su método de razonamiento automático. 
+Introducimos la lógica \slfde\index{\slfde} \cite{Enciso2002} describiendo sus cuatro pilares fundamentales: su lenguaje, su semántica, su sistema axiomático y su método de razonamiento automático. 
 
 \subsection*{Lenguaje}
 \noindent
@@ -276,15 +276,15 @@ Para simplificar la notación:
 	\item Para la diferencia, cambiamos $X-Y$ por $X \smallsetminus Y$.
 \end{itemize}
 
-\begin{definicion}[Implicación]
+\begin{definicion}[Implicación]\index{Implicación}
 	Una implicación sobre un conjuntos de atributos $M$ es una expresión de la forma $X \to Y$, donde $X$ e $Y$ son conjuntos de atributos, i.e. $X \subseteq M$ y $Y \subseteq M$.
 \end{definicion}
 
-\begin{definicion}[Implicación trivial]
+\begin{definicion}[Implicación trivial]\index{Implicación!trivial}
 	Una implicación $X \to Y$ es trivial si $Y \subseteq X$.
 \end{definicion}
 
-\begin{definicion}[Implicación unitaria]
+\begin{definicion}[Implicación unitaria]\index{Implicación!unitaria}
 	Sea $X$ un conjunto de atributos y $a$ un atributo del conjunto, $a \in X$, una implicación se dice unitaria si su conclusión es un conjunto unitario, i.e. $X \to a$.
 \end{definicion}
 
@@ -302,7 +302,7 @@ Para simplificar la notación:
 
 \subsection*{Semántica}
 \noindent
-Tras la definición del lenguaje pasamos ahora a introducir la semántica utilizada, para lo cual utilizamos el concepto de \textit{operador de cierre} que reescribimos a continuación.
+Tras la definición del lenguaje pasamos ahora a introducir la semántica utilizada, para lo cual utilizamos el concepto de \textit{operador de cierre}\index{operador de cierre} que reescribimos a continuación.
 
 Un operador de cierre en $M$ es una función $c\colon 2^M \to 2^M$ que es \emph{extensivo} ($X\subseteq c(X) \ \forall X\subseteq M$), \emph{monótono} ($X_1\subseteq X_2$ implica que $c(X_1)\subseteq c(X_2)\ \forall X_1,X_2\subseteq M$), e \emph{idempotente} ($c(c(X))=c(X) \quad \forall X\subseteq M$). Los puntos fijos para $c$ (i.e. $X\subseteq M$ tales que $c(X)=X$) se denominan \emph{conjuntos cerrados}.
 
@@ -315,9 +315,9 @@ Decimos que $A\to B$ se \emph{deriva semánticamente} de $\Sigma$, denotado $\Sig
 \noindent
 Los conocidos Axiomas de Armstrong es el primer sistema descrito para tratar sistemas de implicaciones utilizando la lógica. Tiene su origen en \cite{Armstrong74} donde se utilizó para estudiar las propiedades de las dependencias funcionales en el modelo relacional de Codd \cite{Codd1970}. Este sistema ha tenido una clara influencia en el diseño de varias lógicas sobre implicaciones, todos ellas construidas alrededor del paradigma de la transitividad. Con el paso de los años, otros trabajos han propuesto sistemas axiomáticos equivalentes \cite{Ibaraki1999,Atzeni1993,Paredaens89}.
 
-Estos axiomas son válidos al generar sólo implicaciones dentro del cierre del conjunto de implicaciones (denotado como $F^+$) cuando se actúa sobre el conjunto $F$. También son completos ya que la aplicación repetitiva de las reglas generarán todas las implicaciones en el conjunto cerrado $F^+$. 
+Estos axiomas son válidos al generar sólo implicaciones dentro del cierre del conjunto de implicaciones\index{conjuntos de implicaciones} (denotado como $F^+$) cuando se actúa sobre el conjunto $F$. También son completos ya que la aplicación repetitiva de las reglas generarán todas las implicaciones en el conjunto cerrado $F^+$. 
 
-Este sistema axiomático está formado por un axioma, denominado \textit{Reflexivo}, y dos reglas de inferencia, \textit{Aumentativa} y \textit{Transitiva} que se definen a continuación
+Este sistema axiomático\index{sistema axiomático} está formado por un axioma, denominado \textit{Reflexivo}, y dos reglas de inferencia, \textit{Aumentativa} y \textit{Transitiva} que se definen a continuación
 
 Sean $A$, $B$, $C$ subconjuntos de atributos de $M$. Entonces, tenemos:
 %\begin{center}
@@ -336,8 +336,8 @@ Si bien es cierto que el sistema de Armstrong es un trabajo que acumula innumera
 
 En este punto es donde aparece la \slfde \cite{Mora2004}, que constituye un marco mucho más adecuado en términos de la automatización del razonamiento utilizando implicaciones. De hecho, \slfde será el núcleo fundamental de los métodos y las aplicaciones que se han llevado a cabo a lo largo de esta tesis doctoral.  
 
-\slfde constituye una lógica válida y completa \cite{Enciso2002} en la que el principal elemento del lenguaje son las implicaciones. Se define formalmente como:
-\begin{definicion}%[Implicación trivial]
+\slfde\index{\slfde} constituye una lógica válida y completa \cite{Enciso2002} en la que el principal elemento del lenguaje son las implicaciones. Se define formalmente como:
+\begin{definicion}
 	Sea $M$ un conjunto finito, la formulación de \slfde son expresiones, denominadas implicaciones, de la forma $ X \to Y$, donde $X$ e $Y$ son subconjuntos de $M$.
 \end{definicion}
 
@@ -357,7 +357,7 @@ Además de su forma natural de expresar el conocimiento como regla, las implicaci
 \end{center}
 
 \noindent
-junto con las siguientes reglas de inferencia, denominadas \emph{fragmentación}, \emph{composición} y \emph{simplificación} respectivamente.
+junto con las siguientes reglas de inferencia\index{reglas de inferencia}, denominadas \emph{fragmentación}\index{reglas de inferencia!fragmentación}, \emph{composición}\index{reglas de inferencia!composición} y \emph{simplificación}\index{reglas de inferencia!simplificación} respectivamente.
 
 %\begin{center}
 %{\scriptsize \tt{[Frag]}}\ {\footnotesize $\displaystyle\frac{A\to B\cup C}{A\to B}$}  \quad
@@ -389,9 +389,9 @@ Se dice que una implicación $A\to B$ se deriva sintácticamente de un sistema de 
 
 La secuencia $\sigma_1,\dots,\sigma_n$ constituye una \emph{demostración} para $\Sigma\vdash A\to B$.
 
-La derivación sintáctica proporciona una gestión automatizada de las implicaciones. En particular, se puede usar para resolver el denominado problema de las implicaciones: dado un conjunto de implicaciones $\Gamma$ y una implicación $A\to B$, queremos responder si $A\to B$ se deduce de $\Gamma$. Este problema se puede abordar utilizando el operador de cierre.
+La derivación sintáctica\index{derivación sintáctica} proporciona una gestión automatizada de las implicaciones. En particular, se puede usar para resolver el denominado problema de las implicaciones: dado un conjunto de implicaciones $\Gamma$ y una implicación $A\to B$, queremos responder si $A\to B$ se deduce de $\Gamma$. Este problema se puede abordar utilizando el operador de cierre.
 
-El sistema axiomático es válido y completo, es decir, se cumple que la derivación sintáctica y semántica coinciden. Esto significa que cada regla que se puede deducir con este sistema puede derivarse semánticamente (el sistema axiomático es válido) y viceversa (el sistema axiomático es completo).
+El sistema axiomático es válido y completo, es decir, se cumple que la derivación sintáctica y semántica\index{derivación semántica} coinciden. Esto significa que cada regla que se puede deducir con este sistema puede derivarse semánticamente (el sistema axiomático es válido) y viceversa (el sistema axiomático es completo).
 
 \begin{theorem}
 Sea $M$ un conjunto finito no vacío de atributos, $\Sigma \subseteq \mathcal L_M$ y $A\to B \in \mathcal L_M$. Entonces, $\Sigma\models A\to B$ si y sólo si $\Sigma\vdash A\to B$.  
@@ -400,7 +400,7 @@ Sea $M$ un conjunto finito no vacío de atributos, $\Sigma \subseteq \mathcal L_M
 La derivación sintáctica nos conduce a un nuevo operador de cierre denominado \textit{cierre sintáctico}.
 
 \begin{definicion}
-	Dado un sistema de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si $A \subseteq X$ implica $B \subseteq X$ para toda $A\to B\in \Sigma$. Debido a que $M$ es cerrado con respecto a $\Sigma$ y cualquier intersección de conjuntos cerrados es cerrada, podemos definir el siguiente operador de cierre:
+	Dado un conjunto de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si $A \subseteq X$ implica $B \subseteq X$ para toda $A\to B\in \Sigma$. Debido a que $M$ es cerrado con respecto a $\Sigma$ y cualquier intersección de conjuntos cerrados es cerrada, podemos definir el siguiente operador de cierre:
 $$
 (\ )^+_\Sigma\colon 2^M\to 2^M\qquad X^+_\Sigma=\bigcap\{Y\subseteq M\mid Y\text{ es cerrado con respecto a }\Sigma\text{ y }X\subseteq Y \}
 $$
@@ -408,7 +408,8 @@ $$
 
 El siguiente teorema es esencial para calcular cierres y a su vez también para introducir un método de razonamiento automático.
  
-\begin{theorem}[Teorema de deducción]\label{empty_set}
+\begin{theorem}[Teorema de deducción]\index{Teorema de deducción}
+\label{empty_set}
 	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
 %\vspace*{-0.2cm}
 	$$\Sigma \vdash A\to B \quad \mbox{sii} \quad B\subseteq A^+_\Sigma\quad \mbox{sii} \quad 
@@ -428,7 +429,7 @@ La principal ventaja de \slfde radica en que las reglas de inferencia pueden con
 \subsection*{Método de Razonamiento Automático}
 \noindent
 El problema de las implicaciones se ha abordado tradicionalmente utilizando un método básico que recibe $A\subseteq M$ como entrada y utiliza de forma exhaustiva la
-relación de subconjuntos recorriendo iterativamente $\Gamma$ y agregando nuevos elementos al cierre. Este método, propuesto en la década de 1970 \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Podemos verlo detallado en el Algoritmo \ref{algoritmo:cierreUllman}.
+relación de subconjuntos recorriendo iterativamente $\Gamma$ y agregando nuevos elementos al cierre. Este método, propuesto en la década de 1970 \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Podemos verlo detallado en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
 \begin{algorithm2e}
 %\footnotesize
 %\SetAlgoLined
@@ -459,7 +460,7 @@ relación de subconjuntos recorriendo iterativamente $\Gamma$ y agregando nuevos 
 
 Más tarde, varios autores han desarrollado otros métodos mediante el uso de diferentes técnicas, resolviendo eficientemente este problema en tiempo lineal. En \cite{Paredaens1989}, los autores muestran que la complejidad del problema de cierre es $\mathtt{O}(|{\mathcal{A}}|\, |{ \varGamma}|)$. En \cite{Mora2012}, presentamos un método de cierre de atributos estrechamente relacionado con el sistema axiomático \slfde. También demostramos que nuestro método tiene un mejor rendimiento que aquellos basados en el cierre clásico.
 
-Por nuestra parte, el método de razonamiento automático en \slfde se basa en el Teorema de Deducción y un conjunto de equivalencias. Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si sus modelos coinciden, es decir, se cumple que para todo operador de cierre en $M$, $c\models \Sigma_1$ sii $c\models \Sigma_2$.
+Por nuestra parte, el método de razonamiento automático en \slfde se basa en el Teorema de Deducción\index{Teorema de deducción} y un conjunto de equivalencias. Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si sus modelos coinciden, es decir, se cumple que para todo operador de cierre en $M$, $c\models \Sigma_1$ sii $c\models \Sigma_2$.
 
 La siguiente proposición proporciona las tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}, que se se aplican y justifican el nombre de la lógica \slfde porque, si las leemos de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones (cf. \cite{Mora2012}).
 
@@ -478,7 +479,7 @@ La siguiente proposición proporciona las tres equivalencias, denominadas también
 %\end{equation*}
 \end{proposicion}
 
-Basándonos en el Teorema de Deducción y las equivalencias anteriores, en \cite{Mora2012}, los autores presentan un novedoso algoritmo para calcular cierres utilizando \slfde, denominado {\tt Cls} que actúa según el siguiente procedimiento.
+Basándonos en el Teorema de Deducción y las equivalencias anteriores, en \cite{Mora2012}, los autores presentan un novedoso algoritmo para calcular cierres utilizando \slfde, denominado {\tt Cls}\index{Cierre \slfd} que actúa según el siguiente procedimiento.
 
 Dado un conjunto $A\subseteq M$ y un conjunto de implicaciones $\Sigma$, {\tt Cls} calcula el par $(A^+_\Sigma,\Gamma)$, siendo $A^+_\Sigma$ el cierre sintáctico de $A$ con respecto a $\Sigma$ y $\Gamma$ el conjunto residual de implicaciones respecto a $\varnothing \to A^+_\Sigma$. Esto permite determinar si una implicación $A \to B$ puede deducirse de $\Sigma$.
 

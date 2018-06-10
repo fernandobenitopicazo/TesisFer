@@ -71,11 +71,11 @@
 \newblock Reducing the search space by closure and simplification paradigms.
 \newblock {\em Journal of Supercomputing 73}, 1 (Jan. 2017), 75--87.
 
-\bibitem{Benito-Picazo2017}
-{\sc Benito-Picazo, F., Enciso, M., Rossi, C., and Guevara, A.}
-\newblock Enhancing the conversational process by using a logical closure
-  operator in phenotypes implications.
-\newblock {\em Mathematical Methods in the Applied Sciences\/} (2017).
+\bibitem{Benito-Picazo2018}
+{\sc Benito-Picazo, F., Cordero, P., Enciso, M., and Mora, A.}
+\newblock Minimal generators, an affordable approach by means of massive
+  computation.
+\newblock {\em The Journal of Supercomputing\/} (Jun 2018).
 
 \bibitem{Bertet2016}
 {\sc Bertet, K., Demko, C., Viaud, J.-F., and Guérin, C.}
@@ -225,6 +225,13 @@
 \newblock In {\em Proceedings of the 19th ACM Conference on Computer Supported
   Cooperative Work and Social Computing Companion\/} (New York, NY, USA, 2016),
   CSCW '16 Companion, ACM, pp.~253--256.
+
+\bibitem{Benito-Picazo2017}
+{\sc Fernando, B.-P., Manuel, E., Carlos, R., and Antonio, G.}
+\newblock Enhancing the conversational process by using a logical closure
+  operator in phenotypes implications.
+\newblock {\em Mathematical Methods in the Applied Sciences 41}, 3 (2017),
+  1089--1100.
 
 \bibitem{Friedman2015}
 {\sc Friedman, A., Knijnenburg, B.~P., Vanhecke, K., Martens, L., and
