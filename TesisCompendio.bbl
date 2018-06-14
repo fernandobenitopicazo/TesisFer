@@ -71,11 +71,25 @@
 \newblock Reducing the search space by closure and simplification paradigms.
 \newblock {\em Journal of Supercomputing 73}, 1 (Jan. 2017), 75--87.
 
+\bibitem{Benito-Picazo2018}
+{\sc Benito-Picazo, F., Cordero, P., Enciso, M., and Mora, A.}
+\newblock Minimal generators, an affordable approach by means of massive
+  computation.
+\newblock {\em The Journal of Supercomputing\/} (Jun 2018).
+
 \bibitem{Benito-Picazo2017}
 {\sc Benito-Picazo, F., Enciso, M., Rossi, C., and Guevara, A.}
 \newblock Enhancing the conversational process by using a logical closure
   operator in phenotypes implications.
-\newblock {\em Mathematical Methods in the Applied Sciences\/} (2017).
+\newblock {\em Mathematical Methods in the Applied Sciences 41}, 3 (2017),
+  1089--1100.
+
+\bibitem{Benito-PicazoCMMSE2016}
+{\sc Benito-Picazo, F., Rossi, C., Enciso, M., and Guevara, A.}
+\newblock Conversational recommendation to avoid the cold-start problem.
+\newblock In {\em Proceedings of the Sixteenth International Conference on
+  Computational and Mathematical Methods in Science and Engineering\/} (Cádiz,
+  Spain, 2016), pp.~184--190.
 
 \bibitem{Bertet2016}
 {\sc Bertet, K., Demko, C., Viaud, J.-F., and Guérin, C.}
@@ -340,6 +354,12 @@
 \newblock In {\em Query Processing for Advanced Database Systems, Dagstuhl}.
   Morgan Kaufmann, 1991, pp.~63--98.
 
+\bibitem{KIM2018}
+{\sc Kim, K.}
+\newblock An improved semi-supervised dimensionality reduction using feature
+  weighting: Application to sentiment analysis.
+\newblock {\em Expert Systems with Applications 109\/} (2018), 49 -- 65.
+
 \bibitem{Krajca2008}
 {\sc Krajca, P., Outrata, J., and Vychodil, V.}
 \newblock Parallel recursive algorithm for fca.
@@ -421,6 +441,13 @@
 \newblock {\em Advanced Database Indexing}, vol.~17 of {\em Advances in
   Database Systems}.
 \newblock Kluwer, 1999.
+
+\bibitem{McEneaney2008}
+{\sc McEneaney, W.~M., Deshpande, A., and Gaubert, S.}
+\newblock Curse-of-complexity attenuation in the curse-of-dimensionality-free
+  method for hjb pdes.
+\newblock In {\em 2008 American Control Conference\/} (June 2008),
+  pp.~4684--4690.
 
 \bibitem{McSherry01}
 {\sc McSherry, D.}
@@ -574,6 +601,15 @@
 \newblock {\em The Egyptian Journal of Remote Sensing and Space Science\/}
   (2017).
 
+\bibitem{Salimi2018}
+{\sc Salimi, A., Ziaii, M., Amiri, A., Zadeh, M.~H., Karimpouli, S., and
+  Moradkhani, M.}
+\newblock Using a feature subset selection method and support vector machine to
+  address curse of dimensionality and redundancy in hyperion hyperspectral data
+  classification.
+\newblock {\em The Egyptian Journal of Remote Sensing and Space Science 21}, 1
+  (2018), 27 -- 36.
+
 \bibitem{BenSassi2017}
 {\sc Sassi, I.~B., Mellouli, S., and Yahia, S.~B.}
 \newblock Context-aware recommender systems in mobile environment: On the road
@@ -677,6 +713,13 @@
 \newblock In {\em International Conference on Formal Concept Analysis
   (ICFCA)\/} (2008), vol.~4933 of {\em Lecture Notes in Computer Science},
   Springer, pp.~182--198.
+
+\bibitem{Viegas2018}
+{\sc Viegas, F., Rocha, L., Gonçalves, M., Mourão, F., Sá, G., Salles, T.,
+  Andrade, G., and Sandin, I.}
+\newblock A genetic programming approach for feature selection in highly
+  dimensional skewed data.
+\newblock {\em Neurocomputing 273\/} (2018), 554 -- 569.
 
 \bibitem{Wastl98a}
 {\sc Wastl, R.}
