@@ -18,6 +18,8 @@
 \indexentry{Tableaux|hyperpage}{9}
 \indexentry{\slfde|hyperpage}{10}
 \indexentry{SST|hyperpage}{10}
+\indexentry{supercomputaci\'on|hyperpage}{11}
+\indexentry{paralelismo|hyperpage}{11}
 \indexentry{paralelismo|hyperpage}{11}
 \indexentry{SST|hyperpage}{11}
 \indexentry{sistema axiom\'atico|hyperpage}{12}
@@ -25,14 +27,17 @@
 \indexentry{CK|hyperpage}{12}
 \indexentry{operador de cierre|hyperpage}{12}
 \indexentry{MapReduce|hyperpage}{13}
+\indexentry{supercomputaci\'on|hyperpage}{13}
 \indexentry{ret\IeC {\'\i }culo de conceptos!conjuntos cerrados|hyperpage}{14}
 \indexentry{bases|hyperpage}{14}
+\indexentry{dataset|hyperpage}{15}
 \indexentry{\slfde|hyperpage}{15}
 \indexentry{reglas de inferencia|hyperpage}{15}
 \indexentry{mapeo $mg_\Sigma$|hyperpage}{15}
 \indexentry{MinGen|hyperpage}{16}
 \indexentry{MinGenPr|hyperpage}{16}
 \indexentry{GenMinGen|hyperpage}{16}
+\indexentry{supercomputaci\'on|hyperpage}{17}
 \indexentry{MinGen|hyperpage}{17}
 \indexentry{MinGenPr|hyperpage}{17}
 \indexentry{GenMinGen|hyperpage}{17}
@@ -69,12 +74,14 @@
 \indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{22}
 \indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{22}
 \indexentry{\slfde|hyperpage}{24}
+\indexentry{supercomputaci\'on|hyperpage}{27}
 \indexentry{contexto formal|hyperpage}{34}
 \indexentry{operadores de derivaci\'on|hyperpage}{35}
 \indexentry{conjuntos cerrados|hyperpage}{37}
 \indexentry{concepto formal|hyperpage}{37}
 \indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{39}
-\indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{39}
+\indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{39}
+\indexentry{dataset|hyperpage}{40}
 \indexentry{if-then rules|hyperpage}{40}
 \indexentry{Implicaci\'on|hyperpage}{42}
 \indexentry{Implicaci\'on!trivial|hyperpage}{42}
@@ -82,9 +89,12 @@
 \indexentry{Bases de Datos Relacionales|hyperpage}{43}
 \indexentry{Esquemas|hyperpage}{44}
 \indexentry{Tuplas|hyperpage}{44}
-\indexentry{Dependencia Funcional|hyperpage}{45}
-\indexentry{Clave|hyperpage}{47}
+\indexentry{dependencias funcionales|hyperpage}{45}
+\indexentry{clave|hyperpage}{47}
+\indexentry{clave!claves minimales|hyperpage}{47}
 \indexentry{Tableaux|hyperpage}{47}
+\indexentry{paralelismo|hyperpage}{47}
+\indexentry{supercomputaci\'on|hyperpage}{47}
 \indexentry{Axiomas de Armstrong|hyperpage}{47}
 \indexentry{conjuntos de implicaciones|hyperpage}{48}
 \indexentry{sistema axiom\'atico|hyperpage}{48}

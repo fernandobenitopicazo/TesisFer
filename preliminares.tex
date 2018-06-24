@@ -208,7 +208,7 @@ La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de concepto
 		\begin{center}
 			\includegraphics[height=.6\textheight,width=1\textwidth]{ejemploReticuloAerolineas.png}
 		\end{center}
-		\caption{Retículo de conceptos\index{retículo de concepto} asociado al contexto formal \ref{ejemploContextoFormal}}
+		\caption{Retículo de conceptos\index{retículo de conceptos} asociado al contexto formal \ref{ejemploContextoFormal}}
 		\label{figura:ejemploReticuloAerolineas}
 \end{figure}
 
@@ -226,7 +226,7 @@ De esta forma, cuanto más se avance en el retículo de conceptos, más destinos of
 
 \subsection{Sistema de implicaciones}
 \label{subsec:sistemaImplicaciones}
-Un concepto equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Reflejan una forma relativamente sencilla de trasladar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos de los datasets ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules} con una gestión muy eficiente y automatizada de la información.
+Un concepto equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Reflejan una forma relativamente sencilla de trasladar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos de los datasets\index{dataset} ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules} con una gestión muy eficiente y automatizada de la información.
 
 %Básicamente, una implicación puedeEste concepto de implicación es el que guía este trabajo otorgando un gran potencial para automatizar técnicas de razonamiento, con el beneficio que eso conlleva. Además, las implicaciones son elemento fundamental para el desarrollo de formas más eficientes de representación del conocimiento que el retículo de conceptos.
 
@@ -351,7 +351,7 @@ En el modelo relacional, una base de datos consiste en una o más relaciones \cit
 \label{subsec:dependenciasFuncionales}
 Existen muchas restricciones que el modelo relacional permite establecer en las relaciones de los esquemas de la base de datos y mediante su análisis se puede examinar cuidadosamente el diseño de un esquema relacional. Concretamente, esta parte de la tesis está enfocada en las restricciones denominadas dependencias funcionales.
 
-\begin{definicion}[Dependencia Funcional]\index{Dependencia Funcional}
+\begin{definicion}[Dependencia Funcional]\index{dependencias funcionales}
 	Sea M un conjunto de atributos. Una dependencia funcional (FD) sobre M es una expresión de la forma $X \rightarrow Y$, donde $X,\ Y$ son conjuntos de atributos. Una FD
 se satisface en una tabla R si para cada dos tuplas de R, si verifican X, entonces verifican Y.
 \end{definicion}
@@ -384,11 +384,11 @@ Como consecuencia de lo anterior, el concepto de FD es de gran importancia en la
 
 Una clave en bases de datos relacionales está constituida por un subconjunto de los atributos de una tabla tal que los valores de esos atributos identifican unívocamente a cada tupla de la tabla. Se puede definir por medio de FD de la siguiente forma:
 
-\begin{definicion}[Clave]\index{Clave}
+\begin{definicion}[Clave]\index{clave}
 	Dada una tabla $R$ sobre el conjunto de atributos $M$, se dice que $K$ es una clave de $R$ si la FD $K \rightarrow M$ se verifica en $R$.
 \end{definicion}
 
-\begin{definicion}[Clave Minimal]
+\begin{definicion}[Clave Minimal]\index{clave!claves minimales}
 	Dada una tabla $R$, el conjunto de atributos $K \subset M$ se dice que es una clave minimal si $K$ es clave y para todo atributo $k \in K$ el subconjunto $K - \{k\}$ no es clave de $R$.
 \end{definicion}
 
@@ -396,7 +396,7 @@ Una clave en bases de datos relacionales está constituida por un subconjunto de 
 	El conjunto de atributos $K \subseteq M$ se dice que es una superclave de $R$ si $K^+\ =\ M$.
 \end{definicion}
 
-Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de Tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo en las implementaciones y recursos de supercomputación como se puede comprobar en trabajos publicaciones que avalan este trabajo de investigación \cite{Benito-Picazo2014,Benito-Picazo2016}.   
+Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de Tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en trabajos publicaciones que avalan este trabajo de investigación \cite{Benito-Picazo2014,Benito-Picazo2016}.   
 
 
 \section{Lógica de Simplificación}
