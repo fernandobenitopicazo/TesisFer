@@ -4,22 +4,35 @@
 \select@language {spanish}
 \contentsline {chapter}{\numberline {1}Introducci\'on}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Claves Minimales}{6}{section.1.1}
-\contentsline {section}{\numberline {1.2}Generadores Minimales}{13}{section.1.2}
-\contentsline {section}{\numberline {1.3}Sistemas de Recomendaci\'on Conversacionales}{17}{section.1.3}
+\contentsline {section}{\numberline {1.2}Generadores Minimales}{14}{section.1.2}
+\contentsline {section}{\numberline {1.3}Sistemas de Recomendaci\'on Conversacionales}{18}{section.1.3}
 \select@language {spanish}
 \contentsline {chapter}{\numberline {2}Preliminares}{31}{chapter.2}
-\contentsline {section}{\numberline {2.1}An\'alisis de conceptos formales}{33}{section.2.1}
-\contentsline {section}{\numberline {2.2}L\'ogica de Simplificaci\'on}{40}{section.2.2}
-\contentsline {chapter}{\numberline {3}Claves Minimales}{51}{chapter.3}
-\contentsline {chapter}{\numberline {4}Generadores Minimales}{69}{chapter.4}
-\contentsline {chapter}{\numberline {5}Sistemas de Recomendaci\'on Conversacionales}{91}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajos Futuros}{107}{chapter.6}
-\contentsline {chapter}{\'Indice alfab\'etico}{117}{section*.32}
-\contentsline {chapter}{{\'Indice de figuras}}{119}{chapter*.33}
-\contentsline {chapter}{{\'Indice de tablas}}{121}{chapter*.34}
-\contentsline {chapter}{Anexo}{123}{section*.35}
-\contentsline {chapter}{\numberline {A}Closed sets enumeration: a logical approach}{125}{appendix.A}
-\contentsline {chapter}{\numberline {B}Conversational recommendation to avoid the cold-start problem}{133}{appendix.B}
-\contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{142}{appendix.C}
-\contentsline {chapter}{\numberline {D}Increasing the Efficiency of Minimal Key Enumeration Methods by Means of Parallelism}{155}{appendix.D}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{163}{appendix.D}
+\contentsline {section}{\numberline {2.1}An\'alisis Formal de Conceptos}{33}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Contextos formales}{34}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Operadores de derivaci\'on}{35}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Conceptos Formales}{37}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Ret\IeC {\'\i }culo de conceptos}{38}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Sistema de implicaciones}{40}{subsection.2.1.5}
+\contentsline {section}{\numberline {2.2}Bases de Datos Relacionales}{43}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Dependencias Funcionales}{45}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}L\'ogica de Simplificaci\'on}{47}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Axiomas de Armstrong}{47}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}L\'ogica $SL_{FD}$}{49}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}M\'etodo de Razonamiento Autom\'atico}{52}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Problema de las implicaciones}{52}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Cierre cl\'asico}{53}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Cierre $SL_{FD}$}{54}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Claves Minimales}{59}{chapter.3}
+\contentsline {chapter}{\numberline {4}Generadores Minimales}{77}{chapter.4}
+\contentsline {chapter}{\numberline {5}Sistemas de Recomendaci\'on Conversacionales}{99}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajos Futuros}{115}{chapter.6}
+\contentsline {chapter}{\'Indice alfab\'etico}{125}{section*.33}
+\contentsline {chapter}{{\'Indice de figuras}}{127}{chapter*.34}
+\contentsline {chapter}{{\'Indice de tablas}}{129}{chapter*.35}
+\contentsline {chapter}{Anexo}{131}{section*.36}
+\contentsline {chapter}{\numberline {A}Closed sets enumeration: a logical approach}{133}{appendix.A}
+\contentsline {chapter}{\numberline {B}Conversational recommendation to avoid the cold-start problem}{141}{appendix.B}
+\contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{150}{appendix.C}
+\contentsline {chapter}{\numberline {D}Increasing the Efficiency of Minimal Key Enumeration Methods by Means of Parallelism}{163}{appendix.D}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{171}{appendix.D}
