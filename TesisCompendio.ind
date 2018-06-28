@@ -2,19 +2,19 @@
 
   \item \slfde, \hyperpage{8}, \hyperpage{10}, \hyperpage{12}, 
 		\hyperpage{15}, \hyperpage{19}, \hyperpage{24}, 
-		\hyperpage{49}
+		\hyperpage{50}, \hyperpage{52}
 
   \indexspace
 
   \item An\'alisis Formal de Conceptos, \hyperpage{3}
-  \item atributo, \hyperpage{6}
-  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{47}
+  \item atributo, \hyperpage{6}, \hyperpage{44}
+  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{48}
 
   \indexspace
 
   \item bases, \hyperpage{14}
   \item bases de datos, \hyperpage{3}
-  \item Bases de Datos Relacionales, \hyperpage{43}
+  \item Bases de Datos Relacionales, \hyperpage{44}
 
   \indexspace
 
@@ -26,19 +26,22 @@
   \item concepto formal, \hyperpage{37}
   \item conjuntos cerrados, \hyperpage{18}, \hyperpage{37}
   \item conjuntos de implicaciones, \hyperpage{3}, \hyperpage{18}, 
-		\hyperpage{22}, \hyperpage{48}
-  \item contexto formal, \hyperpage{34}
+		\hyperpage{22}, \hyperpage{49}
+  \item contexto formal, \hyperpage{34, 35}, \hyperpage{37, 38}, 
+		\hyperpage{42, 43}, \hyperpage{46, 47}
+  \item Cuerpo, \hyperpage{45}
 
   \indexspace
 
-  \item dataset, \hyperpage{4}, \hyperpage{15}, \hyperpage{40}
+  \item dataset, \hyperpage{4}, \hyperpage{15}
   \item dependencias funcionales, \hyperpage{4}, \hyperpage{45}
   \item derivaci\'on sem\'antica, \hyperpage{51}
   \item derivaci\'on sint\'actica, \hyperpage{51}
+  \item dominio, \hyperpage{44}
 
   \indexspace
 
-  \item Esquemas, \hyperpage{44}
+  \item Esquema, \hyperpage{44}
 
   \indexspace
 
@@ -51,8 +54,8 @@
 
   \indexspace
 
-  \item if-then rules, \hyperpage{4}, \hyperpage{40}
-  \item Implicaci\'on, \hyperpage{42}
+  \item if-then rules, \hyperpage{4}, \hyperpage{41}
+  \item Implicaci\'on, \hyperpage{41}
     \subitem trivial, \hyperpage{42}
     \subitem unitaria, \hyperpage{42}
   \item implicaciones, \hyperpage{4}
@@ -69,15 +72,17 @@
   \item MinGen, \hyperpage{16, 17}
   \item MinGenPar, \hyperpage{17}
   \item MinGenPr, \hyperpage{16, 17}
+  \item Modelo, \hyperpage{42}
 
   \indexspace
 
-  \item operador de cierre, \hyperpage{12}, \hyperpage{49}
+  \item operador de cierre, \hyperpage{12}, \hyperpage{36}, 
+		\hyperpage{42}
   \item operadores de derivaci\'on, \hyperpage{35}
 
   \indexspace
 
-  \item paralelismo, \hyperpage{11}, \hyperpage{47}
+  \item paralelismo, \hyperpage{11}, \hyperpage{48}
   \item problemas SR, \hyperpage{21}
     \subitem arranque en fr\IeC {\'\i }o, \hyperpage{21}
     \subitem ataques maliciosos, \hyperpage{21}
@@ -95,13 +100,13 @@
     \subitem composici\'on, \hyperpage{50}
     \subitem fragmentaci\'on, \hyperpage{50}
     \subitem simplificaci\'on, \hyperpage{50}
-  \item ret\IeC {\'\i }culo de concepto, \hyperpage{39}
+  \item ret\IeC {\'\i }culo de concepto, \hyperpage{38}
   \item ret\IeC {\'\i }culo de conceptos, \hyperpage{3}, \hyperpage{39}
     \subitem conjuntos cerrados, \hyperpage{14}
 
   \indexspace
 
-  \item sistema axiom\'atico, \hyperpage{12}, \hyperpage{48}
+  \item sistema axiom\'atico, \hyperpage{12}, \hyperpage{49}
   \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{18}
     \subitem basados en conocimiento, \hyperpage{20}, \hyperpage{22}
     \subitem basados en contenido, \hyperpage{19, 20}, \hyperpage{22}
@@ -112,12 +117,12 @@
   \item SST, \hyperpage{10, 11}
   \item supercomputaci\'on, \hyperpage{5}, \hyperpage{11}, 
 		\hyperpage{13}, \hyperpage{17}, \hyperpage{27}, 
-		\hyperpage{47}
+		\hyperpage{48}
 
   \indexspace
 
-  \item Tableaux, \hyperpage{9}, \hyperpage{47}
+  \item Tableaux, \hyperpage{9}, \hyperpage{48}
   \item Teorema de deducci\'on, \hyperpage{52}, \hyperpage{54}
-  \item Tuplas, \hyperpage{44}
+  \item tupla, \hyperpage{44}, \hyperpage{46}
 
 \end{theindex}

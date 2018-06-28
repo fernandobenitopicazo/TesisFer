@@ -4,15 +4,15 @@
 
 \bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello, se ha dividido en cuatro secciones principales. 
 
-La primera presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de implicaciones. La tercera parte se dedica a presentar formalmente la lógica utilizada. La cuarta y última, presenta el método de razonamiento automático y los algoritmos del cierre utilizados.
+La primera presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de dependencias funcionales. La tercera parte se dedica a presentar formalmente la lógica de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dicha lógica.
 
 
 
 \section{Análisis Formal de Conceptos}
 \label{sec:analisisFormalConceptos}
-De forma general, se puede considerar FCA como un marco para el análisis de información que facilita la extracción de conocimiento y la posibilidad de poder razonar sobre él. La referencia principal de este campo de conocimiento viene de la mano de Wille y Ganter en \cite{Ganter1997}. Según el propio Wille en \cite{Wille2005}: \textit{``El objetivo y significado del análisis formal de conceptos como teoría matemática consiste en apoyar la comunicación racional de las personas, mediante el desarrollo de estructuras de conceptos matemáticamente apropiadas que puedan activarse lógicamente''}. Debido a su teoría formal elemental pero robusta, FCA puede utilizarse para expresar otros métodos, y por lo tanto tiene la capacidad de unificar la metodología de análisis de datos.
+De forma general, se puede considerar FCA como un marco para el análisis de información que facilita la extracción de conocimiento y la posibilidad de poder razonar sobre él. La referencia principal de este campo de conocimiento viene de la mano de Wille y Ganter en \cite{Ganter1997}. Según el propio Wille en \cite{Wille2005}: \textit{``El objetivo y significado del análisis formal de conceptos como teoría matemática consiste en apoyar la comunicación racional de las personas, mediante el desarrollo de estructuras de conceptos matemáticamente apropiadas que puedan activarse lógicamente''}.
 
-Como principales fortalezas de FCA cabe mencionar: su sólida base matemática y filosófica, una representación gráfica e intuitiva del conocimiento, más de 2.000 publicaciones científicas y aplicaciones en cientos de proyectos \cite{Wille2005} en diversos campos de conocimiento, como se ha mencionado en el Capítulo \ref{cap:introduccion}. 
+Como principales fortalezas de FCA cabe mencionar: su sólida base matemática y filosófica, una representación gráfica e intuitiva del conocimiento, avalada en más de 2.000 publicaciones científicas y aplicaciones en cientos de proyectos \cite{Wille2005} en diversos campos de conocimiento, como se ha mencionado en el Capítulo \ref{cap:introduccion}. 
 
 
 \subsection{Contextos formales}
@@ -23,7 +23,7 @@ El punto de partida de FCA es un \textit{contexto formal}\index{contexto formal}
 	Un contexto formal es una tripleta $K = (G,M,I)$ que consiste en dos conjuntos no vacíos, $G$ y $M$, y una relación binaria $I$ entre ellos. Los elementos de $G$ se llaman objetos del contexto, y los elementos de $M$ se llaman atributos del contexto. Para $g \in G$ y $m \in M$, escribimos $<g,m> \in I$ o $gIm$ si el objeto $g$ posee el atributo $m$.
 \end{definicion}
 
-La forma más sencilla de representar un contexto formal es mediante una tabla donde los objetos se sitúan en sus filas y los atributos en las columnas, de forma que un valor en cada celda indica si un objeto $g \in G$ posee un atributo $m \in M$. Hay que tener en cuenta que la definición de contexto formal es muy general. No hay restricciones sobre la naturaleza de los objetos y atributos. Se pueden considerar objetos físicos, personas, números, procesos, estructuras, etc. En realidad, cualquier cosa que sea un \textit{conjunto} en el sentido matemático se puede tomar como el conjunto de objetos o de atributos de algún contexto formal. También es posible intercambiar el papel de los objetos y atributos, es decir, si se tiene que $K = (G,M,I)$ es un contexto formal, igualmente lo será su dual, $K = (M,G,I^-1)$ con $mIg \Longleftrightarrow gIm$. Además, ni siquiera es necesario que $G$ y $M$ sean disjuntos, de hecho, pueden incluso no ser diferentes.
+La forma más sencilla de representar un contexto formal es mediante una tabla donde los objetos se sitúan en sus filas y los atributos en las columnas, de forma que un valor en cada celda indica si un objeto $g \in G$ posee un atributo $m \in M$. Hay que tener en cuenta que la definición de contexto formal es deliberadamente muy general. No hay restricciones sobre la naturaleza de los objetos y atributos. Se pueden considerar objetos físicos, personas, números, procesos, estructuras, etc. En realidad, cualquier cosa que sea un \textit{conjunto} en el sentido matemático se puede tomar como el conjunto de objetos o de atributos de algún contexto formal. También es posible intercambiar el papel de los objetos y atributos, es decir, si se tiene que $K = (G,M,I)$ es un contexto formal, igualmente lo será su dual, $K = (M,G,I')$ con $mIg \Longleftrightarrow gIm$. Además, ni siquiera es necesario que $G$ y $M$ sean disjuntos, de hecho, pueden incluso no ser diferentes. Se utilizarán letras mayúsculas: A, B, C, etc., para denotar subconjuntos de $M$ y $G$.
 
 %\begin{ejemplo}
 %	Se considera un ejemplo de contexto formal en el cual los objetos son hoteles, los atributos son diferentes servicios que ofrece el establecimiento y cada celda de la tabla indica si un objeto cumple un atributo. Por tanto, se tiene el contexto formal $\mathbf{K} = (G,M,I)$ en el cual:
@@ -57,11 +57,11 @@ La forma más sencilla de representar un contexto formal es mediante una tabla do
 %	%Por tanto, se puede apreciar como el hotel \textit{Fuerte Estepona Suites} ofrece todos los servicios disponibles en el contexto, mientras que los \textit{Apts Marriot Playa} únicamente ofrecen el servicio de \textit{Internet}.
 %\end{ejemplo}
 
-Para ilustrar un ejemplo de contexto formal y como apoyo a los posteriores conceptos que se presentan en esta sección, se va a utilizar el siguiente ejemplo tomado de \cite{Ganter2002}. En él, los autores muestran un información sobre los destinos aéreos que oferta un grupo de aerolíneas comerciales.
+Para ilustrar un ejemplo de contexto formal\index{contexto formal} y como apoyo al contenido que se presenta en esta sección, se va a utilizar el siguiente ejemplo tomado de \cite{Ganter2002}. En él, los autores muestran un información sobre los destinos aéreos que oferta un grupo de aerolíneas comerciales.
 
 \begin{ejemplo}
 \label{ejemploContextoFormal}
-	Se considera un ejemplo de contexto formal en cual el conjunto de objetos comprende todas las líneas aéreas del grupo Star Alliance y el conjunto de atributos muestra sus destinos.
+	Sea $K$ un contexto formal donde el conjunto de objetos $G$ comprende todas las líneas aéreas del grupo Star Alliance y el conjunto de atributos $M$ muestra sus destinos.
 	
 	La relación binaria $I$ viene reflejada en la Tabla \ref{tabla:ejemploContextoFormal} y muestra los destinos a los que viaja cada miembro de Star Alliance. Por tanto, se tiene el contexto formal $K = (G,M,I)$ en el cual:
 
@@ -100,7 +100,7 @@ VARIG & \checkmark & \checkmark &  & \checkmark &  & \checkmark & \checkmark &  
 
 \subsection{Operadores de derivación}
 \label{subsec:operadoresDerivacion}
-Dada una selección $A \subseteq G$ de objetos de un contexto formal $K = (G,M,I)$, se desea averiguar qué atributos de $M$ son comunes a todos estos objetos. Esto define un operador que produce para cada conjunto de objetos $A \subseteq G$, el conjunto $A$ de sus atributos comunes. Estos operadores se denominan operadores de derivación\index{operadores de derivación} para $K$.
+Dada una selección $A \subseteq G$ de objetos de un contexto formal\index{contexto formal} $K = (G,M,I)$, se desea caracterizar qué atributos de $M$ son comunes a todos estos objetos. Esto define un operador que produce para cada conjunto de objetos $A \subseteq G$, el conjunto $A$ de sus atributos comunes, y dualmente, a partir de un conjunto de atributos, caracterizar el conjunto de atributos que tienen en común a dichos atributos. Estos operadores se denominan operadores de derivación\index{operadores de derivación} para $K$.
  
 \begin{definicion}[Operadores de derivación]
 	Dado un contexto formal $K = (G,M,I)$, se definen los operadores de derivación:
@@ -118,42 +118,56 @@ B' = \{g \in G \mid g\I m  \quad \forall m \in B\}
 $$
 \end{definicion}
 
-Ambas funciones se denotan con el mismo símbolo porque no hay lugar a confusión. El primero asigna a cada conjunto de objetos, el conjunto de atributos comunes a todos los objetos, y el segundo asigna, a cada conjunto de atributos, el conjunto de objetos que tienen todos estos atributos.
+Ambas funciones se denotan con el mismo símbolo porque no hay lugar a confusión.
 
-Si $A$ es un conjunto de objetos, entonces $A'$ es un conjunto de atributos, al cual podemos aplicar el segundo operador de derivación para obtener $A''$, un conjunto de objetos. De forma dual, comenzando con un conjunto $B$ de atributos, podemos formar el conjunto $B''$, que nuevamente es un conjunto de atributos. De esto se obtiene que:
+Si $A$ es un conjunto de objetos, entonces $A'$ es un conjunto de atributos, al cual podemos aplicar el segundo operador de derivación para obtener el conjunto de objetos $A''$. De forma dual, comenzando con un conjunto $B$ de atributos, podemos formar el conjunto de atributos $B''$.
 
-\begin{proposicion}
-	Sean los subconjuntos $A, A_1, A_2 \subseteq G$, se tiene que:
-	\begin{enumerate}
-		\item $A_1 \subseteq A_2 \Rightarrow A^{'}_2 \subseteq A^{'}_1$
-		\item $A \subseteq A''$
-		\item $A = A''''$
-	\end{enumerate}
-\end{proposicion}
+De la definición anterior se obtiene que:
 
-Un conjunto $A \subseteq M$ se denomina \textit{conjunto cerrado} para el operador $''$ si es un punto fijo para $''$, es decir, $''(A)=A$. Los conjuntos cerrados\index{conjuntos cerrados} permiten definir lo que se denominan \textit{conceptos formales}\index{concepto formal}, los cuales son súmamente importantes en FCA y a los que se dedica el siguiente apartado. 
+%\begin{proposicion}
+%	Sean los subconjuntos $A, A_1, A_2 \subseteq G$, se tiene que:
+%	\begin{enumerate}
+%		\item $A_1 \subseteq A_2 \Rightarrow A^{'}_2 \subseteq A^{'}_1$
+%		\item $A \subseteq A''$
+%		\item $A = A''''$
+%	\end{enumerate}
+%\end{proposicion}
+
+El operador de cierre $''$ (i.e. aplicar el operador de derivación $'$ y su dual) verifica algunas propiedades interesantes que serán fundamentales para poder desarrollar la teoría formal.
+
+\begin{definicion}[Operador de cierre]\index{operador de cierre}
+	Sea $K\ =\ (G,M,I)$ un contexto formal, entonces el operador $()'' : 2^G \to 2^G$ es un operador de cierre, es decir, satisface las siguientes propiedades:
+	\begin{itemize}
+		\item Idempotente: $X'''' = X'' \quad \forall X \in 2^M$
+		\item Monótona: $X \subseteq Y$ $\rightarrow$ $X'' \subseteq Y'' \quad \forall X,Y \in 2^M$ 
+		\item Extensiva: $X \subseteq X'' \quad \forall X \in 2^M$
+	\end{itemize}
+	
+Por dualidad, el resultado es igualmente válido para $()'' : 2^M \to 2^M$.
+\end{definicion}
+
+Un conjunto $A \subseteq M$ se denomina \textit{conjunto cerrado} para el operador $''$ si es un punto fijo para $''$, es decir, $A''=A$. Los conjuntos cerrados\index{conjuntos cerrados} permiten definir lo que se denominan \textit{conceptos formales}\index{concepto formal}, los cuales son una noción esencial en FCA y a los que se dedica el siguiente apartado. 
 
 
 \subsection{Conceptos Formales}
 \label{subsec:conceptosFormales}
 De forma general, un concepto formal permite describir formalmente un hecho del contexto y caracterizar un conjunto de objetos por medio de los atributos que comparten y viceversa. 
 
-Operacionalmente, un par $(X,Y)$ es un concepto si se verifica que:
+Así, un par $(X,Y)$ con $X\subseteq G$ y $Y\subseteq M$ es un concepto formal cuando se verifica que:
 \begin{itemize}
-	\item Cada objeto en $X$ tiene todos los atributos de $Y$.
-	\item Para cada objeto en $G$ que no está en $X$, existe un atributo en $Y$ que el objeto no tiene.
-	\item Para cada atributo en $M$ que no está en $Y$, hay un objeto en $X$ que no tiene ese atributo.
+	\item Cada objeto en $X$ tiene todos los atributos de $Y$, y dualmente, cada atributo de $Y$ está presente en cada objeto de $X$.
+	\item Para cada objeto en $G$ que no está en $X$, existe un atributo en $Y$ que el objeto no tiene. Dualmente, para cada atributo en $M$ que no está en $Y$, hay un objeto en $X$ que no tiene ese atributo.
 \end{itemize}
 
-La definición formal:
+Se introduce ahora la noción formalmente:
 
 \begin{definicion}[Concepto formal]
-	Sea $K = (G,M,I)$ un contexto formal y $A \subseteq G$, $B \subseteq M$. El par (A, B) se denomina concepto formal si $A'=B$ y $B'=A$. El conjunto de objetos $A$ se denomina extensión del concepto (A, B) mientras que el conjunto de atributos $B$ será la intensión del concepto.
+	Sea $K = (G,M,I)$ un contexto formal\index{contexto formal} y $A \subseteq G$, $B \subseteq M$. El par (A, B) se denomina concepto formal si $A'=B$ y $B'=A$. El conjunto de objetos $A$ se denomina extensión del concepto (A, B) mientras que el conjunto de atributos $B$ será la intensión del concepto.
 \end{definicion}
 
 La descripción de un concepto a través de su extensión e intención es redundante, ya que cada una de las dos partes determina la otra debido a que $B\ =\ A'$ y $A\ =\ B'$, sin embargo, pueden existir ocasiones en las cuales esta descripción redundante puede ser conveniente \cite{Ganter2002}.
 
-Una alternativa gráfica de definir los conceptos formales es la siguiente. Desde la representación del contexto formal, un concepto formal se puede reconocer por medio de una submatriz de tal manera que todas las celdas de la submatriz son verdaderas (no es necesario que la submatriz esté formada por celdas contiguas). De esta forma, en la Tabla \ref{tabla:extractoEjemploContextoFormal}, se ve como es posible extraer un concepto formal como el par (\textit{\{Air New Zealand, All Nippon Airways\},\{Europa, Asia, Estados Unidos\}}) a partir del contexto formal. 
+Una alternativa gráfica de identificar los conceptos formales es la siguiente. Desde la representación del contexto formal, un concepto formal se puede reconocer por medio de una submatriz de tal manera que se verifican todas las relaciones contenidas en la submatriz (no es necesario que la submatriz esté formada por celdas contiguas). De esta forma, en la Tabla \ref{tabla:extractoEjemploContextoFormal}, se ve como es posible identificar el concepto formal construido con el par (\textit{\{Air New Zealand, All Nippon Airways\},\{Europa, Asia, Estados Unidos\}}) a partir del contexto formal. 
 
 %\begin{table*}[tb]
 %\caption{Conceptos formales a partir de la representación del contexto formal.}
@@ -196,11 +210,11 @@ $\left [ \ldots \right ]$  &  &  &  &  &  &  &  &  & \\
 
 \subsection{Retículo de conceptos}
 \label{subsec:reticuloConceptos}
-Un contexto formal puede tener muchos conceptos formales. El conjunto de todos los conceptos formales de un contexto formal $K$ constituye el denominado \textit{retículo de conceptos} con la relación de inclusión que se muestra a continuación.
+Un contexto formal\index{contexto formal} puede tener muchos conceptos formales. El conjunto de todos los conceptos formales de un contexto formal $K$ tiene estructura de \textit{retículo} con la relación de orden que se muestra a continuación.
 
 Si $(X_1,Y_1)$ y $(X_2,Y_2)$ son conceptos, se define un orden parcial, $\leq$, de forma que $(X_1,Y_1) \leq (X_2,Y_2)$ si y sólo si $X_1 \subseteq X_2$, o equivalentemente, si $Y_2 \subseteq Y_1$.
 
-Los pares de conceptos en este orden parcial tienen una única máxima cota inferior, que es el concepto generado por $X_1 \cap X_2$. De forma análoga, poseen una única mínima cota superior, el concepto generado por los atributos $Y_1 \cap Y_2$. Por medio de estas operaciones de cálculo del máximo y del mínimo de dos conceptos, se satisfacen las propiedades que definen un retículo. 
+%Los pares de conceptos en este orden parcial tienen una única máxima cota inferior, que es el concepto generado por $X_1 \cap X_2$. De forma análoga, poseen una única mínima cota superior, el concepto generado por los atributos $Y_1 \cap Y_2$. Por medio de estas operaciones de cálculo del máximo y del mínimo de dos conceptos, se satisfacen las propiedades que definen un retículo. 
 
 La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de conceptos\index{retículo de concepto} asociado al contexto formal mostrado anteriormente \ref{ejemploContextoFormal}.
 
@@ -212,25 +226,23 @@ La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de concepto
 		\label{figura:ejemploReticuloAerolineas}
 \end{figure}
 
-En un diagrama de líneas como el de la Figura \ref{figura:ejemploReticuloAerolineas}, cada nodo representa un concepto formal. Un concepto $c_1$ es un subconcepto de un concepto $c_2$ si y solo si hay un camino de  descendente desde el nodo que representa $c_2$ al nodo que representa $c_1$. El nombre de un objeto $g$ se asocia al nodo que representa el concepto más pequeño que contiene $g$ en su extensión; dualmente, el nombre de un atributo $m$ va asociado al nodo que representa el concepto más grande con $m$ en su intensión. 
+En un diagrama como el de la Figura \ref{figura:ejemploReticuloAerolineas}, cada nodo representa un concepto formal. Un concepto $c_1$ es un subconcepto de un concepto $c_2$ si y solo si hay un camino de  descendente desde el nodo que representa $c_2$ al nodo que representa $c_1$. El nombre de un objeto $g$ se asocia al nodo que representa el concepto más pequeño que contiene $g$ en su extensión; dualmente, el nombre de un atributo $m$ va asociado al nodo que representa el concepto más grande con $m$ en su intensión. 
 
 Se pueden comprobar fácilmente las relaciones que existen en el contexto ya que un objeto $g$ tiene un atributo $m$ si y solo si el concepto asociado a $g$ es un \textit{subconcepto} del asociado a $m$. La extensión de un concepto consiste en todos aquellos objetos cuyas etiquetas están asociadas a subconceptos, y, dualmente, la intensión consiste en todos los atributos asociados a \textit{superconceptos}. 
 
-Por ejemplo, el concepto etiquetado como `Medio Oriente' tiene como extensión el conjunto \{\textit{Singapore Airlines, The Austrian Airlines Group, Lufthansa, Air Canada}\}, y como intensión \{\textit{Middle East, Canadá, Estados Unidos, Europa, Asia}\}.
+Dicho lo anterior y teniendo en cuenta la sobrecarga que conllevaría representar cada concepto del retículo en la Figura \ref{figura:ejemploReticuloAerolineas}, se puede mencionar aquí como ejemplo, el concepto etiquetado como `Oriente Medio' \textit{(Middle East)}, el cual tiene como extensión el conjunto \{\textit{Singapore Airlines, The Austrian Airlines Group, Lufthansa, Air Canada}\}, y como intensión \{\textit{Middle East, Canadá, Estados Unidos, Europa, Asia}\}.
 
 En la parte superior del retículo, encontramos los destinos que ofrecen la mayoría de las aerolíneas: Europa, Asia Pacífico y los Estados Unidos. Por ejemplo, exceptuando British Midland y Ansett Australia, todas las aerolíneas ofrecen vuelos a Estados Unidos. Esas dos líneas aéreas se encuentran en la parte superior del diagrama, ya que tienen la menor oferta de vuelos, operan sólo en Europa y Asia, respectivamente. 
 
-De esta forma, cuanto más se avance en el retículo de conceptos, más destinos ofrecerán las aerolíneas. Así, la mayor oferta de destinos se encuentra en las aerolíneas de la parte inferior del retículo: Lufthansa y Air Canada. De forma análoga, cuanto más se descienda en el retículo, serán menos los destinos ofertados, e.g. África, Medio Oriente y el Caribe.
+De esta forma, cuanto más se descienda en el retículo de conceptos, más destinos ofrecerán las aerolíneas. Así, la mayor oferta de destinos se encuentra en las aerolíneas de la parte inferior del retículo: Lufthansa y Air Canada. De forma análoga, cuanto más se descienda en el retículo, serán menos los destinos ofertados, e.g. África, Oriente Medio y el Caribe.
 
 
 
 \subsection{Sistema de implicaciones}
 \label{subsec:sistemaImplicaciones}
-Un concepto equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Reflejan una forma relativamente sencilla de trasladar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos de los datasets\index{dataset} ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules} con una gestión muy eficiente y automatizada de la información.
+Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Reflejan una forma relativamente sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules} con una gestión automatizada de la información.
 
-%Básicamente, una implicación puedeEste concepto de implicación es el que guía este trabajo otorgando un gran potencial para automatizar técnicas de razonamiento, con el beneficio que eso conlleva. Además, las implicaciones son elemento fundamental para el desarrollo de formas más eficientes de representación del conocimiento que el retículo de conceptos.
-
-Para introducir el trabajo realizado utilizando la lógica sobre los conjuntos de implicaciones, se va a proceder describiendo los componentes habituales de una lógica: su lenguaje, sintaxis, semántica y método de razonamiento. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA, bases de datos y sistemas de recomendación). En consecuencia, en este punto se presentan los elementos de la lógica que serán comunes a todos ellos, en concreto, el lenguaje y la sintaxis. El resto, i.e. la semántica y el método de razonamiento, se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
+Para introducir el trabajo realizado utilizando la lógica sobre los conjuntos de implicaciones, se va a proceder describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA, bases de datos y sistemas de recomendación). En consecuencia, en este punto se presentan los elementos de la lógica que serán comunes a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
 
 \subsection*{Lenguaje}
 \noindent
@@ -241,34 +253,51 @@ $$
 $$
 \end{definicion}
 
-Las fórmulas $A \to B$ se denominan \emph{implicaciones} y los conjuntos $A$ y $B$ reciben el nombre de \emph{premisa} y \emph{conclusión} de la implicación respectivamente. Los conjuntos $\sum \subseteq \mathcal L_M$ se denominan \emph{sistemas de implicaciones} sobre $M$.
+Las fórmulas $A \to B$ se denominan \emph{implicaciones} y los conjuntos $A$ y $B$ reciben el nombre de \emph{premisa} y \emph{conclusión} de la implicación\index{Implicación} respectivamente. Los conjuntos $\sum \subseteq \mathcal L_M$ se denominan \emph{sistemas de implicaciones} sobre $M$.
 
-\subsection*{Sintaxis}
-\noindent
-Para simplificar la notación:
+Se utilizará la siguiente notación:
 \begin{itemize}
 	\item Se utilizarán letras minúsculas para denotar los elementos en $M$, mientras que las mayúsculas denotan sus subconjuntos.
 	\item Se omiten las llaves en premisas y conclusiones, es decir, $abcde$ denota el conjunto $\{a,b,c,d,e\}$.
-	\item Se escriben sus elementos por yuxtaposición, es decir, para $X \cup Y$ se escribirá $XY$.
-	\item Para la diferencia, se cambia $X-Y$ por $X \smallsetminus Y$.
+	\item Se escriben los elementos de $2^M$ por yuxtaposición, es decir, para $X \cup Y$ se escribirá $XY$.
+	\item Para la diferencia, se utiliza $X-Y$ por $X \smallsetminus Y$.
 \end{itemize}
 
-\begin{definicion}[Implicación]\index{Implicación}
-	Una implicación sobre un conjunto de atributos $M$ es una expresión de la forma $X \to Y$, donde $X$ e $Y$ son conjuntos de atributos, i.e. $X \subseteq M$ y $Y \subseteq M$.
-\end{definicion}
-
-Se dice que una implicación $X \to Y$ se cumple en un contexto formal $K$ si y sólo si cada objeto $A \in G$ que tiene todos los atributos de $X$ también tiene todos los atributos de $Y$.
+%\begin{definicion}[Implicación]\index{Implicación}
+%	Una implicación sobre un conjunto de atributos $M$ es una expresión de la forma $X \to Y$, donde $X$ e $Y$ son conjuntos de atributos, i.e. $X \subseteq M$ y $Y \subseteq M$.
+%\end{definicion}
 
 \begin{definicion}[Implicación trivial]\index{Implicación!trivial}
 	Una implicación $X \to Y$ es trivial si $Y \subseteq X$.
 \end{definicion}
 
 \begin{definicion}[Implicación unitaria]\index{Implicación!unitaria}
-	Sea $X$ un conjunto de atributos y $a$ un atributo del conjunto, $a \in X$, una implicación se dice unitaria si su conclusión es un conjunto unitario, i.e. $X \to a$.
+	Una implicación se dice unitaria si su conclusión es un conjunto unitario, i.e. $X \to a$.
 \end{definicion}
 
+
+\subsection*{Semántica}
+\noindent
+Tras la definición del lenguaje se pasa ahora a introducir la semántica utilizada, para lo cual se va a utilizar el concepto de \textit{operador de cierre}\index{operador de cierre} definido anteriormente.
+
+%Un operador de cierre $c$ en $M$ recibe el nombre de \emph{modelo} para una implicación $A\to B\in\mathcal L_M$ si $B\subseteq  c(A)$; se denota $c\models A\to B$. Además, dado un sistema de implicaciones $\Sigma\subseteq \mathcal L_M$ y un operador de cierre $c$ en $M$, $c\models \Sigma$ denota que $c\models A\to B$ para todo $A\to B\in \Sigma$.
+
+%Se dice que una implicación $X \to Y$ se cumple en un contexto formal $K$ si y sólo si cada objeto $A \in G$ que tiene todos los atributos de $X$ también tiene todos los atributos de $Y$.
+
+%En definitiva, $\Sigma \models A\to B$ si cada modelo de $\Sigma$ es un modelo para $A\to B$, y $\Sigma_1 \equiv \Sigma_2$ si sus modelos representan el mismo conocimiento.
+
+\begin{definicion}[Modelo]\index{Modelo}
+	Sea $K=(G,M,I)$ un contexto formal\index{contexto formal} y sea $A\to B \in \mathcal L_M$. El contexto K es un modelo para $A\to B$ si $B \subseteq A''$. Se denota por $K\models A\to B$.
+\end{definicion}
+
+La noción de modelo puede extenderse a los sistemas de implicaciones de la siguiente manera. Dado $\Sigma\subseteq \mathcal L_M$, la expresión $K\models \Sigma$ indica que $\Sigma \models A\to B$ para toda $A \to B \in \Sigma$.
+
 \begin{ejemplo}
-	Sea $M = \{a,b,c,d\}$ un conjunto de atributos. Se cumple que $\{a\to b, a\to c\} \equiv \{a\to bc\}$ porque para cada contexto formal $K = (G,M,I)$, se verifica que $\{b,c\}' = \{b\}' \cup \{c\}'$. Por tanto, $\{a\}' \subseteq \{b\}'$ y $\{a\}' \subseteq \{c\}'$ si y sólo si $\{a\}' \subseteq \{b,c\}'$. Este ejemplo permite asegurar que cualquier sistema de implicaciones es equivalente a un sistema de implicaciones unitarias.
+	De la información mostrada en el contexto formal \ref{tabla:ejemploContextoFormal} se puede identificar que: $K \models Caribe \to Latinoamerica$. Y también que: $K \not\models Caribe \to Mexico$.
+\end{ejemplo} 
+
+\begin{ejemplo}
+	Sea $M = \{a,b,c,d\}$ un conjunto de atributos. Se cumple que $\{a\to b, a\to c\} \equiv \{a\to bc\}$ porque para cada contexto formal $K = (G,M,I)$, se verifica que $\{b,c\}' = \{b\}' \cup \{c\}'$. Por tanto, $\{a\}' \subseteq \{b\}'$ y $\{a\}' \subseteq \{c\}'$ si y sólo si $\{a\}' \subseteq \{b,c\}'$.
 \end{ejemplo}
 
 \begin{proposicion}
@@ -280,181 +309,225 @@ Se dice que una implicación $X \to Y$ se cumple en un contexto formal $K$ si y s
 
 Un ejemplo básico de implicaciones puede verse utilizando nuevamente la información de la Tabla \ref{tabla:ejemploContextoFormal}. En ese ejemplo puede apreciarse una relación que siempre se cumple y es la siguiente. Si la aerolínea provee servicio de vuelo a \textit{Latinoamérica} entonces también ofrece como destino \textit{Estados Unidos}. He ahí un claro ejemplo de regla \textit{si-entonces} o implicación (en este caso, unitaria), que se verifica en el contexto.
 
-Por completitud, el conjunto de todas las implicaciones que se verifican en ese contexto es: 
+Las implicaciones se interpretan de forma conjuntiva, es decir, corresponden a las fórmulas $a_1\land \ldots\land a_n \to b_1\land \ldots\land b_m$ donde las proposiciones $a_1, \ldots  a_n,  b_1, \ldots, b_m$ son elementos del conjunto $M$.
 
-\noindent
-$\Sigma\ =\ \{$ 
+%Por completitud, el conjunto de todas las implicaciones que se verifican en ese contexto es: 
+%
+%\noindent
+%$\Sigma\ =\ \{$ 
+%
+%$Europa,\ Estados\  Unidos \rightarrow Asia$;
+%
+% $Asia,\  Estados\  Unidos \rightarrow Europa$; 
+% 
+% $Latinoamerica \rightarrow Estados\  Unidos$; 
+% 
+% $Canada \rightarrow Estados\  Unidos$; 
+% 
+% $Europa,\  Asia \rightarrow Estados\  Unidos$;  
+% 
+% $Africa \rightarrow Europa,\  Asia,\  Estados\  Unidos$; 
+% 
+% $Mexico \rightarrow Latinoamerica,\  Estados\  Unidos$; 
+% 
+% $Caribe \rightarrow Latinoamerica,\  Estados\  Unidos$; 
+% 
+% $Latinoamerica,\  Canada,\  Estados\  Unidos \rightarrow Mexico$; 
+% 
+% $Europa,\  Canada,\  Asia,\  Africa,\  Estados\  Unidos \rightarrow Oriente\  Medio$; 
+% 
+% $Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos$;
+% 
+% $Latinoamerica,\  Mexico,\  Caribe,\  Estados\  Unidos \rightarrow Canada$
+% 
+%\noindent
+% $\}$.
 
-$Europa,\ Estados\  Unidos \rightarrow Asia$;
+Al comenzar el capítulo se habló de la equivalencia entre el retículo de conceptos y las implicaciones; tras haber introducido formalmente el lenguaje y la semántica de las implicaciones, ahora ya se pueden mencionar ejemplos de esta equivalencia utilizando la información del retículo \ref{figura:ejemploReticuloAerolineas}. Así, es posible identificar ejemplos de implicaciones tales como:
 
- $Asia,\  Estados\  Unidos \rightarrow Europa$; 
- 
- $Latinoamerica \rightarrow Estados\  Unidos$; 
- 
- $Canada \rightarrow Estados\  Unidos$; 
- 
- $Europa,\  Asia \rightarrow Estados\  Unidos$;  
- 
- $Africa \rightarrow Europa,\  Asia,\  Estados\  Unidos$; 
- 
- $Mexico \rightarrow Latinoamerica,\  Estados\  Unidos$; 
- 
- $Caribe \rightarrow Latinoamerica,\  Estados\  Unidos$; 
- 
- $Latinoamerica,\  Canada,\  Estados\  Unidos \rightarrow Mexico$; 
- 
- $Europa,\  Canada,\  Asia,\  Africa,\  Estados\  Unidos \rightarrow Oriente\  Medio$; 
- 
- $Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos$;
- 
- $Latinoamerica,\  Mexico,\  Caribe,\  Estados\  Unidos \rightarrow Canada$
- 
-\noindent
- $\}$.
+$\{Canada \rightarrow Estados\  Unidos,$
 
-Se puede considerar a las implicaciones y el retículo de conceptos como distintas alternativas de tratar la información que se puede extraer de un contexto formal. No obstante, los retículos de conceptos permiten una representación gráfica, mientras que la característica fundamental, desde el punto de vista de esta tesis doctoral, es que los sistemas de implicaciones facilitan el razonamiento por medio de la lógica.
+$Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos\}$;
 
+Se puede considerar a las implicaciones y el retículo de conceptos como distintas alternativas de tratar la información que se puede extraer de un contexto formal\index{contexto formal}. No obstante, los retículos de conceptos permiten una representación gráfica, mientras que la característica fundamental, desde el punto de vista de esta tesis doctoral, es que los sistemas de implicaciones proporcionan una manipulación simbólica usando la lógica de implicaciones, y por tanto, permiten el razonamiento automático.
+
+Como se ha mencionado anteriormente, se entra ahora en la segunda sección de este capítulo en la cual se van a utilizar las implicaciones en el entorno de las bases de datos relacionales, donde recibirán el nombre de Dependencias Funcionales.
 
 
 
 \section{Bases de Datos Relacionales}\index{Bases de Datos Relacionales}
 \label{sec:basesDatosRelacionales}
-El modelo de base de datos relacional aparece en el exitoso artículo de Edgar Frank Codd en 1970 \cite{Codd1970}. Codd propuso que los sistemas de bases de datos deberían presentarse al usuario con una vista de datos organizada en forma de tablas bidimensionales (filas y columnas) que denominó \textit{relaciones}.
+El modelo de base de datos relacional aparece en el exitoso artículo de Edgar Frank Codd en 1970 \cite{Codd1970}. Codd propuso que los sistemas de bases de datos deberían presentarse al usuario con una vista de datos organizada en forma de tablas bidimensionales (filas y columnas) que denominó \textit{relaciones}. La Tabla \ref{tabla:ejemploPeliculas} es un ejemplo de relación en el que cada fila representa una película y cada columna una propiedad de la película. 
 
-La Tabla \ref{tabla:ejemploPeliculas} es un ejemplo de relación en el que cada fila representa una película y cada columna una propiedad de la película. De forma general, en un esquema relacional se pueden encontrar los siguientes elementos.
+En un esquema relacional se pueden encontrar los siguientes elementos:
+\begin{itemize}
+	\item \textbf{Atributo}\index{atributo}. Cada una de las columnas de un relación se denomina atributo. En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
+	\item \textbf{Tupla}\index{tupla}. Se denomina tupla a cada fila de una relación exceptuando la fila que contiene a los atributos.
+	\item \textbf{Dominio}\index{dominio}. El modelo relacional requiere que cada componente de cada tupla sea atómico. No se permite que un valor de la tupla sea una estructura de datos (e.g. una lista, una matriz, un conjunto, etc.) cuyos valores puedan dividirse en componentes más pequeños. De esta forma, se establece que cada atributo de la relación está asociado a un dominio, i.e. un tipo particular de dato.
+\end{itemize}
 
-\begin{definicion}[Atributo]
-	Un atributo $A$ es un identificador para un elemento en un dominio $D$. En en modelo relacional aparecen en las columnas de la tabla.
+%Las relaciones son conjuntos de tuplas, no listas de tuplas y por tanto, el orden en que el se presenten las tuplas de una relación es irrelevante. De hecho, se puede incluso modificar el orden de aparición de los atributos y la relación se mantiene constante.
+
+Formalmente, en el modelo relacional, una base de datos consiste en una o más relaciones \cite{Elmasri2010}. La planificación de la estructura de la base de datos, en particular de las relaciones, es vital para la gestión efectiva de la misma \cite{Harrington2016}. Una relación $R$ definida sobre un conjunto de dominios $D_1$, $D_2$, ..., $D_n$ está formada por un esquema y un cuerpo como se definen a continuación.
+
+\begin{definicion}[Esquema]\index{Esquema}
+	Un esquema $E$ para una relación $R$ se define como un conjunto fijo de pares \textit{(atributo:dominio)}. Habitualmente se denota como $\{(A_1:D_1),\ (A_2:D_2),\ (A_n:D_n)\}$ donde cada $A_j$ corresponde a un único $D_j$ y los $A_j$ son todos distintos.
 \end{definicion}
 
-Los atributos en un esquema de relación son un conjunto, no una lista.
+En el ejemplo \ref{tabla:ejemploPeliculas}, el esquema sería: 
 
-\begin{definicion}[Esquemas]\index{Esquemas}
-	El nombre de una relación junto con su conjunto de atributos se denomina esquema para esa relación. Habitualmente, un esquema se denota por un identificador seguido de los atributos entre paréntesis, en el ejemplo, el esquema podría ser: Películas(Título, Año, País, Director, Nacionalidad, Actor).
+\noindent
+\textit{\{}
+
+\textit{Título:Cadena de caracteres, Año:Número natural, País:Cadena de caracteres, Director:Cadena de caracteres, Nacionalidad:Cadena de caracteres, Actor:Cadena de caracteres}
+
+\noindent
+\textit{\}}.
+
+El conjunto de los esquemas para las relaciones de una base de datos se denomina \textit{esquema de base de datos relacional}.
+
+\begin{definicion}[Cuerpo]\index{Cuerpo}
+	Un cuerpo $C$ para una relación $R$ se define como un conjunto de tuplas de pares \textit{(atributo:valor)}. Habitualmente se denota como $\{(A_1:v_{i1}),\ (A_2:v_{i2}),\ (A_n:v_{in})\}$ con $i = 1,2,...,m$ tal que $m$ es el cardinal de $R$, i.e. el número de tuplas de la relación. En cada $(A_j:v_{ij})$ se tiene que $v_{ij} \in D_j$.
 \end{definicion}
 
-\begin{definicion}[Tuplas]\index{Tuplas}
-	Cada una de las filas de una relación, exceptuando la fila de encabezado que contiene los nombres de los atributos, se denomina tupla. Una tupla contiene un valor para cada atributo de la relación, por ejemplo: \{\textit{Pulp Fiction, 1994, USA, Quentin Tarantino, USA, Uma Thurman}\}.
-\end{definicion}
+En el ejemplo \ref{tabla:ejemploPeliculas}, un extracto del cuerpo sería:
 
-El modelo relacional requiere que cada componente de cada tupla sea atómico. No se permite que un valor de la tupla sea una estructura de datos (e.g. una lista, una matriz, un conjunto, etc.) cuyos valores puedan dividirse en componentes más pequeños. De esta forma, se puede incluir el dominio para cada atributo del esquema, utilizando habitualmente, la siguiente nomenclatura: \{\textit{Titulo:Pulp Fiction, Año:1994, Pais:USA, Director:Quentin Tarantino, Nacionalidad:USA, Actor (o actriz):Uma Thurman}\}.
+\noindent
+\textit{\{}
 
-Las relaciones son conjuntos de tuplas, no listas de tuplas y por tanto, el orden en que el se presenten las tuplas de una relación es irrelevante. De hecho, se puede incluso modificar el orden de aparición de los atributos y la relación se mantiene constante.
+	\textit{[(Título:Pulp Fiction), (Año:1994), (País:USA), (Director:Quentin Tarantino), (Nacionalidad:USA), (Actor:Uma Thurman)],}
 
-El diseño de una base de datos relacional no es trivial \cite{Harrington2016}. La planificación de la estructura de la base de datos, en particular de las tablas, es vital para la gestión efectiva de la misma. El diseño de la estructura de una tabla consiste en una descripción de cada uno de los campos que componen el registro y los valores o datos que contendrá cada uno de esos campos.
+ \textit{[(Título:King Kong), (Año:2005), (País:NZ), (Director:Peter Jackson), (Nacionalidad:NZ), (Actor:Naomi Watts)], }
+ 
+ \textit{...}
+ 
+\noindent
+\textit{\}}.
 
-En el modelo relacional, una base de datos consiste en una o más relaciones \cite{Elmasri2010}. El conjunto de los esquemas para las relaciones de una base de datos se denomina \textit{esquema de base de datos relacional}. Un diseño impreciso de un esquema de base de datos relacional puede generar ciertas anomalías que provoquen el mal funcionamiento del sistema. Una anomalía es una inconsistencia entre una parte de los datos y otra. Los principales tipos de anomalías aparecen a la hora de operar con el sistema en términos de actualizaciones, eliminaciones o inserción de información redundante \cite{Vavilis2015,Costante2017}.
+%Un diseño impreciso de un esquema de base de datos relacional puede generar ciertas anomalías que provoquen el mal funcionamiento del sistema. Una anomalía es una inconsistencia entre una parte de los datos y otra. Los principales tipos de anomalías aparecen a la hora de operar con el sistema en términos de actualizaciones, eliminaciones o inserción de información redundante \cite{Vavilis2015,Costante2017}.
 
 
 
 \subsection{Dependencias Funcionales}
 \label{subsec:dependenciasFuncionales}
-Existen muchas restricciones que el modelo relacional permite establecer en las relaciones de los esquemas de la base de datos y mediante su análisis se puede examinar cuidadosamente el diseño de un esquema relacional. Concretamente, esta parte de la tesis está enfocada en las restricciones denominadas dependencias funcionales.
+Existen muchas restricciones que el modelo relacional permite establecer en las relaciones de los esquemas de la base de datos. Concretamente, esta parte de la tesis está enfocada en las restricciones denominadas dependencias funcionales.
 
 \begin{definicion}[Dependencia Funcional]\index{dependencias funcionales}
-	Sea M un conjunto de atributos. Una dependencia funcional (FD) sobre M es una expresión de la forma $X \rightarrow Y$, donde $X,\ Y$ son conjuntos de atributos. Una FD
-se satisface en una tabla R si para cada dos tuplas de R, si verifican X, entonces verifican Y.
+	Sea M un conjunto de atributos. Una dependencia funcional (FD) sobre M es una expresión de la forma $X \rightarrow Y$, donde $X,\ Y$ son conjuntos de atributos.
 \end{definicion}
 
-\begin{definicion}[Dependencia Funcional Trivial]
-	Una dependencia funcional es trivial si $X \subseteq Y$.
-\end{definicion}
+Teniendo en cuenta que la sintaxis que se va a utilizar para FD es la misma que para implicaciones, existen tipos de FD denominados triviales y unitarias, cuyas nociones son iguales a las introducidas para implicaciones en \ref{subsec:sistemaImplicaciones}. Se pasa ahora a describir la semántica para las FD.
 
-\begin{definicion}[Dependencia Funcional Unitaria]
-	Una dependencia funcional es unitaria cuando su conclusión es un conjunto unitario, es decir, $X \rightarrow a \ \mid \ a \in M$.
-\end{definicion}
+%\begin{definicion}[Dependencia Funcional Trivial]
+%	Una dependencia funcional es trivial si $X \subseteq Y$.
+%\end{definicion}
+%
+%\begin{definicion}[Dependencia Funcional Unitaria]
+%	Una dependencia funcional es unitaria cuando su conclusión es un conjunto unitario, es decir, $X \rightarrow a \ \mid \ a \in M$.
+%\end{definicion}
+%
+%\begin{definicion}[Esquema Relacional]
+%	Un esquema de relación \df es un par ordenado que consiste en un conjunto de atributos $M$ y un conjunto $F$ de FD sobre $M$.
+%\end{definicion}
 
-\begin{definicion}[Esquema Relacional]
-	Un esquema de relación \df es un par ordenado que consiste en un conjunto de atributos $M$ y un conjunto $F$ de FD sobre $M$.
-\end{definicion}
+\subsection*{Semántica}
+\noindent
+Una FD se satisface en una tabla $R$ si para cada dos tuplas\index{tupla} de $R$, si verifican $X$, entonces verifican $Y$. Intuitivamente, una FD $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente el concepto de regla \textit{si-entonces} que definen las implicaciones y se acerca a la definición de una función entre los dominios de $A$ y $B$, $f: A\to B$. Entonces, ¿por qué el cambio de denominación? 
 
-Intuitivamente, una FD $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual se acerca al concepto de regla \textit{si-entonces} que definen las implicaciones. Entonces, ¿por qué el cambio de nomenclatura? 
+En la Sección \ref{subsec:sistemaImplicaciones} se definió la noción de implicación, denotado por $X \rightarrow Y$, y se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una FD, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
 
-La diferencia entre implicación y FD radica en el sentido de que la segunda es más restrictiva que la primera. En la Sección \ref{subsec:sistemaImplicaciones} se definió el concepto de implicación, denotado por $X \rightarrow Y$, y se dijo que una implicación se verifica en un contexto formal $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una FD, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
+Esta es una diferencia esencial que surge del hecho de que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una FD se verifique, han de coincidir los valores  de la relación.
 
-Esta es una diferencia esencial que surge del hecho de que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una FD se verifique, los valores han de coincidir para todos aquellos objetos cuya premisa y conclusión coincidan.
+Para ilustrar de una forma más sencilla esta diferencia vamos a utilizar el siguiente ejemplo:
+\begin{ejemplo}
+Sea el contexto formal $K=(G,M,I)$ representado en \ref{tabla:ejemploContextoFormal} donde los objetos son $g_i \in G$ y los atributos $a,b,c \in G$.
 
-Para ilustrar de una forma más sencilla esta diferencia se puede contrastar la información que refleja el contexto formal del ejemplo \ref{tabla:ejemploContextoFormal} con la Tabla \ref{tabla:ejemploPeliculas}. En el primero se ve como los valores de la relación pueden considerarse binarios en el sentido de que indican si una aerolínea ofrece vuelo a un destino o no. Sin embargo, en el segundo, la tabla refleja diferentes valores para cada uno de los atributos del esquema (nombres propios, años, etc.). 
+Según la definición de implicación \ref{subsec:sistemaImplicaciones}, se puede ver como se verifica la implicación $a \to c$ en $K$, mientras que por el contrario, al considerar la relación como una tabla del modelo relacional y considerando la definición de FD, no se cumple que $a \to c$ debido al último objeto $g_4$. 
+	\begin{table*}[htbp]
+	\caption{Ejemplo de contexto formal para ilustrar la diferencia entre implicación y dependencia funcional}
+	\label{tabla:ejemploContextoFormal}
+	\centering
+	{\scriptsize
+	\begin{tabular}{cccccc}
+ 		%\hline
+  	& a & b & c \\
+ 		\hline
+ 		$g_1$ & 1 & 0 & 1\\
+ 		$g_2$ & 1 & 1 & 1\\
+ 		$g_3$ & 0 & 0 & 0\\
+ 		$g_4$ & 0 & 1 & 1\\
+ 		%\hline
+	\end{tabular}
+	}
+\end{table*}
+\end{ejemplo}
 
-De esta manera, una implicación que verifica en ese contexto formal es $Canada \rightarrow Estados\ Unidos$, mientras que una FD que se verifica en el esquema relacional puede ser $Director \rightarrow Nacionalidad$. Sin embargo, nótese que por contra, la FD $Director \rightarrow Titulo$ no es válida pues existe más de una tupla de la relación cuyos valores para esos atributos no coinciden, Quentin Tarantino dirige tanto \textit{Pulp Fiction} como \textit{Django Unchained}.
+%Para ilustrar de una forma más sencilla esta diferencia se puede contrastar la información que refleja el contexto formal del ejemplo \ref{tabla:ejemploContextoFormal} con la Tabla \ref{tabla:ejemploPeliculas}. En el primero se ve como los valores de la relación pueden considerarse binarios en el sentido de que indican si una aerolínea ofrece vuelo a un destino o no. Sin embargo, en el segundo, la tabla refleja diferentes valores para cada uno de los atributos del esquema (nombres propios, años, etc.). 
 
-Obviamente, el concepto de implicaciones en FCA puede ampliarse para poder tratar este tipo de situaciones multivaluadas otorgando valores, por ejemplo, dentro de un rango [0,1], pero en ese caso, se entraría en lo que se denomina implicaciones difusas  \cite{Baczynski2008} que es otro campo de conocimiento que queda fuera del ámbito de esta tesis doctoral.
+%De esta manera, una implicación que verifica en ese contexto formal es $Canada \rightarrow Estados\ Unidos$, mientras que una FD que se verifica en el esquema relacional puede ser $Director \rightarrow Nacionalidad$. Sin embargo, nótese que por contra, la FD $Director \rightarrow Titulo$ no es válida pues existe más de una tupla de la relación cuyos valores para esos atributos no coinciden, Quentin Tarantino dirige tanto \textit{Pulp Fiction} como \textit{Django Unchained}.
 
-Como consecuencia de lo anterior, el concepto de FD es de gran importancia en la tesis debido a que es la base para el trabajo realizado sobre el problema de la enumeración de las claves de esquemas relacionales ya va a permitir caracterizar las claves para una determinada relación.
+El concepto de implicaciones en FCA puede ampliarse para poder tratar con contextos formales donde la relación $I$ toma valores en un conjunto en lugar de ser binaria. Este tipo de contextos formales\index{contexto formal} se denominan multivaluados y su aproximación se realiza a través del llamado análisis de conceptos formales difusos \cite{Burusco1998,Belohlavek2000}, lo que queda fuera del ámbito de esta tesis doctoral.
 
-Una clave en bases de datos relacionales está constituida por un subconjunto de los atributos de una tabla tal que los valores de esos atributos identifican unívocamente a cada tupla de la tabla. Se puede definir por medio de FD de la siguiente forma:
+%tratar situaciones multivaluadas otorgando valores, por ejemplo, dentro de un rango [0,1], pero en ese caso, se entraría en lo que se denomina implicaciones difusas  \cite{Baczynski2008} que es otro campo de conocimiento que queda fuera del ámbito de esta tesis doctoral.
+
+Como consecuencia de lo anterior, la noción de FD es de gran importancia en la tesis debido a que es la base para el trabajo realizado sobre el problema de la enumeración de todas las claves minimales de esquemas relacionales.
+
+Una clave en bases de datos relacionales está constituida por un subconjunto de los atributos del esquema de una tabla tal que los valores de esos atributos identifican unívocamente a cada tupla de la tabla. Se puede definir por medio de FD de la siguiente forma:
 
 \begin{definicion}[Clave]\index{clave}
-	Dada una tabla $R$ sobre el conjunto de atributos $M$, se dice que $K$ es una clave de $R$ si la FD $K \rightarrow M$ se verifica en $R$.
+	Dada una tabla $R$ sobre el conjunto de atributos $M$, se dice que $K \subseteq M$ es una clave de $R$ si la FD $K \rightarrow M$ se verifica en $R$.
 \end{definicion}
 
 \begin{definicion}[Clave Minimal]\index{clave!claves minimales}
-	Dada una tabla $R$, el conjunto de atributos $K \subset M$ se dice que es una clave minimal si $K$ es clave y para todo atributo $k \in K$ el subconjunto $K - \{k\}$ no es clave de $R$.
+	Dada una tabla $R$, el conjunto de atributos $K \subseteq M$ se dice que es una clave minimal si $K$ es clave y para todo atributo $k \in K$ el subconjunto $K - \{k\}$ no es clave de $R$.
 \end{definicion}
 
 \begin{definicion}[Superclave]
-	El conjunto de atributos $K \subseteq M$ se dice que es una superclave de $R$ si $K^+\ =\ M$.
+	El conjunto de atributos $K \subseteq M$ se dice que es una superclave de $R$ si $K$ es una clave de $R$ y no es minimal.
 \end{definicion}
 
-Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de Tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en trabajos publicaciones que avalan este trabajo de investigación \cite{Benito-Picazo2014,Benito-Picazo2016}.   
+Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de Tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en algunas de las publicaciones que avalan esta tesis \cite{Benito-Picazo2014,Benito-Picazo2016}.   
 
 
-\section{Lógica de Simplificación}
-\label{sec:logicaSimplificacion}
+
+\section{Lógica de Implicaciones}
+En esta sección se va a introducir las lógicas de implicaciones que permitirán disponer de sistemas axiomáticos correctos y completos para trabajar con ellas. Para ello, el punto de partida van a ser los Axiomas de Armstrong como pionero en el campo. Sin embargo, el sistema de Armstrong no es adecuado para el razonamiento automático debido a su fuerte dependencia a la transitividad. En consecuencia, tras los Axiomas de Armstrong se presenta la lógica \slfd, la cual sí va a permitir desarrollar métodos de razonamiento automático.
+
+Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con FD. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo que se definió en \ref{subsec:sistemaImplicaciones}. Del mismo modo, la semántica también quedó definida en sendos apartados, \ref{subsec:sistemaImplicaciones}, \ref{subsec:dependenciasFuncionales}, para implicaciones y FD respectivamente. Por tanto, en los siguientes apartados se analizarán los sistemas axiomáticos y métodos de razonamiento.
 
 \subsection{Axiomas de Armstrong}
 \label{subsec:axiomasArmstrong}
 Los conocidos Axiomas de Armstrong\index{Axiomas de Armstrong} es el primer sistema descrito para tratar sistemas de implicaciones utilizando la lógica \cite{Armstrong74}. Este sistema ha tenido una clara influencia en el diseño de varias lógicas sobre implicaciones, todos ellas construidas alrededor del paradigma de la transitividad. Con el paso de los años, otros trabajos han propuesto sistemas axiomáticos equivalentes \cite{Ibaraki1999,Atzeni1993,Paredaens89}.
 
-Los Axiomas de Armstrong son válidos al generar sólo implicaciones dentro del cierre del conjunto de implicaciones\index{conjuntos de implicaciones} (denotado como $F^+$) cuando se actúa sobre el conjunto $F$. También son completos ya que la aplicación repetitiva de las reglas generarán todas las implicaciones en el conjunto cerrado $F^+$. 
-
-Este sistema axiomático\index{sistema axiomático} está formado por un axioma, denominado \textit{Reflexivo}, y dos reglas de inferencia, \textit{Aumentativa} y \textit{Transitiva} que se definen a continuación
-
-Sean $A$, $B$, $C$ subconjuntos de atributos de $M$. Entonces, se tiene:
+Este sistema axiomático\index{sistema axiomático} está formado por un axioma, denominado \textit{Reflexivo}: 
 
 \begin{center}
-	{\scriptsize \tt{[Ref]}}\ $\displaystyle\frac{}{AB \to A}$ \quad
+	{\scriptsize \tt{[Ref]}}\ $\displaystyle\frac{}{AB \to A}$
+\end{center}
+
+y dos reglas de inferencia, \textit{Aumentativa} y \textit{Transitiva} que se definen como:
+
+\begin{center}
 	{\scriptsize \tt{[Aug]}}\ $\displaystyle\frac{A \to B\cup C}{AC \to BC}$ \quad
 	{\scriptsize \tt{[Tran]}}\ $\displaystyle\frac{A \to B,\ B \to C}{A \to C}$ 
 \end{center}
 
-Además de su forma natural de expresar el conocimiento como regla, las implicaciones proporcionan un sistema de razonamiento lógico y de inferencia. Su tratamiento simbólico se ha mostrado en esta sección, sin embargo, debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se basa en métodos indirectos.
+El sistema axiomático de Armstrong se va a definir sobre el lenguaje introducido en la sección \ref{subsec:sistemaImplicaciones}. Sin embargo, debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos. El estudio de estos métodos se verá en la Sección \ref{sec:metodoRazonamientoAutomatico}.
 
-Por ello, si bien es cierto que el sistema de Armstrong es un trabajo que acumula innumerables citas en diferentes trabajos a lo largo de los años, su utilidad práctica se ve mermada debido a la dificultad que conlleva a la hora de plasmar las demostraciones. Es por ello que su uso está enfocado al estudio teórico de las implicaciones en vez de al desarrollo de nuevos algoritmos. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd.
+Los Axiomas de Armstrong son válidos al generar sólo implicaciones dentro del cierre del conjunto de implicaciones\index{conjuntos de implicaciones} (denotado como $F^+$) cuando se actúa sobre el conjunto $F$. También son completos ya que la aplicación repetitiva de las reglas generarán todas las implicaciones en el conjunto cerrado $F^+$.
 
-La lógica \slfde evita el uso de la transitividad y se guía por la idea de simplificar el conjunto de implicaciones mediante la eliminación atributos redundantes de manera eficiente  \cite{Mora2012}. Por consiguiente, la introducción de la lógica \slfde abrió la puerta al desarrollo de métodos de razonamiento automatizados directamente basados en su novedoso sistema axiomático \cite{CorderoEMG14, CorderoEMOR15} que se resume a continuación.
+Por todo lo anterior, si bien es cierto que el sistema de Armstrong es un trabajo que acumula innumerables citas en diferentes trabajos a lo largo de los años, su utilidad práctica se ve limitada. Por esa razón, su uso está enfocado al estudio teórico de las implicaciones en vez de al desarrollo de algoritmos automáticos. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd.
+
+La lógica \slfde evita el uso de la transitividad y se guía por la idea de simplificar el conjunto de implicaciones mediante la eliminación atributos redundantes de manera eficiente \cite{Enciso2002}. Por consiguiente, la introducción de la lógica \slfde abrió la puerta al desarrollo de métodos de razonamiento automatizados directamente basados en su novedoso sistema axiomático \cite{CorderoEMG14, CorderoEMOR15}. La posibilidad de desarrollar estas aplicaciones ha sido la motivación principal para el desarrollo de esta tesis, buscando sobre todo, mejorar la eficacia y la eficiencia.
 
 
 
 \subsection{Lógica \slfd}
 \label{subsec:logicaSLFD}
-Se introduce ahora la lógica \slfde\index{\slfde} \cite{Enciso2002}. Para ello, habría que hacer una descripción de sus cuatro pilares fundamentales: su lenguaje, sintaxis, semántica y método de razonamiento automático. Sin embargo, hay que recordar que el lenguaje y la sintaxis se describió previamente en \ref{subsec:sistemaImplicaciones} y por tanto, en este momento se describe su semántica y método de razonamiento. 
-
-\subsection*{Semántica}
-\noindent
-Para introducir la semántica utilizada, se va a utilizar el concepto de \textit{operador de cierre}\index{operador de cierre} que se reescribe a continuación.
-
-Un operador de cierre en $M$ es una función $c\colon 2^M \to 2^M$ que es \emph{extensivo} ($X\subseteq c(X) \ \forall X\subseteq M$), \emph{monótono} ($X_1\subseteq X_2$ implica que $c(X_1)\subseteq c(X_2)\ \forall X_1,X_2\subseteq M$), e \emph{idempotente} ($c(c(X))=c(X) \quad \forall X\subseteq M$). Los puntos fijos para $c$ (i.e. $X\subseteq M$ tales que $c(X)=X$) se denominan \emph{conjuntos cerrados}.
-
-Un operador de cierre $c$ en $M$ recibe el nombre de \emph{modelo} para una implicación $A\to B\in\mathcal L_M$ si $B\subseteq  c(A)$; se denota $c\models A\to B$. Además, dado un sistema de implicaciones $\Sigma\subseteq \mathcal L_M$ y un operador de cierre $c$ en $M$, $c\models \Sigma$ denota que $c\models A\to B$ para todo $A\to B\in \Sigma$.
-
-Se dice que $A\to B$ se \emph{deriva semánticamente} de $\Sigma$, denotado $\Sigma\models A\to B$, si cualquier modelo para $\Sigma$ también es un modelo para $A\to B$, i.e. $c\models \Sigma$ implica que $c\models A\to B$ para todo operador de cierre $c$ en $M$. 
-
+Se introduce ahora la lógica \slfde\index{\slfde} \cite{Enciso2002}. Para ello, se va a empezar definiendo su sistema axiómatico, pues como se ha indicado al comienzo de esta sección, el lenguaje y la semántica será la misma que la introducida anteriormente en \ref{subsec:sistemaImplicaciones} y \ref{subsec:dependenciasFuncionales}.
 
 \subsection*{Sistema Axiomático}
 \noindent
-\slfde\index{\slfde} constituye una lógica válida y completa \cite{Enciso2002} en la que el principal elemento del lenguaje son las implicaciones. Se define formalmente como:
-\begin{definicion}
-	Sea $M$ un conjunto finito, la formulación de \slfde son expresiones, denominadas implicaciones, de la forma $ X \to Y$, donde $X$ e $Y$ son subconjuntos de $M$.
-\end{definicion}
-
-Las implicaciones se interpretan de forma conjuntiva, es decir, corresponden a las fórmulas $a_1\land \ldots\land a_n \to b_1\land \ldots\land b_m$ donde las proposiciones $a_1, \ldots  a_n,  b_1, \ldots, b_m$ son elementos del conjunto $M$. La interpretación es la siguiente:
-
-\begin{definicion}
-Sea $O$ y $M$ dos conjuntos finitos, que representan objetos y atributos respectivamente, y $I$ una relación en $O\times M$. Una implicación de \slfd, $X\to Y$, donde $X$ y $Y$ son subconjuntos de $M$, es válida en $I$ si y sólo si
-$$\{o\in O\mid (o,x_i)\in I\, \ \forall x_i\in X\}\subseteq \{o\in O\mid (o,y_j)\in I\, \ \forall j_i\in Y\}$$
-\end{definicion}
-
 \slfde se define como el par ($L_{FD}, S_{FD}$) donde $S_{FD}$ tiene el siguiente esquema axiomático:
 
 \begin{center}
@@ -464,22 +537,16 @@ $$\{o\in O\mid (o,x_i)\in I\, \ \forall x_i\in X\}\subseteq \{o\in O\mid (o,y_j)
 \noindent
 junto con las siguientes reglas de inferencia\index{reglas de inferencia}, denominadas \emph{fragmentación}\index{reglas de inferencia!fragmentación}, \emph{composición}\index{reglas de inferencia!composición} y \emph{simplificación}\index{reglas de inferencia!simplificación} respectivamente.
 
-%\begin{center}
-%{\scriptsize \tt{[Frag]}}\ {\footnotesize $\displaystyle\frac{A\to B\cup C}{A\to B}$}  \quad
-%{\scriptsize \tt{[Comp]}}\  {\footnotesize $\displaystyle\frac{A\to B,\ C \to D}{A\cup C \to B\cup D}$ } \quad
-%{\scriptsize \tt{[Simp]}}\  {\footnotesize $\displaystyle\frac{A\to B,\ C \to D}{A\cup(C\smallsetminus B)\to D}$}
-%\end{center}
-
 \begin{center}
 	{\scriptsize \tt{[Frag]}}\ $\displaystyle\frac{A\to B\cup C}{A\to B}$  \quad
 	{\scriptsize \tt{[Comp]}}\ $\displaystyle\frac{A\to B,\ C \to D}{A\cup C \to B\cup D}$ \quad
 	{\scriptsize \tt{[Simp]}}\ $\displaystyle\frac{A\to B,\ C \to D}{A\cup(C\smallsetminus B)\to D}$
 \end{center}
 
-Se destaca que el lenguaje \slfde considera como fórmulas válidas aquellas en donde cualquiera de sus dos partes puede ser el conjunto vacío, denotado $A \to \varnothing$ y $\varnothing \to A$. Sus significados fueron discutidos en \cite{Enciso2002}. En ese trabajo, también se presenta el siguiente resultado donde la derivación de una implicación $A \to B$ se reduce a la derivación de la fórmula $\varnothing \to B$ teniendo $\varnothing \to A$. Este resultado se usará más adelante en el diseño de nuestro novedoso método de cierre.
+Se destaca que el lenguaje \slfde considera como fórmulas válidas aquellas en donde cualquiera de sus dos partes puede ser el conjunto vacío, denotado $A \to \varnothing$ y $\varnothing \to A$. Sus significados fueron discutidos en \cite{Enciso2002}. En ese trabajo, también se presenta el siguiente resultado donde la derivación de una implicación $A \to B$ se reduce a la derivación de la fórmula $\varnothing \to B$ teniendo $\varnothing \to A$. Este resultado se usará más adelante en el diseño de nuestro novedoso método de cierre \ref{subsec:cierreSLFD}.
 
 \begin{proposicion}
-Para cualquier $\varGamma$ y $\forall X, Y\subseteq M$, $\varGamma \vdash X\to Y \text{ si y sólo si }\varGamma \cup \{\top \to X\} \vdash\top \to Y$
+Para cualquier $\varGamma$ y $\forall X, Y\subseteq M$, $\varGamma \vdash X\to Y$ si y sólo si $\varGamma \cup \{\top \to X\} \vdash\top \to Y$
 \end{proposicion}
 
 
@@ -529,6 +596,8 @@ El siguiente teorema es esencial para calcular cierres y a su vez también para i
 \end{corolario}
 
 La principal ventaja de la lógica \slfde radica en que las reglas de inferencia pueden considerarse reglas de equivalencia. Como consecuencia, se ha podido utilizar como núcleo principal para el desarrollo de métodos automáticos para diversas aplicaciones (e.g. obtener claves minimales, cálculos del cierre) como se verá más adelante. Un estudio más detallado al respecto, incluyendo teoremas y demostraciones, puede verse en \cite{Mora2012}.
+
+\slfde\index{\slfde} constituye una lógica válida y completa \cite{Enciso2002} en la que el principal elemento del lenguaje son las implicaciones.
 
 
 

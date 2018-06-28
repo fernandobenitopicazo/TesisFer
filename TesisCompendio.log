@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2017.2.26)  27 JUN 2018 11:20
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2017.2.26)  29 JUN 2018 00:58
 entering extended mode
 **F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendio/TesisCompendio.tex
 (F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendio/TesisCompendio.tex
@@ -743,6 +743,9 @@ Writing index file TesisCompendio.idx
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\introduccion.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\preliminares.aux
 
+LaTeX Warning: Label `tabla:ejemploContextoFormal' multiply defined.
+
+
 LaTeX Warning: Label `empty_set' multiply defined.
 
 )
@@ -973,17 +976,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: arbol897.png Graphic file (type png)
  <use arbol897.png>
 [10 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendio/arbol897.png>] [11]
+
+LaTeX Warning: Reference `sec:logicaSimplificacion' on page 12 undefined on inp
+ut line 142.
+
 [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
 [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
-<esquemaConceptual.png, id=656, 386.04225pt x 429.40425pt>
+<esquemaConceptual.png, id=655, 386.04225pt x 429.40425pt>
 File: esquemaConceptual.png Graphic file (type png)
 
 <use esquemaConceptual.png> [25] [26 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisC
 ompendio/esquemaConceptual.png (PNG copy)>] [27]
-<esquemaTesis.png, id=680, 312.56775pt x 395.67825pt>
+<esquemaTesis.png, id=679, 312.56775pt x 395.67825pt>
 File: esquemaTesis.png Graphic file (type png)
  <use esquemaTesis.png>)
 [28] [29 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendio/esquemaTesis.png (P
@@ -1008,75 +1015,72 @@ Overfull \hbox (5.60098pt too wide) in paragraph at lines 15--16
  e in-tu-iti-va del conocimien-
  []
 
-[34] [35] [36] [37] [38]
-<ejemploReticuloAerolineas.png, id=756, 432.4155pt x 348.1005pt>
+[34] [35] [36] [37]
+<ejemploReticuloAerolineas.png, id=747, 432.4155pt x 348.1005pt>
 File: ejemploReticuloAerolineas.png Graphic file (type png)
 
-<use ejemploReticuloAerolineas.png>
-Underfull \vbox (badness 1168) has occurred while \output is active []
-
- [39 <F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendio/ejemploReticuloAeroline
-as.png (PNG copy)>]
+<use ejemploReticuloAerolineas.png> [38] [39 <F:/Dropbox/DoctoradoMalaga/EnCurs
+o/TesisCompendio/ejemploReticuloAerolineas.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 219.
- [40] [41] [42] [43] [44] [45] [46] [47] [48]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 233.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 429.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [40]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 429.
+LaTeX Warning: Reference `sec:logicaSimplificacion' on page 41 undefined on inp
+ut line 245.
 
+[41] [42]
+Underfull \vbox (badness 1314) has occurred while \output is active []
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 429.
-
-
-Overfull \hbox (0.55663pt too wide) in paragraph at lines 431--432
-\OT1/cmr/m/n/10.95 scrip-cion de sus cu-a-tro pi-lares fun-da-men-tales: su le
-ngua-je, sin-taxis, semanti-
+ [43]
+[44]
+Overfull \hbox (21.18773pt too wide) in paragraph at lines 398--399
+[]\OT1/cmr/m/it/10.95 [(Ttu-lo:Pulp Fic-tion), (A~no:1994), (Pas:USA), (Di-
+rec-tor:Quentin Taranti-
  []
 
-[49]
-Overfull \hbox (28.81262pt too wide) in paragraph at lines 482--483
-[]\OT1/cmr/bx/n/10.95 Proposicion 2.3.3. []\OT1/cmr/m/it/10.95 Para cualquier 
-$\OML/cmm/m/it/10.95  $ \OT1/cmr/m/it/10.95 y $\OMS/cmsy/m/n/10.95 8\OML/cmm/m/
-it/10.95 X; Y \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 M$\OT1/cmr/m/it/10.95 ,
- $\OML/cmm/m/it/10.95   \OMS/cmsy/m/n/10.95 ` \OML/cmm/m/it/10.95 X \OMS/cmsy/m
-/n/10.95 ! \OML/cmm/m/it/10.95 Y[]  \OMS/cmsy/m/n/10.95 [
- []
+[45] [46] [47] [48] [49]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 525.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 525.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 525.
 
 [50] [51] [52] [53]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 584.
+(hyperref)                removing `math shift' on input line 653.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 584.
+(hyperref)                removing `subscript' on input line 653.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 584.
+(hyperref)                removing `math shift' on input line 653.
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 61
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 68
+0.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 68
 1.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 61
-2.
 
 [54]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56]
-Overfull \hbox (4.62872pt too wide) in paragraph at lines 701--702
+[55] [56]
+Overfull \hbox (4.62872pt too wide) in paragraph at lines 770--771
 []\OT1/cmr/m/it/10.95 Una vez fi-nal-iza-do la eje-cu-cion del al-go-rit-mo, s
 e ob-tiene: $[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 c; 
 e\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/
@@ -1112,7 +1116,7 @@ t version <1.4> allowed
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=971, page=1, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=974, page=1, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 1>
@@ -1131,7 +1135,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1697, page=2, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1700, page=2, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 2>
@@ -1145,7 +1149,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1703, page=3, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1706, page=3, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 3>
@@ -1159,7 +1163,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1724, page=4, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1727, page=4, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 4>
@@ -1173,7 +1177,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1734, page=5, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1737, page=5, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 5>
@@ -1187,7 +1191,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1747, page=6, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1750, page=6, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 6>
@@ -1201,7 +1205,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1759, page=7, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1762, page=7, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 7>
@@ -1215,7 +1219,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1772, page=8, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1775, page=8, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 8>
@@ -1229,7 +1233,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1777, page=9, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1780, page=9, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 9>
@@ -1243,7 +1247,7 @@ TesisCompendio/paperClavesMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1782, page=10, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1785, page=10, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 10>
@@ -1258,7 +1262,7 @@ File: paperClavesMinimales.pdf Graphic file (type pdf)
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1787, page=11, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1790, page=11, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 11>
@@ -1273,7 +1277,7 @@ File: paperClavesMinimales.pdf Graphic file (type pdf)
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1797, page=12, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1800, page=12, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 12>
@@ -1288,7 +1292,7 @@ File: paperClavesMinimales.pdf Graphic file (type pdf)
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperClavesMinimales.pdf): PDF inclusion: found PDF version <1.6>, but at mos
 t version <1.4> allowed
-<paperClavesMinimales.pdf, id=1802, page=13, 441.01764pt x 668.64006pt>
+<paperClavesMinimales.pdf, id=1805, page=13, 441.01764pt x 668.64006pt>
 File: paperClavesMinimales.pdf Graphic file (type pdf)
 
 <use paperClavesMinimales.pdf, page 13>
@@ -1333,7 +1337,7 @@ t most version <1.4> allowed
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=1831, page=1, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=1834, page=1, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 1>
@@ -1354,7 +1358,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2561, page=2, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2564, page=2, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 2>
@@ -1369,7 +1373,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2580, page=3, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2583, page=3, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 3>
@@ -1384,7 +1388,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2589, page=4, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2592, page=4, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 4>
@@ -1399,7 +1403,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2624, page=5, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2627, page=5, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 5>
@@ -1414,7 +1418,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2643, page=6, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2646, page=6, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 6>
@@ -1429,7 +1433,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2666, page=7, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2669, page=7, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 7>
@@ -1444,7 +1448,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2694, page=8, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2697, page=8, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 8>
@@ -1459,7 +1463,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2699, page=9, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2702, page=9, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 9>
@@ -1474,7 +1478,7 @@ urso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2704, page=10, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2707, page=10, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 10>
@@ -1489,7 +1493,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2716, page=11, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2719, page=11, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 11>
@@ -1504,7 +1508,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2725, page=12, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2728, page=12, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 12>
@@ -1519,7 +1523,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2733, page=13, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2736, page=13, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 13>
@@ -1534,7 +1538,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2739, page=14, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2742, page=14, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 14>
@@ -1549,7 +1553,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2744, page=15, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2747, page=15, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 15>
@@ -1564,7 +1568,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2749, page=16, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2752, page=16, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 16>
@@ -1579,7 +1583,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2754, page=17, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2757, page=17, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 17>
@@ -1594,7 +1598,7 @@ Curso/TesisCompendio/paperGeneradoresMinimales.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperGeneradoresMinimales.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperGeneradoresMinimales.pdf, id=2759, page=18, 441.01764pt x 668.64006pt>
+<paperGeneradoresMinimales.pdf, id=2762, page=18, 441.01764pt x 668.64006pt>
 File: paperGeneradoresMinimales.pdf Graphic file (type pdf)
 
 <use paperGeneradoresMinimales.pdf, page 18>
@@ -1619,7 +1623,7 @@ Cap\'{\i }tulo 5.
 ] [101] [102
 
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2784, page=1, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2787, page=1, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 1>
@@ -1637,7 +1641,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 1> [103 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2804, page=2, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2807, page=2, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 2>
@@ -1649,7 +1653,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 2> [104 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2809, page=3, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2812, page=3, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 3>
@@ -1661,7 +1665,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 3> [105 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2822, page=4, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2825, page=4, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 4>
@@ -1673,7 +1677,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 4> [106 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2832, page=5, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2835, page=5, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 5>
@@ -1685,7 +1689,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 5> [107 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2856, page=6, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2859, page=6, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 6>
@@ -1697,7 +1701,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 6> [108 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2861, page=7, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2864, page=7, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 7>
@@ -1709,7 +1713,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 7> [109 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2868, page=8, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2871, page=8, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 8>
@@ -1721,7 +1725,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 8> [110 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2873, page=9, 597.46411pt x 79
+<paperSistemaRecomendacionConversacional.pdf, id=2876, page=9, 597.46411pt x 79
 3.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 9>
@@ -1733,7 +1737,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 9> [111 <F:/Dropbox/Doct
 oradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf>
 ]
-<paperSistemaRecomendacionConversacional.pdf, id=2879, page=10, 597.46411pt x 7
+<paperSistemaRecomendacionConversacional.pdf, id=2882, page=10, 597.46411pt x 7
 93.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 10>
@@ -1745,7 +1749,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 10> [112 <F:/Dropbox/Doc
 toradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf
 >]
-<paperSistemaRecomendacionConversacional.pdf, id=2888, page=11, 597.46411pt x 7
+<paperSistemaRecomendacionConversacional.pdf, id=2891, page=11, 597.46411pt x 7
 93.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 11>
@@ -1757,7 +1761,7 @@ File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
 <use paperSistemaRecomendacionConversacional.pdf, page 11> [113 <F:/Dropbox/Doc
 toradoMalaga/EnCurso/TesisCompendio/paperSistemaRecomendacionConversacional.pdf
 >]
-<paperSistemaRecomendacionConversacional.pdf, id=2893, page=12, 597.46411pt x 7
+<paperSistemaRecomendacionConversacional.pdf, id=2896, page=12, 597.46411pt x 7
 93.9532pt>
 File: paperSistemaRecomendacionConversacional.pdf Graphic file (type pdf)
  <use paperSistemaRecomendacionConversacional.pdf, page 12>
@@ -1788,9 +1792,7 @@ Cap\'{\i }tulo 6.
 
 
 ]
-[126
-
-]) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\TesisCompendio.lof)
+[126]) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\TesisCompendio.lof)
 \tf@lof=\write8
 
 [127
@@ -1817,7 +1819,7 @@ Ap\'{e}ndice A.
 ] [134
 
 ]
-<paperCMMSE2017MinGen.pdf, id=3119, page=1, 604.62085pt x 782.45125pt>
+<paperCMMSE2017MinGen.pdf, id=3137, page=1, 604.62085pt x 782.45125pt>
 File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 1>
@@ -1832,7 +1834,7 @@ File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 1> [135 <F:/Dropbox/DoctoradoMalaga/EnCurso
 /TesisCompendio/paperCMMSE2017MinGen.pdf>]
-<paperCMMSE2017MinGen.pdf, id=3169, page=2, 604.62085pt x 782.45125pt>
+<paperCMMSE2017MinGen.pdf, id=3187, page=2, 604.62085pt x 782.45125pt>
 File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 2>
@@ -1842,7 +1844,7 @@ File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 2> [136 <F:/Dropbox/DoctoradoMalaga/EnCurso
 /TesisCompendio/paperCMMSE2017MinGen.pdf>]
-<paperCMMSE2017MinGen.pdf, id=3202, page=3, 604.62085pt x 782.45125pt>
+<paperCMMSE2017MinGen.pdf, id=3220, page=3, 604.62085pt x 782.45125pt>
 File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 3>
@@ -1852,7 +1854,7 @@ File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 3> [137 <F:/Dropbox/DoctoradoMalaga/EnCurso
 /TesisCompendio/paperCMMSE2017MinGen.pdf>]
-<paperCMMSE2017MinGen.pdf, id=3230, page=4, 604.62085pt x 782.45125pt>
+<paperCMMSE2017MinGen.pdf, id=3248, page=4, 604.62085pt x 782.45125pt>
 File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 4>
@@ -1862,7 +1864,7 @@ File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 4> [138 <F:/Dropbox/DoctoradoMalaga/EnCurso
 /TesisCompendio/paperCMMSE2017MinGen.pdf>]
-<paperCMMSE2017MinGen.pdf, id=3237, page=5, 604.62085pt x 782.45125pt>
+<paperCMMSE2017MinGen.pdf, id=3255, page=5, 604.62085pt x 782.45125pt>
 File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 5>
@@ -1872,7 +1874,7 @@ File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 5> [139 <F:/Dropbox/DoctoradoMalaga/EnCurso
 /TesisCompendio/paperCMMSE2017MinGen.pdf>]
-<paperCMMSE2017MinGen.pdf, id=3245, page=6, 604.62085pt x 782.45125pt>
+<paperCMMSE2017MinGen.pdf, id=3263, page=6, 604.62085pt x 782.45125pt>
 File: paperCMMSE2017MinGen.pdf Graphic file (type pdf)
 
 <use paperCMMSE2017MinGen.pdf, page 6>
@@ -1905,7 +1907,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3263, page=1, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3281, page=1, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 1>
@@ -1927,7 +1929,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3315, page=2, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3333, page=2, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 2>
@@ -1943,7 +1945,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3324, page=3, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3342, page=3, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 3>
@@ -1959,7 +1961,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3341, page=4, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3359, page=4, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 4>
@@ -1975,7 +1977,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3367, page=5, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3385, page=5, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 5>
@@ -1991,7 +1993,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3373, page=6, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3391, page=6, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 6>
@@ -2007,7 +2009,7 @@ pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2016SistemaRecomendacionMMAS.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.4> allowed
 
-<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3378, page=7, 597.45204pt x 845
+<paperCMMSE2016SistemaRecomendacionMMAS.pdf, id=3396, page=7, 597.45204pt x 845
 .1575pt>
 File: paperCMMSE2016SistemaRecomendacionMMAS.pdf Graphic file (type pdf)
  <use paperCMMSE2016SistemaRecomendacionMMAS.pdf, page 7>
@@ -2040,7 +2042,7 @@ t most version <1.4> allowed
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3393, page=1, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3411, page=1, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 1>
@@ -2061,7 +2063,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3451, page=2, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3469, page=2, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 2>
@@ -2076,7 +2078,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3469, page=3, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3487, page=3, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 3>
@@ -2091,7 +2093,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3478, page=4, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3496, page=4, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 4>
@@ -2106,7 +2108,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3489, page=5, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3507, page=5, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 5>
@@ -2121,7 +2123,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3504, page=6, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3522, page=6, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 6>
@@ -2136,7 +2138,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3515, page=7, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3533, page=7, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 7>
@@ -2151,7 +2153,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3520, page=8, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3538, page=8, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 8>
@@ -2166,7 +2168,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3526, page=9, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3544, page=9, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 9>
@@ -2181,7 +2183,7 @@ Curso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3531, page=10, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3549, page=10, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 10>
@@ -2196,7 +2198,7 @@ nCurso/TesisCompendio/paperCMMSE2015MinimalKeys.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperCMMSE2015MinimalKeys.pdf): PDF inclusion: found PDF version <1.6>, but a
 t most version <1.4> allowed
-<paperCMMSE2015MinimalKeys.pdf, id=3536, page=11, 597.45204pt x 845.1575pt>
+<paperCMMSE2015MinimalKeys.pdf, id=3554, page=11, 597.45204pt x 845.1575pt>
 File: paperCMMSE2015MinimalKeys.pdf Graphic file (type pdf)
 
 <use paperCMMSE2015MinimalKeys.pdf, page 11>
@@ -2232,7 +2234,7 @@ at most version <1.4> allowed
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperParallelismICSOFT2014.pdf): PDF inclusion: found PDF version <1.7>, but 
 at most version <1.4> allowed
-<paperParallelismICSOFT2014.pdf, id=3551, page=1, 597.23125pt x 845.1575pt>
+<paperParallelismICSOFT2014.pdf, id=3569, page=1, 597.23125pt x 845.1575pt>
 File: paperParallelismICSOFT2014.pdf Graphic file (type pdf)
 
 <use paperParallelismICSOFT2014.pdf, page 1>
@@ -2253,7 +2255,7 @@ nCurso/TesisCompendio/paperParallelismICSOFT2014.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperParallelismICSOFT2014.pdf): PDF inclusion: found PDF version <1.7>, but 
 at most version <1.4> allowed
-<paperParallelismICSOFT2014.pdf, id=3587, page=2, 597.23125pt x 845.1575pt>
+<paperParallelismICSOFT2014.pdf, id=3605, page=2, 597.23125pt x 845.1575pt>
 File: paperParallelismICSOFT2014.pdf Graphic file (type pdf)
 
 <use paperParallelismICSOFT2014.pdf, page 2>
@@ -2268,7 +2270,7 @@ nCurso/TesisCompendio/paperParallelismICSOFT2014.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperParallelismICSOFT2014.pdf): PDF inclusion: found PDF version <1.7>, but 
 at most version <1.4> allowed
-<paperParallelismICSOFT2014.pdf, id=3600, page=3, 597.23125pt x 845.1575pt>
+<paperParallelismICSOFT2014.pdf, id=3618, page=3, 597.23125pt x 845.1575pt>
 File: paperParallelismICSOFT2014.pdf Graphic file (type pdf)
 
 <use paperParallelismICSOFT2014.pdf, page 3>
@@ -2283,7 +2285,7 @@ nCurso/TesisCompendio/paperParallelismICSOFT2014.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperParallelismICSOFT2014.pdf): PDF inclusion: found PDF version <1.7>, but 
 at most version <1.4> allowed
-<paperParallelismICSOFT2014.pdf, id=3605, page=4, 597.23125pt x 845.1575pt>
+<paperParallelismICSOFT2014.pdf, id=3623, page=4, 597.23125pt x 845.1575pt>
 File: paperParallelismICSOFT2014.pdf Graphic file (type pdf)
 
 <use paperParallelismICSOFT2014.pdf, page 4>
@@ -2298,7 +2300,7 @@ nCurso/TesisCompendio/paperParallelismICSOFT2014.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperParallelismICSOFT2014.pdf): PDF inclusion: found PDF version <1.7>, but 
 at most version <1.4> allowed
-<paperParallelismICSOFT2014.pdf, id=3612, page=5, 597.23125pt x 845.1575pt>
+<paperParallelismICSOFT2014.pdf, id=3630, page=5, 597.23125pt x 845.1575pt>
 File: paperParallelismICSOFT2014.pdf Graphic file (type pdf)
 
 <use paperParallelismICSOFT2014.pdf, page 5>
@@ -2313,7 +2315,7 @@ nCurso/TesisCompendio/paperParallelismICSOFT2014.pdf>]
 pdfTeX warning: pdflatex (file F:/Dropbox/DoctoradoMalaga/EnCurso/TesisCompendi
 o/paperParallelismICSOFT2014.pdf): PDF inclusion: found PDF version <1.7>, but 
 at most version <1.4> allowed
-<paperParallelismICSOFT2014.pdf, id=3617, page=6, 597.23125pt x 845.1575pt>
+<paperParallelismICSOFT2014.pdf, id=3635, page=6, 597.23125pt x 845.1575pt>
 File: paperParallelismICSOFT2014.pdf Graphic file (type pdf)
 
 <use paperParallelismICSOFT2014.pdf, page 6>
@@ -2354,14 +2356,17 @@ o.aux)
 io.aux) (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\conclusiones.aux)
 (F:\Dropbox\DoctoradoMalaga\EnCurso\TesisCompendio\fraseFinal.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14273 strings out of 495285
- 208313 string characters out of 3179878
- 363086 words of memory out of 3000000
- 16574 multiletter control sequences out of 15000+200000
+ 14267 strings out of 495285
+ 208257 string characters out of 3179878
+ 362998 words of memory out of 3000000
+ 16575 multiletter control sequences out of 15000+200000
  26621 words of font info for 113 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,20n,75p,1935b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2387,20 +2392,20 @@ ype1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1
 /public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/pub
 lic/amsfonts/cm/cmss8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/a
-msfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfont
-s/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/c
-m/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/
-cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmt
-t10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmtt8
-.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/cour/cour.pfa><C:/Pr
-ogram Files (x86)/MiKTeX 2.8/fonts/type1/public/marvosym/marvosym.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
-/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on TesisCompendio.pdf (207 pages, 4590330 bytes).
+msfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsf
+onts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfont
+s/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/
+cm/cmti9.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cm
+tt8.pfb><C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/cour/cour.pfa><C:
+/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/marvosym/marvosym.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:
+/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/msbm7.pf
+b>
+Output written on TesisCompendio.pdf (207 pages, 4586167 bytes).
 PDF statistics:
- 3880 PDF objects out of 4296 (max. 8388607)
- 452 named destinations out of 1000 (max. 500000)
+ 3894 PDF objects out of 4296 (max. 8388607)
+ 445 named destinations out of 1000 (max. 500000)
  763 words of extra memory for PDF output out of 10000 (max. 10000000)
 

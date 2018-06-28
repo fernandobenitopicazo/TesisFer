@@ -12,7 +12,7 @@
 \BOOKMARK [2][-]{subsection.2.1.5}{Sistema de implicaciones}{section.2.1}
 \BOOKMARK [1][-]{section.2.2}{Bases de Datos Relacionales}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.2.1}{Dependencias Funcionales}{section.2.2}
-\BOOKMARK [1][-]{section.2.3}{L\363gica de Simplificaci\363n}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{L\363gica de Implicaciones}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.3.1}{Axiomas de Armstrong}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{L\363gica SLFD}{section.2.3}
 \BOOKMARK [1][-]{section.2.4}{M\351todo de Razonamiento Autom\341tico}{chapter.2}
@@ -23,10 +23,10 @@
 \BOOKMARK [0][-]{chapter.4}{Generadores Minimales}{}
 \BOOKMARK [0][-]{chapter.5}{Sistemas de Recomendaci\363n Conversacionales}{}
 \BOOKMARK [0][-]{chapter.6}{Conclusiones y Trabajos Futuros}{}
-\BOOKMARK [0][-]{section*.33}{\315ndice alfab\351tico}{}
-\BOOKMARK [0][-]{chapter*.34}{\315ndice de figuras}{}
-\BOOKMARK [0][-]{chapter*.35}{\315ndice de tablas}{}
-\BOOKMARK [0][-]{section*.36}{Anexo}{}
+\BOOKMARK [0][-]{section*.34}{\315ndice alfab\351tico}{}
+\BOOKMARK [0][-]{chapter*.35}{\315ndice de figuras}{}
+\BOOKMARK [0][-]{chapter*.36}{\315ndice de tablas}{}
+\BOOKMARK [0][-]{section*.37}{Anexo}{}
 \BOOKMARK [0][-]{appendix.A}{Closed sets enumeration: a logical approach}{}
 \BOOKMARK [0][-]{appendix.B}{Conversational recommendation to avoid the cold-start problem}{}
 \BOOKMARK [0][-]{appendix.C}{Keys for the fusion of heterogeneous information}{}

@@ -23,11 +23,6 @@
 \newblock {\em Relational Database Theory}.
 \newblock Benjamin-Cummings Publishing Co., Inc., Redwood City, CA, USA, 1993.
 
-\bibitem{Baczynski2008}
-{\sc Baczynski, M., and Jayaram, B.}
-\newblock {\em An Introduction to Fuzzy Implications}.
-\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2008, pp.~1--35.
-
 \bibitem{BeelLNG13}
 {\sc Beel, J., Langer, S., Nurnberger, A., and Genzmehr, M.}
 \newblock The impact of demographics (age and gender) and other
@@ -46,6 +41,11 @@
 \newblock The implication problem for data dependencies.
 \newblock In {\em Automata, Languages and Programming\/} (Berlin, Heidelberg,
   1981), S.~Even and O.~Kariv, Eds., Springer Berlin Heidelberg, pp.~73--85.
+
+\bibitem{Belohlavek2000}
+{\sc Belohlavek, R.}
+\newblock Similarity relations in concept lattices.
+\newblock {\em J. Log. Comput. 10}, 6 (2000), 823--845.
 
 \bibitem{Benito-Picazo2013PFC}
 {\sc Benito-Picazo, F.}
@@ -138,6 +138,11 @@
 \newblock In {\em Proceedings of the Fourth ACM Conference on Recommender
   Systems\/} (New York, NY, USA, 2010), RecSys '10, ACM, pp.~225--228.
 
+\bibitem{Burusco1998}
+{\sc Burusco, A., and Fuentes{-}Gonz{\'{a}}lez, R.}
+\newblock Construction of the l-fuzzy concept lattice.
+\newblock {\em Fuzzy Sets and Systems 97}, 1 (1998), 109--114.
+
 \bibitem{Chen2007}
 {\sc Chen, L., and Pu, P.}
 \newblock {Hybrid Critiquing-based Recommender Systems}.
@@ -201,13 +206,6 @@
 \newblock Knowledge discovery in social networks by using a logic-based
   treatment of implications.
 \newblock {\em Knowledge-Based System 87\/} (2015), 16--25.
-
-\bibitem{Costante2017}
-{\sc Costante, E., den Hartog, J., Petkovic, M., Etalle, S., and Pechenizkiy,
-  M.}
-\newblock A white-box anomaly-based framework for database leakage detection.
-\newblock {\em Journal of Information Security and Applications 32\/} (2017),
-  27 -- 46.
 
 \bibitem{Crespo2011}
 {\sc Crespo, R.~G., Martínez, O.~S., Lovelle, J. M.~C., García-Bustelo, B.
@@ -744,11 +742,6 @@
 \newblock In {\em International Conference on Formal Concept Analysis
   (ICFCA)\/} (2008), vol.~4933 of {\em Lecture Notes in Computer Science},
   Springer, pp.~182--198.
-
-\bibitem{Vavilis2015}
-{\sc Vavilis, S., Egner, A., Petkovic, M., and Zannone, N.}
-\newblock An anomaly analysis framework for database systems.
-\newblock {\em Computers and Security 53\/} (2015), 156 -- 173.
 
 \bibitem{Viegas2018}
 {\sc Viegas, F., Rocha, L., Gonçalves, M., Mourão, F., Sá, G., Salles, T.,
