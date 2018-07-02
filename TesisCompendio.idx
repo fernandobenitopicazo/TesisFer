@@ -1,7 +1,6 @@
 \indexentry{bases de datos|hyperpage}{3}
 \indexentry{sistemas de recomendaci\'on|hyperpage}{3}
 \indexentry{An\'alisis Formal de Conceptos|hyperpage}{3}
-\indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{3}
 \indexentry{conjuntos de implicaciones|hyperpage}{3}
 \indexentry{dataset|hyperpage}{4}
 \indexentry{if-then rules|hyperpage}{4}
@@ -14,14 +13,15 @@
 \indexentry{supercomputaci\'on|hyperpage}{5}
 \indexentry{clave|hyperpage}{6}
 \indexentry{atributo|hyperpage}{6}
-\indexentry{\slfde|hyperpage}{8}
+\indexentry{tupla|hyperpage}{6}
+\indexentry{\slfde|hyperpage}{9}
 \indexentry{Tableaux|hyperpage}{9}
 \indexentry{\slfde|hyperpage}{10}
-\indexentry{SST|hyperpage}{10}
+\indexentry{SST|hyperpage}{11}
 \indexentry{supercomputaci\'on|hyperpage}{11}
 \indexentry{paralelismo|hyperpage}{11}
 \indexentry{paralelismo|hyperpage}{11}
-\indexentry{SST|hyperpage}{11}
+\indexentry{SST|hyperpage}{12}
 \indexentry{sistema axiom\'atico|hyperpage}{12}
 \indexentry{\slfde|hyperpage}{12}
 \indexentry{CK|hyperpage}{12}
@@ -37,7 +37,7 @@
 \indexentry{MinGen|hyperpage}{16}
 \indexentry{MinGenPr|hyperpage}{16}
 \indexentry{GenMinGen|hyperpage}{16}
-\indexentry{supercomputaci\'on|hyperpage}{17}
+\indexentry{MinGenPr|hyperpage}{16}
 \indexentry{MinGen|hyperpage}{17}
 \indexentry{MinGenPr|hyperpage}{17}
 \indexentry{GenMinGen|hyperpage}{17}
@@ -48,13 +48,13 @@
 \indexentry{sistemas de recomendaci\'on|hyperpage}{18}
 \indexentry{\slfde|hyperpage}{19}
 \indexentry{sistemas de recomendaci\'on!colaborativos|hyperpage}{19}
-\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{19}
-\indexentry{sistemas de recomendaci\'on!contextuales|hyperpage}{19}
-\indexentry{sistemas de recomendaci\'on!demogr\'aficos|hyperpage}{19}
+\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{20}
+\indexentry{sistemas de recomendaci\'on!contextuales|hyperpage}{20}
+\indexentry{sistemas de recomendaci\'on!demogr\'aficos|hyperpage}{20}
 \indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{20}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{20}
-\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{20}
-\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{20}
+\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{21}
+\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{21}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{21}
 \indexentry{Information Retrieval|hyperpage}{21}
 \indexentry{problemas SR|hyperpage}{21}
@@ -62,18 +62,18 @@
 \indexentry{problemas SR!privacidad|hyperpage}{21}
 \indexentry{problemas SR!oveja-negra|hyperpage}{21}
 \indexentry{problemas SR!escasez|hyperpage}{21}
-\indexentry{problemas SR!ataques maliciosos|hyperpage}{21}
-\indexentry{problemas SR!sobreespecializaci\'on|hyperpage}{21}
-\indexentry{problemas SR!escalabilidad|hyperpage}{21}
-\indexentry{problemas SR!postergaci\'on|hyperpage}{21}
-\indexentry{problemas SR!dimensionalidad|hyperpage}{21}
+\indexentry{problemas SR!ataques maliciosos|hyperpage}{22}
+\indexentry{problemas SR!sobreespecializaci\'on|hyperpage}{22}
+\indexentry{problemas SR!escalabilidad|hyperpage}{22}
+\indexentry{problemas SR!postergaci\'on|hyperpage}{22}
+\indexentry{problemas SR!dimensionalidad|hyperpage}{22}
 \indexentry{feature selection|hyperpage}{22}
 \indexentry{problemas SR!dimensionalidad|hyperpage}{22}
 \indexentry{conjuntos de implicaciones|hyperpage}{22}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{22}
-\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{22}
-\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{22}
-\indexentry{\slfde|hyperpage}{24}
+\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{23}
+\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{23}
+\indexentry{\slfde|hyperpage}{25}
 \indexentry{supercomputaci\'on|hyperpage}{27}
 \indexentry{contexto formal|hyperpage}{34}
 \indexentry{contexto formal|hyperpage}{35}

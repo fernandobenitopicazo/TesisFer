@@ -1,8 +1,8 @@
 \begin{theindex}
 
-  \item \slfde, \hyperpage{8}, \hyperpage{10}, \hyperpage{12}, 
-		\hyperpage{15}, \hyperpage{19}, \hyperpage{24}, 
-		\hyperpage{50}, \hyperpage{52}
+  \item \slfde, \hyperpage{9, 10}, \hyperpage{12}, \hyperpage{15}, 
+		\hyperpage{19}, \hyperpage{25}, \hyperpage{50}, 
+		\hyperpage{52}
 
   \indexspace
 
@@ -85,14 +85,14 @@
   \item paralelismo, \hyperpage{11}, \hyperpage{48}
   \item problemas SR, \hyperpage{21}
     \subitem arranque en fr\IeC {\'\i }o, \hyperpage{21}
-    \subitem ataques maliciosos, \hyperpage{21}
-    \subitem dimensionalidad, \hyperpage{21, 22}
-    \subitem escalabilidad, \hyperpage{21}
+    \subitem ataques maliciosos, \hyperpage{22}
+    \subitem dimensionalidad, \hyperpage{22}
+    \subitem escalabilidad, \hyperpage{22}
     \subitem escasez, \hyperpage{21}
     \subitem oveja-negra, \hyperpage{21}
-    \subitem postergaci\'on, \hyperpage{21}
+    \subitem postergaci\'on, \hyperpage{22}
     \subitem privacidad, \hyperpage{21}
-    \subitem sobreespecializaci\'on, \hyperpage{21}
+    \subitem sobreespecializaci\'on, \hyperpage{22}
 
   \indexspace
 
@@ -101,28 +101,28 @@
     \subitem fragmentaci\'on, \hyperpage{50}
     \subitem simplificaci\'on, \hyperpage{50}
   \item ret\IeC {\'\i }culo de concepto, \hyperpage{38}
-  \item ret\IeC {\'\i }culo de conceptos, \hyperpage{3}, \hyperpage{39}
+  \item ret\IeC {\'\i }culo de conceptos, \hyperpage{39}
     \subitem conjuntos cerrados, \hyperpage{14}
 
   \indexspace
 
   \item sistema axiom\'atico, \hyperpage{12}, \hyperpage{49}
   \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{18}
-    \subitem basados en conocimiento, \hyperpage{20}, \hyperpage{22}
-    \subitem basados en contenido, \hyperpage{19, 20}, \hyperpage{22}
+    \subitem basados en conocimiento, \hyperpage{20, 21}, 
+		\hyperpage{23}
+    \subitem basados en contenido, \hyperpage{20, 21}, \hyperpage{23}
     \subitem colaborativos, \hyperpage{19}
-    \subitem contextuales, \hyperpage{19}
+    \subitem contextuales, \hyperpage{20}
     \subitem conversacionales, \hyperpage{20--22}
-    \subitem demogr\'aficos, \hyperpage{19}
-  \item SST, \hyperpage{10, 11}
+    \subitem demogr\'aficos, \hyperpage{20}
+  \item SST, \hyperpage{11, 12}
   \item supercomputaci\'on, \hyperpage{5}, \hyperpage{11}, 
-		\hyperpage{13}, \hyperpage{17}, \hyperpage{27}, 
-		\hyperpage{48}
+		\hyperpage{13}, \hyperpage{27}, \hyperpage{48}
 
   \indexspace
 
   \item Tableaux, \hyperpage{9}, \hyperpage{48}
   \item Teorema de deducci\'on, \hyperpage{52}, \hyperpage{54}
-  \item tupla, \hyperpage{44}, \hyperpage{46}
+  \item tupla, \hyperpage{6}, \hyperpage{44}, \hyperpage{46}
 
 \end{theindex}
