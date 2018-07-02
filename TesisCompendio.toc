@@ -27,12 +27,12 @@
 \contentsline {chapter}{\numberline {4}Generadores Minimales}{77}{chapter.4}
 \contentsline {chapter}{\numberline {5}Sistemas de Recomendaci\'on Conversacionales}{99}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusiones y Trabajos Futuros}{115}{chapter.6}
-\contentsline {chapter}{\'Indice alfab\'etico}{125}{section*.34}
-\contentsline {chapter}{{\'Indice de figuras}}{127}{chapter*.35}
-\contentsline {chapter}{{\'Indice de tablas}}{129}{chapter*.36}
-\contentsline {chapter}{Anexo}{131}{section*.37}
-\contentsline {chapter}{\numberline {A}Closed sets enumeration: a logical approach}{133}{appendix.A}
-\contentsline {chapter}{\numberline {B}Conversational recommendation to avoid the cold-start problem}{141}{appendix.B}
-\contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{150}{appendix.C}
-\contentsline {chapter}{\numberline {D}Increasing the Efficiency of Minimal Key Enumeration Methods by Means of Parallelism}{163}{appendix.D}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{171}{appendix.D}
+\contentsline {chapter}{\'Indice alfab\'etico}{127}{section*.34}
+\contentsline {chapter}{{\'Indice de figuras}}{129}{chapter*.35}
+\contentsline {chapter}{{\'Indice de tablas}}{131}{chapter*.36}
+\contentsline {chapter}{Anexo}{133}{section*.37}
+\contentsline {chapter}{\numberline {A}Closed sets enumeration: a logical approach}{135}{appendix.A}
+\contentsline {chapter}{\numberline {B}Conversational recommendation to avoid the cold-start problem}{143}{appendix.B}
+\contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{152}{appendix.C}
+\contentsline {chapter}{\numberline {D}Increasing the Efficiency of Minimal Key Enumeration Methods by Means of Parallelism}{165}{appendix.D}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{173}{appendix.D}
