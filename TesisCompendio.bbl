@@ -18,6 +18,13 @@
 \newblock In {\em Proceedings of the International Federation for Information
   Processing Congress\/} (1974), pp.~580--583.
 
+\bibitem{Arnaboldi2016}
+{\sc Arnaboldi, V., Campana, M.~G., Delmastro, F., and Pagani, E.}
+\newblock Pliers: A popularity-based recommender system for content
+  dissemination in online social networks.
+\newblock In {\em Proceedings of the 31st Annual ACM Symposium on Applied
+  Computing\/} (New York, NY, USA, 2016), SAC '16, ACM, pp.~671--673.
+
 \bibitem{Atzeni1993}
 {\sc Atzeni, P., and De~Antonellis, V.}
 \newblock {\em Relational Database Theory}.
@@ -131,6 +138,14 @@
 \newblock Sigtur/e-destination: A system for the management of complex tourist
   regions.
 \newblock R.~Law, M.~Fuchs, and F.~Ricci, Eds., Springer Vienna, pp.~39--50.
+
+\bibitem{Bressan2016}
+{\sc Bressan, M., Leucci, S., Panconesi, A., Raghavan, P., and Terolli, E.}
+\newblock The limits of popularity-based recommendations, and the role of
+  social ties.
+\newblock In {\em Proceedings of the 22Nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining\/} (New York, NY, USA, 2016), KDD '16,
+  ACM, pp.~745--754.
 
 \bibitem{Burke2010}
 {\sc Burke, R.}
@@ -286,6 +301,11 @@
 \bibitem{Giannella99}
 {\sc Giannella, C., and Wyss, C.}
 \newblock Finding minimal keys in a relation instance, 1999.
+
+\bibitem{Goh10}
+{\sc Goh, T.~N.}
+\newblock An information management paradigm for statistical experiments.
+\newblock {\em Quality and Reliability Eng. Int. 26}, 5 (2010), 487--494.
 
 \bibitem{Gras2016}
 {\sc Gras, B., Brun, A., and Boyer, A.}
@@ -556,6 +576,12 @@
 \newblock {\em Annals of Mathematics and Artificial Intelligence 25}, 3-4 (Feb.
   1999), 241--273.
 
+\bibitem{Papadimitriou2012}
+{\sc Papadimitriou, A., Symeonidis, P., and Manolopoulos, Y.}
+\newblock A generalized taxonomy of explanations styles for traditional and
+  social recommender systems.
+\newblock {\em Data Min. Knowl. Discov. 24}, 3 (2012), 555--583.
+
 \bibitem{Paredaens89}
 {\sc Paredaens, J., Bra, P., Gyssens, M., and Gucht, D.~V.}, Eds.
 \newblock {\em The structure of the relational database model}.
@@ -595,6 +621,11 @@
 \newblock Study of decision implications based on formal concept analysis.
 \newblock {\em International Journal of General Systems 36}, 2 (2007),
   147--156.
+
+\bibitem{Moraes2016}
+{\sc R.~M.~de Moraes, N., Dias, S., Freitas, H., and Zárate, L.}
+\newblock Parallelization of the next closure algorithm for generating the
+  minimum set of implication rules.
 
 \bibitem{Metaphor2012}
 {\sc Reda, A., Park, Y., Tiwari, M., Posse, C., and Shah, S.}
@@ -644,6 +675,12 @@
   classification.
 \newblock {\em The Egyptian Journal of Remote Sensing and Space Science 21}, 1
   (2018), 27 -- 36.
+
+\bibitem{Shalom2016}
+{\sc Sar~Shalom, O., Koenigstein, N., Paquet, U., and Vanchinathan, H.~P.}
+\newblock Beyond collaborative filtering: The list recommendation problem.
+\newblock In {\em Proceedings of the 25th International Conference on World
+  Wide Web\/} (2016), WWW '16, pp.~63--72.
 
 \bibitem{BenSassi2017}
 {\sc Sassi, I.~B., Mellouli, S., and Yahia, S.~B.}
@@ -710,6 +747,11 @@
 \newblock In {\em Proceedings of the Fifth ACM Conference on Recommender
   Systems\/} (New York, NY, USA, 2011), RecSys '11, ACM, pp.~1--6.
 
+\bibitem{Tintarev2011}
+{\sc Tintarev, N., and Masthoff, J.}
+\newblock {\em Designing and Evaluating Explanations for Recommender Systems}.
+\newblock Springer US, Boston, MA, 2011, pp.~479--510.
+
 \bibitem{Tiroshi11}
 {\sc Tiroshi, A., Kuflik, T., Kay, J., and Kummerfeld, B.}
 \newblock Recommender systems and the social web.
@@ -771,6 +813,11 @@
 \newblock An efficient algorithm for 3nf determination.
 \newblock {\em Information Sciences 167}, 1 (2004), 177 -- 192.
 
+\bibitem{Yang2012}
+{\sc Yang, X., Wang, Z., Xue, J., and Zhou, Y.}
+\newblock The reliability wall for exascale supercomputing.
+\newblock {\em IEEE Transactions on Computers 61}, 6 (June 2012), 767--779.
+
 \bibitem{Yang2016}
 {\sc Yang, Z., and Cai, Z.}
 \newblock Detecting abnormal profiles in collaborative filtering recommender
@@ -815,6 +862,14 @@
 \newblock {\em A Shilling Attack Detection Method Based on SVM and Target Item
   Analysis in Collaborative Filtering Recommender Systems}.
 \newblock Springer International Publishing, Cham, 2015, pp.~751--763.
+
+\bibitem{Zobel1998}
+{\sc Zobel, J.}
+\newblock How reliable are the results of large-scale information retrieval
+  experiments?
+\newblock In {\em Proceedings of the 21st Annual International ACM SIGIR
+  Conference on Research and Development in Information Retrieval\/} (New York,
+  NY, USA, 1998), SIGIR '98, ACM, pp.~307--314.
 
 \bibitem{Zou2017}
 {\sc Zou, C., Zhang, D., Wan, J., Hassan, M.~M., and Lloret, J.}
