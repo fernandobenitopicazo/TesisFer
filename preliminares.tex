@@ -2,10 +2,17 @@
 \chapter{Preliminares}\label{cap:preliminares}
 \pagestyle{headings}
 
-\bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello, se ha dividido en cuatro secciones principales. 
+\bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello, a partir de las implicaciones, se ha dividido en cuatro secciones principales tal como muestra la Figura \ref{figura:esquemaPreliminares}. 
 
 La primera presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de dependencias funcionales. La tercera parte se dedica a presentar formalmente la lógica de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dicha lógica.
 
+\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[height=.15\textheight,width=.75\textwidth]{esquemaPreliminares.png}
+		\end{center}
+		\caption{Esquema de contenido del capítulo de Preliminares.}
+		\label{figura:esquemaPreliminares}
+\end{figure}
 
 
 \section{Análisis Formal de Conceptos}
@@ -770,19 +777,6 @@ $$
 
 Una vez finalizado la ejecución del algoritmo, se obtiene: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Gamma = \{b \to d\}$.
 \end{ejemplo}
-
-
-
-\section{Verificación de los Resultados}
-\label{sec:verificacionResultados}
-Antes de finalizar esta sección y entrar plenamente en el cuerpo de la tesis donde se van a presentar las publicaciones que han resultado de este trabajo de investigación, es necesario hacer una importante aclaración previa con la intención de indicar la manera de certificar la validez de los resultados obtenidos a lo largo de la tesis. 
-
-Como se ha mostrado en los capítulos anteriores, la labor de investigación se ha centrado en actuar sobre conjuntos de implicaciones, y en ese sentido, para los experimentos realizados se ha contado con unos ficheros de entrada que contenían la información necesaria, y sobre ellos se han obtenido unos resultados. Ahora bien, la forma de verificar que esos resultados son correctos es la siguiente. 
-
-En primer lugar y con respecto a los resultados que se presentan en cuanto a claves y generadores minimales, se han realizado numerosos ejercicios en papel intentando buscar casos límites donde la implementación pudiera no ser precisa y se ha comprobado que los resultados obtenidos en papel coincidían exactamente con los calculados por la máquina. Además, dado que para muchos de los experimentos, en los que se llegaban a calcular millones de nodos de un árbol, no era posible comprobar si cada uno de esos cálculos era correcto, para el caso concreto de los experimentos relacionados con claves minimales, la validez de los experimentos viene dada al haber cotejado los resultados con aquellos obtenidos sobre un amplio abanico de experimentos en trabajos anteriores \cite{Benito-Picazo2013PFC,Benito-Picazo2014TFM} donde su validez quedó demostrada. Básicamente, la validez de los ejercicios más grandes se ha extrapolado de los resultados correctos obtenidos para los ejercicios más pequeños. Pero además, la validez de los resultados se corrobora igualmente al alcanzar las mismas soluciones para diferentes métodos cuando cada uno de ellos hace un tratamiento de la información diferente con respecto al otro. En relación a los experimentos con SR conversacionales, dado que los experimentos no alcanzan números tan costosos de verificar, la validez de los resultados puede demostrarse de forma más asequible siguiendo un desarrollo explícito en papel.
-
-Adicionalmente, y con mayor énfasis en relación a los experimentos que han conllevado la utilización de recursos de supercomputación, cada uno de los experimentos se ha reproducido entre 30 y 50 veces de forma que los resultados mostrados son fruto de un estudio estadístico posterior más amplio que permite identificar los resultados más fiables, tal y como se sugiere en trabajos anteriores \cite{Zobel1998,Goh10,Yang2012}.  
-
 
 % =====================================================================
 % =====================================================================

@@ -8,7 +8,7 @@
 
   \item An\'alisis Formal de Conceptos, \hyperpage{3}
   \item atributo, \hyperpage{6}, \hyperpage{44}
-  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{48}
+  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{49}
 
   \indexspace
 
@@ -27,21 +27,21 @@
   \item conjuntos cerrados, \hyperpage{18}, \hyperpage{37}
   \item conjuntos de implicaciones, \hyperpage{3}, \hyperpage{18}, 
 		\hyperpage{22}, \hyperpage{49}
-  \item contexto formal, \hyperpage{34, 35}, \hyperpage{37, 38}, 
+  \item contexto formal, \hyperpage{34--36}, \hyperpage{38}, 
 		\hyperpage{42, 43}, \hyperpage{46, 47}
   \item Cuerpo, \hyperpage{45}
 
   \indexspace
 
   \item dataset, \hyperpage{4}, \hyperpage{15}
-  \item dependencias funcionales, \hyperpage{4}, \hyperpage{45}
+  \item dependencias funcionales, \hyperpage{4}, \hyperpage{46}
   \item derivaci\'on sem\'antica, \hyperpage{51}
   \item derivaci\'on sint\'actica, \hyperpage{51}
   \item dominio, \hyperpage{44}
 
   \indexspace
 
-  \item Esquema, \hyperpage{44}
+  \item Esquema, \hyperpage{45}
 
   \indexspace
 
@@ -55,7 +55,7 @@
   \indexspace
 
   \item if-then rules, \hyperpage{4}, \hyperpage{41}
-  \item Implicaci\'on, \hyperpage{41}
+  \item Implicaci\'on, \hyperpage{42}
     \subitem trivial, \hyperpage{42}
     \subitem unitaria, \hyperpage{42}
   \item implicaciones, \hyperpage{4}
@@ -76,9 +76,9 @@
 
   \indexspace
 
-  \item operador de cierre, \hyperpage{12}, \hyperpage{36}, 
+  \item operador de cierre, \hyperpage{12}, \hyperpage{37}, 
 		\hyperpage{42}
-  \item operadores de derivaci\'on, \hyperpage{35}
+  \item operadores de derivaci\'on, \hyperpage{36}
 
   \indexspace
 

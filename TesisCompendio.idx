@@ -77,17 +77,17 @@
 \indexentry{supercomputaci\'on|hyperpage}{27}
 \indexentry{contexto formal|hyperpage}{34}
 \indexentry{contexto formal|hyperpage}{35}
-\indexentry{contexto formal|hyperpage}{35}
-\indexentry{operadores de derivaci\'on|hyperpage}{35}
-\indexentry{operador de cierre|hyperpage}{36}
+\indexentry{contexto formal|hyperpage}{36}
+\indexentry{operadores de derivaci\'on|hyperpage}{36}
+\indexentry{operador de cierre|hyperpage}{37}
 \indexentry{conjuntos cerrados|hyperpage}{37}
 \indexentry{concepto formal|hyperpage}{37}
-\indexentry{contexto formal|hyperpage}{37}
+\indexentry{contexto formal|hyperpage}{38}
 \indexentry{contexto formal|hyperpage}{38}
 \indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{38}
 \indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{39}
 \indexentry{if-then rules|hyperpage}{41}
-\indexentry{Implicaci\'on|hyperpage}{41}
+\indexentry{Implicaci\'on|hyperpage}{42}
 \indexentry{Implicaci\'on!trivial|hyperpage}{42}
 \indexentry{Implicaci\'on!unitaria|hyperpage}{42}
 \indexentry{operador de cierre|hyperpage}{42}
@@ -98,9 +98,9 @@
 \indexentry{atributo|hyperpage}{44}
 \indexentry{tupla|hyperpage}{44}
 \indexentry{dominio|hyperpage}{44}
-\indexentry{Esquema|hyperpage}{44}
+\indexentry{Esquema|hyperpage}{45}
 \indexentry{Cuerpo|hyperpage}{45}
-\indexentry{dependencias funcionales|hyperpage}{45}
+\indexentry{dependencias funcionales|hyperpage}{46}
 \indexentry{tupla|hyperpage}{46}
 \indexentry{contexto formal|hyperpage}{46}
 \indexentry{contexto formal|hyperpage}{47}
@@ -109,7 +109,7 @@
 \indexentry{Tableaux|hyperpage}{48}
 \indexentry{paralelismo|hyperpage}{48}
 \indexentry{supercomputaci\'on|hyperpage}{48}
-\indexentry{Axiomas de Armstrong|hyperpage}{48}
+\indexentry{Axiomas de Armstrong|hyperpage}{49}
 \indexentry{sistema axiom\'atico|hyperpage}{49}
 \indexentry{conjuntos de implicaciones|hyperpage}{49}
 \indexentry{\slfde|hyperpage}{50}

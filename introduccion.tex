@@ -296,20 +296,23 @@ La propuesta de solución realizada consiste en reducir los efectos del problema 
 
 Además, se han realizado numerosas pruebas de aplicación sobre la propuesta que se ha desarrollado para contrastar su validez. En concreto, se han realizado pruebas utilizando información real sobre enfermedades y fenotipos como se puede apreciar en una de las contribuciones que avalan este trabajo de investigación \cite{Benito-Picazo2017}. Además, la propuesta desarrollada, al igual que la gran mayoría de los SR, permite actuar sobre diferentes datasets de forma que se puede utilizar el mismo procedimiento para mejorar las recomendaciones conversacionales en diversos entornos. Esta versatilidad es una característica notoria, ya que permite libertad de maniobra en el caso de que se quieran introducir ciertos cambios, o simplemente que los datos sean diferentes. En ese sentido, la propuesta de este trabajo casa con los conceptos de adaptabilidad y longevidad de los SR ya que el funcionamiento es independiente de la información de base con la que trabaje, sólo es necesario conocer el conjunto de atributos e implicaciones subyacente a los datos.
 
-A modo de resumen gráfico, la Figura \ref{figura:esquemaConceptual} muestra un esquema del camino que investigación que se ha seguido en el desarrollo de esta tesis doctoral, apoyado por las principales nociones y referencias.
 
-\begin{figure}[htbp]
-	\begin{center}
-		\includegraphics*[width=1\textwidth,height=.75\textheight]{esquemaConceptual.png}
-	\end{center}
-	\caption{Esquema del estado del arte y las contribuciones generadas.}
-	\label{figura:esquemaConceptual}
-\end{figure}
+\section{Verificación de los Resultados}
+\label{sec:verificacionResultados}
+Antes de entrar plenamente en el cuerpo de la tesis es necesario hacer una importante aclaración previa con la intención de indicar la manera de certificar la validez de los resultados obtenidos a lo largo de la tesis. 
+
+Como se ha verá en los siguientes capítulos, la labor de investigación se ha centrado en actuar sobre conjuntos de implicaciones, y en ese sentido, para los experimentos realizados se ha contado con unos ficheros de entrada que contenían la información necesaria, y sobre ellos se han obtenido unos resultados. Ahora bien, la forma de verificar que esos resultados son correctos es la siguiente. 
+
+En primer lugar y con respecto a los resultados que se presentan en cuanto a claves y generadores minimales, se han realizado numerosos ejercicios en papel intentando buscar casos límites donde la implementación pudiera no ser precisa y se ha comprobado que los resultados obtenidos en papel coincidían exactamente con los calculados por la máquina. Además, dado que para muchos de los experimentos, en los que se llegaban a calcular millones de nodos de un árbol, no era posible comprobar si cada uno de esos cálculos era correcto, para el caso concreto de los experimentos relacionados con claves minimales, la validez de los experimentos viene dada al haber cotejado los resultados con aquellos obtenidos sobre un amplio abanico de experimentos en trabajos anteriores \cite{Benito-Picazo2013PFC,Benito-Picazo2014TFM} donde su validez quedó demostrada. Básicamente, la validez de los ejercicios más grandes se ha extrapolado de los resultados correctos obtenidos para los ejercicios más pequeños. Pero además, la validez de los resultados se corrobora igualmente al alcanzar las mismas soluciones para diferentes métodos cuando cada uno de ellos hace un tratamiento de la información diferente con respecto al otro. En relación a los experimentos con SR conversacionales, dado que los experimentos no alcanzan números tan costosos de verificar, la validez de los resultados puede demostrarse de forma más asequible siguiendo un desarrollo explícito en papel.
+
+Adicionalmente, y con mayor énfasis en relación a los experimentos que han conllevado la utilización de recursos de supercomputación, cada uno de los experimentos se ha reproducido entre 30 y 50 veces de forma que los resultados mostrados son fruto de un estudio estadístico posterior más amplio que permite identificar los resultados más fiables, tal y como se sugiere en trabajos anteriores \cite{Zobel1998,Goh10,Yang2012}.
+
+%\vspace{0.4cm}
 
 Para finalizar este capítulo, se describe la estructura del documento incluyendo las publicaciones que avalan esta tesis.
 
 %\vspace{2cm}
-\newpage{}
+%\newpage{}
 \subsection*{Estructura de la Tesis}
 \noindent
 En este primer capítulo de introducción, se han fijado los puntos fundamentales de la tesis, como son: el marco de trabajo sobre el que se va a actuar, las técnicas que se utilizarán y los principales objetivos que se pretenden alcanzar. Concretamente, se ha estipulado la utilización de FCA y los conjuntos de implicaciones como base del estudio sobre la que aplicar técnicas basadas en la lógica para mejorar el tratamiento de la información.
@@ -334,6 +337,16 @@ En la Figura \ref{figura:esquemaTesis} se muestra de forma gráfica el contenido 
 	\end{center}
 	\caption{Esquema de la estructura de la tesis y las publicaciones.}
 	\label{figura:esquemaTesis}
+\end{figure}
+
+A modo de resumen gráfico, la Figura \ref{figura:esquemaConceptual} muestra un esquema del camino que investigación que se ha seguido en el desarrollo de esta tesis doctoral, apoyado por las principales nociones y referencias.
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics*[width=1\textwidth,height=.75\textheight]{esquemaConceptual.png}
+	\end{center}
+	\caption{Esquema del estado del arte y las contribuciones generadas.}
+	\label{figura:esquemaConceptual}
 \end{figure}
 
 
