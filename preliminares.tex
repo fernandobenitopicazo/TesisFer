@@ -195,7 +195,7 @@ Se introduce ahora la noción formalmente:
 	Sea $K = (G,M,I)$ un contexto formal\index{contexto formal} y $A \subseteq G$, $B \subseteq M$. El par (A, B) se denomina concepto formal si $A'=B$ y $B'=A$. El conjunto de objetos $A$ se denomina extensión del concepto (A, B) mientras que el conjunto de atributos $B$ será la intensión del concepto.
 \end{definicion}
 
-La descripción de un concepto a través de su extensión e intención es redundante, ya que cada una de las dos partes determina la otra debido a que $B\ =\ A'$ y $A\ =\ B'$, sin embargo, pueden existir ocasiones en las cuales esta descripción redundante puede ser conveniente \cite{Ganter2002}.
+La descripción de un concepto a través de su extensión e intensión es redundante, ya que cada una de las dos partes determina la otra debido a que $B\ =\ A'$ y $A\ =\ B'$, sin embargo, pueden existir ocasiones en las cuales esta descripción redundante puede ser conveniente \cite{Ganter2002}.
 
 Una alternativa gráfica de identificar los conceptos formales es la siguiente. Desde la representación del contexto formal, un concepto formal se puede reconocer por medio de una submatriz de tal manera que se verifican todas las relaciones contenidas en la submatriz (no es necesario que la submatriz esté formada por celdas contiguas). De esta forma, en la Tabla \ref{tabla:extractoEjemploContextoFormal}, se ve como es posible identificar el concepto formal construido con el par (\textit{\{Air New Zealand, All Nippon Airways\},\{Europa, Asia, Estados Unidos\}}) a partir del contexto formal. 
 
@@ -308,7 +308,7 @@ Se utilizará la siguiente notación:
 
 \subsection*{Semántica}
 \noindent
-Tras la definición del lenguaje se pasa ahora a introducir la semántica utilizada, para lo cual se va a utilizar el concepto de \textit{operador de cierre}\index{operador de cierre} definido anteriormente.
+Tras la definición del lenguaje se pasa ahora a introducir la semántica utilizada, para lo cual se va a utilizar la noción de \textit{operador de cierre}\index{operador de cierre} definido anteriormente.
 
 %Un operador de cierre $c$ en $M$ recibe el nombre de \emph{modelo} para una implicación $A\to B\in\mathcal L_M$ si $B\subseteq  c(A)$; se denota $c\models A\to B$. Además, dado un sistema de implicaciones $\Sigma\subseteq \mathcal L_M$ y un operador de cierre $c$ en $M$, $c\models \Sigma$ denota que $c\models A\to B$ para todo $A\to B\in \Sigma$.
 
@@ -464,7 +464,7 @@ se pasa ahora a describir la semántica para las FD.
 
 \subsection*{Semántica}
 \noindent
-Una FD se satisface en una tabla $R$ si para cada dos tuplas\index{tupla} de $R$, si verifican $X$, entonces verifican $Y$. Intuitivamente, una FD $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente el concepto de regla \textit{si-entonces} que definen las implicaciones y se acerca a la definición de una función entre los dominios de $A$ y $B$, $f: A\to B$. Entonces, ¿por qué el cambio de denominación? 
+Una FD se satisface en una tabla $R$ si para cada dos tuplas\index{tupla} de $R$, si verifican $X$, entonces verifican $Y$. Intuitivamente, una FD $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de regla \textit{si-entonces} que definen las implicaciones y se acerca a la definición de una función entre los dominios de $A$ y $B$, $f: A\to B$. Entonces, ¿por qué el cambio de denominación? 
 
 En la Sección \ref{subsec:sistemaImplicaciones} se definió la noción de implicación, denotado por $X \rightarrow Y$, y se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una FD, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
 
