@@ -1,5 +1,11 @@
 \begin{thebibliography}{100}
 
+\bibitem{Abdollahpouri2017}
+{\sc Abdollahpouri, H., Burke, R., and Mobasher, B.}
+\newblock Controlling popularity bias in learning-to-rank recommendation.
+\newblock In {\em Proceedings of the Eleventh ACM Conference on Recommender
+  Systems\/} (New York, NY, USA, 2017), RecSys '17, ACM, pp.~42--46.
+
 \bibitem{Adomavicius2005}
 {\sc Adomavicius, G., and Tuzhilin, A.}
 \newblock Toward the next generation of recommender systems: A survey of the
@@ -11,6 +17,15 @@
 {\sc Adomavicius, G., and Tuzhilin, A.}
 \newblock In {\em Recommender Systems Handbook}, F.~Ricci, L.~Rokach,
   B.~Shapira, and P.~B. Kantor, Eds. Springer, 2011, pp.~217--253.
+
+\bibitem{AlAli2016}
+{\sc Al-Ali, R., Kathiresan, N., Anbari, M.~E., Schendel, E.~R., and Zaid,
+  T.~A.}
+\newblock Workflow optimization of performance and quality of service for
+  bioinformatics application in high performance computing.
+\newblock {\em Journal of Computational Science 15\/} (2016), 3 -- 10.
+\newblock International Computational Science and Engineering Conference 2015
+  (ICSEC15).
 
 \bibitem{Armstrong74}
 {\sc Armstrong, W.~W.}
@@ -238,6 +253,12 @@
 \newblock {\em International Journal of Approximate Reasoning 51}, 7 (2010),
   785 -- 799.
 
+\bibitem{Moraes2016}
+{\sc de~Moraes, N. R.~M., Dias, S.~M., Freitas, H.~C., and Z{\'a}rate, L.~E.}
+\newblock Parallelization of the next closure algorithm for generating the
+  minimum set of implication rules.
+\newblock {\em Artificial Intelligence Research 5\/} (03 2016), 40--54.
+
 \bibitem{Dean2004}
 {\sc Dean, J., and Ghemawat, S.}
 \newblock Mapreduce: simplified data processing on large clusters.
@@ -282,6 +303,11 @@
 \newblock In {\em Proceedings of the 19th ACM Conference on Computer Supported
   Cooperative Work and Social Computing Companion\/} (New York, NY, USA, 2016),
   CSCW '16 Companion, ACM, pp.~253--256.
+
+\bibitem{Felfernig2015}
+{\sc Felfernig, A., Friedrich, G., Jannach, D., and Zanker, M.}
+\newblock {\em Constraint-Based Recommender Systems}.
+\newblock Springer US, Boston, MA, 2015, pp.~161--190.
 
 \bibitem{Friedman2015}
 {\sc Friedman, A., Knijnenburg, B.~P., Vanhecke, K., Martens, L., and
@@ -337,6 +363,14 @@
 \newblock In {\em Proceedings of the 20th International Conference on User
   Modeling, Adaptation, and Personalization\/} (Berlin, Heidelberg, 2012),
   UMAP'12, Springer-Verlag, pp.~361--364.
+
+\bibitem{Guy2009}
+{\sc Guy, I., Zwerdling, N., Carmel, D., Ronen, I., Uziel, E., Yogev, S., and
+  Ofek-Koifman, S.}
+\newblock Personalized recommendation of social software items based on social
+  relations.
+\newblock In {\em Proceedings of the Third ACM Conference on Recommender
+  Systems\/} (New York, NY, USA, 2009), RecSys '09, ACM, pp.~53--60.
 
 \bibitem{Harrington2016}
 {\sc Harrington, J.~L.}
@@ -472,6 +506,12 @@
 \newblock Amazon.com recommendations: Item-to-item collaborative filtering.
 \newblock {\em IEEE Internet Computing 7\/} (2003), 76--80.
 
+\bibitem{Llorente2012}
+{\sc Llorente, M.~S., and Guerrero, S.~E.}
+\newblock Increasing retrieval quality in conversational recommenders.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering 24}, 10 (Oct
+  2012), 1876--1888.
+
 \bibitem{LopsGS11}
 {\sc Lops, P., de~Gemmis, M., and Semeraro, G.}
 \newblock Content-based recommender systems: State of the art and trends.
@@ -541,6 +581,13 @@
 \newblock The implication problem for functional and inclusion dependencies.
 \newblock {\em Information and Control 56}, 3 (1983), 154 -- 173.
 
+\bibitem{Mooney2000}
+{\sc Mooney, R.~J., and Roy, L.}
+\newblock Content-based book recommending using learning for text
+  categorization.
+\newblock In {\em Proceedings of the Fifth ACM Conference on Digital
+  Libraries\/} (New York, NY, USA, 2000), DL '00, ACM, pp.~195--204.
+
 \bibitem{Mora2012}
 {\sc Mora, A., Cordero, P., Enciso, M., Fortes, I., and Aguilera, G.}
 \newblock Closure via functional dependence simplification.
@@ -568,6 +615,13 @@
 \newblock Evading the curse of dimensionality in nonparametric density
   estimation with simplified vine copulas.
 \newblock {\em Journal of Multivariate Analysis 151\/} (2016), 69 -- 89.
+
+\bibitem{Nguyen2014}
+{\sc Nguyen, T.~T., Hui, P.-M., Harper, F.~M., Terveen, L., and Konstan, J.~A.}
+\newblock Exploring the filter bubble: The effect of using recommender systems
+  on content diversity.
+\newblock In {\em Proceedings of the 23rd International Conference on World
+  Wide Web\/} (New York, NY, USA, 2014), WWW '14, ACM, pp.~677--686.
 
 \bibitem{Niemela1999}
 {\sc Niemel\"{a}, I.}
@@ -622,11 +676,6 @@
 \newblock {\em International Journal of General Systems 36}, 2 (2007),
   147--156.
 
-\bibitem{Moraes2016}
-{\sc R.~M.~de Moraes, N., Dias, S., Freitas, H., and Zárate, L.}
-\newblock Parallelization of the next closure algorithm for generating the
-  minimum set of implication rules.
-
 \bibitem{Metaphor2012}
 {\sc Reda, A., Park, Y., Tiwari, M., Posse, C., and Shah, S.}
 \newblock Metaphor: a system for related search recommendations.
@@ -653,6 +702,12 @@
   database schema.
 \newblock {\em Comput. J. 39}, 2 (1996), 124--132.
 
+\bibitem{Salem2014}
+{\sc Salem, Y., Hong, J., and Liu, W.}
+\newblock History-guided conversational recommendation.
+\newblock In {\em Proceedings of the 23rd International Conference on World
+  Wide Web\/} (New York, NY, USA, 2014), WWW '14 Companion, ACM, pp.~999--1004.
+
 \bibitem{Sali2004}
 {\sc Sali, A.}
 \newblock {\em Minimal Keys in Higher-Order Datamodels}.
@@ -675,12 +730,6 @@
   classification.
 \newblock {\em The Egyptian Journal of Remote Sensing and Space Science 21}, 1
   (2018), 27 -- 36.
-
-\bibitem{Shalom2016}
-{\sc Sar~Shalom, O., Koenigstein, N., Paquet, U., and Vanchinathan, H.~P.}
-\newblock Beyond collaborative filtering: The list recommendation problem.
-\newblock In {\em Proceedings of the 25th International Conference on World
-  Wide Web\/} (2016), WWW '16, pp.~63--72.
 
 \bibitem{BenSassi2017}
 {\sc Sassi, I.~B., Mellouli, S., and Yahia, S.~B.}
@@ -747,11 +796,6 @@
 \newblock In {\em Proceedings of the Fifth ACM Conference on Recommender
   Systems\/} (New York, NY, USA, 2011), RecSys '11, ACM, pp.~1--6.
 
-\bibitem{Tintarev2011}
-{\sc Tintarev, N., and Masthoff, J.}
-\newblock {\em Designing and Evaluating Explanations for Recommender Systems}.
-\newblock Springer US, Boston, MA, 2011, pp.~479--510.
-
 \bibitem{Tiroshi11}
 {\sc Tiroshi, A., Kuflik, T., Kay, J., and Kummerfeld, B.}
 \newblock Recommender systems and the social web.
@@ -802,6 +846,13 @@
 \newblock On the number of keys of a relational database schema.
 \newblock {\em Journal of Universal Computer Science 4}, 5 (1998), 547--559.
 
+\bibitem{Wienke2016}
+{\sc Wienke, S., Miller, J., Schulz, M., and M\"{u}ller, M.~S.}
+\newblock Development effort estimation in hpc.
+\newblock In {\em Proceedings of the International Conference for High
+  Performance Computing, Networking, Storage and Analysis\/} (Piscataway, NJ,
+  USA, 2016), SC '16, IEEE Press, pp.~10:1--10:12.
+
 \bibitem{Wille2005}
 {\sc Wille, R.}
 \newblock {\em Formal Concept Analysis as Mathematical Theory of Concepts and
@@ -834,6 +885,13 @@
 {\sc Yevtushenko, S., Tane, J., Kaiser, T.~B., Obiedkov, S., Hereth, J., and
   Reppe, H.}
 \newblock Conexp - the concept explorer.
+
+\bibitem{Yulong2011}
+{\sc Ying, Y.}
+\newblock The personalized recommendation algorithm based on item semantic
+  similarity.
+\newblock In {\em Communication Systems and Information Technology\/} (Berlin,
+  Heidelberg, 2011), M.~Ma, Ed., Springer Berlin Heidelberg, pp.~999--1004.
 
 \bibitem{Yu76}
 {\sc Yu, C.~T., and Johnson, D.~T.}

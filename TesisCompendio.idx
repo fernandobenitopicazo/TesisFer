@@ -17,7 +17,7 @@
 \indexentry{\slfde|hyperpage}{9}
 \indexentry{Tableaux|hyperpage}{9}
 \indexentry{\slfde|hyperpage}{10}
-\indexentry{SST|hyperpage}{11}
+\indexentry{SST|hyperpage}{10}
 \indexentry{supercomputaci\'on|hyperpage}{11}
 \indexentry{paralelismo|hyperpage}{11}
 \indexentry{paralelismo|hyperpage}{11}
@@ -74,52 +74,53 @@
 \indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{23}
 \indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{23}
 \indexentry{\slfde|hyperpage}{25}
-\indexentry{supercomputaci\'on|hyperpage}{27}
-\indexentry{contexto formal|hyperpage}{34}
-\indexentry{contexto formal|hyperpage}{35}
+\indexentry{supercomputaci\'on|hyperpage}{29}
 \indexentry{contexto formal|hyperpage}{36}
-\indexentry{operadores de derivaci\'on|hyperpage}{36}
-\indexentry{operador de cierre|hyperpage}{37}
-\indexentry{conjuntos cerrados|hyperpage}{38}
-\indexentry{concepto formal|hyperpage}{38}
+\indexentry{contexto formal|hyperpage}{37}
 \indexentry{contexto formal|hyperpage}{38}
-\indexentry{contexto formal|hyperpage}{39}
-\indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{39}
-\indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{40}
-\indexentry{if-then rules|hyperpage}{42}
-\indexentry{Implicaci\'on|hyperpage}{42}
-\indexentry{operador de cierre|hyperpage}{43}
-\indexentry{Modelo|hyperpage}{43}
-\indexentry{contexto formal|hyperpage}{43}
-\indexentry{contexto formal|hyperpage}{44}
-\indexentry{Bases de Datos Relacionales|hyperpage}{44}
-\indexentry{atributo|hyperpage}{44}
-\indexentry{tupla|hyperpage}{45}
-\indexentry{dominio|hyperpage}{45}
-\indexentry{Esquema|hyperpage}{45}
-\indexentry{Cuerpo|hyperpage}{45}
-\indexentry{dependencias funcionales|hyperpage}{46}
-\indexentry{tupla|hyperpage}{46}
-\indexentry{contexto formal|hyperpage}{47}
-\indexentry{contexto formal|hyperpage}{47}
-\indexentry{clave|hyperpage}{48}
-\indexentry{clave!claves minimales|hyperpage}{48}
-\indexentry{Tableaux|hyperpage}{48}
-\indexentry{paralelismo|hyperpage}{48}
-\indexentry{supercomputaci\'on|hyperpage}{48}
-\indexentry{Axiomas de Armstrong|hyperpage}{49}
-\indexentry{sistema axiom\'atico|hyperpage}{49}
-\indexentry{conjuntos de implicaciones|hyperpage}{50}
-\indexentry{\slfde|hyperpage}{50}
-\indexentry{reglas de inferencia|hyperpage}{51}
-\indexentry{reglas de inferencia!fragmentaci\'on|hyperpage}{51}
-\indexentry{reglas de inferencia!composici\'on|hyperpage}{51}
-\indexentry{reglas de inferencia!simplificaci\'on|hyperpage}{51}
-\indexentry{derivaci\'on sint\'actica|hyperpage}{51}
-\indexentry{derivaci\'on sem\'antica|hyperpage}{52}
-\indexentry{Teorema de deducci\'on|hyperpage}{52}
-\indexentry{\slfde|hyperpage}{53}
-\indexentry{Cierre cl\'asico|hyperpage}{54}
-\indexentry{Teorema de deducci\'on|hyperpage}{55}
-\indexentry{Teorema de deducci\'on|hyperpage}{55}
-\indexentry{Cierre \slfd|hyperpage}{55}
+\indexentry{operadores de derivaci\'on|hyperpage}{38}
+\indexentry{operador de cierre|hyperpage}{39}
+\indexentry{conjuntos cerrados|hyperpage}{40}
+\indexentry{concepto formal|hyperpage}{40}
+\indexentry{contexto formal|hyperpage}{40}
+\indexentry{contexto formal|hyperpage}{41}
+\indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{41}
+\indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{42}
+\indexentry{if-then rules|hyperpage}{44}
+\indexentry{Implicaci\'on|hyperpage}{44}
+\indexentry{operador de cierre|hyperpage}{45}
+\indexentry{Modelo|hyperpage}{45}
+\indexentry{contexto formal|hyperpage}{45}
+\indexentry{contexto formal|hyperpage}{46}
+\indexentry{Bases de Datos Relacionales|hyperpage}{46}
+\indexentry{atributo|hyperpage}{46}
+\indexentry{tupla|hyperpage}{47}
+\indexentry{dominio|hyperpage}{47}
+\indexentry{Esquema|hyperpage}{47}
+\indexentry{Cuerpo|hyperpage}{47}
+\indexentry{dependencias funcionales|hyperpage}{48}
+\indexentry{tupla|hyperpage}{48}
+\indexentry{contexto formal|hyperpage}{49}
+\indexentry{contexto formal|hyperpage}{49}
+\indexentry{clave|hyperpage}{50}
+\indexentry{clave!claves minimales|hyperpage}{50}
+\indexentry{Tableaux|hyperpage}{50}
+\indexentry{paralelismo|hyperpage}{50}
+\indexentry{supercomputaci\'on|hyperpage}{50}
+\indexentry{Axiomas de Armstrong|hyperpage}{51}
+\indexentry{sistema axiom\'atico|hyperpage}{51}
+\indexentry{conjuntos de implicaciones|hyperpage}{52}
+\indexentry{\slfde|hyperpage}{52}
+\indexentry{reglas de inferencia|hyperpage}{53}
+\indexentry{reglas de inferencia!fragmentaci\'on|hyperpage}{53}
+\indexentry{reglas de inferencia!composici\'on|hyperpage}{53}
+\indexentry{reglas de inferencia!simplificaci\'on|hyperpage}{53}
+\indexentry{derivaci\'on sint\'actica|hyperpage}{53}
+\indexentry{derivaci\'on sem\'antica|hyperpage}{54}
+\indexentry{Teorema de deducci\'on|hyperpage}{54}
+\indexentry{\slfde|hyperpage}{55}
+\indexentry{Cierre cl\'asico|hyperpage}{56}
+\indexentry{Teorema de deducci\'on|hyperpage}{57}
+\indexentry{Teorema de deducci\'on|hyperpage}{57}
+\indexentry{Cierre \slfd|hyperpage}{57}
+\indexentry{\slfde|hyperpage}{121}

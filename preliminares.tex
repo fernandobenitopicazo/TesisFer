@@ -24,13 +24,13 @@ Como principales fortalezas de FCA cabe mencionar: su sólida base matemática y f
 
 \subsection{Contextos formales}
 \label{subsec:contextosFormales}
-El punto de partida de FCA es un \textit{contexto formal}\index{contexto formal} que se define a continuación.
+El punto de partida de FCA es un \textit{contexto formal}\index{contexto formal}. Es una noción fundamental para el contenido de esta sección y se define a continuación.
 
 \begin{definicion}[Contexto formal]
 	Un contexto formal es una tripleta $K = (G,M,I)$ que consiste en dos conjuntos no vacíos, $G$ y $M$, y una relación binaria $I$ entre ellos. Los elementos de $G$ se llaman objetos del contexto, y los elementos de $M$ se llaman atributos del contexto. Para $g \in G$ y $m \in M$, escribimos $<g,m> \in I$ o $gIm$ si el objeto $g$ posee el atributo $m$.
 \end{definicion}
 
-La forma más sencilla de representar un contexto formal es mediante una tabla donde los objetos se sitúan en sus filas y los atributos en las columnas, de forma que un valor en cada celda indica si un objeto $g \in G$ posee un atributo $m \in M$. Hay que tener en cuenta que la definición de contexto formal es deliberadamente muy general. No hay restricciones sobre la naturaleza de los objetos y atributos. Se pueden considerar objetos físicos, personas, números, procesos, estructuras, etc. En realidad, cualquier cosa que sea un \textit{conjunto} en el sentido matemático se puede tomar como el conjunto de objetos o de atributos de algún contexto formal. También es posible intercambiar el papel de los objetos y atributos, es decir, si se tiene que $K = (G,M,I)$ es un contexto formal, igualmente lo será su dual, $K = (M,G,I')$ con $mI'g \Longleftrightarrow gIm$. Además, ni siquiera es necesario que $G$ y $M$ sean disjuntos, de hecho, pueden incluso no ser diferentes. Se utilizarán letras mayúsculas: A, B, C, etc., para denotar subconjuntos de $M$ y $G$.
+La forma más sencilla de representar un contexto formal es mediante una tabla donde los objetos se sitúan en sus filas y los atributos en las columnas, de forma que un valor en cada celda indica si un objeto $g \in G$ posee un atributo $m \in M$. Hay que tener en cuenta que la definición de contexto formal es deliberadamente muy general. No hay restricciones sobre la naturaleza de los objetos y atributos. Se pueden considerar objetos físicos, personas, números, procesos, estructuras, etc. En realidad, cualquier cosa que sea un \textit{conjunto} en el sentido matemático se puede tomar como el conjunto de objetos o de atributos de algún contexto formal. También es posible intercambiar el papel de los objetos y atributos, es decir, si se tiene que $K = (G,M,I)$ es un contexto formal, igualmente lo será su dual, $K = (M,G,I')$ con $mI'g \Longleftrightarrow gIm$. Además, ni siquiera es necesario que $G$ y $M$ sean disjuntos, de hecho, pueden incluso no ser diferentes.
 
 %\begin{ejemplo}
 %	Se considera un ejemplo de contexto formal en el cual los objetos son hoteles, los atributos son diferentes servicios que ofrece el establecimiento y cada celda de la tabla indica si un objeto cumple un atributo. Por tanto, se tiene el contexto formal $\mathbf{K} = (G,M,I)$ en el cual:
@@ -270,9 +270,9 @@ De esta forma, cuanto más se descienda en el retículo de conceptos, más destinos
 
 \subsection{Sistema de implicaciones}
 \label{subsec:sistemaImplicaciones}
-Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Reflejan una forma relativamente sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules}.% con una gestión automatizada de la información.
+Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Muestran una alternativa relativamente sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules}.% con una gestión automatizada de la información.
 
-Para introducir el trabajo realizado utilizando la lógica sobre los conjuntos de implicaciones, se va a proceder describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA, bases de datos y sistemas de recomendación). En consecuencia, en este punto se presenta el elemento de la lógica común a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
+Para introducir el trabajo realizado utilizando la lógica sobre los conjuntos de implicaciones, se va a proceder describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA y bases de datos). En consecuencia, en este punto se presenta el elemento de la lógica común a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
 
 \subsection*{Lenguaje}
 \noindent
@@ -290,7 +290,7 @@ Se utilizará la siguiente notación:
 	\item Se utilizarán letras minúsculas para denotar los elementos en $M$, mientras que las mayúsculas denotan sus subconjuntos.
 	\item Se omiten las llaves en premisas y conclusiones, es decir, $abcde$ denota el conjunto $\{a,b,c,d,e\}$.
 	\item Se escriben los elementos de $2^M$ por yuxtaposición, es decir, para $X \cup Y$ se escribirá $XY$.
-	\item Para la diferencia, se cambia $X-Y$ por la notación $X \smallsetminus Y$.
+	\item Para la diferencia, en vez de utilizar $X-Y$, se utiliza $X \smallsetminus Y$.
 \end{itemize}
 
 %\begin{definicion}[Implicación]\index{Implicación}
@@ -518,7 +518,7 @@ Una clave en bases de datos relacionales está constituida por un subconjunto de 
 	El conjunto de atributos $K \subseteq M$ se dice que es una superclave de $R$ si $K$ es una clave de $R$ y no es minimal.
 \end{definicion}
 
-Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de Tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en algunas de las publicaciones que avalan esta tesis \cite{Benito-Picazo2014,Benito-Picazo2016}.   
+Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en algunas de las publicaciones que avalan esta tesis \cite{Benito-Picazo2014,Benito-Picazo2016}.   
 
 
 
