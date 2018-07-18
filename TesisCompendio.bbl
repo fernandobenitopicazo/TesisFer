@@ -18,6 +18,11 @@
 \newblock In {\em Recommender Systems Handbook}, F.~Ricci, L.~Rokach,
   B.~Shapira, and P.~B. Kantor, Eds. Springer, 2011, pp.~217--253.
 
+\bibitem{Agrawal1993}
+{\sc Agrawal, R., Imieli\'{n}ski, T., and Swami, A.}
+\newblock Mining association rules between sets of items in large databases.
+\newblock {\em SIGMOD Rec. 22}, 2 (June 1993), 207--216.
+
 \bibitem{AlAli2016}
 {\sc Al-Ali, R., Kathiresan, N., Anbari, M.~E., Schendel, E.~R., and Zaid,
   T.~A.}
@@ -372,6 +377,11 @@
 \newblock In {\em Proceedings of the Third ACM Conference on Recommender
   Systems\/} (New York, NY, USA, 2009), RecSys '09, ACM, pp.~53--60.
 
+\bibitem{Han2000}
+{\sc Han, J., and Kamber, M.}
+\newblock {\em Data Mining: Concepts and Techniques}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2000.
+
 \bibitem{Harrington2016}
 {\sc Harrington, J.~L.}
 \newblock {\em Relational Database Design and Implementation}, 4th~ed.
@@ -675,6 +685,13 @@
 \newblock Study of decision implications based on formal concept analysis.
 \newblock {\em International Journal of General Systems 36}, 2 (2007),
   147--156.
+
+\bibitem{Rajput2015}
+{\sc Rajput, A., and Chaturvedi, S.~K.}
+\newblock User rating and synonyms based modified ranking technique for
+  recommender systems.
+\newblock In {\em 2015 International Conference on Computational Intelligence
+  and Communication Networks (CICN)\/} (Dec 2015), pp.~989--992.
 
 \bibitem{Metaphor2012}
 {\sc Reda, A., Park, Y., Tiwari, M., Posse, C., and Shah, S.}

@@ -1,6 +1,6 @@
-\select@language {english}
 \select@language {spanish}
-\contentsline {figure}{\numberline {1}{\ignorespaces Producci\'on cient\IeC {\'\i }fica\relax }}{vii}{figure.caption.6}
+\select@language {spanish}
+\contentsline {figure}{\numberline {1}{\ignorespaces Producci\'on cient\IeC {\'\i }fica\relax }}{\es@scroman {vii}}{figure.caption.6}
 \select@language {spanish}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de tableaux utilizando el sistema de inferencia $\mathbb {K}$ de Wastl.\relax }}{10}{figure.caption.10}
