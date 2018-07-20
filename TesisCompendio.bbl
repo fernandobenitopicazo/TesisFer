@@ -664,6 +664,11 @@
 \newblock In {\em Proceedings of the 23rd International Conference on World
   Wide Web\/} (New York, NY, USA, 2014), WWW '14, ACM, pp.~677--686.
 
+\bibitem{Nikolov2011}
+{\sc Nikolov, A., Ferrara, A., and Scharffe, F.}
+\newblock Data linking for the semantic web.
+\newblock {\em Int. J. Semant. Web Inf. Syst. 7}, 3 (July 2011), 46--76.
+
 \bibitem{Outrata2012}
 {\sc Outrata, J., and Vychodil, V.}
 \newblock Fast algorithm for computing fixpoints of galois connections induced
