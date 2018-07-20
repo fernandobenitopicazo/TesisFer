@@ -4,19 +4,20 @@
 
 \bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello, a partir de las implicaciones, se ha dividido en cuatro secciones principales tal como muestra la Figura \ref{figura:esquemaPreliminares}. 
 
-La primera presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de dependencias funcionales. La tercera parte se dedica a presentar formalmente las lógicas de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dichas lógicas.
+La primera presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de FDs. La tercera parte se dedica a presentar formalmente las lógicas de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dichas lógicas.
 
 \begin{figure}[htbp]
 		\begin{center}
 			\includegraphics[height=.15\textheight,width=.75\textwidth]{esquemaPreliminares.png}
 		\end{center}
-		\caption{Esquema de contenido del capítulo de Preliminares.}
+		\caption{Esquema de contenido del Capítulo \ref{cap:preliminares}, Preliminares.}
 		\label{figura:esquemaPreliminares}
 \end{figure}
 
 
 \section{Análisis Formal de Conceptos}
 \label{sec:analisisFormalConceptos}
+\noindent
 De forma general, se puede considerar FCA como un marco para el análisis de información que facilita la extracción de conocimiento y la posibilidad de poder razonar sobre él. La referencia principal de este campo de conocimiento viene de la mano de Wille y Ganter en \cite{Ganter1997}. Según el propio Wille en \cite{Wille2005}: \textit{``El objetivo y significado del análisis formal de conceptos como teoría matemática consiste en apoyar la comunicación racional de las personas, mediante el desarrollo de estructuras de conceptos matemáticamente apropiadas que puedan activarse lógicamente''}.
 
 Como principales fortalezas de FCA cabe mencionar: su sólida base matemática y filosófica, una representación gráfica e intuitiva del conocimiento, avalada en más de 2.000 publicaciones científicas y aplicaciones en cientos de proyectos \cite{Wille2005} en diversos campos de conocimiento, como se ha mencionado en el Capítulo \ref{cap:introduccion}. 
@@ -24,6 +25,7 @@ Como principales fortalezas de FCA cabe mencionar: su sólida base matemática y f
 
 \subsection{Contextos formales}
 \label{subsec:contextosFormales}
+\noindent
 El punto de partida de FCA es un \textit{contexto formal}\index{contexto formal}. Es una noción fundamental para el contenido de esta sección y se define a continuación.
 
 \begin{definicion}[Contexto formal]
@@ -107,6 +109,7 @@ VARIG & \checkmark & \checkmark &  & \checkmark &  & \checkmark & \checkmark &  
 
 \subsection{Operadores de derivación}
 \label{subsec:operadoresDerivacion}
+\noindent
 Dada una selección $A \subseteq G$ de objetos de un contexto formal\index{contexto formal} $K = (G,M,I)$, se desea caracterizar qué atributos de $M$ son comunes a todos estos objetos. Esto define un operador que produce para cada conjunto de objetos $A \subseteq G$, el conjunto $A$ de sus atributos comunes, y dualmente, a partir de un conjunto de atributos, caracterizar el conjunto de atributos que tienen en común a dichos atributos. Estos operadores se denominan operadores de derivación\index{operadores de derivación} para $K$.
  
 \begin{definicion}[Operadores de derivación]
@@ -128,7 +131,7 @@ $$
 Ambas funciones se denotan con el mismo símbolo porque no hay lugar a confusión.
 
 \begin{ejemplo}
-	A partir del contexto formal representado en la Tabla \ref{tabla:ejemploContextoFormal} se puede obtener:
+	A partir del contexto formal representado en la Tabla \ref{tabla:ejemploContextoFormal} se puede aplicar los operadores de derivación y obtener, por ejemplo:
 	
 	\begin{itemize}
 		\item $\{Mexicana\}' = \{Latinoamerica,\ Canada,\ Mexico,\ Caribe,\ Estados$
@@ -181,6 +184,7 @@ Un conjunto $A \subseteq M$ se denomina \textit{conjunto cerrado} para el operad
 
 \subsection{Conceptos Formales}
 \label{subsec:conceptosFormales}
+\noindent
 De forma general, un concepto formal permite describir formalmente un hecho del contexto y caracterizar un conjunto de objetos por medio de los atributos que comparten y viceversa. 
 
 Así, un par $(X,Y)$ con $X\subseteq G$ y $Y\subseteq M$ es un concepto formal cuando se verifica que:
@@ -240,27 +244,26 @@ $\left [ \ldots \right ]$  &  &  &  &  &  &  &  &  & \\
 
 \subsection{Retículo de conceptos}
 \label{subsec:reticuloConceptos}
+\noindent
 Un contexto formal\index{contexto formal} puede tener muchos conceptos formales. El conjunto de todos los conceptos formales de un contexto formal $K$ tiene estructura de \textit{retículo} con la relación de orden que se muestra a continuación.
 
 Si $(X_1,Y_1)$ y $(X_2,Y_2)$ son conceptos, se define un orden parcial, $\leq$, de forma que $(X_1,Y_1) \leq (X_2,Y_2)$ si y sólo si $X_1 \subseteq X_2$, o equivalentemente, si $Y_2 \subseteq Y_1$.
 
 %Los pares de conceptos en este orden parcial tienen una única máxima cota inferior, que es el concepto generado por $X_1 \cap X_2$. De forma análoga, poseen una única mínima cota superior, el concepto generado por los atributos $Y_1 \cap Y_2$. Por medio de estas operaciones de cálculo del máximo y del mínimo de dos conceptos, se satisfacen las propiedades que definen un retículo. 
 
-La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de conceptos\index{retículo de concepto} asociado al contexto formal mostrado anteriormente \ref{ejemploContextoFormal}.
+La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de conceptos\index{retículo de concepto} asociado al contexto formal mostrado anteriormente en el Ejemplo \ref{ejemploContextoFormal}. En un diagrama como el de la Figura \ref{figura:ejemploReticuloAerolineas}, cada nodo representa un concepto formal. Un concepto $c_1$ es un subconcepto de un concepto $c_2$ si y solo si hay un camino de  descendente desde el nodo que representa $c_2$ al nodo que representa $c_1$. El nombre de un objeto $g$ se asocia al nodo que representa el concepto más pequeño que contiene $g$ en su extensión; dualmente, el nombre de un atributo $m$ va asociado al nodo que representa el concepto más grande con $m$ en su intensión.
 
 \begin{figure}[htbp]
 		\begin{center}
-			\includegraphics[height=.6\textheight,width=1\textwidth]{ejemploReticuloAerolineas.png}
+			\includegraphics[height=.5\textheight,width=1\textwidth]{ejemploReticuloAerolineas.png}
 		\end{center}
 		\caption{Retículo de conceptos\index{retículo de conceptos} asociado al contexto formal \ref{ejemploContextoFormal}}
 		\label{figura:ejemploReticuloAerolineas}
 \end{figure}
 
-En un diagrama como el de la Figura \ref{figura:ejemploReticuloAerolineas}, cada nodo representa un concepto formal. Un concepto $c_1$ es un subconcepto de un concepto $c_2$ si y solo si hay un camino de  descendente desde el nodo que representa $c_2$ al nodo que representa $c_1$. El nombre de un objeto $g$ se asocia al nodo que representa el concepto más pequeño que contiene $g$ en su extensión; dualmente, el nombre de un atributo $m$ va asociado al nodo que representa el concepto más grande con $m$ en su intensión. 
-
 Se pueden comprobar fácilmente las relaciones que existen en el contexto ya que un objeto $g$ tiene un atributo $m$ si y solo si el concepto asociado a $g$ es un \textit{subconcepto} del asociado a $m$. La extensión de un concepto consiste en todos aquellos objetos cuyas etiquetas están asociadas a subconceptos, y, dualmente, la intensión consiste en todos los atributos asociados a \textit{superconceptos}. 
 
-Dicho lo anterior y teniendo en cuenta la sobrecarga que conllevaría representar cada concepto del retículo en la Figura \ref{figura:ejemploReticuloAerolineas}, se puede mencionar aquí como ejemplo, el concepto etiquetado como `Oriente Medio' \textit{(Middle East)}, el cual tiene como extensión el conjunto \{\textit{Singapore Airlines, The Austrian Airlines Group, Lufthansa, Air Canada}\}, y como intensión \{\textit{Middle East, Canadá, Estados Unidos, Europa, Asia}\}.
+Dicho lo anterior y teniendo en cuenta la sobrecarga que conllevaría representar cada concepto del retículo en la Figura \ref{figura:ejemploReticuloAerolineas}, se puede mencionar aquí como ejemplo, el concepto etiquetado como `Oriente' \textit{(Oriente Medio)}, el cual tiene como extensión el conjunto \{\textit{Singapore Airlines, The Austrian Airlines Group, Lufthansa, Air Canada}\}, y como intensión \{\textit{Oriente Medio, Canadá, Estados Unidos, Europa, Asia}\}.
 
 En la parte superior del retículo, encontramos los destinos que ofrecen la mayoría de las aerolíneas: Europa, Asia Pacífico y los Estados Unidos. Por ejemplo, exceptuando British Midland y Ansett Australia, todas las aerolíneas ofrecen vuelos a Estados Unidos. Esas dos líneas aéreas se encuentran en la parte superior del diagrama, ya que tienen la menor oferta de vuelos, operan sólo en Europa y Asia, respectivamente. 
 
@@ -270,20 +273,24 @@ De esta forma, cuanto más se descienda en el retículo de conceptos, más destinos
 
 \subsection{Sistema de implicaciones}
 \label{subsec:sistemaImplicaciones}
-Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. Muestran una alternativa relativamente sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules}.% con una gestión automatizada de la información.
+\noindent
+Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. 
 
-Para introducir el trabajo realizado utilizando la lógica sobre los conjuntos de implicaciones, se va a proceder describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA y bases de datos). En consecuencia, en este punto se presenta el elemento de la lógica común a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
+%Muestran una alternativa sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules}.% con una gestión automatizada de la información.
+
+Para introducir la labor realizada utilizando la lógica sobre los conjuntos de implicaciones, se va a proceder describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA y bases de datos). En consecuencia, en este punto se presenta el elemento de la lógica común a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
 
 \subsection*{Lenguaje}
 \noindent
 \begin{definicion}
+	\label{def:lenguaje}
 	Dado un conjunto $M$ finito de símbolos (denominados atributos) no vacío, el lenguaje sobre $M$ se define como: 
 $$
 \mathcal L_M = \{A\to B\mid A,B\subseteq M\}
 $$
 \end{definicion}
 
-Las fórmulas $A \to B$ se denominan \emph{implicaciones} y los conjuntos $A$ y $B$ reciben el nombre de \emph{premisa} y \emph{conclusión} de la implicación\index{Implicación} respectivamente. Los conjuntos $\sum \subseteq \mathcal L_M$ se denominan \emph{sistemas de implicaciones} sobre $M$.
+Las fórmulas $A \to B$ se denominan \emph{implicaciones} y los conjuntos $A$ y $B$ reciben el nombre de \emph{premisa} y \emph{conclusión} de la implicación\index{Implicación} respectivamente. Los conjuntos $\sum \subseteq \mathcal L_M$ se denominan \emph{conjuntos de implicaciones} sobre $M$.
 
 Se utilizará la siguiente notación:
 \begin{itemize}
@@ -317,6 +324,7 @@ Tras la definición del lenguaje se pasa ahora a introducir la semántica utilizad
 %En definitiva, $\Sigma \models A\to B$ si cada modelo de $\Sigma$ es un modelo para $A\to B$, y $\Sigma_1 \equiv \Sigma_2$ si sus modelos representan el mismo conocimiento.
 
 \begin{definicion}[Modelo]\index{Modelo}
+\label{def:sintaxisFCA}
 	Sea $K=(G,M,I)$ un contexto formal\index{contexto formal} y sea $A\to B \in \mathcal L_M$. El contexto K es un modelo para $A\to B$ si $B \subseteq A''$. Se denota por $K\models A\to B$.
 \end{definicion}
 
@@ -326,20 +334,20 @@ La noción de modelo puede extenderse a los sistemas de implicaciones de la sigui
 	De la información mostrada en el contexto formal \ref{tabla:ejemploContextoFormal} se puede identificar que: $K \models Caribe \to Latinoamerica$. Y también que: $K \not\models Caribe \to Mexico$.
 \end{ejemplo} 
 
-\begin{ejemplo}
-	Sea $M = \{a,b,c,d\}$ un conjunto de atributos. Se cumple que $\{a\to b, a\to c\} \equiv \{a\to bc\}$ porque para cada contexto formal $K = (G,M,I)$, se verifica que $\{b,c\}' = \{b\}' \cup \{c\}'$. Por tanto, $\{a\}' \subseteq \{b\}'$ y $\{a\}' \subseteq \{c\}'$ si y sólo si $\{a\}' \subseteq \{b,c\}'$.
-\end{ejemplo}
+%\begin{ejemplo}
+%	Sea $M = \{a,b,c,d\}$ un conjunto de atributos. Se cumple que $\{a\to b, a\to c\} \equiv \{a\to bc\}$ porque para cada contexto formal $K = (G,M,I)$, se verifica que $\{b,c\}' = \{b\}' \cup \{c\}'$. Por tanto, $\{a\}' \subseteq \{b\}'$ y $\{a\}' \subseteq \{c\}'$ si y sólo si $\{a\}' \subseteq \{b,c\}'$.
+%\end{ejemplo}
 
-\begin{proposicion}
-	Sea $M$ un conjunto de atributos y $\Sigma \subseteq \mathcal L_M$. Se verifica que:
-	\[
-		\Sigma \equiv \bigcup_{A\to B \in \Sigma} \{A \to b \mid b \in B\}
-	\]
-\end{proposicion}
+%\begin{proposicion}
+%	Sea $M$ un conjunto de atributos y $\Sigma \subseteq \mathcal L_M$. Se verifica que:
+%	\[
+%		\Sigma \equiv \bigcup_{A\to B \in \Sigma} \{A \to b \mid b \in B\}
+%	\]
+%\end{proposicion}
 
-Un ejemplo básico de implicaciones puede verse utilizando nuevamente la información de la Tabla \ref{tabla:ejemploContextoFormal}. En ese ejemplo puede apreciarse una relación que siempre se cumple y es la siguiente. Si la aerolínea provee servicio de vuelo a \textit{Latinoamérica} entonces también ofrece como destino \textit{Estados Unidos}. He ahí un claro ejemplo de regla \textit{si-entonces} o implicación, que se verifica en el contexto.
+%Un ejemplo básico de implicaciones puede verse utilizando nuevamente la información de la Tabla \ref{tabla:ejemploContextoFormal}. En ese ejemplo puede apreciarse una relación que siempre se cumple y es la siguiente. Si la aerolínea provee servicio de vuelo a \textit{Latinoamérica} entonces también ofrece como destino \textit{Estados Unidos}. He ahí un claro ejemplo de regla \textit{si-entonces} o implicación, que se verifica en el contexto.
 
-Las implicaciones se interpretan de forma conjuntiva, es decir, corresponden a las fórmulas $a_1\land \ldots\land a_n \to b_1\land \ldots\land b_m$ donde las proposiciones $a_1, \ldots  a_n,  b_1, \ldots, b_m$ son elementos del conjunto $M$.
+%Las implicaciones se interpretan de forma conjuntiva, es decir, corresponden a las fórmulas $a_1\land \ldots\land a_n \to b_1\land \ldots\land b_m$ donde las proposiciones $a_1, \ldots  a_n,  b_1, \ldots, b_m$ son elementos del conjunto $M$.
 
 %Por completitud, el conjunto de todas las implicaciones que se verifican en ese contexto es: 
 %
@@ -373,7 +381,7 @@ Las implicaciones se interpretan de forma conjuntiva, es decir, corresponden a l
 %\noindent
 % $\}$.
 
-Al comenzar el capítulo se habló de la equivalencia entre el retículo de conceptos y las implicaciones; tras haber introducido formalmente el lenguaje y la semántica de las implicaciones, ahora ya se pueden mencionar ejemplos de esta equivalencia utilizando la información del retículo \ref{figura:ejemploReticuloAerolineas}. Así, es posible identificar ejemplos de implicaciones tales como:
+Al comenzar el capítulo se habló de la equivalencia entre la información que muestra el retículo de conceptos y las implicaciones; tras haber introducido formalmente el lenguaje y la semántica de las implicaciones, ahora ya se pueden mencionar algunos ejemplos que reflejen esta equivalencia utilizando la información del retículo \ref{figura:ejemploReticuloAerolineas}. Así, es posible identificar ejemplos de implicaciones tales como:
 
 $\{Canada \rightarrow Estados\  Unidos,$
 
@@ -387,18 +395,10 @@ Como se ha mencionado anteriormente, se entra ahora en la segunda sección de est
 
 \section{Bases de Datos Relacionales}\index{Bases de Datos Relacionales}
 \label{sec:basesDatosRelacionales}
-El modelo de base de datos relacional aparece en el exitoso artículo de Edgar Frank Codd en 1970 \cite{Codd1970}. Codd propuso que los sistemas de bases de datos deberían presentarse al usuario con una vista de datos organizada en forma de tablas bidimensionales (filas y columnas) que denominó \textit{relaciones}. La Tabla \ref{tabla:ejemploPeliculas} es un ejemplo de relación en el que cada fila representa una película y cada columna una propiedad de la película. 
+\noindent
+El modelo de base de datos relacional aparece en el exitoso artículo de Edgar Frank Codd en 1970 \cite{Codd1970}. Codd propuso que los sistemas de bases de datos deberían presentarse al usuario con una vista de datos organizada en forma de tablas bidimensionales (filas y columnas) que denominó \textit{relaciones}. La tabla es una representación de la relación, pero en el modelo de Codd, lo que se introducen son las relaciones.
 
-En un esquema relacional se pueden encontrar los siguientes elementos:
-\begin{itemize}
-	\item \textbf{Atributo}\index{atributo}. Cada una de las columnas de un relación se denomina atributo. En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
-	\item \textbf{Tupla}\index{tupla}. Se denomina tupla a cada fila de una relación exceptuando la fila que contiene a los atributos.
-	\item \textbf{Dominio}\index{dominio}. El modelo relacional requiere que cada componente de cada tupla sea atómico. No se permite que un valor de la tupla sea una estructura de datos (e.g. una lista, una matriz, un conjunto, etc.) cuyos valores puedan dividirse en componentes más pequeños. De esta forma, se establece que cada atributo de la relación está asociado a un dominio, i.e. un tipo particular de dato.
-\end{itemize}
-
-%Las relaciones son conjuntos de tuplas, no listas de tuplas y por tanto, el orden en que el se presenten las tuplas de una relación es irrelevante. De hecho, se puede incluso modificar el orden de aparición de los atributos y la relación se mantiene constante.
-
-Formalmente, en el modelo relacional, una base de datos consiste en una o más relaciones \cite{Elmasri2010}. La planificación de la estructura de la base de datos, en particular de las relaciones, es vital para la gestión efectiva de la misma \cite{Harrington2016}. Una relación $R$ definida sobre un conjunto de dominios $D_1$, $D_2$, ..., $D_n$ está formada por un esquema y un cuerpo como se definen a continuación.
+Formalmente, en el modelo relacional, una base de datos consiste en una o más relaciones \cite{Elmasri2010}. Una relación $R$ definida sobre un conjunto de dominios $D_1$, $D_2$, ..., $D_n$ está formada por un esquema y un cuerpo como se definen a continuación.
 
 \begin{definicion}[Esquema]\index{Esquema}
 	Un esquema $E$ para una relación $R$ se define como un conjunto fijo de pares \textit{(atributo:dominio)}. Habitualmente se denota como $\{(A_1:D_1),\ (A_2:D_2),\ (A_n:D_n)\}$ donde cada $A_j$ corresponde a un único $D_j$ y los $A_j$ son todos distintos.
@@ -434,51 +434,46 @@ En el ejemplo \ref{tabla:ejemploPeliculas}, un extracto del cuerpo sería:
 \noindent
 \textit{\}}.
 
+Tras haber definido formalmente el cuerpo y el esquema de un relación, se puede mencionar que en los sistemas gestores de bases de datos relacionales, las relaciones se representan como una tabla de doble entrada, en la que (con un una terminología más informal) se encuentran los siguientes elementos:
+\begin{itemize}
+	\item \textbf{Atributo}\index{atributo}. Cada una de las columnas de una relación se denomina atributo. %En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
+	\item \textbf{Tupla}\index{tupla}. Se denomina tupla a cada fila de una relación exceptuando la fila que contiene a los atributos.
+	\item \textbf{Dominio}\index{dominio}. Un dominio describe un conjunto de posibles valores para cierto atributo.
+	%El modelo relacional requiere que cada componente de cada tupla sea atómico. No se permite que un valor de la tupla sea una estructura de datos (e.g. una lista, una matriz, un conjunto, etc.) cuyos valores puedan dividirse en componentes más pequeños. De esta forma, se establece que cada atributo de la relación está asociado a un dominio, i.e. un tipo particular de dato.
+\end{itemize}
+
+%Las relaciones son conjuntos de tuplas, no listas de tuplas y por tanto, el orden en que el se presenten las tuplas de una relación es irrelevante. De hecho, se puede incluso modificar el orden de aparición de los atributos y la relación se mantiene constante.
+
+
+
 %Un diseño impreciso de un esquema de base de datos relacional puede generar ciertas anomalías que provoquen el mal funcionamiento del sistema. Una anomalía es una inconsistencia entre una parte de los datos y otra. Los principales tipos de anomalías aparecen a la hora de operar con el sistema en términos de actualizaciones, eliminaciones o inserción de información redundante \cite{Vavilis2015,Costante2017}.
 
 
 
 \subsection{Dependencias Funcionales}
 \label{subsec:dependenciasFuncionales}
-Existen muchas restricciones que el modelo relacional permite establecer en las relaciones de los esquemas de la base de datos. Concretamente, esta parte de la tesis está enfocada en las restricciones denominadas dependencias funcionales.
+\noindent
+Un diseño defectuoso del esquema de base de datos relacional puede provocar lo que se denominan \textit{anomalías} \cite{Ullman1997,Kamra2008,Sallam2015}. Estas anomalías son problemas que aparecen a la hora de operar con la base de datos en términos de actualizaciones, eliminaciones o inserción de información redundante \cite{Costante2017,Vavilis2015}.
 
-\begin{definicion}[Dependencia Funcional]\index{dependencias funcionales}
-	Sea M un conjunto de atributos. Una dependencia funcional (FD) sobre M es una expresión de la forma $X \rightarrow Y$, donde $X,\ Y$ son conjuntos de atributos.
-\end{definicion}
+La manera de eliminar estas anomalías consiste en descomponer las relaciones \cite{Armstrong1980}. La descomposición de relaciones conduce al campo de la \textit{normalización} \cite{Codd1971} que si bien no forma parte del ámbito principal de esta tesis doctoral, permite dar paso a la introducción del concepto de FD, el cual nace como un recurso para caracterizar la semántica de las relaciones y, por tanto, permitir hacer una aplicación de las transformaciones de normalización \cite{Darwen2012}. Ésta es una de las diferencias del tratamiento de las relaciones entre FCA y bases de datos relacionales, ya que para el primero, lo que se pretende es capturar conocimiento, mientras que en el segundo, las FDs se utilizan para definir Formas Normales \cite{Armstrong1980,Fagin1981,Kent1983}.
 
-Teniendo en cuenta que la sintaxis que se va a utilizar para FD es la misma que para implicaciones, 
-%existen tipos de FD denominados triviales y unitarias, cuyas nociones son iguales a las introducidas para implicaciones en \ref{subsec:sistemaImplicaciones}. 
-se pasa ahora a describir la semántica para las FD.
+%Existen muchas restricciones que el modelo relacional permite establecer en las relaciones de los esquemas de la base de datos. Concretamente, esta parte de la tesis está enfocada en las restricciones denominadas dependencias funcionales.
 
-%\begin{definicion}[Dependencia Funcional Trivial]
-%	Una dependencia funcional es trivial si $X \subseteq Y$.
-%\end{definicion}
-%
-%\begin{definicion}[Dependencia Funcional Unitaria]
-%	Una dependencia funcional es unitaria cuando su conclusión es un conjunto unitario, es decir, $X \rightarrow a \ \mid \ a \in M$.
-%\end{definicion}
-%
-%\begin{definicion}[Esquema Relacional]
-%	Un esquema de relación \df es un par ordenado que consiste en un conjunto de atributos $M$ y un conjunto $F$ de FD sobre $M$.
-%\end{definicion}
+Teniendo en cuenta que la sintaxis que se va a utilizar para FDs es la misma que la ya introducida para las implicaciones en FCA en la Sección \ref{subsec:sistemaImplicaciones}, donde el conjunto $M$ lo forman los atributos del esquema de la relación, se pasa ahora a describir la semántica para las FDs.
+
 
 \subsection*{Semántica}
 \noindent
-Una FD se satisface en una tabla $R$ si para cada dos tuplas\index{tupla} de $R$, si verifican $X$, entonces verifican $Y$. Intuitivamente, una FD $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de regla \textit{si-entonces} que definen las implicaciones y se acerca a la definición de una función entre los dominios de $A$ y $B$, $f: A\to B$. Entonces, ¿por qué el cambio de denominación? 
+\begin{definicion}[Dependencia Funcional]\index{dependencias funcionales}
+\label{def:sintaxisFD}
+Una FD $X \to Y$ se cumple en una tabla $R$ si y sólo si para cada dos tuplas\index{tupla} de $R$, si verifican $X$, entonces verifican $Y$. %Dicho de otro modo, si dos tuplas tienen los mismos valores para cada atributo de $X$, entonces tendrán los mismos valores para cada atributo de $Y$.
+\end{definicion}
 
-En la Sección \ref{subsec:sistemaImplicaciones} se definió la noción de implicación, denotado por $X \rightarrow Y$, y se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una FD, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
+Intuitivamente, una FD $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de función (y de ahí su nombre) entre los dominios de $A$ y $B$, $f: A\to B$. Estas funciones son las que se usan para tratar las anomalías mencionadas anteriormente, buscando aquellas funciones que se correspondan con relaciones de forma unívoca.
 
-Esta es una diferencia esencial que surge del hecho de que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una FD se verifique, han de coincidir los valores  de la relación.
-
-Para ilustrar de una forma más sencilla esta diferencia vamos a utilizar el siguiente ejemplo:
 \begin{ejemplo}
-Sea el contexto formal $K=(G,M,I)$ representado en \ref{tabla:ejemploContextoFormal} donde los objetos son $g_i \in G$ y los atributos $a,b,c \in G$.
-
-Según la definición de implicación \ref{subsec:sistemaImplicaciones}, se puede ver como se verifica la implicación $a \to c$ en $K$, mientras que por el contrario, al considerar la relación como una tabla del modelo relacional y considerando la definición de FD, no se cumple que $a \to c$ debido al último objeto $g_4$. 
-	\begin{table*}[htbp]
-	\caption{Ejemplo de contexto formal para ilustrar la diferencia entre implicación y dependencia funcional}
-	\label{tabla:ejemploContextoFormal}
-	\centering
+Sea el contexto formal $K=(G,M,I)$ representado a continuación:
+\begin{center}
 	{\scriptsize
 	\begin{tabular}{cccccc}
  		%\hline
@@ -491,48 +486,58 @@ Según la definición de implicación \ref{subsec:sistemaImplicaciones}, se puede v
  		%\hline
 	\end{tabular}
 	}
-\end{table*}
+\end{center}
+
+Dado ese contexto formal, se puede ver que se verifica la implicación $a \to c$ en $K$, mientras que por otro lado, al considerar el contexto formal como una relación del modelo relacional y considerando la semántica de FD, no se cumple que $a \to c$ debido al último objeto $g_4$. 
 \end{ejemplo}
 
-%Para ilustrar de una forma más sencilla esta diferencia se puede contrastar la información que refleja el contexto formal del ejemplo \ref{tabla:ejemploContextoFormal} con la Tabla \ref{tabla:ejemploPeliculas}. En el primero se ve como los valores de la relación pueden considerarse binarios en el sentido de que indican si una aerolínea ofrece vuelo a un destino o no. Sin embargo, en el segundo, la tabla refleja diferentes valores para cada uno de los atributos del esquema (nombres propios, años, etc.). 
+La forma en que las FDs se asemejan a las implicaciones no viene dada porque se parezcan en su semántica sino por el hecho de que se pueden manejar utilizando la misma lógica, los Axiomas de Armstrong \cite{Armstrong74}, que se presentarán más adelante en la Sección \ref{subsec:axiomasArmstrong}.
 
-%De esta manera, una implicación que verifica en ese contexto formal es $Canada \rightarrow Estados\ Unidos$, mientras que una FD que se verifica en el esquema relacional puede ser $Director \rightarrow Nacionalidad$. Sin embargo, nótese que por contra, la FD $Director \rightarrow Titulo$ no es válida pues existe más de una tupla de la relación cuyos valores para esos atributos no coinciden, Quentin Tarantino dirige tanto \textit{Pulp Fiction} como \textit{Django Unchained}.
+Por otro lado, en la Sección \ref{subsec:sistemaImplicaciones} se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una FD, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
+
+Esta es una diferencia esencial que surge al comparar la semántica implicación en FCA con FD, ya que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una FD se verifique, han de coincidir los valores de la relación.
 
 La noción de implicaciones en FCA puede ampliarse para poder tratar con contextos formales donde la relación $I$ toma valores en un conjunto en lugar de ser binaria. Este tipo de contextos formales\index{contexto formal} se denominan multivaluados y su aproximación se realiza a través del llamado análisis de conceptos formales difusos \cite{Burusco1998,Belohlavek2000}, lo que queda fuera del ámbito de esta tesis doctoral.
 
-%tratar situaciones multivaluadas otorgando valores, por ejemplo, dentro de un rango [0,1], pero en ese caso, se entraría en lo que se denomina implicaciones difusas  \cite{Baczynski2008} que es otro campo de conocimiento que queda fuera del ámbito de esta tesis doctoral.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%La noción de FD es de gran importancia en la tesis debido a que es la base para el trabajo realizado sobre el problema de la enumeración de todas las claves minimales de esquemas relacionales.
+%
+%A continuación, introducimos algunas definiciones usadas más adelante para abordar dicho problema.
+%
+%Una clave en bases de datos relacionales está constituida por un subconjunto de los atributos del esquema de una tabla tal que los valores de esos atributos identifican unívocamente a cada tupla de la tabla. Se puede definir por medio de FDs de la siguiente forma:
+%
+%\begin{definicion}[Clave]\index{clave}
+%	Dada una relación $R$ sobre el conjunto de atributos $M$, se dice que $K \subseteq M$ es una clave de $R$ si la FD $K \rightarrow M$ se verifica en $R$.
+%\end{definicion}
+%
+%\begin{definicion}[Clave Minimal]\index{clave!claves minimales}
+%	Dada una relación $R$, el conjunto de atributos $K \subseteq M$ se dice que es una clave minimal si $K$ es clave y para todo atributo $k \in K$ el subconjunto $K - \{k\}$ no es clave de $R$.
+%\end{definicion}
+%
+%\begin{definicion}[Superclave]
+%	El conjunto de atributos $K \subseteq M$ se dice que es una superclave de $R$ si $K$ es una clave de $R$ y no es minimal.
+%\end{definicion}
 
-La noción de FD es de gran importancia en la tesis debido a que es la base para el trabajo realizado sobre el problema de la enumeración de todas las claves minimales de esquemas relacionales.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Una clave en bases de datos relacionales está constituida por un subconjunto de los atributos del esquema de una tabla tal que los valores de esos atributos identifican unívocamente a cada tupla de la tabla. Se puede definir por medio de FD de la siguiente forma:
-
-\begin{definicion}[Clave]\index{clave}
-	Dada una tabla $R$ sobre el conjunto de atributos $M$, se dice que $K \subseteq M$ es una clave de $R$ si la FD $K \rightarrow M$ se verifica en $R$.
-\end{definicion}
-
-\begin{definicion}[Clave Minimal]\index{clave!claves minimales}
-	Dada una tabla $R$, el conjunto de atributos $K \subseteq M$ se dice que es una clave minimal si $K$ es clave y para todo atributo $k \in K$ el subconjunto $K - \{k\}$ no es clave de $R$.
-\end{definicion}
-
-\begin{definicion}[Superclave]
-	El conjunto de atributos $K \subseteq M$ se dice que es una superclave de $R$ si $K$ es una clave de $R$ y no es minimal.
-\end{definicion}
-
-Finalmente, a través de las FD que se verifican en un determinado esquema relacional y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en algunas de las publicaciones que avalan esta tesis \cite{Benito-Picazo2014,Benito-Picazo2016}.   
+%Finalmente, a través de las FDs que se verifican en una relación $R$ y por medio de la lógica que se introduce a continuación, se ha realizado un amplio estudio de los métodos de enumeración de claves basados en el paradigma de tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} y el diseño de nuevos métodos que mejoran a los existentes en la literatura. El trabajo ha conllevado además una exhaustiva labor en cuanto a experimentos y pruebas para verificar las mejoras alcanzadas. Debido a los requerimientos que alcanza el problema de la enumeración de claves cuando la información de entrada es considerable, la mayor parte de estos experimentos ha supuesto utilizar el paralelismo\index{paralelismo} en las implementaciones y recursos de supercomputación\index{supercomputación} como se puede comprobar en algunas de las publicaciones que avalan esta tesis \cite{Benito-Picazo2014,Benito-Picazo2016}.   
 
 
 
 \section{Lógica de Implicaciones}
 \label{sec:logicaSimplificacion}
-En esta sección se va a introducir las lógicas de implicaciones que permitirán disponer de sistemas axiomáticos correctos y completos para trabajar con ellas. Para ello, el punto de partida van a ser los Axiomas de Armstrong como pionero en el campo. Sin embargo, el sistema de Armstrong no es adecuado para el razonamiento automático debido a su fuerte dependencia a la transitividad. En consecuencia, tras los Axiomas de Armstrong se presenta la lógica \slfd, la cual sí va a permitir desarrollar métodos de razonamiento automático.
+\noindent
+En esta sección se van a introducir las lógicas de implicaciones que permitirán disponer de sistemas axiomáticos correctos y completos para trabajar con ellas. Para ello, el punto de partida van a ser los Axiomas de Armstrong \cite{Armstrong74} como pionero en el campo. Sin embargo, el sistema de Armstrong no es adecuado para el razonamiento automático debido a su fuerte dependencia a la transitividad. En consecuencia, tras los Axiomas de Armstrong se presenta la lógica \slfd, la cual sí va a permitir desarrollar métodos de razonamiento automático.
 
-Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con FD. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo que se definió en \ref{subsec:sistemaImplicaciones}. Del mismo modo, la semántica también quedó definida en sendos apartados, \ref{subsec:sistemaImplicaciones}, \ref{subsec:dependenciasFuncionales}, para implicaciones y FD respectivamente. Por tanto, en los siguientes apartados se analizarán los sistemas axiomáticos y métodos de razonamiento.
+Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con FDs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica también quedó definida en sendas Definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones y FDs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Por facilidad para con el texto, para los siguientes apartados se utiliza el término implicaciones, siendo igualmente válido para FDs.
+
 
 \subsection{Axiomas de Armstrong}
 \label{subsec:axiomasArmstrong}
-Los conocidos Axiomas de Armstrong\index{Axiomas de Armstrong} es el primer sistema descrito para tratar sistemas de implicaciones utilizando la lógica \cite{Armstrong74}. Este sistema ha tenido una clara influencia en el diseño de varias lógicas sobre implicaciones, todos ellas construidas alrededor del paradigma de la transitividad. Con el paso de los años, otros trabajos han propuesto sistemas axiomáticos equivalentes \cite{Ibaraki1999,Atzeni1993,Paredaens89}.
+\noindent
+Los denominados Axiomas de Armstrong\index{Axiomas de Armstrong} son el primer sistema axiomático descrito para tratar sistemas de implicaciones utilizando la lógica \cite{Armstrong74}. Este sistema ha tenido una clara influencia en el diseño de varias lógicas sobre implicaciones, todos ellas construidas alrededor del paradigma de la transitividad \cite{Ibaraki1999,Atzeni1993,Paredaens89}.
 
-Este sistema axiomático\index{sistema axiomático} está formado por un axioma, denominado \textit{Reflexivo}: 
+Este sistema axiomático\index{sistema axiomático} está formado por un esquema de axioma, denominado \textit{Reflexivo}: 
 
 \begin{center}
 	{\scriptsize \tt{[Ref]}}\ $\displaystyle\frac{}{AB \to A}$
@@ -541,168 +546,158 @@ Este sistema axiomático\index{sistema axiomático} está formado por un axioma, de
 y dos reglas de inferencia, \textit{Aumentativa} y \textit{Transitiva} que se definen como:
 
 \begin{center}
-	{\scriptsize \tt{[Aug]}}\ $\displaystyle\frac{A \to B\cup C}{AC \to BC}$ \quad
+	{\scriptsize \tt{[Aug]}}\ $\displaystyle\frac{A \to B}{AC \to BC}$ \quad
 	{\scriptsize \tt{[Tran]}}\ $\displaystyle\frac{A \to B,\ B \to C}{A \to C}$ 
 \end{center}
 
-El sistema axiomático de Armstrong se va a definir sobre el lenguaje introducido en la sección \ref{subsec:sistemaImplicaciones}. Sin embargo, debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos. El estudio de estos métodos se verá en la Sección \ref{sec:metodoRazonamientoAutomatico}.
+Para el sistema axiomático anterior, la noción de \textit{deducción} ($\vdash$) se define como:
 
-Los Axiomas de Armstrong son válidos al generar sólo implicaciones dentro del cierre del conjunto de implicaciones\index{conjuntos de implicaciones} (denotado como $F^+$) cuando se actúa sobre el conjunto $F$. También son completos ya que la aplicación repetitiva de las reglas generarán todas las implicaciones en el conjunto cerrado $F^+$.
+\begin{definicion}
+Se dice que una implicación $A\to B$ se deriva sintácticamente (o se deduce) de un sistema de implicaciones $\Sigma$, y se denota por $\Sigma\vdash A\to B$, si existe una secuencia de implicaciones $\sigma_1,\dots,\sigma_n \in \mathcal L_M$ tal que $\sigma_n=A\to B$ y, para todo $1\leq i\leq n$, la implicación $\sigma_i$ satisface una de las siguientes condiciones:
+	\begin{itemize}
+		\item $\sigma_i$ es un axioma, es decir, verifica el esquema {\tt [Ref]}.
+		\item $\sigma_i\in \Sigma$.
+		\item $\sigma_i$ se obtiene a partir de implicaciones pertenecientes a $\{\sigma_j\mid 1\le j<i\}$ aplicando las reglas de inferencia del sistema axiomático.
+	\end{itemize}
+\end{definicion}
 
-Por todo lo anterior, si bien es cierto que el sistema de Armstrong es un trabajo que acumula innumerables citas en diferentes trabajos a lo largo de los años, su utilidad práctica se ve limitada. Por esa razón, su uso está enfocado al estudio teórico de las implicaciones en vez de al desarrollo de algoritmos automáticos. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd.
+La secuencia $\sigma_1,\dots,\sigma_n$ constituye una demostración para $\Sigma\vdash A\to B$
 
-La lógica \slfde evita el uso de la transitividad y se guía por la idea de simplificar el conjunto de implicaciones mediante la eliminación atributos redundantes de manera eficiente \cite{Enciso2002}. Por consiguiente, la introducción de la lógica \slfde abrió la puerta al desarrollo de métodos de razonamiento automatizados directamente basados en su novedoso sistema axiomático \cite{CorderoEMG14, CorderoEMOR15}. La posibilidad de desarrollar estas aplicaciones ha sido la motivación principal para el desarrollo de esta tesis, buscando sobre todo, mejorar la eficacia y la eficiencia.
+Los Axiomas de Armstrong son un sistema axiomático correcto y completo tanto si se está trabajando con implicaciones en FCA \cite{Armstrong74} como con FDs en bases de datos relacionales \cite{Ganter1997}.
 
+Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{subsec:metodoRazonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd, que se introduce a continuación.
 
 
 \subsection{Lógica \slfd}
 \label{subsec:logicaSLFD}
-Se introduce ahora la lógica \slfde\index{\slfde} \cite{Enciso2002}. Para ello, se va a empezar definiendo su sistema axiómatico, pues como se ha indicado al comienzo de esta sección, el lenguaje y la semántica será la misma que la introducida anteriormente en \ref{subsec:sistemaImplicaciones} y \ref{subsec:dependenciasFuncionales}.
+\noindent
+La lógica \slfde no toma el paradigma de la transitividad como centro sino que se guía por la idea de simplificar el conjunto de implicaciones mediante la eliminación atributos redundantes de manera eficiente \cite{Enciso2002}. Por consiguiente, la introducción de la lógica \slfde\index{\slfde} abrió la puerta al desarrollo de métodos de razonamiento automatizados directamente basados en su novedoso sistema axiomático \cite{CorderoEMG14, CorderoEMOR15}. La posibilidad de desarrollar estas aplicaciones ha sido la motivación principal para el desarrollo de esta tesis, buscando sobre todo, mejorar la eficacia y la eficiencia. 
+
+Seguidamente, se va a comenzar definiendo su sistema axiomático\index{sistema axiomático} que es válido para ambas semánticas (FCA, FDs) y además es común debido a que utilizan el mismo lenguaje.
 
 \subsection*{Sistema Axiomático}
 \noindent
-\slfde se define como el par ($L_{FD}, S_{FD}$) donde $S_{FD}$ tiene el siguiente esquema axiomático:
+\slfde se define como el par ($\mathcal L_M, S_{FD}$) donde $S_{FD}$ tiene el siguiente esquema de axioma:
 
 \begin{center}
-{\scriptsize \tt{[Ref]}}\quad $\displaystyle\frac{}{A\cup B \to A}$  
+{\scriptsize \tt{[Ref]}}\quad $\displaystyle\frac{}{AB \to A}$  
 \end{center}
 
 \noindent
 junto con las siguientes reglas de inferencia\index{reglas de inferencia}, denominadas \emph{fragmentación}\index{reglas de inferencia!fragmentación}, \emph{composición}\index{reglas de inferencia!composición} y \emph{simplificación}\index{reglas de inferencia!simplificación} respectivamente.
 
 \begin{center}
-	{\scriptsize \tt{[Frag]}}\ $\displaystyle\frac{A\to B\cup C}{A\to B}$  \quad
-	{\scriptsize \tt{[Comp]}}\ $\displaystyle\frac{A\to B,\ C \to D}{A\cup C \to B\cup D}$ \quad
-	{\scriptsize \tt{[Simp]}}\ $\displaystyle\frac{A\to B,\ C \to D}{A\cup(C\smallsetminus B)\to D}$
+	{\scriptsize \tt{[Frag]}}\ $\displaystyle\frac{A\to BC}{A\to B}$  \quad
+	{\scriptsize \tt{[Comp]}}\ $\displaystyle\frac{A\to B,\ C \to D}{AC \to BD}$ \\ \vspace{0.4cm}
+	{\scriptsize \tt{[Simp]}}\ Si $A\subseteq C, A\cap B=\varnothing$, $\displaystyle\frac{A\to B,\ C \to D}{A(C\smallsetminus B)\to D}$
 \end{center}
 
-Se destaca que el lenguaje \slfde considera como fórmulas válidas aquellas en donde cualquiera de sus dos partes puede ser el conjunto vacío, denotado $A \to \varnothing$ y $\varnothing \to A$. Sus significados fueron discutidos en \cite{Enciso2002}. En ese trabajo, también se presenta el siguiente resultado donde la derivación de una implicación $A \to B$ se reduce a la derivación de la fórmula $\varnothing \to B$ teniendo $\varnothing \to A$. Este resultado se usará más adelante en el diseño de nuestro novedoso método de cierre \ref{subsec:cierreSLFD}.
-
-\begin{proposicion}
-Para cualquier $\varGamma$ y $\forall X, Y\subseteq M$, $\varGamma \vdash X\to Y$ si y sólo si $\varGamma \cup \{\top \to X\} \vdash\top \to Y$
-\end{proposicion}
-
-
-\begin{definicion}
-Se dice que una implicación $A\to B$ se deriva sintácticamente de un sistema de implicaciones $\Sigma$, y se denota por $\Sigma\vdash A\to B$, si existe una secuencia de implicaciones $\sigma_1,\dots,\sigma_n \in \mathcal L_M$ tal que $\sigma_n=(A\to B)$ y, para todo $1\leq i\leq n$, la implicación $\sigma_i$ satisface una de las siguientes condiciones:
-	\begin{itemize}
-		\item $\sigma_i$ es un axioma, es decir, verifica el esquema {\tt [Ref]}.
-		\item $\sigma_i\in \Sigma$.
-		\item $\sigma_i$ se obtiene a partir de implicaciones pertenecientes a $\{\sigma_j\mid 1\le j<i\}$ aplicando las reglas de inferencia {\tt [Frag]}, {\tt [Comp]} o {\tt [Simp]}.
-	\end{itemize}
-\end{definicion}
-
-La secuencia $\sigma_1,\dots,\sigma_n$ constituye una \emph{demostración} para $\Sigma\vdash A\to B$.
-
-La derivación sintáctica\index{derivación sintáctica} proporciona una gestión automatizada de las implicaciones. En particular, se puede usar para resolver el denominado problema de las implicaciones: dado un conjunto de implicaciones $\Gamma$ y una implicación $A\to B$, queremos responder si $A\to B$ se deduce de $\Gamma$. Este problema se puede abordar utilizando el operador de cierre.
-
-El sistema axiomático es válido y completo, es decir, se cumple que la derivación sintáctica y semántica\index{derivación semántica} coinciden. Esto significa que cada regla que se puede deducir con este sistema puede derivarse semánticamente (el sistema axiomático es válido) y viceversa (el sistema axiomático es completo).
+\slfd\index{\slfde}, al igual que los Axiomas de Armstrong, constituye una lógica correcta y completa tanto para implicaciones como FDs, tal y como los autores presentaron en \cite{Enciso2002} y como muestra el siguiente teorema.
 
 \begin{theorem}
 Sea $M$ un conjunto finito no vacío de atributos, $\Sigma \subseteq \mathcal L_M$ y $A\to B \in \mathcal L_M$. Entonces, $\Sigma\models A\to B$ si y sólo si $\Sigma\vdash A\to B$.  
 \end{theorem}
 
-La derivación sintáctica conduce a un nuevo operador de cierre denominado \textit{cierre sintáctico}.
+Se destaca que el lenguaje \slfde considera como fórmulas válidas aquellas en donde cualquiera de sus dos partes puede ser el conjunto vacío, denotado $A \to \varnothing$ y $\varnothing \to A$, tal y como los autores discutieron en \cite{Enciso2002}.
 
-\begin{definicion}
-	Dado un conjunto de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si $A \subseteq X$ implica $B \subseteq X$ para toda $A\to B\in \Sigma$. Debido a que $M$ es cerrado con respecto a $\Sigma$ y cualquier intersección de conjuntos cerrados es cerrada, podemos definir el siguiente operador de cierre:
-$$
-(\ )^+_\Sigma\colon 2^M\to 2^M\quad X^+_\Sigma=\bigcap\{Y\subseteq M\mid Y\text{ es cerrado w.r.t }\Sigma\text{ y }X\subseteq Y \}
-$$
-\end{definicion}
-
-El siguiente teorema es esencial para calcular cierres y a su vez también para introducir un método de razonamiento automático.
- 
-\begin{theorem}[Teorema de deducción]\index{Teorema de deducción}
-\label{empty_set}
-	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
-%\vspace*{-0.2cm}
-	$$\Sigma \vdash A\to B \quad \mbox{sii} \quad B\subseteq A^+_\Sigma\quad \mbox{sii} \quad 
- 	\{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
-\end{theorem}
- 
-\begin{corolario}
-	Sea $\Sigma\subseteq \mathcal L_M$. $\forall X\subseteq M$, se tiene que 
-	$$
-	X^+_\Sigma=\max\{Y\subseteq M\mid \Sigma\vdash X\to Y \}.
-	$$
-\end{corolario}
+%\begin{theorem}
+%Para cualquier $\varGamma$ y $\forall X, Y\subseteq M$, $\varGamma \vdash X\to Y$ si y sólo si $\varGamma \cup \{\top \to X\} \vdash\top \to Y$
+%\end{theorem}
 
 La principal ventaja de la lógica \slfde radica en que las reglas de inferencia pueden considerarse reglas de equivalencia. Como consecuencia, se ha podido utilizar como núcleo principal para el desarrollo de métodos automáticos para diversas aplicaciones (e.g. obtener claves minimales, cálculos del cierre) como se verá más adelante. Un estudio más detallado al respecto, incluyendo teoremas y demostraciones, puede verse en \cite{Mora2012}.
 
-\slfde\index{\slfde} constituye una lógica válida y completa \cite{Enciso2002} en la que el principal elemento del lenguaje son las implicaciones.
+Para finalizar, estos sistemas axiomáticos se pueden utilizar para el desarrollo de métodos de razonamiento automático con los que resolver el denominado problema de las implicaciones tal y como se muestra en el siguiente apartado.
 
 
 
-\section{Método de Razonamiento Automático}
-\label{sec:metodoRazonamientoAutomatico}
+\section{Problema de las implicaciones}
+\label{sec:problemaImplicaciones}
+\noindent
+El problema de las implicaciones es crucial en el diseño de un sistema de razonamiento y como tal, existen desde hace años notables estudios al respecto en diferentes áreas \cite{Armstrong74,Beeri1977,Maier1979}.
+
+Básicamente, el problema de las implicaciones es el siguiente: dado un conjunto finito de implicaciones, determinar mediante la lógica si a partir de ese conjunto se puede inferir una nueva implicación. Dicho de otro modo, si tenemos el conjunto de implicaciones $\Sigma$, el problema consiste en comprobar si se verifica $\Sigma \vdash A \to B$ \cite{Beeri1981,Mitchell1983}. Para ello, se utilizarán los anteriores sistemas axiomáticos junto con una serie de nuevos elementos, como los conjuntos cerrados y los operadores de cierre, que darán paso a la utilización de métodos de razonamiento automático como se introducen a continuación.
 
 
-\subsection{Problema de las implicaciones}
-\label{subsec:problemaImplicaciones}
-El problema de las implicaciones es crucial en el diseño de un sistema de razonamiento y como tal, existen desde hace años notables estudios al respecto en diferentes áreas, incluyendo las bases de datos relacionales \cite{Armstrong74,Beeri1977,Maier1979}.
+\subsection{Método de Razonamiento Automático}
+\label{subsec:metodoRazonamientoAutomatico}
+\noindent
+%Claramente, la primera pregunta que surge es si el problema de las implicaciones tiene solución, es decir, si existe algún método que proporcione una respuesta positiva o negativa para cualquier instancia dada del problema. Para ello, un método es a través de axiomas. Un \textit{axioma de inferencia} es una regla que establece que si una relación satisface ciertas dependencias, entonces debe satisfacer otras. Dado un conjunto de implicaciones $\Sigma$ y un conjunto de axiomas de inferencia, el \textit{cierre} de $\Sigma$, denotado por $\Sigma^+$, es el menor conjunto que contiene a $\Sigma$ tal que no es posible aplicar los axiomas de inferencia para derivar una dependencia que no esté en $\Sigma$. En otras palabras, del conjunto $\Sigma$ se deriva una dependencia $\sigma$, denotado $\Sigma \vdash \sigma$, si $\sigma \in \Sigma^+$.
 
-Básicamente, el problema de las implicaciones es el siguiente: dado un conjunto finito de implicaciones, determinar mediante la lógica si a partir de ese conjunto se puede inferir una nueva implicación. Dicho de otro modo, si tenemos el conjunto de implicaciones $\Sigma$, el problema consiste en comprobar si se verifica $\Sigma \vdash A \to B$ \cite{Beeri1981,Mitchell1983}.
+Para cada conjunto de implicaciones, el sistema axiomático permite definir un operador de cierre en $2^M$ denominado \textit{cierre sintáctico}.
 
-Claramente, la primera pregunta que surge es si el problema de las implicaciones tiene solución, es decir, si existe algún método que proporcione una respuesta positiva o negativa para cualquier instancia dada del problema. Para ello, un método es a través de axiomas. Un \textit{axioma de inferencia} es una regla que establece que si una relación satisface ciertas dependencias, entonces debe satisfacer otras. Dado un conjunto de implicaciones $\Sigma$ y un conjunto de axiomas de inferencia, el \textit{cierre} de $\Sigma$, denotado por $\Sigma^+$, es el menor conjunto que contiene a $\Sigma$ tal que no es posible aplicar los axiomas de inferencia para derivar una dependencia que no esté en $\Sigma$. En otras palabras, del conjunto $\Sigma$ se deriva una dependencia $\sigma$, denotado $\Sigma \vdash \sigma$, si $\sigma \in \Sigma^+$.
+\begin{definicion}[Conjunto cerrado]
+	Dado un conjunto de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si, para cada $A\to B\in \Sigma$, se cumple que $A \subseteq X$ implica $B \subseteq X$. 
+\end{definicion}
+	
+Debido a que $M$ es cerrado con respecto a $\Sigma$ se define el operador de cierre $(\ )^+_\Sigma\colon 2^M\to 2^M$ que permite obtener el menor cerrado como:
 
+\begin{definicion}[Operador de cierre]\index{Operador de cierre}
+Sea $M$ un conjunto de atributos y $\Sigma \subseteq \mathcal L_M$. Para cada $X \subseteq M$, el cierre de $X$ respecto a $\Sigma$ se define como: 
+$$X^+_\Sigma=\bigcap\{Y\subseteq M\mid Y\text{ es cerrado respecto a }\Sigma\text{ y }X\subseteq Y \}$$
+\end{definicion}
+
+Por tanto, el cierre de $X$ con respecto a $\Sigma$ es el mayor subconjunto de $M$ tal que $\Sigma \vdash X \to X^+_\Sigma$.
+
+Además, en \cite{Enciso2002} también se presentó el siguiente teorema, que no sólo es fundamental para calcular cierres sino para introducir un método de razonamiento automático, y que se conoce como Teorema de la deducción.
+
+\begin{theorem}[Teorema de la deducción]\index{Teorema de la deducción}
+\label{empty_set}
+	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
+%\vspace*{-0.2cm}
+	$$\Sigma \vdash A\to B \quad \mbox{si y sólo si} \quad B\subseteq A^+_\Sigma\quad \mbox{si y sólo si} \quad 
+ 	\{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
+\end{theorem}
+
+%\begin{corolario}
+%	Sea $\Sigma\subseteq \mathcal L_M$. $\forall X\subseteq M$, se tiene que 
+%	$$
+%	X^+_\Sigma=\max\{Y\subseteq M\mid \Sigma\vdash X\to Y \}.
+%	$$
+%\end{corolario}
+
+Se pasa ahora a presentar los métodos de razonamiento utilizados en esta tesis doctoral: el cierre clásico de Maier \cite{Maier83} como base, y en especial, el cierre \slfd, este último como núcleo principal del funcionamiento de los métodos diseñados y utilizados en las publicaciones que avalan este trabajo de tesis \cite{Benito-Picazo2016,Benito-Picazo2017,Benito-Picazo2018}.
 
 
 \subsection{Cierre clásico}
 \label{subsec:cierreClasico}
-El problema de las implicaciones se ha abordado tradicionalmente utilizando un método básico que recibe $A\subseteq M$ como entrada y utiliza de forma exhaustiva la relación de subconjuntos recorriendo iterativamente $\Gamma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
+\noindent
+El problema de las implicaciones se ha abordado tradicionalmente utilizando un método básico que recibe $A\subseteq M$ como entrada y utiliza de forma exhaustiva la relación de subconjuntos recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
 \begin{algorithm2e}
 %\footnotesize
 %\SetAlgoLined
 %\SetAlgoFuncName{SchemePruning}
 %\dontprintsemicolon
 %\KwIn{}
-\KwData{$ \varGamma$, $A$}
-\KwResult{$A^+_\Gamma$ }
+\KwData{$ \Sigma$, $A$}
+\KwResult{$A^+_\Sigma$ }
 %\KwOut{$X^+$}
     \Indp
     \Begin{
-     $A^+_\Gamma:=A$
+     $A^+_\Sigma:=A$
 		
-     \Repeat{$A^+_\Gamma=A^\prime$}{
-        $A^\prime:=A^+_\Gamma$
+     \Repeat{$A^+_\Sigma=A^\prime$}{
+        $A^\prime:=A^+_\Sigma$
 				
-       \ForEach{ $X \to Y \in  \varGamma$}{
-           \If{$X \subseteq A^+_\Gamma$ {\bf and} $Y\not\subseteq A^+_\Gamma$}{
-               $A^+_\Gamma:=A^+_\Gamma \cup \{Y\}$
+       \ForEach{ $X \to Y \in  \Sigma$}{
+           \If{$X \subseteq A^+_\Sigma$ {\bf and} $Y\not\subseteq A^+_\Sigma$}{
+               $A^+_\Sigma:=A^+_\Sigma \cup \{Y\}$
            }%end if
        }% end foreach
 		}%until 
-   return $A^+_\Gamma$
+   return $A^+_\Sigma$
    }%end begin
  \caption{Cierre clásico}
  \label{algoritmo:cierreUllman}
 \end{algorithm2e}
 
-Más tarde, varios autores han desarrollado otros métodos mediante el uso de diferentes técnicas, resolviendo eficientemente este problema en tiempo lineal. En \cite{Paredaens1989}, los autores muestran que la complejidad del problema del cierre es $\mathtt{O}(|{\mathcal{A}}|\, |{ \varGamma}|)$. Además, como se muestra a continuación, en \cite{Mora2012}, los autores presentan un método de cierre de atributos estrechamente relacionado con el sistema axiomático \slfd. También se demuestra que el método tiene un mejor rendimiento que aquellos basados en el cierre clásico.
+Más tarde, varios autores han desarrollado otros métodos mediante el uso de diferentes técnicas, resolviendo eficientemente este problema en tiempo lineal. En \cite{Paredaens1989}, los autores muestran que la complejidad del problema del cierre es $\mathtt{O}(|{\mathcal{A}}|\, |{ \Sigma}|)$. Además, como se muestra a continuación, en \cite{Mora2012}, los autores presentan un método de cierre de atributos estrechamente relacionado con el sistema axiomático \slfd. También se demuestra que el método tiene un mejor rendimiento que aquellos basados en el cierre clásico.
 
 
 
 \subsection{Cierre \slfd}
 \label{subsec:cierreSLFD}
-Antes de pasar a exponer el algoritmo del cierre \slfd, se muestra el siguiente teorema, el cual es esencial para calcular cierres y a su vez también para introducir un método de razonamiento automático.
- 
-\begin{theorem}[Teorema de deducción]\index{Teorema de deducción}
-\label{empty_set}
-	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
-%\vspace*{-0.2cm}
-	$$\Sigma \vdash A\to B \quad \mbox{sii} \quad B\subseteq A^+_\Sigma\quad \mbox{sii} \quad 
- 	\{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
-\end{theorem}
- 
-\begin{corolario}
-	Sea $\Sigma\subseteq \mathcal L_M$. $\forall X\subseteq M$, se tiene que 
-	$$
-	X^+_\Sigma=\max\{Y\subseteq M\mid \Sigma\vdash X\to Y \}.
-	$$
-\end{corolario}
-
-El método de razonamiento automático en \slfde se basa en el Teorema de Deducción\index{Teorema de deducción} y un conjunto de equivalencias \cite{Mora2012}. Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si sus modelos coinciden, es decir, se cumple que para todo operador de cierre en $M$, $c\models \Sigma_1$ si y sólo si $c\models \Sigma_2$.
+\noindent
+El método de razonamiento automático en \slfde se basa en el Teorema de la deducción\index{Teorema de la deducción} y un conjunto de equivalencias \cite{Mora2012}. Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si sus modelos coinciden, es decir, se cumple que para todo operador de cierre en $M$, $c\models \Sigma_1$ si y sólo si $c\models \Sigma_2$.
 
 La siguiente proposición proporciona las tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}, que se se aplican y justifican el nombre de la lógica \slfde porque, leídas de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones.
 
@@ -721,20 +716,20 @@ La siguiente proposición proporciona las tres equivalencias, denominadas también
 %\end{equation*}
 \end{proposicion}
 
-Gracias al Teorema de Deducción y las equivalencias anteriores, se puede pasar de las reglas de inferencia del sistema clásico de Armstrong a un sistema que puede ser automatizable. En este punto aparece el cierre \slfd, denominado {\tt Cls}\index{Cierre \slfd}, y que actúa según el siguiente procedimiento.
+Mediante el Teorema de la deducción y las equivalencias anteriores, se puede pasar de las reglas de inferencia del sistema axiomático clásico de Armstrong a un sistema que puede ser automatizable. En este punto aparece el cierre \slfd, que los autores denominaron {\tt Cls}\index{Cierre \slfd} \cite{Mora2012}, y que actúa según el siguiente procedimiento.
 
-Dado un conjunto $A\subseteq M$ y un conjunto de implicaciones $\Sigma$, {\tt Cls} calcula el par $(A^+_\Sigma,\Gamma)$, siendo $A^+_\Sigma$ el cierre sintáctico de $A$ con respecto a $\Sigma$ y $\Gamma$ el conjunto residual de implicaciones respecto a $\varnothing \to A^+_\Sigma$. Esto permite determinar si una implicación $A \to B$ puede deducirse de $\Sigma$.
+Dado un conjunto $A\subseteq M$ y un conjunto de implicaciones $\Sigma$, {\tt Cls} calcula el par $(A^+_\Sigma,\Sigma)$, siendo $A^+_\Sigma$ el cierre sintáctico de $A$ con respecto a $\Sigma$, y $\Sigma$ el conjunto residual de implicaciones respecto a $\varnothing \to A^+_\Sigma$. Esto permite determinar si una implicación $A \to B$ puede deducirse de $\Sigma$.
 
 Los pasos del algoritmo desglosados en lenguaje natural y de forma más detallada son:
 \begin{enumerate}
  \item En primer lugar, se incluye la fórmula $\varnothing \to A$ en $\Sigma$ y se usa como semilla por el método de razonamiento mediante las equivalencias mencionadas en la proposición anterior.
- \item A continuación, el algoritmo entra en un proceso iterativo en el cual se irán aplicando las siguientes equivalencias mientras no se alcance la condición de parada.
+ \item A continuación, el algoritmo entra en un proceso iterativo en el cual se irán aplicando las siguientes equivalencias hasta alcanzar un punto en el que no sea posible aplicar ninguna.
 	\begin{itemize}
 		\item {\bf Eq. I}: Si $B\subseteq A$ entonces $\{\emptyset\to A,B\to C\} \equiv \{\emptyset\to A\cup C\}$.
 		\item {\bf Eq. II}: Si $C\subseteq A$ entonces $\{\emptyset\to A,B\to C\} \equiv \{\emptyset\to A\}$.
 		\item {\bf Eq. III}: En otro caso  $\{\emptyset\to A,B\to C\} \equiv \{\emptyset\to A,B\smallsetminus A\to C\smallsetminus A\}$.
 	\end{itemize} 
- \item En el momento en el que no sea posible aplicar ninguna de las equivalencias anteriores, el algoritmo termina dando como resultado el conjunto cierre $A^+_\Sigma$, es decir, el cierre sintáctico de $A$ con respecto a $\Sigma$, y además, el conjunto residual de implicaciones $\Gamma$.
+ \item En el momento en el que no sea posible aplicar ninguna de las equivalencias anteriores, el algoritmo termina dando como resultado el conjunto cierre $A^+_\Sigma$, es decir, el cierre sintáctico de $A$ con respecto a $\Sigma$, y además, el conjunto residual de implicaciones $\Sigma$.
 \end{enumerate}
 
 Formalmente, el algoritmo {\tt Cls} puede verse en la Función \ref{algoritmo:Cls}.
@@ -747,18 +742,18 @@ Formalmente, el algoritmo {\tt Cls} puede verse en la Función \ref{algoritmo:Cls
 \Input{$A$, conjunto de atributos sobre los que se quiere calcular el cierre; \\
 $\Sigma$, un sistema de implicaciones;}
 \Output{$A^+_\Sigma$, cierre sintáctico de $A$ con respecto a $\Sigma$; \\ 
-$\Gamma$, el sistema de implicaciones residual;}
+$\Sigma$, el sistema de implicaciones residual;}
  
  
 %    \Begin{
 
-\Repeat{$\Gamma=\Sigma$}{
-$\Gamma:=\Sigma$
+\Repeat{$\Sigma=\Sigma$}{
+$\Sigma:=\Sigma$
 
 $\Sigma:=\varnothing$
 
 
-\ForEach{$B\to C\in \Gamma$}{
+\ForEach{$B\to C\in \Sigma$}{
 \lIf{$B\subseteq A$}{
 
 \ \ \ \ {$A:=A\cup B$}
@@ -770,7 +765,7 @@ $\Sigma:=\varnothing$
 }
 }
  
-     \Return $(A,\Gamma)$   
+     \Return $(A,\Sigma)$   
  
 %   }%end begin
 \end{function}
@@ -800,9 +795,10 @@ Guide &  & \multicolumn{4}{c}{\Sigma } \\
 $$
 %}%end small
 
-Una vez finalizado la ejecución del algoritmo, se obtiene: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Gamma = \{b \to d\}$.
+Una vez finalizado la ejecución del algoritmo, se obtiene: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Sigma = \{b \to d\}$.
 \end{ejemplo}
 
 % =====================================================================
 % =====================================================================
 % =====================================================================
+

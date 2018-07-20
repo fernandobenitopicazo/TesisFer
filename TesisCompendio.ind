@@ -1,47 +1,45 @@
 \begin{theindex}
 
-  \item \slfde, \hyperpage{9, 10}, \hyperpage{12}, \hyperpage{15}, 
-		\hyperpage{19}, \hyperpage{25}, \hyperpage{52}, 
-		\hyperpage{55}, \hyperpage{121}
+  \item \slfde, \hyperpage{8}, \hyperpage{10}, \hyperpage{12}, 
+		\hyperpage{15}, \hyperpage{19}, \hyperpage{24}, 
+		\hyperpage{49, 50}, \hyperpage{117}
 
   \indexspace
 
   \item An\'alisis Formal de Conceptos, \hyperpage{3}
-  \item atributo, \hyperpage{6}, \hyperpage{46}
-  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{51}
+  \item atributo, \hyperpage{5}, \hyperpage{45}
+  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{48}
 
   \indexspace
 
   \item bases, \hyperpage{14}
   \item bases de datos, \hyperpage{3}
-  \item Bases de Datos Relacionales, \hyperpage{46}
+  \item Bases de Datos Relacionales, \hyperpage{43}
 
   \indexspace
 
-  \item Cierre \slfd, \hyperpage{58}
-  \item Cierre cl\'asico, \hyperpage{56}
+  \item Cierre \slfd, \hyperpage{53}
+  \item Cierre cl\'asico, \hyperpage{52}
   \item CK, \hyperpage{12}
-  \item clave, \hyperpage{6}, \hyperpage{50}
-    \subitem claves minimales, \hyperpage{5}, \hyperpage{50}
-  \item concepto formal, \hyperpage{40}
-  \item conjuntos cerrados, \hyperpage{18}, \hyperpage{40}
+  \item clave, \hyperpage{5}
+    \subitem claves minimales, \hyperpage{5}
+  \item concepto formal, \hyperpage{38}
+  \item conjuntos cerrados, \hyperpage{18}, \hyperpage{38}
   \item conjuntos de implicaciones, \hyperpage{3}, \hyperpage{18}, 
-		\hyperpage{22}, \hyperpage{52}
-  \item contexto formal, \hyperpage{36--38}, \hyperpage{40, 41}, 
-		\hyperpage{45, 46}, \hyperpage{49}
-  \item Cuerpo, \hyperpage{47}
+		\hyperpage{22}
+  \item contexto formal, \hyperpage{34--36}, \hyperpage{38, 39}, 
+		\hyperpage{42, 43}, \hyperpage{46, 47}
+  \item Cuerpo, \hyperpage{44}
 
   \indexspace
 
-  \item dataset, \hyperpage{4}, \hyperpage{15}
-  \item dependencias funcionales, \hyperpage{4}, \hyperpage{48}
-  \item derivaci\'on sem\'antica, \hyperpage{54}
-  \item derivaci\'on sint\'actica, \hyperpage{53}
-  \item dominio, \hyperpage{47}
+  \item dataset, \hyperpage{15}
+  \item dependencias funcionales, \hyperpage{4}, \hyperpage{46}
+  \item dominio, \hyperpage{45}
 
   \indexspace
 
-  \item Esquema, \hyperpage{47}
+  \item Esquema, \hyperpage{44}
 
   \indexspace
 
@@ -54,8 +52,8 @@
 
   \indexspace
 
-  \item if-then rules, \hyperpage{4}, \hyperpage{44}
-  \item Implicaci\'on, \hyperpage{44}
+  \item if-then rules, \hyperpage{4}
+  \item Implicaci\'on, \hyperpage{42}
   \item implicaciones, \hyperpage{4}
   \item Information Retrieval, \hyperpage{21}
 
@@ -66,61 +64,61 @@
   \indexspace
 
   \item mapeo $mg_\Sigma$, \hyperpage{15}
-  \item MapReduce, \hyperpage{13}, \hyperpage{17}
-  \item MinGen, \hyperpage{16, 17}
+  \item MapReduce, \hyperpage{12}, \hyperpage{17}
+  \item MinGen, \hyperpage{15}, \hyperpage{17}
   \item MinGenPar, \hyperpage{17}
-  \item MinGenPr, \hyperpage{16, 17}
-  \item Modelo, \hyperpage{45}
+  \item MinGenPr, \hyperpage{15--17}
+  \item Modelo, \hyperpage{42}
 
   \indexspace
 
-  \item operador de cierre, \hyperpage{12}, \hyperpage{39}, 
-		\hyperpage{45}
-  \item operadores de derivaci\'on, \hyperpage{38}
+  \item Operador de cierre, \hyperpage{51}
+  \item operador de cierre, \hyperpage{12}, \hyperpage{37}, 
+		\hyperpage{42}
+  \item operadores de derivaci\'on, \hyperpage{36}
 
   \indexspace
 
-  \item paralelismo, \hyperpage{11}, \hyperpage{50}
+  \item paralelismo, \hyperpage{11}
   \item problemas SR, \hyperpage{21}
     \subitem arranque en fr\IeC {\'\i }o, \hyperpage{21}
-    \subitem ataques maliciosos, \hyperpage{22}
-    \subitem dimensionalidad, \hyperpage{22}
-    \subitem escalabilidad, \hyperpage{22}
+    \subitem ataques maliciosos, \hyperpage{21}
+    \subitem dimensionalidad, \hyperpage{21, 22}
+    \subitem escalabilidad, \hyperpage{21}
     \subitem escasez, \hyperpage{21}
     \subitem oveja-negra, \hyperpage{21}
-    \subitem postergaci\'on, \hyperpage{22}
+    \subitem postergaci\'on, \hyperpage{21}
     \subitem privacidad, \hyperpage{21}
-    \subitem sobreespecializaci\'on, \hyperpage{22}
+    \subitem sobreespecializaci\'on, \hyperpage{21}
 
   \indexspace
 
-  \item reglas de inferencia, \hyperpage{15}, \hyperpage{53}
-    \subitem composici\'on, \hyperpage{53}
-    \subitem fragmentaci\'on, \hyperpage{53}
-    \subitem simplificaci\'on, \hyperpage{53}
-  \item ret\IeC {\'\i }culo de concepto, \hyperpage{41}
-  \item ret\IeC {\'\i }culo de conceptos, \hyperpage{42}
+  \item reglas de inferencia, \hyperpage{15}, \hyperpage{49}
+    \subitem composici\'on, \hyperpage{49}
+    \subitem fragmentaci\'on, \hyperpage{49}
+    \subitem simplificaci\'on, \hyperpage{49}
+  \item ret\IeC {\'\i }culo de concepto, \hyperpage{39}
+  \item ret\IeC {\'\i }culo de conceptos, \hyperpage{40}
     \subitem conjuntos cerrados, \hyperpage{14}
 
   \indexspace
 
-  \item sistema axiom\'atico, \hyperpage{12}, \hyperpage{51}
+  \item sistema axiom\'atico, \hyperpage{11}, \hyperpage{48, 49}
   \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{18}
-    \subitem basados en conocimiento, \hyperpage{20, 21}, 
-		\hyperpage{23}
-    \subitem basados en contenido, \hyperpage{20, 21}, \hyperpage{23}
+    \subitem basados en conocimiento, \hyperpage{20}, \hyperpage{22}
+    \subitem basados en contenido, \hyperpage{19, 20}, \hyperpage{22}
     \subitem colaborativos, \hyperpage{19}
-    \subitem contextuales, \hyperpage{20}
+    \subitem contextuales, \hyperpage{19}
     \subitem conversacionales, \hyperpage{20--22}
-    \subitem demogr\'aficos, \hyperpage{20}
-  \item SST, \hyperpage{10}, \hyperpage{12}
-  \item supercomputaci\'on, \hyperpage{5}, \hyperpage{11}, 
-		\hyperpage{13}, \hyperpage{29}, \hyperpage{50}
+    \subitem demogr\'aficos, \hyperpage{19}
+  \item SST, \hyperpage{10, 11}
+  \item supercomputaci\'on, \hyperpage{5}, \hyperpage{10}, 
+		\hyperpage{13}, \hyperpage{27}
 
   \indexspace
 
-  \item Tableaux, \hyperpage{9}, \hyperpage{50}
-  \item Teorema de deducci\'on, \hyperpage{54}, \hyperpage{57}
-  \item tupla, \hyperpage{6}, \hyperpage{47, 48}
+  \item Tableaux, \hyperpage{9}
+  \item Teorema de la deducci\'on, \hyperpage{51, 52}
+  \item tupla, \hyperpage{6}, \hyperpage{45, 46}
 
 \end{theindex}

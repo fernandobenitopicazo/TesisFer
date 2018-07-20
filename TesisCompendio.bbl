@@ -38,6 +38,11 @@
 \newblock In {\em Proceedings of the International Federation for Information
   Processing Congress\/} (1974), pp.~580--583.
 
+\bibitem{Armstrong1980}
+{\sc Armstrong, W.~W., and Deobel, C.}
+\newblock Decompositions and functional dependencies in relations.
+\newblock {\em ACM Trans. Database Syst. 5}, 4 (Dec. 1980), 404--430.
+
 \bibitem{Arnaboldi2016}
 {\sc Arnaboldi, V., Campana, M.~G., Delmastro, F., and Pagani, E.}
 \newblock Pliers: A popularity-based recommender system for content
@@ -196,18 +201,29 @@
 \newblock A relational model of data for large shared data banks.
 \newblock {\em Commun. ACM 13}, 6 (1970), 377--387.
 
+\bibitem{Codd1971b}
+{\sc Codd, E.~F.}
+\newblock Further normalization of the data base relational model.
+\newblock {\em IBM Research Report, San Jose, California RJ909\/} (1971).
+
+\bibitem{Codd1971}
+{\sc Codd, E.~F.}
+\newblock Normalized data base structure: A brief tutorial.
+\newblock In {\em Proceedings of the 1971 ACM SIGFIDET (Now SIGMOD) Workshop on
+  Data Description, Access and Control\/} (New York, NY, USA, 1971), SIGFIDET
+  '71, ACM, pp.~1--17.
+
+\bibitem{Codd1990}
+{\sc Codd, E.~F.}
+\newblock {\em The Relational Model for Database Management: Version 2}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1990.
+
 \bibitem{Codocedo2015}
 {\sc Codocedo, V., and Napoli, A.}
 \newblock Formal concept analysis and information retrieval -- a survey.
 \newblock In {\em Formal Concept Analysis\/} (Cham, 2015), J.~Baixeries,
   C.~Sacarea, and M.~Ojeda-Aciego, Eds., Springer International Publishing,
   pp.~61--77.
-
-\bibitem{Cohen2001}
-{\sc Cohen, E., Datar, M., Fujiwara, S., Gionis, A., Indyk, P., Motwani, R.,
-  Ullman, J.~D., and Yang, C.}
-\newblock Finding interesting associations without support pruning.
-\newblock {\em IEEE Trans. on Knowl. and Data Eng. 13}, 1 (Jan. 2001), 64--78.
 
 \bibitem{Cordero2013}
 {\sc Cordero, P., Enciso, M., and Mora, A.}
@@ -242,6 +258,13 @@
   treatment of implications.
 \newblock {\em Knowledge-Based System 87\/} (2015), 16--25.
 
+\bibitem{Costante2017}
+{\sc Costante, E., den Hartog, J., Petkovic, M., Etalle, S., and Pechenizkiy,
+  M.}
+\newblock A white-box anomaly-based framework for database leakage detection.
+\newblock {\em Journal of Information Security and Applications 32\/} (2017),
+  27 -- 46.
+
 \bibitem{Crespo2011}
 {\sc Crespo, R.~G., Martínez, O.~S., Lovelle, J. M.~C., García-Bustelo, B.
   C.~P., Gayo, J. E.~L., and de~Pablos, P.~O.}
@@ -249,6 +272,13 @@
   intelligent electronic books.
 \newblock {\em Computers in Human Behavior 27}, 4 (2011), 1445 -- 1449.
 \newblock Social and Humanistic Computing for the Knowledge Society.
+
+\bibitem{Darwen2012}
+{\sc Darwen, H., Date, C.~J., and Fagin, R.}
+\newblock A normal form for preventing redundant tuples in relational
+  databases.
+\newblock In {\em Proceedings of the 15th International Conference on Database
+  Theory\/} (New York, NY, USA, 2012), ICDT '12, ACM, pp.~114--126.
 
 \bibitem{DeCampos2010}
 {\sc de~Campos, L.~M., Fernández-Luna, J.~M., Huete, J.~F., and Rueda-Morales,
@@ -300,6 +330,12 @@
 \newblock Finding candidate keys for relational data bases.
 \newblock In {\em SIGMOD Conference\/} (1975), W.~F. King, Ed., ACM,
   pp.~203--210.
+
+\bibitem{Fagin1981}
+{\sc Fagin, R.}
+\newblock A normal form for relational databases that is based on domains and
+  keys.
+\newblock {\em ACM Trans. Database Syst. 6}, 3 (Sept. 1981), 387--415.
 
 \bibitem{Feil2016}
 {\sc Feil, S., Kretzer, M., Werder, K., and Maedche, A.}
@@ -382,11 +418,6 @@
 \newblock {\em Data Mining: Concepts and Techniques}.
 \newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2000.
 
-\bibitem{Harrington2016}
-{\sc Harrington, J.~L.}
-\newblock {\em Relational Database Design and Implementation}, 4th~ed.
-\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2016.
-
 \bibitem{Herlocker2004}
 {\sc Herlocker, J.~L., Konstan, J.~A., Terveen, L.~G., and Riedl, J.~T.}
 \newblock Evaluating collaborative filtering recommender systems.
@@ -434,6 +465,11 @@
   Study}.
 \newblock {\em Information Technology {\&} Tourism 11}, 2 (2009), 139--155.
 
+\bibitem{Kamra2008}
+{\sc Kamra, A., Terzi, E., and Bertino, E.}
+\newblock Detecting anomalous access patterns in relational databases.
+\newblock {\em The VLDB Journal 17}, 5 (Aug. 2008), 1063--1077.
+
 \bibitem{Karnaugh1953}
 {\sc Karnaugh, M.}
 \newblock {The map method for synthesis of combinational logic circuits}.
@@ -441,19 +477,22 @@
   Communication and Electronics, Transactions of the 72}, 5 (Nov. 1953),
   593--599.
 
-\bibitem{Kaytoue2011}
-{\sc Kaytoue, M., Kuznetsov, S.~O., Napoli, A., and Duplessis, S.}
-\newblock Mining gene expression data with pattern structures in formal concept
-  analysis.
-\newblock {\em Information Sciences 181}, 10 (2011), 1989 -- 2001.
-\newblock Special Issue on Information Engineering Applications Based on
-  Lattices.
-
 \bibitem{Kemper1991}
 {\sc Kemper, A., and Moerkotte, G.}
 \newblock Query optimization in object bases: Exploiting relational techniques.
 \newblock In {\em Query Processing for Advanced Database Systems, Dagstuhl}.
   Morgan Kaufmann, 1991, pp.~63--98.
+
+\bibitem{Kent1983}
+{\sc Kent, W.}
+\newblock A simple guide to five normal forms in relational database theory.
+\newblock {\em Commun. ACM 26}, 2 (Feb. 1983), 120--125.
+
+\bibitem{Kester2013}
+{\sc Kester, Q.-A.}
+\newblock Application of formal concept analysis to visualization of the
+  evaluation of risks matrix in software engineering projects.
+\newblock 220--225.
 
 \bibitem{KIM2018}
 {\sc Kim, K.}
@@ -612,14 +651,6 @@
   Deduktionssysteme, Interner Bericht 8/92, March 18-20, 1992\/} (1992),
   pp.~56--58.
 
-\bibitem{Motameny2008}
-{\sc Motameny, S., Versmold, B., and Schmutzler, R.}
-\newblock Formal concept analysis for the identification of combinatorial
-  biomarkers in breast cancer.
-\newblock In {\em Proceedings of the 6th International Conference on Formal
-  Concept Analysis\/} (Berlin, Heidelberg, 2008), ICFCA'08, Springer-Verlag,
-  pp.~229--240.
-
 \bibitem{Nagler2016}
 {\sc Nagler, T., and Czado, C.}
 \newblock Evading the curse of dimensionality in nonparametric density
@@ -633,12 +664,11 @@
 \newblock In {\em Proceedings of the 23rd International Conference on World
   Wide Web\/} (New York, NY, USA, 2014), WWW '14, ACM, pp.~677--686.
 
-\bibitem{Niemela1999}
-{\sc Niemel\"{a}, I.}
-\newblock Logic programs with stable model semantics as a constraint
-  programming paradigm.
-\newblock {\em Annals of Mathematics and Artificial Intelligence 25}, 3-4 (Feb.
-  1999), 241--273.
+\bibitem{Outrata2012}
+{\sc Outrata, J., and Vychodil, V.}
+\newblock Fast algorithm for computing fixpoints of galois connections induced
+  by object-attribute relational data.
+\newblock {\em Information Sciences 185}, 1 (2012), 114 -- 127.
 
 \bibitem{Papadimitriou2012}
 {\sc Papadimitriou, A., Symeonidis, P., and Manolopoulos, Y.}
@@ -662,6 +692,12 @@
 \newblock {\em Web Semantics: Science, Services and Agents on the WWW 23\/}
   (2013), 16--30.
 
+\bibitem{Poelmans2012}
+{\sc Poelmans, J., Dedene, G., Snoeck, M., and Viaene, S.}
+\newblock An iterative requirements engineering framework based on formal
+  concept analysis and c k theory.
+\newblock {\em Expert Systems with Applications 39}, 9 (2012), 8115 -- 8135.
+
 \bibitem{Poelmans2013}
 {\sc Poelmans, J., Ignatov, D.~I., Kuznetsov, S.~O., and Dedene, G.}
 \newblock Formal concept analysis in knowledge processing: A survey on
@@ -674,11 +710,6 @@
 \newblock A hybrid recommender system for the selective dissemination of
   research resources in a technology transfer office.
 \newblock {\em Inf. Sci. 184}, 1 (Feb. 2012), 1--19.
-
-\bibitem{Priss2006}
-{\sc Priss, U.}
-\newblock Formal concept analysis in information science.
-\newblock {\em Annual Rev. Info. Sci \& Technol. 40}, 1 (Dec. 2006), 521--543.
 
 \bibitem{Qu2007}
 {\sc Qu, K., Zhai, Y., Liang, J., and Chen, M.}
@@ -712,6 +743,13 @@
   Informatik, Institut f{\"{u}}r Logik, Komplexit{\"{a}}t und
   Deduktionssysteme, Interner Bericht 8/92, March 18-20, 1992\/} (1992),
   pp.~76--78.
+
+\bibitem{Sacarea2017}
+{\sc Sacarea, C., Sotropa, D., and Troanca, D.}
+\newblock Symptoms investigation by means of formal concept analysis for
+  enhancing medical diagnoses.
+\newblock In {\em 2017 25th International Conference on Software,
+  Telecommunications and Computer Networks (SoftCOM)\/} (Sept 2017), pp.~1--5.
 
 \bibitem{Saiedian1996}
 {\sc Saiedian, H., and Spencer, T.}
@@ -748,6 +786,13 @@
 \newblock {\em The Egyptian Journal of Remote Sensing and Space Science 21}, 1
   (2018), 27 -- 36.
 
+\bibitem{Sallam2015}
+{\sc Sallam, A., Bertino, E., Hussain, S.~R., Landers, D., Lefler, R.~M., and
+  Steiner, D.}
+\newblock Dbsafe: An anomaly detection system to protect databases from
+  exfiltration attempts.
+\newblock {\em IEEE Systems Journal 11}, 2 (June 2017), 483--493.
+
 \bibitem{BenSassi2017}
 {\sc Sassi, I.~B., Mellouli, S., and Yahia, S.~B.}
 \newblock Context-aware recommender systems in mobile environment: On the road
@@ -782,11 +827,6 @@
 \newblock Gordian: efficient and scalable discovery of composite keys.
 \newblock In {\em In Proc. International Conference on Very Large Data Bases
   (VLDB\/} (2006), pp.~691--702.
-
-\bibitem{Snelting1998}
-{\sc Snelting, G., and Tip, F.}
-\newblock Reengineering class hierarchies using concept analysis.
-\newblock {\em SIGSOFT Softw. Eng. Notes 23}, 6 (Nov. 1998), 99--110.
 
 \bibitem{Son2018}
 {\sc Son, J., and Kim, S.~B.}
@@ -827,6 +867,12 @@
 \newblock {\em International Journal on Artificial Intelligence Tools 20}, 4
   (2011), 591--616.
 
+\bibitem{Xudong2015}
+{\sc Tu, X., Wang, Y., Zhang, M., and Wu, J.}
+\newblock Using formal concept analysis to identify negative correlations in
+  gene expression data.
+\newblock 1--1.
+
 \bibitem{Ullman1997}
 {\sc Ullman, J.~D., and Widom, J.}
 \newblock {\em A First Course in Database Systems}.
@@ -845,6 +891,11 @@
 \newblock In {\em International Conference on Formal Concept Analysis
   (ICFCA)\/} (2008), vol.~4933 of {\em Lecture Notes in Computer Science},
   Springer, pp.~182--198.
+
+\bibitem{Vavilis2015}
+{\sc Vavilis, S., Egner, A., Petkovic, M., and Zannone, N.}
+\newblock An anomaly analysis framework for database systems.
+\newblock {\em Computers and Security 53\/} (2015), 156 -- 173.
 
 \bibitem{Viegas2018}
 {\sc Viegas, F., Rocha, L., Gonçalves, M., Mourão, F., Sá, G., Salles, T.,

@@ -2,7 +2,6 @@
 \indexentry{sistemas de recomendaci\'on|hyperpage}{3}
 \indexentry{An\'alisis Formal de Conceptos|hyperpage}{3}
 \indexentry{conjuntos de implicaciones|hyperpage}{3}
-\indexentry{dataset|hyperpage}{4}
 \indexentry{if-then rules|hyperpage}{4}
 \indexentry{dependencias funcionales|hyperpage}{4}
 \indexentry{implicaciones|hyperpage}{4}
@@ -11,22 +10,22 @@
 \indexentry{clave!claves minimales|hyperpage}{5}
 \indexentry{generadores minimales|hyperpage}{5}
 \indexentry{supercomputaci\'on|hyperpage}{5}
-\indexentry{clave|hyperpage}{6}
-\indexentry{atributo|hyperpage}{6}
+\indexentry{clave|hyperpage}{5}
+\indexentry{atributo|hyperpage}{5}
 \indexentry{tupla|hyperpage}{6}
-\indexentry{\slfde|hyperpage}{9}
+\indexentry{\slfde|hyperpage}{8}
 \indexentry{Tableaux|hyperpage}{9}
 \indexentry{\slfde|hyperpage}{10}
 \indexentry{SST|hyperpage}{10}
-\indexentry{supercomputaci\'on|hyperpage}{11}
+\indexentry{supercomputaci\'on|hyperpage}{10}
 \indexentry{paralelismo|hyperpage}{11}
 \indexentry{paralelismo|hyperpage}{11}
-\indexentry{SST|hyperpage}{12}
-\indexentry{sistema axiom\'atico|hyperpage}{12}
+\indexentry{SST|hyperpage}{11}
+\indexentry{sistema axiom\'atico|hyperpage}{11}
 \indexentry{\slfde|hyperpage}{12}
 \indexentry{CK|hyperpage}{12}
 \indexentry{operador de cierre|hyperpage}{12}
-\indexentry{MapReduce|hyperpage}{13}
+\indexentry{MapReduce|hyperpage}{12}
 \indexentry{supercomputaci\'on|hyperpage}{13}
 \indexentry{ret\IeC {\'\i }culo de conceptos!conjuntos cerrados|hyperpage}{14}
 \indexentry{bases|hyperpage}{14}
@@ -34,8 +33,8 @@
 \indexentry{\slfde|hyperpage}{15}
 \indexentry{reglas de inferencia|hyperpage}{15}
 \indexentry{mapeo $mg_\Sigma$|hyperpage}{15}
-\indexentry{MinGen|hyperpage}{16}
-\indexentry{MinGenPr|hyperpage}{16}
+\indexentry{MinGen|hyperpage}{15}
+\indexentry{MinGenPr|hyperpage}{15}
 \indexentry{GenMinGen|hyperpage}{16}
 \indexentry{MinGenPr|hyperpage}{16}
 \indexentry{MinGen|hyperpage}{17}
@@ -48,13 +47,13 @@
 \indexentry{sistemas de recomendaci\'on|hyperpage}{18}
 \indexentry{\slfde|hyperpage}{19}
 \indexentry{sistemas de recomendaci\'on!colaborativos|hyperpage}{19}
-\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{20}
-\indexentry{sistemas de recomendaci\'on!contextuales|hyperpage}{20}
-\indexentry{sistemas de recomendaci\'on!demogr\'aficos|hyperpage}{20}
+\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{19}
+\indexentry{sistemas de recomendaci\'on!contextuales|hyperpage}{19}
+\indexentry{sistemas de recomendaci\'on!demogr\'aficos|hyperpage}{19}
 \indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{20}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{20}
-\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{21}
-\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{21}
+\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{20}
+\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{20}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{21}
 \indexentry{Information Retrieval|hyperpage}{21}
 \indexentry{problemas SR|hyperpage}{21}
@@ -62,65 +61,57 @@
 \indexentry{problemas SR!privacidad|hyperpage}{21}
 \indexentry{problemas SR!oveja-negra|hyperpage}{21}
 \indexentry{problemas SR!escasez|hyperpage}{21}
-\indexentry{problemas SR!ataques maliciosos|hyperpage}{22}
-\indexentry{problemas SR!sobreespecializaci\'on|hyperpage}{22}
-\indexentry{problemas SR!escalabilidad|hyperpage}{22}
-\indexentry{problemas SR!postergaci\'on|hyperpage}{22}
-\indexentry{problemas SR!dimensionalidad|hyperpage}{22}
+\indexentry{problemas SR!ataques maliciosos|hyperpage}{21}
+\indexentry{problemas SR!sobreespecializaci\'on|hyperpage}{21}
+\indexentry{problemas SR!escalabilidad|hyperpage}{21}
+\indexentry{problemas SR!postergaci\'on|hyperpage}{21}
+\indexentry{problemas SR!dimensionalidad|hyperpage}{21}
 \indexentry{feature selection|hyperpage}{22}
 \indexentry{problemas SR!dimensionalidad|hyperpage}{22}
 \indexentry{conjuntos de implicaciones|hyperpage}{22}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{22}
-\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{23}
-\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{23}
-\indexentry{\slfde|hyperpage}{25}
-\indexentry{supercomputaci\'on|hyperpage}{29}
+\indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{22}
+\indexentry{sistemas de recomendaci\'on!basados en conocimiento|hyperpage}{22}
+\indexentry{\slfde|hyperpage}{24}
+\indexentry{supercomputaci\'on|hyperpage}{27}
+\indexentry{contexto formal|hyperpage}{34}
+\indexentry{contexto formal|hyperpage}{35}
 \indexentry{contexto formal|hyperpage}{36}
-\indexentry{contexto formal|hyperpage}{37}
+\indexentry{operadores de derivaci\'on|hyperpage}{36}
+\indexentry{operador de cierre|hyperpage}{37}
+\indexentry{conjuntos cerrados|hyperpage}{38}
+\indexentry{concepto formal|hyperpage}{38}
 \indexentry{contexto formal|hyperpage}{38}
-\indexentry{operadores de derivaci\'on|hyperpage}{38}
-\indexentry{operador de cierre|hyperpage}{39}
-\indexentry{conjuntos cerrados|hyperpage}{40}
-\indexentry{concepto formal|hyperpage}{40}
-\indexentry{contexto formal|hyperpage}{40}
-\indexentry{contexto formal|hyperpage}{41}
-\indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{41}
-\indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{42}
-\indexentry{if-then rules|hyperpage}{44}
-\indexentry{Implicaci\'on|hyperpage}{44}
-\indexentry{operador de cierre|hyperpage}{45}
-\indexentry{Modelo|hyperpage}{45}
-\indexentry{contexto formal|hyperpage}{45}
+\indexentry{contexto formal|hyperpage}{39}
+\indexentry{ret\IeC {\'\i }culo de concepto|hyperpage}{39}
+\indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{40}
+\indexentry{Implicaci\'on|hyperpage}{42}
+\indexentry{operador de cierre|hyperpage}{42}
+\indexentry{Modelo|hyperpage}{42}
+\indexentry{contexto formal|hyperpage}{42}
+\indexentry{contexto formal|hyperpage}{43}
+\indexentry{Bases de Datos Relacionales|hyperpage}{43}
+\indexentry{Esquema|hyperpage}{44}
+\indexentry{Cuerpo|hyperpage}{44}
+\indexentry{atributo|hyperpage}{45}
+\indexentry{tupla|hyperpage}{45}
+\indexentry{dominio|hyperpage}{45}
+\indexentry{dependencias funcionales|hyperpage}{46}
+\indexentry{tupla|hyperpage}{46}
 \indexentry{contexto formal|hyperpage}{46}
-\indexentry{Bases de Datos Relacionales|hyperpage}{46}
-\indexentry{atributo|hyperpage}{46}
-\indexentry{tupla|hyperpage}{47}
-\indexentry{dominio|hyperpage}{47}
-\indexentry{Esquema|hyperpage}{47}
-\indexentry{Cuerpo|hyperpage}{47}
-\indexentry{dependencias funcionales|hyperpage}{48}
-\indexentry{tupla|hyperpage}{48}
-\indexentry{contexto formal|hyperpage}{49}
-\indexentry{contexto formal|hyperpage}{49}
-\indexentry{clave|hyperpage}{50}
-\indexentry{clave!claves minimales|hyperpage}{50}
-\indexentry{Tableaux|hyperpage}{50}
-\indexentry{paralelismo|hyperpage}{50}
-\indexentry{supercomputaci\'on|hyperpage}{50}
-\indexentry{Axiomas de Armstrong|hyperpage}{51}
-\indexentry{sistema axiom\'atico|hyperpage}{51}
-\indexentry{conjuntos de implicaciones|hyperpage}{52}
-\indexentry{\slfde|hyperpage}{52}
-\indexentry{reglas de inferencia|hyperpage}{53}
-\indexentry{reglas de inferencia!fragmentaci\'on|hyperpage}{53}
-\indexentry{reglas de inferencia!composici\'on|hyperpage}{53}
-\indexentry{reglas de inferencia!simplificaci\'on|hyperpage}{53}
-\indexentry{derivaci\'on sint\'actica|hyperpage}{53}
-\indexentry{derivaci\'on sem\'antica|hyperpage}{54}
-\indexentry{Teorema de deducci\'on|hyperpage}{54}
-\indexentry{\slfde|hyperpage}{55}
-\indexentry{Cierre cl\'asico|hyperpage}{56}
-\indexentry{Teorema de deducci\'on|hyperpage}{57}
-\indexentry{Teorema de deducci\'on|hyperpage}{57}
-\indexentry{Cierre \slfd|hyperpage}{58}
-\indexentry{\slfde|hyperpage}{121}
+\indexentry{contexto formal|hyperpage}{47}
+\indexentry{Axiomas de Armstrong|hyperpage}{48}
+\indexentry{sistema axiom\'atico|hyperpage}{48}
+\indexentry{\slfde|hyperpage}{49}
+\indexentry{sistema axiom\'atico|hyperpage}{49}
+\indexentry{reglas de inferencia|hyperpage}{49}
+\indexentry{reglas de inferencia!fragmentaci\'on|hyperpage}{49}
+\indexentry{reglas de inferencia!composici\'on|hyperpage}{49}
+\indexentry{reglas de inferencia!simplificaci\'on|hyperpage}{49}
+\indexentry{\slfde|hyperpage}{50}
+\indexentry{Operador de cierre|hyperpage}{51}
+\indexentry{Teorema de la deducci\'on|hyperpage}{51}
+\indexentry{Cierre cl\'asico|hyperpage}{52}
+\indexentry{Teorema de la deducci\'on|hyperpage}{52}
+\indexentry{Cierre \slfd|hyperpage}{53}
+\indexentry{\slfde|hyperpage}{117}
