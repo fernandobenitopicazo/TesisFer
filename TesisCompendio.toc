@@ -28,10 +28,12 @@
 \contentsline {chapter}{\numberline {4}Generadores Minimales}{75}{chapter.4}
 \contentsline {chapter}{\numberline {5}Sistemas de Recomendaci\'on Conversacionales}{97}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusiones y Trabajos Futuros}{113}{chapter.6}
-\contentsline {chapter}{\'Indice alfab\'etico}{127}{section*.34}
-\contentsline {chapter}{{\'Indice de figuras}}{129}{chapter*.35}
-\contentsline {chapter}{{\'Indice de tablas}}{131}{chapter*.36}
-\contentsline {chapter}{Anexo}{133}{section*.37}
+\contentsline {section}{\numberline {6.1}Conclusiones}{116}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabajos Futuros}{121}{section.6.2}
+\contentsline {chapter}{\'Indice alfab\'etico}{127}{section.6.2}
+\contentsline {chapter}{{\'Indice de figuras}}{129}{chapter*.33}
+\contentsline {chapter}{{\'Indice de tablas}}{131}{chapter*.34}
+\contentsline {chapter}{Anexo}{133}{section*.35}
 \contentsline {chapter}{\numberline {A}Closed sets enumeration: a logical approach}{135}{appendix.A}
 \contentsline {chapter}{\numberline {B}Conversational recommendation to avoid the cold-start problem}{143}{appendix.B}
 \contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{152}{appendix.C}

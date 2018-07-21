@@ -24,10 +24,12 @@
 \BOOKMARK [0][-]{chapter.4}{Generadores Minimales}{}
 \BOOKMARK [0][-]{chapter.5}{Sistemas de Recomendaci\363n Conversacionales}{}
 \BOOKMARK [0][-]{chapter.6}{Conclusiones y Trabajos Futuros}{}
-\BOOKMARK [0][-]{section*.34}{\315ndice alfab\351tico}{}
-\BOOKMARK [0][-]{chapter*.35}{\315ndice de figuras}{}
-\BOOKMARK [0][-]{chapter*.36}{\315ndice de tablas}{}
-\BOOKMARK [0][-]{section*.37}{Anexo}{}
+\BOOKMARK [1][-]{section.6.1}{Conclusiones}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{Trabajos Futuros}{chapter.6}
+\BOOKMARK [0][-]{section.6.2}{\315ndice alfab\351tico}{}
+\BOOKMARK [0][-]{chapter*.33}{\315ndice de figuras}{}
+\BOOKMARK [0][-]{chapter*.34}{\315ndice de tablas}{}
+\BOOKMARK [0][-]{section*.35}{Anexo}{}
 \BOOKMARK [0][-]{appendix.A}{Closed sets enumeration: a logical approach}{}
 \BOOKMARK [0][-]{appendix.B}{Conversational recommendation to avoid the cold-start problem}{}
 \BOOKMARK [0][-]{appendix.C}{Keys for the fusion of heterogeneous information}{}

@@ -1,11 +1,5 @@
 \begin{thebibliography}{100}
 
-\bibitem{Abdollahpouri2017}
-{\sc Abdollahpouri, H., Burke, R., and Mobasher, B.}
-\newblock Controlling popularity bias in learning-to-rank recommendation.
-\newblock In {\em Proceedings of the Eleventh ACM Conference on Recommender
-  Systems\/} (New York, NY, USA, 2017), RecSys '17, ACM, pp.~42--46.
-
 \bibitem{Adomavicius2005}
 {\sc Adomavicius, G., and Tuzhilin, A.}
 \newblock Toward the next generation of recommender systems: A survey of the
@@ -42,13 +36,6 @@
 {\sc Armstrong, W.~W., and Deobel, C.}
 \newblock Decompositions and functional dependencies in relations.
 \newblock {\em ACM Trans. Database Syst. 5}, 4 (Dec. 1980), 404--430.
-
-\bibitem{Arnaboldi2016}
-{\sc Arnaboldi, V., Campana, M.~G., Delmastro, F., and Pagani, E.}
-\newblock Pliers: A popularity-based recommender system for content
-  dissemination in online social networks.
-\newblock In {\em Proceedings of the 31st Annual ACM Symposium on Applied
-  Computing\/} (New York, NY, USA, 2016), SAC '16, ACM, pp.~671--673.
 
 \bibitem{Atzeni1993}
 {\sc Atzeni, P., and De~Antonellis, V.}
@@ -163,14 +150,6 @@
 \newblock Sigtur/e-destination: A system for the management of complex tourist
   regions.
 \newblock R.~Law, M.~Fuchs, and F.~Ricci, Eds., Springer Vienna, pp.~39--50.
-
-\bibitem{Bressan2016}
-{\sc Bressan, M., Leucci, S., Panconesi, A., Raghavan, P., and Terolli, E.}
-\newblock The limits of popularity-based recommendations, and the role of
-  social ties.
-\newblock In {\em Proceedings of the 22Nd ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining\/} (New York, NY, USA, 2016), KDD '16,
-  ACM, pp.~745--754.
 
 \bibitem{Burke2010}
 {\sc Burke, R.}
@@ -345,11 +324,6 @@
   Cooperative Work and Social Computing Companion\/} (New York, NY, USA, 2016),
   CSCW '16 Companion, ACM, pp.~253--256.
 
-\bibitem{Felfernig2015}
-{\sc Felfernig, A., Friedrich, G., Jannach, D., and Zanker, M.}
-\newblock {\em Constraint-Based Recommender Systems}.
-\newblock Springer US, Boston, MA, 2015, pp.~161--190.
-
 \bibitem{Friedman2015}
 {\sc Friedman, A., Knijnenburg, B.~P., Vanhecke, K., Martens, L., and
   Berkovsky, S.}
@@ -470,6 +444,13 @@
 \newblock Detecting anomalous access patterns in relational databases.
 \newblock {\em The VLDB Journal 17}, 5 (Aug. 2008), 1063--1077.
 
+\bibitem{Kardan2013}
+{\sc Kardan, A.~A., and Ebrahimi, M.}
+\newblock A novel approach to hybrid recommendation systems based on
+  association rules mining for content recommendation in asynchronous
+  discussion groups.
+\newblock {\em Information Sciences 219\/} (2013), 93 -- 110.
+
 \bibitem{Karnaugh1953}
 {\sc Karnaugh, M.}
 \newblock {The map method for synthesis of combinational logic circuits}.
@@ -555,12 +536,6 @@
 \newblock Amazon.com recommendations: Item-to-item collaborative filtering.
 \newblock {\em IEEE Internet Computing 7\/} (2003), 76--80.
 
-\bibitem{Llorente2012}
-{\sc Llorente, M.~S., and Guerrero, S.~E.}
-\newblock Increasing retrieval quality in conversational recommenders.
-\newblock {\em IEEE Transactions on Knowledge and Data Engineering 24}, 10 (Oct
-  2012), 1876--1888.
-
 \bibitem{LopsGS11}
 {\sc Lops, P., de~Gemmis, M., and Semeraro, G.}
 \newblock Content-based recommender systems: State of the art and trends.
@@ -605,6 +580,14 @@
 \newblock Minimizing dialog length in interactive case-based reasoning.
 \newblock In {\em Procs of the 17th Int Joint Conf on AI, IJCAI, Seattle,
   Washington, USA, August 4-10, 2001\/} (2001), pp.~993--998.
+
+\bibitem{Mican2010}
+{\sc Mican, D., and Tomai, N.}
+\newblock Association-rules-based recommender system for personalization in
+  adaptive web-based applications.
+\newblock In {\em Current Trends in Web Engineering\/} (Berlin, Heidelberg,
+  2010), F.~Daniel and F.~M. Facca, Eds., Springer Berlin Heidelberg,
+  pp.~85--90.
 
 \bibitem{Mimouni2015}
 {\sc Mimouni, N., Nazarenko, A., and Salotti, S.}
@@ -656,13 +639,6 @@
 \newblock Evading the curse of dimensionality in nonparametric density
   estimation with simplified vine copulas.
 \newblock {\em Journal of Multivariate Analysis 151\/} (2016), 69 -- 89.
-
-\bibitem{Nguyen2014}
-{\sc Nguyen, T.~T., Hui, P.-M., Harper, F.~M., Terveen, L., and Konstan, J.~A.}
-\newblock Exploring the filter bubble: The effect of using recommender systems
-  on content diversity.
-\newblock In {\em Proceedings of the 23rd International Conference on World
-  Wide Web\/} (New York, NY, USA, 2014), WWW '14, ACM, pp.~677--686.
 
 \bibitem{Nikolov2011}
 {\sc Nikolov, A., Ferrara, A., and Scharffe, F.}
@@ -762,12 +738,6 @@
   database schema.
 \newblock {\em Comput. J. 39}, 2 (1996), 124--132.
 
-\bibitem{Salem2014}
-{\sc Salem, Y., Hong, J., and Liu, W.}
-\newblock History-guided conversational recommendation.
-\newblock In {\em Proceedings of the 23rd International Conference on World
-  Wide Web\/} (New York, NY, USA, 2014), WWW '14 Companion, ACM, pp.~999--1004.
-
 \bibitem{Sali2004}
 {\sc Sali, A.}
 \newblock {\em Minimal Keys in Higher-Order Datamodels}.
@@ -798,6 +768,12 @@
   exfiltration attempts.
 \newblock {\em IEEE Systems Journal 11}, 2 (June 2017), 483--493.
 
+\bibitem{Shalom2016}
+{\sc Sar~Shalom, O., Koenigstein, N., Paquet, U., and Vanchinathan, H.~P.}
+\newblock Beyond collaborative filtering: The list recommendation problem.
+\newblock In {\em Proceedings of the 25th International Conference on World
+  Wide Web\/} (2016), WWW '16, pp.~63--72.
+
 \bibitem{BenSassi2017}
 {\sc Sassi, I.~B., Mellouli, S., and Yahia, S.~B.}
 \newblock Context-aware recommender systems in mobile environment: On the road
@@ -821,6 +797,12 @@
 {\sc Sharma, R., and Ray, S.}
 \newblock Explanations in recommender systems: An overview.
 \newblock {\em Int. J. Bus. Inf. Syst. 23}, 2 (Jan. 2016), 248--262.
+
+\bibitem{Shashkin2017}
+{\sc Shashkin, P., and Karpov, N.}
+\newblock Learning to rank for personalized news recommendation.
+\newblock In {\em Proceedings of the International Conference on Web
+  Intelligence\/} (New York, NY, USA, 2017), WI '17, ACM, pp.~1069--1071.
 
 \bibitem{Simsion2005}
 {\sc Simsion, G.~C., and Witt, G.~C.}
@@ -908,6 +890,13 @@
 \newblock A genetic programming approach for feature selection in highly
   dimensional skewed data.
 \newblock {\em Neurocomputing 273\/} (2018), 554 -- 569.
+
+\bibitem{Wang2018}
+{\sc Wang, W., Yin, H., Huang, Z., Wang, Q., Du, X., and Nguyen, Q. V.~H.}
+\newblock Streaming ranking based recommender systems.
+\newblock In {\em The 41st International ACM SIGIR Conference on Research
+  \&\#38; Development in Information Retrieval\/} (New York, NY, USA, 2018),
+  SIGIR '18, ACM, pp.~525--534.
 
 \bibitem{Wastl98a}
 {\sc Wastl, R.}
