@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item \slfde, \hyperpage{8, 9}, \hyperpage{11}, \hyperpage{14}, 
+  \item \slfde, \hyperpage{8, 9}, \hyperpage{12}, \hyperpage{15}, 
 		\hyperpage{18}, \hyperpage{24}, \hyperpage{49, 50}, 
 		\hyperpage{117}
 
@@ -20,7 +20,7 @@
 
   \item Cierre \slfd, \hyperpage{53}
   \item Cierre cl\'asico, \hyperpage{52}
-  \item CK, \hyperpage{11}
+  \item CK, \hyperpage{12}
   \item clave, \hyperpage{5}
     \subitem claves minimales, \hyperpage{5}
   \item concepto formal, \hyperpage{38}
@@ -33,9 +33,8 @@
 
   \indexspace
 
-  \item dataset, \hyperpage{4, 5}, \hyperpage{14}, \hyperpage{16}, 
-		\hyperpage{21}, \hyperpage{24}, \hyperpage{28, 29}, 
-		\hyperpage{124}
+  \item dataset, \hyperpage{4, 5}, \hyperpage{15, 16}, \hyperpage{21}, 
+		\hyperpage{24}, \hyperpage{28, 29}, \hyperpage{124}
   \item dependencias funcionales, \hyperpage{4}, \hyperpage{46}
   \item dominio, \hyperpage{45}
 
@@ -45,12 +44,12 @@
 
   \indexspace
 
-  \item feature selection, \hyperpage{21}
+  \item feature selection, \hyperpage{22}
 
   \indexspace
 
   \item generadores minimales, \hyperpage{5}
-  \item GenMinGen, \hyperpage{15, 16}
+  \item GenMinGen, \hyperpage{15}, \hyperpage{17}
 
   \indexspace
 
@@ -65,9 +64,9 @@
 
   \item mapeo $mg_\Sigma$, \hyperpage{15}
   \item MapReduce, \hyperpage{12}, \hyperpage{17}
-  \item MinGen, \hyperpage{15, 16}
+  \item MinGen, \hyperpage{15}, \hyperpage{17}
   \item MinGenPar, \hyperpage{17}
-  \item MinGenPr, \hyperpage{15, 16}
+  \item MinGenPr, \hyperpage{15--17}
   \item Modelo, \hyperpage{42}
 
   \indexspace
@@ -79,7 +78,7 @@
   \indexspace
 
   \item paralelismo, \hyperpage{10, 11}
-  \item problemas SR, \hyperpage{20}
+  \item problemas SR, \hyperpage{21}
     \subitem arranque en fr\IeC {\'\i }o, \hyperpage{21}
     \subitem ataques maliciosos, \hyperpage{21}
     \subitem dimensionalidad, \hyperpage{21, 22}
@@ -93,7 +92,7 @@
   \indexspace
 
   \item Recuperaci\'on de Informaci\'on, \hyperpage{20}
-  \item reglas de inferencia, \hyperpage{14}, \hyperpage{49}
+  \item reglas de inferencia, \hyperpage{15}, \hyperpage{49}
     \subitem composici\'on, \hyperpage{49}
     \subitem fragmentaci\'on, \hyperpage{49}
     \subitem simplificaci\'on, \hyperpage{49}
@@ -112,7 +111,7 @@
     \subitem conversacionales, \hyperpage{19, 20}, \hyperpage{22}, 
 		\hyperpage{119}
     \subitem demogr\'aficos, \hyperpage{19}
-  \item SST, \hyperpage{9}, \hyperpage{11}
+  \item SST, \hyperpage{10, 11}
   \item supercomputaci\'on, \hyperpage{5}, \hyperpage{10}, 
 		\hyperpage{13}, \hyperpage{28}
 

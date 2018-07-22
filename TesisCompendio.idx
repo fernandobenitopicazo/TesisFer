@@ -17,31 +17,31 @@
 \indexentry{\slfde|hyperpage}{8}
 \indexentry{Tableaux|hyperpage}{9}
 \indexentry{\slfde|hyperpage}{9}
-\indexentry{SST|hyperpage}{9}
+\indexentry{SST|hyperpage}{10}
 \indexentry{supercomputaci\'on|hyperpage}{10}
 \indexentry{paralelismo|hyperpage}{10}
 \indexentry{paralelismo|hyperpage}{11}
 \indexentry{SST|hyperpage}{11}
 \indexentry{sistema axiom\'atico|hyperpage}{11}
-\indexentry{\slfde|hyperpage}{11}
-\indexentry{CK|hyperpage}{11}
+\indexentry{\slfde|hyperpage}{12}
+\indexentry{CK|hyperpage}{12}
 \indexentry{operador de cierre|hyperpage}{12}
 \indexentry{MapReduce|hyperpage}{12}
 \indexentry{supercomputaci\'on|hyperpage}{13}
 \indexentry{ret\IeC {\'\i }culo de conceptos!conjuntos cerrados|hyperpage}{13}
 \indexentry{bases|hyperpage}{14}
-\indexentry{dataset|hyperpage}{14}
-\indexentry{\slfde|hyperpage}{14}
-\indexentry{reglas de inferencia|hyperpage}{14}
+\indexentry{dataset|hyperpage}{15}
+\indexentry{\slfde|hyperpage}{15}
+\indexentry{reglas de inferencia|hyperpage}{15}
 \indexentry{mapeo $mg_\Sigma$|hyperpage}{15}
 \indexentry{MinGen|hyperpage}{15}
 \indexentry{MinGenPr|hyperpage}{15}
 \indexentry{GenMinGen|hyperpage}{15}
 \indexentry{MinGenPr|hyperpage}{16}
 \indexentry{dataset|hyperpage}{16}
-\indexentry{MinGen|hyperpage}{16}
-\indexentry{MinGenPr|hyperpage}{16}
-\indexentry{GenMinGen|hyperpage}{16}
+\indexentry{MinGen|hyperpage}{17}
+\indexentry{MinGenPr|hyperpage}{17}
+\indexentry{GenMinGen|hyperpage}{17}
 \indexentry{MinGenPar|hyperpage}{17}
 \indexentry{MapReduce|hyperpage}{17}
 \indexentry{conjuntos de implicaciones|hyperpage}{17}
@@ -58,7 +58,7 @@
 \indexentry{sistemas de recomendaci\'on!basados en contenido|hyperpage}{20}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{20}
 \indexentry{Recuperaci\'on de Informaci\'on|hyperpage}{20}
-\indexentry{problemas SR|hyperpage}{20}
+\indexentry{problemas SR|hyperpage}{21}
 \indexentry{problemas SR!arranque en fr\IeC {\'\i }o|hyperpage}{21}
 \indexentry{problemas SR!privacidad|hyperpage}{21}
 \indexentry{problemas SR!oveja-negra|hyperpage}{21}
@@ -69,7 +69,7 @@
 \indexentry{problemas SR!postergaci\'on|hyperpage}{21}
 \indexentry{problemas SR!dimensionalidad|hyperpage}{21}
 \indexentry{dataset|hyperpage}{21}
-\indexentry{feature selection|hyperpage}{21}
+\indexentry{feature selection|hyperpage}{22}
 \indexentry{problemas SR!dimensionalidad|hyperpage}{22}
 \indexentry{conjuntos de implicaciones|hyperpage}{22}
 \indexentry{sistemas de recomendaci\'on!conversacionales|hyperpage}{22}
