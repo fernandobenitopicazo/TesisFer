@@ -47,10 +47,10 @@ Las DFs especifican una relación entre dos subconjuntos de atributos, e.g. $A$ y
 \label{ejemplo:basicoClaves}
 Supongamos que disponemos de la siguiente tabla con información que relaciona títulos de películas, actores, países, directores, nacionalidad y años de estreno:
 
-\vspace{0.2cm}
-
+\vspace{0.3cm}
+\noindent
 {\scriptsize
-\begin{tabular}{cccccc}
+\begin{tabular}{lcllll}
  \hline
  Título & Año & País & Director & Nacionalidad & Actor\\
  \hline
@@ -62,9 +62,16 @@ Supongamos que disponemos de la siguiente tabla con información que relaciona tí
  King Kong & 1976 & USA & De Laurentiis & IT & Jessica Lange\\
  King Kong & 1976 & USA & De Laurentiis & IT & Jeff Bridges\\
  Django Unchained & 2012 & USA & Quentin Tarantino  & USA & Jamie Foxx\\
- Django Unchained & 2012 & USA & Quentin Tarantino  & USA & Samuel Jackson\\\hline
+ Django Unchained & 2012 & USA & Quentin Tarantino  & USA & Samuel Jackson\\
+ Blade Runner & 1982 & USA & Ridley Scott & UK & Harrison Ford\\
+ Blade Runner & 2017 & USA & Denis Villeneuve  & CAN & Harrison Ford\\
+ El dictador & 2012 & USA & Larry Charles  & USA & Megan Fox\\
+ This is 40 & 2012 & USA & Judd Apatow  & USA & Megan Fox\\
+ \hline
 \end{tabular}
 }
+
+\vspace{0.3cm}
 
 De esta información, podemos extraer el siguiente conjunto de DFs: 
 
@@ -75,7 +82,7 @@ Esta tabla tiene una única clave: $\{Titulo, A\tilde{n}o, Actor\}$ que correspon
 
 La identificación de las claves de una determinada relación es una tarea crucial para muchas áreas de tratamiento de la información: modelos de datos \cite{Simsion2005}, optimización de consultas \cite{Kemper1991}, indexado \cite{Manolopoulos1999}, enlazado de datos \cite{Nikolov2011}, etc. Como muestras de esta importancia, es posible encontrar numerosas citas en la literatura, entre las que se pueden destacar las siguientes. En \cite{Sismanis2006}, los autores afirman que: ``\textit{la identificación de claves es una tarea fundamental en muchas áreas de la gestión moderna de datos, incluyendo modelado de datos, optimización de consultas (proporciona un optimizador de consultas con nuevas rutas de acceso que pueden conducir a mejoras sustanciales en el procesado de consultas), indexación (permite al administrador de la base de datos mejorar la eficiencia del acceso a los datos a través de técnicas como la partición de datos o la creación de índices y vistas), detección de anomalías e integración de datos}''. Más recientemente, se pueden encontrar estudios en referencia al uso de claves minimales en áreas emergentes como el \textit{linked-data} \cite{Benito-PicazoCMMSE2015}, o también en \cite{Pernelle2013}, donde los autores delimitan el problema manifestando: \textit{``establecer enlaces semánticos entre los elementos de datos puede ser realmente útil, ya que permite a los rastreadores, navegadores y aplicaciones combinar información de diferentes fuentes.''}.
 
-Como refleja el contenido de esta sección, es evidente la importancia manifiesta de averiguar las claves de una relación, sin embargo, este labor no está exenta de dificultades, por ello, el trabajo realizado en esta tesis ha consistido en proponer, diseñar e implementar métodos para afrontar el problema de la búsqueda de claves, el cual se presenta a continuación.
+Como refleja el contenido de esta sección, es evidente la importancia manifiesta de averiguar las claves de una relación, sin embargo, este labor no está exenta de dificultades, por ello, el trabajo realizado en esta parte de la tesis ha consistido en proponer, diseñar e implementar métodos para afrontar el problema de la búsqueda de claves, el cual se presenta a continuación.
 
 
 % El problema de la búsqueda de claves
@@ -94,7 +101,7 @@ El cálculo de todas las claves minimales representa un problema complejo. En \ci
 Por otro lado, en \cite{CorderoEMG14}, los autores muestran cómo el problema de las claves minimales en las bases de datos tiene su análogo en FCA, donde el papel de las DFs se trata como implicaciones de atributos. En ese artículo, el problema de las claves mínimales se presentó desde un punto de vista lógico y para ello, se empleó un sistema axiomático, que los autores denominaron \slfde\index{\slfde} (por sus siglas en inglés: \textit{Simplification Logic for Functional Dependencies}) \cite{Enciso2002}, para gestionar las DFs y las implicaciones.
 
 % referencias generales
-Las principales referencias sobre este problema apuntan al trabajo de Lucchesi y Osborn en \cite{Lucchesi78} que presenta un algoritmo para calcular todas las claves. Por otro lado, Saiedian y Spencer \cite{Saiedian1996} presentaron un algoritmo usando grafos con atributos para encontrar todas las claves posibles de un esquema de base de datos relacional. No obstante, demostraron que sólo podía aplicarse cuando el grafo de DFs no estuviera fuertemente conectado. Es reseñable también el trabajo de Zhang \cite{Zhang09} en el cual se utilizan mapas de Karnaugh \cite{Karnaugh1953} para calcular todas las claves. Existen  más trabajos sobre el problema del cálculo de las claves minimales como son \cite{Sismanis2006,Worland2004}, destacando también una contribución actual que aborda el problema en un estilo lógico \cite{CorderoEMG14}. Asimismo, en \cite{Levy2005,Valtchev03,Valtchev08} los autores propusieron el uso de FCA \cite{Ganter1997} para abordar problemas relacionados con la búsqueda y la gestión de las implicaciones, que pueden considerarse complementarios a nuestro trabajo.
+Las principales referencias sobre el problema de la búsqueda de claves apuntan al trabajo de Lucchesi y Osborn en \cite{Lucchesi78} donde presentan un algoritmo para calcular todas las claves. Por otro lado, Saiedian y Spencer \cite{Saiedian1996} presentaron un algoritmo usando grafos con atributos para encontrar todas las claves posibles de un esquema de base de datos relacional. No obstante, demostraron que sólo podía aplicarse cuando el grafo de DFs no estuviera fuertemente conectado. Es reseñable también el trabajo de Zhang \cite{Zhang09} en el cual se utilizan mapas de Karnaugh \cite{Karnaugh1953} para calcular todas las claves. Existen  más trabajos sobre el problema del cálculo de las claves minimales como son \cite{Sismanis2006,Worland2004}, destacando también una contribución actual que aborda el problema en un estilo lógico \cite{CorderoEMG14}. Asimismo, en \cite{Levy2005,Valtchev03,Valtchev08} los autores propusieron el uso de FCA \cite{Ganter1997} para abordar problemas relacionados con la búsqueda y la gestión de las implicaciones, que pueden considerarse complementarios a nuestro trabajo.
 
 
 
@@ -105,7 +112,7 @@ Las principales referencias sobre este problema apuntan al trabajo de Lucchesi y
 % referencias de tableaux
 El objetivo de esta parte de la tesis se centra en los algoritmos de búsqueda de claves basados en la lógica, y más específicamente, en aquellos que utilizan el paradigma de tableaux\index{Tableaux} \cite{Morgan1992,Risch1992} como sistema de inferencia. 
 
-De forma muy general, se puede decir que los métodos tipo tableaux representan el espacio de búsqueda como un árbol, donde sus hojas contienen las soluciones (claves). El proceso de construcción del árbol comienza con una raíz inicial y desde allí, mediante la utilización de unas reglas de inferencia del método que se esté aplicando, generan nuevas ramas del árbol etiquetadas con nodos que representan instancias más simples del nodo padre. La mayor ventaja de este proceso es su versatilidad, ya que el desarrollo de nuevos métodos se reduce a cambiar las reglas de inferencia. Debido a esta característica, las comparaciones entre estos métodos se pueden realizar fácilmente ya que su eficiencia va de la mano del tamaño del árbol de búsqueda generado.
+De forma muy general, se puede decir que los métodos tipo tableaux representan el espacio de búsqueda como un árbol, donde sus hojas contienen las soluciones (claves). El proceso de construcción del árbol comienza con una raíz inicial y desde allí, mediante la utilización de unas reglas de inferencia, se generan nuevas ramas del árbol etiquetadas con nodos que representan instancias más simples del nodo padre. Debido a esta característica, las comparaciones entre estos métodos se pueden realizar fácilmente ya que su eficiencia va de la mano del tamaño del árbol de búsqueda generado. La mayor ventaja de este proceso es su versatilidad, ya que el desarrollo de nuevos métodos se reduce en gran parte a cambiar las reglas de inferencia.
 
 Esto conduce a un punto de partida fundamental, los estudios de R. Wastl (Universidad de Wurzburg, Alemania) \cite{Wastl98a,Wastl98} donde se introduce por primera vez un sistema de inferencia de tipo Hilbert para averiguar todas las claves de un esquema relacional. A modo de ejemplo básico, en la Figura \ref{figura:ejemploTaleaux} se presenta un árbol de búsqueda según el paradigma de tableaux desarrollado según las reglas de inferencia del sistema de inferencia $\mathbb{K}$ de Wastl. Básicamente, se parte de una raíz para cuyo cálculo se ha aplicado una regla de inferencia \uno y a partir de ahí, se van construyendo las diferentes ramas del árbol mediante la aplicación de una segunda regla de inferencia \dos al conjunto de DFs (véase \cite{Wastl98a,Wastl98} para más detalles).
 
@@ -120,9 +127,11 @@ Esto conduce a un punto de partida fundamental, los estudios de R. Wastl (Univer
 Siguiendo esta línea, en \cite{Cordero2013} los autores abordan el problema de la búsqueda de claves utilizando un sistema de inferencia basado en la lógica \slfde \cite{Enciso2002}, demostrando como el árbol del espacio de búsqueda que se genera lleva a sobrepasar las capacidades computacionales de ordenadores corrientes hoy día, incluso para problemas pequeños. En \cite{Mora2012} los autores muestran la equivalencia entre \slfde\index{\slfde} y los axiomas de Armstrong \cite{Armstrong74} junto con un algoritmo para calcular el cierre de un conjunto de atributos. Más tarde, en \cite{CorderoEMG14}, los autores introdujeron el método SST\index{SST}, basado en la introducción del test de minimalidad que evita la apertura de ramas adicionales del árbol, por lo que el espacio de búsqueda se vuelve más reducido, logrando un gran rendimiento en comparación con sus predecesores.
 
 % con el paralelo
-Una propiedad muy interesante de los métodos basados en tableaux es la generación de subproblemas independientes los unos de los otros a partir del problema original. De esta forma, se alcanza otro objetivo fundamental de esta tesis de utilizar las técnicas lógicas sobre una implementación paralela de los métodos de búsqueda de claves que, mediante el uso de recursos de supercomputación\index{supercomputación}, permitan alcanzar resultados en un tiempo razonable.
+Una propiedad muy interesante de los métodos basados en tableaux es la generación de subproblemas independientes los unos de los otros a partir del problema original. De esta forma, se alcanza otro objetivo fundamental de esta tesis, utilizar las técnicas lógicas sobre una implementación paralela de los métodos de búsqueda de claves que, mediante el uso de recursos de supercomputación\index{supercomputación}, permitan alcanzar resultados en un tiempo razonable.
 
-En esta línea, son varios los trabajos que han utilizado la paralelización para afrontar problemas relacionados con implicaciones o FCA. Un algoritmo paralelo para el tratamiento de implicaciones enmarcado en el campo de los hipergrafos lo podemos encontrar en \cite{Sridhar1990}. A su vez, Krajca et al. \cite{Krajca2008} presentan un algoritmo paralelo para el cálculo de conceptos formales. Por nuestra parte, en \cite{Benito-Picazo2014} se prsentó una primera aproximación a la paralelización del método de Wastl \cite{Wastl98a,Wastl98} y el algoritmo de claves \cite{Cordero2013}, donde se muestra cómo el paralelismo\index{paralelismo} puede integrarse de forma natural en los métodos basados en tableaux.
+%En esta línea, son varios los trabajos que han utilizado la paralelización para afrontar problemas relacionados con implicaciones o FCA. Un algoritmo paralelo para el tratamiento de implicaciones enmarcado en el campo de los hipergrafos lo podemos encontrar en \cite{Sridhar1990}. A su vez, Krajca et al. \cite{Krajca2008} presentan un algoritmo paralelo para el cálculo de conceptos formales. 
+
+Por nuestra parte, en \cite{Benito-Picazo2014} se presentó una primera aproximación a la paralelización del método de Wastl \cite{Wastl98a,Wastl98} y el algoritmo de claves \cite{Cordero2013}, donde se muestra cómo el paralelismo\index{paralelismo} puede integrarse de forma natural en los métodos basados en tableaux.
 
 Para la labor de computación de alto rendimiento, se ha trabajado fervientemente con el Centro de Supercomputación y Bioinnovación de la Universidad de Málaga\footnote{http://www.scbi.uma.es/}. La posibilidad de tratar con este centro ha proporcionado dos beneficios fundamentales: por un lado, se ha alcanzado una elevada pericia para trabajar en entornos de computación de alto rendimiento (HPC, por sus siglas en inglés: \textit{High Performance Computing}) y para realizar implementaciones que aprovechen una alta cantidad de recursos, y por otro lado, ha permitido obtener resultados empíricos sobre experimentos utilizando estrategias paralelas\index{paralelismo} que han desembocado en contribuciones científicas \cite{Benito-Picazo2014,Benito-Picazo2016,Benito-Picazo2018} y que habría sido imposible conseguir en la actualidad sin contar con tales recursos computacionales.
 
@@ -130,7 +139,7 @@ Para la labor de computación de alto rendimiento, se ha trabajado fervientemente
 \section*{Métodos \textit{SST} y \textit{CK}}
 \label{sec:metodosSSTyCK}
 \noindent
-En \cite{CorderoEMG14} se presentó un nuevo algoritmo, denominado SST\index{SST}, para calcular todas las claves minimales usando una estrategia de estilo tableaux, abriendo la puerta a incorporar el paralelismo en su implementación. SST se basa en la noción de cierre de conjunto; una noción básica en la teoría de bases de datos que, utilizando el sistema axiomático\index{sistema axiomático} de la lógica \slfde (ver Sección \ref{subsec:logicaSLFD}), permite caracterizar el conjunto máximo de atributos que se puede alcanzar, desde un determinado conjunto de atributos $A$ con respecto a un conjunto de DFs. Por lo tanto, si el cierre de $A$ se denota como $A^+_\Sigma$, el sistema de inferencia para DFs permite inferir la DF $A\to A^+_\Sigma$. En este sentido, el enfoque con estilo lógico para el problema de las claves minimales consiste en la enumeración de todos los conjuntos de atributos $A$ tales que se verifique la DF: $A\to\Omega$.
+En \cite{CorderoEMG14} se presentó un nuevo algoritmo, denominado SST\index{SST}, para calcular todas las claves minimales usando una estrategia de estilo tableaux, abriendo la puerta a incorporar el paralelismo en su implementación. SST se basa en la noción de cierre de conjunto; una noción básica en la teoría de bases de datos que, utilizando el sistema axiomático\index{sistema axiomático} de la lógica \slfde (ver Sección \ref{subsec:logicaSLFD}), permite caracterizar el conjunto máximo de atributos que se puede alcanzar, desde un determinado conjunto de atributos $A$ con respecto a un conjunto de DFs. Por lo tanto, si el cierre de $A$ se denota como $A^+_\Sigma$, el sistema de inferencia para DFs permite inferir la DF $A\to A^+_\Sigma$. En este sentido, el enfoque con estilo lógico para el problema de las claves minimales consiste en la enumeración de todos los conjuntos de atributos $A$ tales que se verifique la DF: $A\to M$.
 
 SST muestra un gran rendimiento en comparación con sus predecesores como puede comprobarse en el amplio estudio realizado sobre el método en \cite{Benito-Picazo2014TFM}. El beneficio principal en la reducción del espacio de búsqueda se debe a la introducción de un test de inclusión para evitar la apertura de la totalidad de las ramas del árbol. Gracias a ello, SST no abre aquellas ramas de las que se tiene el conocimiento de que van a producir las mismas claves que se calculan en otra rama.
 

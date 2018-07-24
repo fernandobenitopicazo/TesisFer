@@ -16,7 +16,7 @@
 \indexentry{tupla|hyperpage}{6}
 \indexentry{\slfde|hyperpage}{8}
 \indexentry{Tableaux|hyperpage}{9}
-\indexentry{\slfde|hyperpage}{9}
+\indexentry{\slfde|hyperpage}{10}
 \indexentry{SST|hyperpage}{10}
 \indexentry{supercomputaci\'on|hyperpage}{10}
 \indexentry{paralelismo|hyperpage}{10}
@@ -30,7 +30,7 @@
 \indexentry{supercomputaci\'on|hyperpage}{13}
 \indexentry{ret\IeC {\'\i }culo de conceptos!conjuntos cerrados|hyperpage}{13}
 \indexentry{bases|hyperpage}{14}
-\indexentry{dataset|hyperpage}{15}
+\indexentry{dataset|hyperpage}{14}
 \indexentry{\slfde|hyperpage}{15}
 \indexentry{reglas de inferencia|hyperpage}{15}
 \indexentry{mapeo $mg_\Sigma$|hyperpage}{15}
@@ -85,8 +85,8 @@
 \indexentry{contexto formal|hyperpage}{36}
 \indexentry{operadores de derivaci\'on|hyperpage}{36}
 \indexentry{operador de cierre|hyperpage}{37}
-\indexentry{conjuntos cerrados|hyperpage}{38}
-\indexentry{concepto formal|hyperpage}{38}
+\indexentry{conjuntos cerrados|hyperpage}{37}
+\indexentry{concepto formal|hyperpage}{37}
 \indexentry{contexto formal|hyperpage}{38}
 \indexentry{contexto formal|hyperpage}{39}
 \indexentry{ret\IeC {\'\i }culo de conceptos|hyperpage}{39}
@@ -101,23 +101,22 @@
 \indexentry{Cuerpo|hyperpage}{44}
 \indexentry{atributo|hyperpage}{45}
 \indexentry{tupla|hyperpage}{45}
-\indexentry{dominio|hyperpage}{45}
-\indexentry{dependencias funcionales|hyperpage}{46}
+\indexentry{dependencias funcionales|hyperpage}{45}
 \indexentry{tupla|hyperpage}{46}
+\indexentry{datasets|hyperpage}{46}
 \indexentry{contexto formal|hyperpage}{46}
-\indexentry{contexto formal|hyperpage}{47}
-\indexentry{Axiomas de Armstrong|hyperpage}{48}
-\indexentry{sistema axiom\'atico|hyperpage}{48}
+\indexentry{Axiomas de Armstrong|hyperpage}{47}
+\indexentry{sistema axiom\'atico|hyperpage}{47}
 \indexentry{\slfde|hyperpage}{49}
 \indexentry{sistema axiom\'atico|hyperpage}{49}
 \indexentry{reglas de inferencia|hyperpage}{49}
 \indexentry{reglas de inferencia!fragmentaci\'on|hyperpage}{49}
 \indexentry{reglas de inferencia!composici\'on|hyperpage}{49}
 \indexentry{reglas de inferencia!simplificaci\'on|hyperpage}{49}
-\indexentry{\slfde|hyperpage}{50}
+\indexentry{\slfde|hyperpage}{49}
 \indexentry{operador de cierre|hyperpage}{51}
 \indexentry{Teorema de la deducci\'on|hyperpage}{51}
-\indexentry{Cierre cl\'asico|hyperpage}{52}
+\indexentry{Cierre cl\'asico|hyperpage}{51}
 \indexentry{Teorema de la deducci\'on|hyperpage}{52}
 \indexentry{Cierre \slfd|hyperpage}{53}
 \indexentry{\slfde|hyperpage}{117}

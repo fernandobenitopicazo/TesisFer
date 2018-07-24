@@ -131,17 +131,17 @@ $$
 Ambas funciones se denotan con el mismo símbolo porque no hay lugar a confusión.
 
 \begin{ejemplo}
-	A partir del contexto formal representado en la Tabla \ref{tabla:ejemploContextoFormal} se puede aplicar los operadores de derivación y obtener, por ejemplo:
+	A partir del contexto formal representado en la Tabla \ref{tabla:ejemploContextoFormal} se pueden aplicar los operadores de derivación y obtener, por ejemplo:
 	
 	\begin{itemize}
 		\item $\{Mexicana\}' = \{Latinoamerica,\ Canada,\ Mexico,\ Caribe,\ Estados$
 	
 	$\ Unidos\}$
-		\item $\{British\  Midland\}' = \{Europa\}$
+		%\item $\{British\  Midland\}' = \{Europa\}$
 		\item $\{Latinoamerica,\ Europa,\ Asia,\ Africa,\ Estados\ Unidos\}' = $
 	
 	$\{Scandinavian\ Airlines\}$
-		\item $\{Asia\}' = \{Ansett\ Australia\}$
+		%\item $\{Asia\}' = \{Ansett\ Australia\}$
 	\end{itemize}
 \end{ejemplo}
 
@@ -223,7 +223,7 @@ Una alternativa gráfica de identificar los conceptos formales es la siguiente. D
 %}
 %\end{table*}
 
-\begin{table*}[tb]
+\begin{table*}[htb]
 \caption{Extracto del ejemplo de contexto formal sobre los destinos aéreos del grupo Star Alliance \ref{tabla:ejemploContextoFormal}}
 \label{tabla:extractoEjemploContextoFormal} 
 \centering
@@ -261,7 +261,7 @@ La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de concepto
 		\label{figura:ejemploReticuloAerolineas}
 \end{figure}
 
-Se pueden comprobar fácilmente las relaciones que existen en el contexto ya que un objeto $g$ tiene un atributo $m$ si y solo si el concepto asociado a $g$ es un \textit{subconcepto} del asociado a $m$. La extensión de un concepto consiste en todos aquellos objetos cuyas etiquetas están asociadas a subconceptos, y, dualmente, la intensión consiste en todos los atributos asociados a \textit{superconceptos}. 
+Se pueden comprobar fácilmente las relaciones que existen en el contexto ya que un objeto $g$ tiene un atributo $m$ si y sólo si el concepto asociado a $g$ es un \textit{subconcepto} del asociado a $m$. La extensión de un concepto consiste en todos aquellos objetos cuyas etiquetas están asociadas a subconceptos, y, dualmente, la intensión consiste en todos los atributos asociados a \textit{superconceptos}. 
 
 Dicho lo anterior y teniendo en cuenta la sobrecarga que conllevaría representar cada concepto del retículo en la Figura \ref{figura:ejemploReticuloAerolineas}, se puede mencionar aquí como ejemplo, el concepto etiquetado como `Oriente' \textit{(Oriente Medio)}, el cual tiene como extensión el conjunto \{\textit{Singapore Airlines, The Austrian Airlines Group, Lufthansa, Air Canada}\}, y como intensión \{\textit{Oriente Medio, Canadá, Estados Unidos, Europa, Asia}\}.
 
@@ -297,7 +297,7 @@ Se utilizará la siguiente notación:
 	\item Se utilizarán letras minúsculas para denotar los elementos en $M$, mientras que las mayúsculas denotan sus subconjuntos.
 	\item Se omiten las llaves en premisas y conclusiones, es decir, $abcde$ denota el conjunto $\{a,b,c,d,e\}$.
 	\item Se escriben los elementos de $2^M$ por yuxtaposición, es decir, para $X \cup Y$ se escribirá $XY$.
-	\item Para la diferencia, en vez de utilizar $X-Y$, se utiliza $X \smallsetminus Y$.
+	\item Para la diferencia se utiliza $X \smallsetminus Y$.
 \end{itemize}
 
 %\begin{definicion}[Implicación]\index{Implicación}
@@ -383,9 +383,10 @@ La noción de modelo puede extenderse a los sistemas de implicaciones de la sigui
 
 Al comenzar el capítulo se habló de la equivalencia entre la información que muestra el retículo de conceptos y las implicaciones; tras haber introducido formalmente el lenguaje y la semántica de las implicaciones, ahora ya se pueden mencionar algunos ejemplos que reflejen esta equivalencia utilizando la información del retículo \ref{figura:ejemploReticuloAerolineas}. Así, es posible identificar ejemplos de implicaciones tales como:
 
-$\{Canada \rightarrow Estados\  Unidos,$
-
-$Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos\}$;
+\begin{itemize}
+	\item $Canada \rightarrow Estados\  Unidos$, ya que se puede ver como el primero es subconcepto del segundo. En otras palabras, todo objeto $g$ del contexto que tenga el atributo $Canada$ tendrá el atributo $Estados\  Unidos$.
+	\item $Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos$. Ídem al anterior.
+\end{itemize}
 
 Se puede considerar a las implicaciones y el retículo de conceptos como distintas alternativas de tratar la información que se puede extraer de un contexto formal\index{contexto formal}. No obstante, los retículos de conceptos permiten una representación gráfica, mientras que la característica fundamental, desde el punto de vista de esta tesis doctoral, es que los sistemas de implicaciones proporcionan una manipulación simbólica usando la lógica de implicaciones, y por tanto, permiten el razonamiento automático.
 
@@ -404,7 +405,7 @@ Formalmente, en el modelo relacional, una base de datos consiste en una o más re
 	Un esquema $E$ para una relación $R$ se define como un conjunto fijo de pares \textit{(atributo:dominio)}. Habitualmente se denota como $\{(A_1:D_1),\ (A_2:D_2),\ (A_n:D_n)\}$ donde cada $A_j$ corresponde a un único $D_j$ y los $A_j$ son todos distintos.
 \end{definicion}
 
-En el ejemplo \ref{tabla:ejemploPeliculas}, el esquema sería: 
+En el ejemplo \ref{ejemplo:basicoClaves}, el esquema sería: 
 
 \noindent
 \textit{\{}
@@ -420,7 +421,7 @@ El conjunto de los esquemas para las relaciones de una base de datos se denomina
 	Un cuerpo $C$ para una relación $R$ se define como un conjunto de tuplas de pares \textit{(atributo:valor)}. Habitualmente se denota como $\{(A_1:v_{i1}),\ (A_2:v_{i2}),\ (A_n:v_{in})\}$ con $i = 1,2,...,m$ tal que $m$ es el cardinal de $R$, i.e. el número de tuplas de la relación. En cada $(A_j:v_{ij})$ se tiene que $v_{ij} \in D_j$.
 \end{definicion}
 
-En el ejemplo \ref{tabla:ejemploPeliculas}, un extracto del cuerpo sería:
+En el ejemplo \ref{ejemplo:basicoClaves}, un extracto del cuerpo sería:
 
 \noindent
 \textit{\{}
@@ -436,9 +437,9 @@ En el ejemplo \ref{tabla:ejemploPeliculas}, un extracto del cuerpo sería:
 
 Tras haber definido formalmente el cuerpo y el esquema de un relación, se puede mencionar que en los sistemas gestores de bases de datos relacionales, las relaciones se representan como una tabla de doble entrada, en la que (con un una terminología más informal) se encuentran los siguientes elementos:
 \begin{itemize}
-	\item \textbf{Atributo}\index{atributo}. Cada una de las columnas de una relación se denomina atributo. %En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
-	\item \textbf{Tupla}\index{tupla}. Se denomina tupla a cada fila de una relación exceptuando la fila que contiene a los atributos.
-	\item \textbf{Dominio}\index{dominio}. Un dominio describe un conjunto de posibles valores para cierto atributo.
+	\item \textbf{Atributo}\index{atributo}. Cada una de las columnas de una relación se identifica con un atributo. %En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
+	\item \textbf{Tupla}\index{tupla}. Se identifica cada tupla de una relación con una fila de la tabla, exceptuando la fila que contiene a los atributos.
+	%\item \textbf{Dominio}\index{dominio}. Un dominio describe un conjunto de posibles valores para cierto atributo.
 	%El modelo relacional requiere que cada componente de cada tupla sea atómico. No se permite que un valor de la tupla sea una estructura de datos (e.g. una lista, una matriz, un conjunto, etc.) cuyos valores puedan dividirse en componentes más pequeños. De esta forma, se establece que cada atributo de la relación está asociado a un dominio, i.e. un tipo particular de dato.
 \end{itemize}
 
@@ -466,10 +467,10 @@ Teniendo en cuenta que la sintaxis que se va a utilizar para DFs es la misma que
 \noindent
 \begin{definicion}[Dependencia Funcional]\index{dependencias funcionales}
 \label{def:sintaxisFD}
-Una dependencia funcional $X \to Y$ se cumple en una tabla $R$ si y sólo si para cada dos tuplas\index{tupla} de $R$, si verifican $X$, entonces verifican $Y$. %Dicho de otro modo, si dos tuplas tienen los mismos valores para cada atributo de $X$, entonces tendrán los mismos valores para cada atributo de $Y$.
+Una dependencia funcional $X \to Y$ se cumple en una tabla $R$ si y sólo si para cada dos tuplas\index{tupla} de $R$, si sus valores en $X$ coinciden, entonces también coinciden sus valores en $Y$. %Dicho de otro modo, si dos tuplas tienen los mismos valores para cada atributo de $X$, entonces tendrán los mismos valores para cada atributo de $Y$.
 \end{definicion}
 
-Intuitivamente, una DF $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de función (y de ahí su nombre) entre los dominios de $A$ y $B$, $f: A\to B$. Estas funciones son las que se usan para tratar las anomalías mencionadas anteriormente, buscando aquellas funciones que se correspondan con relaciones de forma unívoca.
+Intuitivamente, una DF $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de función (y de ahí su nombre) entre los dominios de $A$ y $B$, $f: A\to B$. Estas funciones son las que se usan para tratar las anomalías mencionadas anteriormente, buscando aquellas funciones que se correspondan con relaciones de forma unívoca. El siguiente ejemplo ilustra cómo la semántica de la DFs y las implicaciones es diferente.
 
 \begin{ejemplo}
 Sea el contexto formal $K=(G,M,I)$ representado a continuación:
@@ -488,16 +489,18 @@ Sea el contexto formal $K=(G,M,I)$ representado a continuación:
 	}
 \end{center}
 
-Dado ese contexto formal, se puede ver que se verifica la implicación $a \to c$ en $K$, mientras que por otro lado, al considerar el contexto formal como una relación del modelo relacional y considerando la semántica de DF, no se cumple que $a \to c$ debido al último objeto $g_4$. 
+Dado ese contexto formal, se puede ver que se verifica la implicación $a \to c$ en $K$, mientras que por otro lado, al considerar el contexto formal como una relación del modelo relacional y considerando la semántica de DF, no se cumple que $a \to c$ debido a los diferentes valores de $g_3$ y $g_4$ en el atributo $c$. 
 \end{ejemplo}
 
 La forma en que las DFs se asemejan a las implicaciones no viene dada porque se parezcan en su semántica sino por el hecho de que se pueden manejar utilizando la misma lógica, los Axiomas de Armstrong \cite{Armstrong74}, que se presentarán más adelante en la Sección \ref{subsec:axiomasArmstrong}.
 
-Por otro lado, en la Sección \ref{subsec:sistemaImplicaciones} se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una DF, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
+%Por otro lado, en la Sección \ref{subsec:sistemaImplicaciones} se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una DF, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
 
-Esta es una diferencia esencial que surge al comparar la semántica implicación en FCA con DF, ya que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una DF se cumpla, han de coincidir los valores de la relación.
+La diferencia principal en la interpretación de las DFs y las implicaciones provienen de la estructura de los \textit{datasets}\index{datasets} considerados, que en el caso de FCA son binarios mientras que en el modelo relacional son multivaluados. La noción de implicaciones en FCA puede ampliarse para poder tratar con contextos formales donde la relación $I$ toma valores en un conjunto en lugar de ser binaria. Este tipo de contextos formales\index{contexto formal} se denominan multivaluados y su aproximación se realiza a través del llamado análisis de conceptos formales difusos \cite{Burusco1998,Belohlavek2000}, lo que queda fuera del ámbito de esta tesis doctoral.
 
-La noción de implicaciones en FCA puede ampliarse para poder tratar con contextos formales donde la relación $I$ toma valores en un conjunto en lugar de ser binaria. Este tipo de contextos formales\index{contexto formal} se denominan multivaluados y su aproximación se realiza a través del llamado análisis de conceptos formales difusos \cite{Burusco1998,Belohlavek2000}, lo que queda fuera del ámbito de esta tesis doctoral.
+%Esta es una diferencia esencial que surge al comparar la semántica implicación en FCA con DF, ya que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una DF se cumpla, han de coincidir los valores de la relación.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %La noción de FD es de gran importancia en la tesis debido a que es la base para el trabajo realizado sobre el problema de la enumeración de todas las claves minimales de esquemas relacionales.
@@ -529,7 +532,7 @@ La noción de implicaciones en FCA puede ampliarse para poder tratar con contexto
 \noindent
 En esta sección se van a introducir las lógicas de implicaciones que permitirán disponer de sistemas axiomáticos correctos y completos para trabajar con ellas. Para ello, el punto de partida van a ser los Axiomas de Armstrong \cite{Armstrong74} como pionero en el campo. Sin embargo, el sistema de Armstrong no es adecuado para el razonamiento automático debido a su fuerte dependencia a la transitividad. En consecuencia, tras los Axiomas de Armstrong se presenta la lógica \slfd, la cual sí va a permitir desarrollar métodos de razonamiento automático.
 
-Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con DFs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica también quedó definida en sendas Definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones y DFs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Por facilidad para con el texto, para los siguientes apartados se utiliza el término implicaciones, siendo igualmente válido para DFs.
+Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con DFs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica también quedó definida en sendas Definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones y DFs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Para los siguientes apartados, y por facilitar la redacción y lectura, se utiliza el término implicaciones, siendo igualmente válido para DFs.
 
 
 \subsection{Axiomas de Armstrong}
@@ -565,7 +568,7 @@ La secuencia $\sigma_1,\dots,\sigma_n$ constituye una demostración para $\Sigma\
 
 Los Axiomas de Armstrong son un sistema axiomático correcto y completo tanto si se está trabajando con implicaciones en FCA \cite{Armstrong74} como con DFs en bases de datos relacionales \cite{Ganter1997}.
 
-Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{subsec:metodoRazonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd, que se introduce a continuación.
+Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{subsec:metodoRazonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfde (por sus siglas en), que se introduce a continuación.
 
 
 \subsection{Lógica \slfd}
@@ -573,7 +576,7 @@ Debido al rol central que desempeña la transitividad en ese sistema axiomático, 
 \noindent
 La lógica \slfde no toma el paradigma de la transitividad como centro sino que se guía por la idea de simplificar el conjunto de implicaciones mediante la eliminación atributos redundantes de manera eficiente \cite{Enciso2002}. Por consiguiente, la introducción de la lógica \slfde\index{\slfde} abrió la puerta al desarrollo de métodos de razonamiento automatizados directamente basados en su novedoso sistema axiomático \cite{CorderoEMG14, CorderoEMOR15}. La posibilidad de desarrollar estas aplicaciones ha sido la motivación principal para el desarrollo de esta tesis, buscando sobre todo, mejorar la eficacia y la eficiencia. 
 
-Seguidamente, se va a comenzar definiendo su sistema axiomático\index{sistema axiomático} que es válido para ambas semánticas (FCA, DFs) y además es común debido a que utilizan el mismo lenguaje.
+Seguidamente, se va a comenzar definiendo su sistema axiomático\index{sistema axiomático} que, como ya se ha comentado, es válido para ambas semánticas (FCA, DFs) y además es común debido a que utilizan el mismo lenguaje.
 
 \subsection*{Sistema Axiomático}
 \noindent
@@ -604,7 +607,7 @@ Se destaca que el lenguaje \slfde considera como fórmulas válidas aquellas en do
 %Para cualquier $\varGamma$ y $\forall X, Y\subseteq M$, $\varGamma \vdash X\to Y$ si y sólo si $\varGamma \cup \{\top \to X\} \vdash\top \to Y$
 %\end{theorem}
 
-La principal ventaja de la lógica \slfde radica en que las reglas de inferencia pueden considerarse reglas de equivalencia. Como consecuencia, se ha podido utilizar como núcleo principal para el desarrollo de métodos automáticos para diversas aplicaciones (e.g. obtener claves minimales, cálculos del cierre) como se verá más adelante. Un estudio más detallado al respecto, incluyendo teoremas y demostraciones, puede verse en \cite{Mora2012}.
+La principal ventaja de la lógica \slfde radica en que las reglas de inferencia pueden considerarse reglas de equivalencia. Como consecuencia, se ha podido utilizar como núcleo principal para el desarrollo de métodos automáticos para diversas aplicaciones (e.g. obtener claves minimales, cálculos del cierre) como se verá más adelante. Un estudio más detallado al respecto, incluyendo teoremas y sus demostraciones, puede verse en \cite{Mora2012}.
 
 Para finalizar, estos sistemas axiomáticos se pueden utilizar para el desarrollo de métodos de razonamiento automático con los que resolver el denominado problema de las implicaciones tal y como se muestra en el siguiente apartado.
 

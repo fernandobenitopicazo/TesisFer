@@ -1,14 +1,14 @@
 \begin{theindex}
 
-  \item \slfde, \hyperpage{8, 9}, \hyperpage{12}, \hyperpage{15}, 
-		\hyperpage{18}, \hyperpage{24}, \hyperpage{49, 50}, 
-		\hyperpage{117}
+  \item \slfde, \hyperpage{8}, \hyperpage{10}, \hyperpage{12}, 
+		\hyperpage{15}, \hyperpage{18}, \hyperpage{24}, 
+		\hyperpage{49}, \hyperpage{117}
 
   \indexspace
 
   \item An\'alisis Formal de Conceptos, \hyperpage{3}
   \item atributo, \hyperpage{5}, \hyperpage{45}
-  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{48}
+  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{47}
 
   \indexspace
 
@@ -19,24 +19,25 @@
   \indexspace
 
   \item Cierre \slfd, \hyperpage{53}
-  \item Cierre cl\'asico, \hyperpage{52}
+  \item Cierre cl\'asico, \hyperpage{51}
   \item CK, \hyperpage{12}
   \item clave, \hyperpage{5}
     \subitem claves minimales, \hyperpage{5}
-  \item concepto formal, \hyperpage{38}
-  \item conjuntos cerrados, \hyperpage{17}, \hyperpage{38}
+  \item concepto formal, \hyperpage{37}
+  \item conjuntos cerrados, \hyperpage{17}, \hyperpage{37}
   \item conjuntos de implicaciones, \hyperpage{3}, \hyperpage{17}, 
 		\hyperpage{22}
   \item contexto formal, \hyperpage{34--36}, \hyperpage{38, 39}, 
-		\hyperpage{42, 43}, \hyperpage{46, 47}
+		\hyperpage{42, 43}, \hyperpage{46}
   \item Cuerpo, \hyperpage{44}
 
   \indexspace
 
-  \item dataset, \hyperpage{4, 5}, \hyperpage{15, 16}, \hyperpage{21}, 
-		\hyperpage{24}, \hyperpage{28, 29}, \hyperpage{124}
-  \item dependencias funcionales, \hyperpage{4}, \hyperpage{46}
-  \item dominio, \hyperpage{45}
+  \item dataset, \hyperpage{4, 5}, \hyperpage{14}, \hyperpage{16}, 
+		\hyperpage{21}, \hyperpage{24}, \hyperpage{28, 29}, 
+		\hyperpage{124}
+  \item datasets, \hyperpage{46}
+  \item dependencias funcionales, \hyperpage{4}, \hyperpage{45}
 
   \indexspace
 
@@ -101,7 +102,8 @@
 
   \indexspace
 
-  \item sistema axiom\'atico, \hyperpage{11}, \hyperpage{48, 49}
+  \item sistema axiom\'atico, \hyperpage{11}, \hyperpage{47}, 
+		\hyperpage{49}
   \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{17}
     \subitem basados en conocimiento, \hyperpage{19, 20}, 
 		\hyperpage{22}

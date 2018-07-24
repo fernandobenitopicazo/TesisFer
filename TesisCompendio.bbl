@@ -481,13 +481,6 @@
   weighting: Application to sentiment analysis.
 \newblock {\em Expert Systems with Applications 109\/} (2018), 49 -- 65.
 
-\bibitem{Krajca2008}
-{\sc Krajca, P., Outrata, J., and Vychodil, V.}
-\newblock Parallel recursive algorithm for fca.
-\newblock In {\em 6th Int. Conf. on Concept Lattices and Their Applications
-  (CLA)\/} (2008), vol.~433, CEUR WS, pp.~71--82.
-\newblock Olomouc (ZC).
-
 \bibitem{Kuznetsov2002}
 {\sc Kuznetsov, S., and Obiedkov, S.}
 \newblock Comparing performance of algorithms for generating concept lattices.
@@ -826,13 +819,6 @@
 \newblock Dealing with the new user cold-start problem in recommender systems:
   A comparative review.
 \newblock {\em Information Systems 58\/} (2016), 87 -- 104.
-
-\bibitem{Sridhar1990}
-{\sc Sridhar, R., and Iyengar, S.~S.}
-\newblock Efficient parallel algorithms for functional dependency
-  manipulations.
-\newblock In {\em Procs of the 2nd Int. Symposium on Databases in Parallel and
-  Distributed Systems\/} (1990), DPDS '90, pp.~126--137.
 
 \bibitem{Sundaresan2011}
 {\sc Sundaresan, N.}
