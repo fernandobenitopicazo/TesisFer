@@ -16,10 +16,8 @@
 \BOOKMARK [1][-]{section.2.3}{L\363gica de Implicaciones}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.3.1}{Axiomas de Armstrong}{section.2.3}
 \BOOKMARK [2][-]{subsection.2.3.2}{L\363gica SLFD}{section.2.3}
-\BOOKMARK [1][-]{section.2.4}{Problema de las implicaciones}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.4.1}{M\351todo de Razonamiento Autom\341tico}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.2}{Cierre cl\341sico}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.3}{Cierre SLFD}{section.2.4}
+\BOOKMARK [1][-]{section.2.4}{Razonamiento Autom\341tico}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{Algoritmos para el c\341lculo del cierre}{section.2.4}
 \BOOKMARK [0][-]{chapter.3}{Claves Minimales}{}
 \BOOKMARK [0][-]{chapter.4}{Generadores Minimales}{}
 \BOOKMARK [0][-]{chapter.5}{Sistemas de Recomendaci\363n Conversacionales}{}

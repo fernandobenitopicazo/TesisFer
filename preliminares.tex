@@ -568,7 +568,7 @@ La secuencia $\sigma_1,\dots,\sigma_n$ constituye una demostración para $\Sigma\
 
 Los Axiomas de Armstrong son un sistema axiomático correcto y completo tanto si se está trabajando con implicaciones en FCA \cite{Armstrong74} como con DFs en bases de datos relacionales \cite{Ganter1997}.
 
-Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{subsec:metodoRazonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfde (por sus siglas en), que se introduce a continuación.
+Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{sec:razonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd, que se introduce a continuación.
 
 
 \subsection{Lógica \slfd}
@@ -609,46 +609,55 @@ Se destaca que el lenguaje \slfde considera como fórmulas válidas aquellas en do
 
 La principal ventaja de la lógica \slfde radica en que las reglas de inferencia pueden considerarse reglas de equivalencia. Como consecuencia, se ha podido utilizar como núcleo principal para el desarrollo de métodos automáticos para diversas aplicaciones (e.g. obtener claves minimales, cálculos del cierre) como se verá más adelante. Un estudio más detallado al respecto, incluyendo teoremas y sus demostraciones, puede verse en \cite{Mora2012}.
 
-Para finalizar, estos sistemas axiomáticos se pueden utilizar para el desarrollo de métodos de razonamiento automático con los que resolver el denominado problema de las implicaciones tal y como se muestra en el siguiente apartado.
+Para finalizar, estos sistemas axiomáticos se pueden utilizar para el desarrollo de métodos de razonamiento automático con los que resolver el denominado problema de la implicación tal y como se muestra en el siguiente apartado.
 
 
 
-\section{Problema de las implicaciones}
-\label{sec:problemaImplicaciones}
+\section{Razonamiento Automático}
+\label{sec:razonamientoAutomatico}
 \noindent
-El problema de las implicaciones es crucial en el diseño de un sistema de razonamiento y como tal, existen desde hace años notables estudios al respecto en diferentes áreas \cite{Armstrong74,Beeri1977,Maier1979}.
+Una vez introducido el lenguaje de la lógica, la semántica (en las dos acepciones que se han utilizado en esta tesis) y el sistema axiomático, se llega ahora a la última sección de estos preliminares. En ella se va a abordar la demostración automática a través del problema de la implicación y haciendo uso del cierre de atributos sobre el sistema axiomático.
 
-Básicamente, el problema de las implicaciones es el siguiente: dado un conjunto finito de implicaciones, determinar mediante la lógica si a partir de ese conjunto se puede inferir una nueva implicación. Dicho de otro modo, si tenemos el conjunto de implicaciones $\Sigma$, el problema consiste en comprobar si se verifica $\Sigma \vdash A \to B$ \cite{Beeri1981,Mitchell1983}. Para ello, se utilizarán los anteriores sistemas axiomáticos junto con una serie de nuevos elementos, como los conjuntos cerrados y los operadores de cierre, que darán paso a la utilización de métodos de razonamiento automático como se introducen a continuación.
+%El problema de la implicación es crucial en el diseño de un sistema de razonamiento y como tal, existen desde hace años notables estudios al respecto en diferentes áreas \cite{Armstrong74,Beeri1977,Maier1979}.
+
+Básicamente, el problema de la implicación es el siguiente: dado un conjunto de implicaciones $\Sigma$, determinar mediante la lógica si a partir de ese conjunto se puede inferir la validez de una nueva implicación dada $\Sigma\vdash A\to B$ \cite{Beeri1981,Mitchell1983,Maier1979}. %Dicho de otro modo, si tenemos el conjunto de implicaciones $\Sigma$, el problema consiste en comprobar si se verifica $\Sigma \vdash A \to B$ . %Para ello, se utilizarán los anteriores sistemas axiomáticos junto con una serie de nuevos elementos, como los conjuntos cerrados y los operadores de cierre, que darán paso a la utilización de métodos de razonamiento automático como se introducen a continuación.
 
 
-\subsection{Método de Razonamiento Automático}
-\label{subsec:metodoRazonamientoAutomatico}
-\noindent
+%\subsection{Método de Razonamiento Automático}
+%\label{subsec:metodoRazonamientoAutomatico}
+%\noindent
 %Claramente, la primera pregunta que surge es si el problema de las implicaciones tiene solución, es decir, si existe algún método que proporcione una respuesta positiva o negativa para cualquier instancia dada del problema. Para ello, un método es a través de axiomas. Un \textit{axioma de inferencia} es una regla que establece que si una relación satisface ciertas dependencias, entonces debe satisfacer otras. Dado un conjunto de implicaciones $\Sigma$ y un conjunto de axiomas de inferencia, el \textit{cierre} de $\Sigma$, denotado por $\Sigma^+$, es el menor conjunto que contiene a $\Sigma$ tal que no es posible aplicar los axiomas de inferencia para derivar una dependencia que no esté en $\Sigma$. En otras palabras, del conjunto $\Sigma$ se deriva una dependencia $\sigma$, denotado $\Sigma \vdash \sigma$, si $\sigma \in \Sigma^+$.
 
-Para cada conjunto de implicaciones, el sistema axiomático permite definir un operador de cierre en $2^M$ denominado \textit{cierre sintáctico}.
+%Para cada conjunto de implicaciones, el sistema axiomático permite definir un operador de cierre en $2^M$ denominado \textit{cierre sintáctico}.
+
+A continuación se introduce el cierre de atributos, que se utiliza como base para construir el demostrador automático.
 
 \begin{definicion}[Conjunto cerrado]
-	Dado un conjunto de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si, para cada $A\to B\in \Sigma$, se cumple que $A \subseteq X$ implica $B \subseteq X$. 
+	Dado un conjunto $X\subseteq M$, llamamos cierre de $X$ sobre $\Sigma$ (notado $X^+_\Sigma$) como el mayor subconjunto de $M$ tal que $\Sigma \vdash X \to X^+_\Sigma$.
+	
+	%Dado un conjunto de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si, para cada $A\to B\in \Sigma$, se cumple que $A \subseteq X$ implica $B \subseteq X$. 
 \end{definicion}
 	
-Debido a que $M$ es cerrado con respecto a $\Sigma$ se define el operador de cierre $(\ )^+_\Sigma\colon 2^M\to 2^M$ que permite obtener el menor cerrado como:
+%Debido a que $M$ es cerrado con respecto a $\Sigma$ se define el operador de cierre $(\ )^+_\Sigma\colon 2^M\to 2^M$ que permite obtener el menor cerrado como:
 
-\begin{definicion}[Operador de cierre]\index{operador de cierre}
-Sea $M$ un conjunto de atributos y $\Sigma \subseteq \mathcal L_M$. Para cada $X \subseteq M$, el cierre de $X$ respecto a $\Sigma$ se define como: 
-$$X^+_\Sigma=\bigcap\{Y\subseteq M\mid Y\text{ es cerrado respecto a }\Sigma\text{ y }X\subseteq Y \}$$
-\end{definicion}
+%\begin{definicion}[Operador de cierre]\index{operador de cierre}
+%Sea $M$ un conjunto de atributos y $\Sigma \subseteq \mathcal L_M$. Para cada $X \subseteq M$, el cierre de $X$ respecto a $\Sigma$ se define como: 
+%$$X^+_\Sigma=\bigcap\{Y\subseteq M\mid Y\text{ es cerrado respecto a }\Sigma\text{ y }X\subseteq Y \}$$
+%\end{definicion}
 
-Por tanto, el cierre de $X$ con respecto a $\Sigma$ es el mayor subconjunto de $M$ tal que $\Sigma \vdash X \to X^+_\Sigma$.
+%Por tanto, el cierre de $X$ con respecto a $\Sigma$ es el mayor subconjunto de $M$ tal que $\Sigma \vdash X \to X^+_\Sigma$.
 
-Además, en \cite{Enciso2002} también se presentó el siguiente teorema, que no sólo es fundamental para calcular cierres sino para introducir un método de razonamiento automático, y que se conoce como Teorema de la deducción.
+La definición anterior de cierre sintáctico de atributos da lugar a un operador de cierre, siempre y cuando el conjunto $\Sigma$ sea un sistema de implicaciones completo (las implicaciones deducibles del contexto formal son todas inferibles desde $\Sigma$). No se entra en detalle sobre estos aspectos formales en estos preliminares puesto que, en todo el trabajo, se parte de la noción de cierre sintáctico como base.
+
+En \cite{Mora2012} los autores presentan un novedoso método para calcular el cierre de atributos sobre un conjunto de implicaciones, basado en la lógica \slfd. Dicho método hace uso del siguiente resultado:
+
+%Además, en \cite{Enciso2002} también se presentó el siguiente teorema, que no sólo es fundamental para calcular cierres sino para introducir un método de razonamiento automático, y que se conoce como Teorema de la deducción.
 
 \begin{theorem}[Teorema de la deducción]\index{Teorema de la deducción}
 \label{empty_set}
 	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
 %\vspace*{-0.2cm}
-	$$\Sigma \vdash A\to B \quad \mbox{si y sólo si} \quad B\subseteq A^+_\Sigma\quad \mbox{si y sólo si} \quad 
- 	\{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
+	$$\Sigma \vdash A\to B \quad \mbox{si y sólo si} \quad \{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
 \end{theorem}
 
 %\begin{corolario}
@@ -658,22 +667,20 @@ Además, en \cite{Enciso2002} también se presentó el siguiente teorema, que no só
 %	$$
 %\end{corolario}
 
-Se pasa ahora a presentar los métodos de razonamiento utilizados en esta tesis doctoral: el cierre clásico de Maier \cite{Maier83} como base, y en especial, el cierre \slfd, este último como núcleo principal del funcionamiento de los métodos diseñados y utilizados en las publicaciones que avalan este trabajo de tesis \cite{Benito-Picazo2016,Benito-Picazo2017,Benito-Picazo2018}.
+Se pasa ahora a presentar los métodos de razonamiento utilizados en esta tesis doctoral: el cierre clásico de Maier \cite{Maier83} como trabajo seminal de este área, y a continuación, el cierre \slfd, este último como núcleo principal del funcionamiento de los métodos diseñados y utilizados en las publicaciones que avalan este trabajo de tesis \cite{Benito-Picazo2016,Benito-Picazo2017,Benito-Picazo2018}.
+
+Para abordar el problema de la implicación, se utiliza el cierre sintáctico a modo de demostrador automático, pues dado un conjunto de implicaciones $\Sigma$, debido a la definición de cerrado anterior, se tiene que $\Sigma\vdash A\to B$ si y sólo si $B\subseteq A^+_\Sigma$. Este resultado hace que la definición de un método para calcular el cierre sintáctico abra la puerta al tratamiento automático del problema de la implicación. Ello será el centro del siguiente apartado.
 
 
-\subsection{Cierre clásico}
-\label{subsec:cierreClasico}
+\subsection{Algoritmos para el cálculo del cierre}
+\label{subsec:algoritmosCalculoCierre}
 \noindent
-El problema de las implicaciones se ha abordado tradicionalmente utilizando un método básico que recibe $A\subseteq M$ como entrada y utiliza de forma exhaustiva la relación de subconjuntos recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
+El problema de la implicación se ha abordado tradicionalmente utilizando un método básico que recibe como entrada un conjunto de atributos $X\subseteq M$ y un conjunto de implicaciones $\Sigma\subseteq \mathcal L_M$ y utiliza de forma exhaustiva la relación de subconjuntos recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
+
 \begin{algorithm2e}
-%\footnotesize
-%\SetAlgoLined
-%\SetAlgoFuncName{SchemePruning}
-%\dontprintsemicolon
-%\KwIn{}
+\DontPrintSemicolon
 \KwData{$ \Sigma$, $A$}
 \KwResult{$A^+_\Sigma$ }
-%\KwOut{$X^+$}
     \Indp
     \Begin{
      $A^+_\Sigma:=A$
@@ -682,27 +689,32 @@ El problema de las implicaciones se ha abordado tradicionalmente utilizando un m
         $A^\prime:=A^+_\Sigma$
 				
        \ForEach{ $X \to Y \in  \Sigma$}{
-           \If{$X \subseteq A^+_\Sigma$ {\bf and} $Y\not\subseteq A^+_\Sigma$}{
+           \If{($X \subseteq A^+_\Sigma$) {\bf y} ($Y\not\subseteq A^+_\Sigma$)}{
                $A^+_\Sigma:=A^+_\Sigma \cup \{Y\}$
            }%end if
        }% end foreach
 		}%until 
-   return $A^+_\Sigma$
+   {\bf devolver} $A^+_\Sigma$
    }%end begin
  \caption{Cierre clásico}
  \label{algoritmo:cierreUllman}
 \end{algorithm2e}
 
-Más tarde, varios autores han desarrollado otros métodos mediante el uso de diferentes técnicas, resolviendo eficientemente este problema en tiempo lineal. En \cite{Paredaens1989}, los autores muestran que la complejidad del problema del cierre es $\mathtt{O}(|{\mathcal{A}}|\, |{ \Sigma}|)$. Además, como se muestra a continuación, en \cite{Mora2012}, los autores presentan un método de cierre de atributos estrechamente relacionado con el sistema axiomático \slfd. También se demuestra que el método tiene un mejor rendimiento que aquellos basados en el cierre clásico.
+%Más tarde, varios autores han desarrollado otros métodos mediante el uso de diferentes técnicas, resolviendo eficientemente este problema en tiempo lineal. 
+
+En \cite{Paredaens1989}, los autores muestran que la complejidad del problema del cierre es $\mathtt{O}(|{\mathcal{A}}|\, |{ \Sigma}|)$. En \cite{Mora2012} se presentó el método del cierre basado en la lógica \slfd. En dicho trabajo además se muestra que dicho método presenta un mejor rendimiento que los métodos anteriores. Como novedad, las salida del nuevo cierre no es sólo el conjunto cerrado sino que también produce un conjunto de implicaciones que puede ser interpretado como el conocimiento que resta en el sistema y que complementa a los atributos que están en el cerrado.
+
+%Además, como se muestra a continuación, en \cite{Mora2012}, los autores presentan un método de cierre de atributos estrechamente relacionado con el sistema axiomático \slfd. También se demuestra que el método tiene un mejor rendimiento que aquellos basados en el cierre clásico.
 
 
+%\subsection*{Cierre \slfd}
+%\label{subsec:cierreSLFD}
+%\noindent
+El método de razonamiento automático en \slfde se basa en el Teorema de la deducción\index{Teorema de la deducción} y un conjunto de equivalencias. Introduciremos ambas cosas antes de presentar el método. 
 
-\subsection{Cierre \slfd}
-\label{subsec:cierreSLFD}
-\noindent
-El método de razonamiento automático en \slfde se basa en el Teorema de la deducción\index{Teorema de la deducción} y un conjunto de equivalencias \cite{Mora2012}. Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si sus modelos coinciden, es decir, se cumple que para todo operador de cierre en $M$, $c\models \Sigma_1$ si y sólo si $c\models \Sigma_2$.
+Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si para toda implicación $A \to B$ de $\Sigma_1$, se tiene que $Sigma_2\vdash A \to B$ y viceversa.
 
-La siguiente proposición proporciona las tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}, que se se aplican y justifican el nombre de la lógica \slfde porque, leídas de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones.
+La siguiente proposición proporciona tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}, que se se aplican y justifican el nombre de la lógica \slfde porque, leídas de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones.
 
 \begin{proposicion}\label{simpl_equiv}
 	Sean $A,B,C,D\subseteq M$. Se verifican las siguientes equivalencias:
@@ -721,7 +733,7 @@ La siguiente proposición proporciona las tres equivalencias, denominadas también
 
 Mediante el Teorema de la deducción y las equivalencias anteriores, se puede pasar de las reglas de inferencia del sistema axiomático clásico de Armstrong a un sistema que puede ser automatizable. En este punto aparece el cierre \slfd, que los autores denominaron {\tt Cls}\index{Cierre \slfd} \cite{Mora2012}, y que actúa según el siguiente procedimiento.
 
-Dado un conjunto $A\subseteq M$ y un conjunto de implicaciones $\Sigma$, {\tt Cls} calcula el par $(A^+_\Sigma,\Sigma)$, siendo $A^+_\Sigma$ el cierre sintáctico de $A$ con respecto a $\Sigma$, y $\Sigma$ el conjunto residual de implicaciones respecto a $\varnothing \to A^+_\Sigma$. Esto permite determinar si una implicación $A \to B$ puede deducirse de $\Sigma$.
+%Dado un conjunto $A\subseteq M$ y un conjunto de implicaciones $\Sigma$, {\tt Cls} calcula el par $(A^+_\Sigma,\Sigma^\prime)$, siendo $A^+_\Sigma$ el cierre sintáctico de $A$ con respecto a $\Sigma$, y $\Sigma^\prime$ el conjunto residual de implicaciones respecto a $\varnothing \to A^+_\Sigma$. Esto permite determinar si una implicación $A \to B$ puede deducirse de $\Sigma$.
 
 Los pasos del algoritmo desglosados en lenguaje natural y de forma más detallada son:
 \begin{enumerate}
@@ -732,74 +744,114 @@ Los pasos del algoritmo desglosados en lenguaje natural y de forma más detallada
 		\item {\bf Eq. II}: Si $C\subseteq A$ entonces $\{\emptyset\to A,B\to C\} \equiv \{\emptyset\to A\}$.
 		\item {\bf Eq. III}: En otro caso  $\{\emptyset\to A,B\to C\} \equiv \{\emptyset\to A,B\smallsetminus A\to C\smallsetminus A\}$.
 	\end{itemize} 
- \item En el momento en el que no sea posible aplicar ninguna de las equivalencias anteriores, el algoritmo termina dando como resultado el conjunto cierre $A^+_\Sigma$, es decir, el cierre sintáctico de $A$ con respecto a $\Sigma$, y además, el conjunto residual de implicaciones $\Sigma$.
+ \item En el momento en el que no sea posible aplicar ninguna de las equivalencias anteriores, el algoritmo termina.% dando como resultado el conjunto cierre $A^+_\Sigma$, es decir, el cierre sintáctico de $A$ con respecto a $\Sigma$, y además, el conjunto residual de implicaciones $\Sigma^\prime$.
 \end{enumerate}
 
-Formalmente, el algoritmo {\tt Cls} puede verse en la Función \ref{algoritmo:Cls}.
-\begin{function}[h]
-\caption{Cls($A$,$\Sigma$) }\label{algoritmo:Cls}
-\small
+Formalmente, el algoritmo {\tt Cls} puede verse en \ref{algoritmo:Cls}.
+
+\begin{algorithm2e}
 \DontPrintSemicolon
-\SetKwInOut{Input}{input}
-\SetKwInOut{Output}{output}
-\Input{$A$, conjunto de atributos sobre los que se quiere calcular el cierre; \\
-$\Sigma$, un sistema de implicaciones;}
-\Output{$A^+_\Sigma$, cierre sintáctico de $A$ con respecto a $\Sigma$; \\ 
-$\Sigma$, el sistema de implicaciones residual;}
- 
- 
-%    \Begin{
+\KwData{$\Sigma$, $A$}
+\KwResult{$A^+_\Sigma$, $\Sigma^\prime$}
+    \Indp
+    \Begin{
+     $A^+_\Sigma:=A$
+     
+     $\Sigma^\prime:=\Sigma$
+		
+     \Repeat{$A^+_\Sigma=A^\prime$}{
+        $A^\prime:=A^+_\Sigma$
+				
+       \ForEach{ $B \to C \in  \Sigma$}{
+           \If{$B \subseteq A^+_\Sigma$}{
+           		 \textbf{(Eq. I)}
+           		 
+               $A^+_\Sigma:=A^+_\Sigma \cup \{B\}$
+               
+               $\Sigma^\prime:=\Sigma^\prime \smallsetminus B \to C$
+           }\ElseIf{$C \subseteq A^+_\Sigma$}{
+           		 (\textbf{Eq. II)}
+           		 
+           		 $\Sigma^\prime:=\Sigma^\prime \smallsetminus B \to C$
+           }\ElseIf{($B \cap A^+_\Sigma \neq \varnothing$) {\bf o} ($C \cap A^+_\Sigma \neq \varnothing$)}{
+           		 \textbf{(Eq. III)}
+           
+           		 $\Sigma^\prime:=\Sigma^\prime \cup\{B\smallsetminus A^+_\Sigma\to C\smallsetminus A^+_\Sigma\}$
+           }
+       }% end foreach
+		}%until 
+   {\bf devolver} $A^+_\Sigma$, $\Sigma^\prime$
+   }%end begin
+ \caption{Cierre {\tt Cls}}
+ \label{algoritmo:Cls}
+\end{algorithm2e}
 
-\Repeat{$\Sigma=\Sigma$}{
-$\Sigma:=\Sigma$
-
-$\Sigma:=\varnothing$
 
 
-\ForEach{$B\to C\in \Sigma$}{
-\lIf{$B\subseteq A$}{
+%\begin{function}[h]
+%\caption{Cls($A$,$\Sigma$) }\label{algoritmo:Cls}
+%\small
+%\DontPrintSemicolon
+%\SetKwInOut{Input}{input}
+%\SetKwInOut{Output}{output}
+%\Input{$A$, conjunto de atributos sobre los que se quiere calcular el cierre; \\
+%$\Sigma$, un sistema de implicaciones;}
+%\Output{$A^+_\Sigma$, cierre sintáctico de $A$ con respecto a $\Sigma$; \\ 
+%$\Sigma$, el sistema de implicaciones residual;}
+% 
+% 
+%%    \Begin{
+%
+%\Repeat{$\Sigma=\Sigma$}{
+%$\Sigma:=\Sigma$
+%
+%$\Sigma:=\varnothing$
+%
+%
+%\ForEach{$B\to C\in \Sigma$}{
+%\lIf{$B\subseteq A$}{
+%
+%\ \ \ \ {$A:=A\cup B$}
+%}
+%\lElseIf{$C\not\subseteq A$}{
+%
+%\ \ \ \ {$\Sigma:=\Sigma\cup\{B\smallsetminus A\to C\smallsetminus A\}$}
+%}
+%}
+%}
+% 
+%     \Return $(A,\Sigma)$   
+% 
+%
+%\end{function}
 
-\ \ \ \ {$A:=A\cup B$}
-}
-\lElseIf{$C\not\subseteq A$}{
 
-\ \ \ \ {$\Sigma:=\Sigma\cup\{B\smallsetminus A\to C\smallsetminus A\}$}
-}
-}
-}
- 
-     \Return $(A,\Sigma)$   
- 
-%   }%end begin
-\end{function}
+Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier83}), la principal novedad y ventaja que aporta {\tt Cls} es que, aparte del cálculo del cierre, y de manera simultánea, también se calcula el conjunto reducido de implicaciones, guardando de esta forma el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho conduce sin lugar a dudas a una posición privilegiada, ya que evita el elevado coste de minería de datos para extraer el nuevo conjunto de implicaciones para el \textit{dataset} reducido después de cada aplicación del método, algo imprescindible con las implementaciones clásicas. En consecuencia, el proceso supera los costos de minería de datos preservando una complejidad lineal a lo largo del proceso. Esta característica del algoritmo es la que se ha explotado ampliamente en los resultados obtenidos a lo largo de esta tesis doctoral.
 
+Para finalizar este apartado, se encomienda al lector a ver \cite{Benito-Picazo2018} donde se incluye un ejemplo básico de aplicación del algoritmo {\tt Cls} propuesto.
 
-Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier83}), la principal novedad y ventaja que aporta {\tt Cls} es que, aparte del cálculo del cierre, y de manera simultánea, también se calcula el conjunto reducido de implicaciones, guardando de esta forma el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho conduce sin lugar a dudas a una posición privilegiada, ya que evita el elevado coste de minería de datos para extraer el nuevo conjunto de implicaciones para el \textit{dataset} reducido después de cada aplicación del método, algo imprescindible con las implementaciones clásicas. En consecuencia, el proceso supera los costos de minería de datos preservando una complejidad lineal a lo largo del proceso.
-
-Para finalizar este apartado, se muestra un ejemplo básico de aplicación del algoritmo del cierre \slfde propuesto.
-
-\begin{ejemplo}
-\label{ejemplo:basico} 
-	Sean $\Sigma=\{a\to c, bc\to d, c\to ae, d\to e\}$ y $A=\{c,e\}$. El algoritmo {\tt Cls} devuelve $A^+=\{a,c,e\}$. La siguiente tabla muestra la traza de ejecución paso a paso del algoritmo. 
-
-%{\small
-$$\begin{array}{l||lllll}
-\hline
-Guide &  & \multicolumn{4}{c}{\Sigma } \\
+%\begin{ejemplo}
+%\label{ejemplo:basico} 
+%	Sean $\Sigma=\{a\to c, bc\to d, c\to ae, d\to e\}$ y $A=\{c,e\}$. El algoritmo {\tt Cls} devuelve $A^+=\{a,c,e\}$. La siguiente tabla muestra la traza de ejecución paso a paso del algoritmo. 
+%
+%%{\small
+%$$\begin{array}{l||lllll}
 %\hline
-\emptyset\to ce &  & a\to c \quad& bc\to d \quad& c\to ae\quad& d\to e \quad\\
-\hline
-\hline
-\emptyset\to ce &   & a\to \!\!\not\! c & b\!\!\not\! c\to d & \!\!\not\! c\to a\!\!\not\! e& d\to \!\!\not\! e \\
-\emptyset\to ace &   &  & b\to d & & \\
-%\emptyset\to acef &   &  & b\to d &  & \\
-\hline
-\end{array}
-$$
-%}%end small
-
-Una vez finalizado la ejecución del algoritmo, se obtiene: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Sigma = \{b \to d\}$.
-\end{ejemplo}
+%Guide &  & \multicolumn{4}{c}{\Sigma } \\
+%%\hline
+%\emptyset\to ce &  & a\to c \quad& bc\to d \quad& c\to ae\quad& d\to e \quad\\
+%\hline
+%\hline
+%\emptyset\to ce &   & a\to \!\!\not\! c & b\!\!\not\! c\to d & \!\!\not\! c\to a\!\!\not\! e& d\to \!\!\not\! e \\
+%\emptyset\to ace &   &  & b\to d & & \\
+%%\emptyset\to acef &   &  & b\to d &  & \\
+%\hline
+%\end{array}
+%$$
+%%}%end small
+%
+%Una vez finalizado la ejecución del algoritmo, se obtiene: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Sigma^\prime = \{b \to d\}$.
+%\end{ejemplo}
 
 % =====================================================================
 % =====================================================================

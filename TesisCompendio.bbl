@@ -49,12 +49,6 @@
 \newblock In {\em TPDL\/} (2013), vol.~8092 of {\em Lecture Notes in Computer
   Science}, Springer, pp.~396--400.
 
-\bibitem{Beeri1977}
-{\sc Beeri, C., Fagin, R., and H.~Howard, J.}
-\newblock {\em A Complete Axiomatization for Functional and Multivalued
-  Dependencies in Database Relations.}, vol.~77.
-\newblock 01 1977.
-
 \bibitem{Beeri1981}
 {\sc Beeri, C., and Vardi, M.~Y.}
 \newblock The implication problem for data dependencies.
@@ -616,7 +610,8 @@
 \bibitem{Mora2012}
 {\sc Mora, A., Cordero, P., Enciso, M., Fortes, I., and Aguilera, G.}
 \newblock Closure via functional dependence simplification.
-\newblock {\em Int. J. Comput. Math. 89}, 4 (2012), 510--526.
+\newblock {\em International Journal of Computer Mathematics 89}, 4 (2012),
+  510--526.
 
 \bibitem{Morgan1992}
 {\sc Morgan, C.~G.}
