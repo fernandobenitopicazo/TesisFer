@@ -140,7 +140,7 @@ Ambas funciones se denotan con el mismo símbolo porque no hay lugar a confusión.
 		%\item $\{British\  Midland\}' = \{Europa\}$
 		\item $\{Latinoamerica,\ Europa,\ Asia,\ Africa,\ Estados\ Unidos\}' = $
 	
-	$\{Scandinavian\ Airlines\}$
+	$\{Scandinavian\ Airlines,\ Lufthansa,\ VARIG\}$
 		%\item $\{Asia\}' = \{Ansett\ Australia\}$
 	\end{itemize}
 \end{ejemplo}
@@ -384,8 +384,8 @@ La noción de modelo puede extenderse a los sistemas de implicaciones de la sigui
 Al comenzar el capítulo se habló de la equivalencia entre la información que muestra el retículo de conceptos y las implicaciones; tras haber introducido formalmente el lenguaje y la semántica de las implicaciones, ahora ya se pueden mencionar algunos ejemplos que reflejen esta equivalencia utilizando la información del retículo \ref{figura:ejemploReticuloAerolineas}. Así, es posible identificar ejemplos de implicaciones tales como:
 
 \begin{itemize}
-	\item $Canada \rightarrow Estados\  Unidos$, ya que se puede ver como el primero es subconcepto del segundo. En otras palabras, todo objeto $g$ del contexto que tenga el atributo $Canada$ tendrá el atributo $Estados\  Unidos$.
-	\item $Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos$. Ídem al anterior.
+	\item $Canada \rightarrow Estados\  Unidos$, ya que se puede ver como el primer atributo aparece por primera vez en la jerarquía en un subconcepto del nodo que refleja la primera aparición del segundo. En otras palabras, todo objeto $g$ del contexto que tenga el atributo $Canada$ tendrá el atributo $Estados\  Unidos$.
+	%\item $Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos$. Ídem al anterior.
 \end{itemize}
 
 Se puede considerar a las implicaciones y el retículo de conceptos como distintas alternativas de tratar la información que se puede extraer de un contexto formal\index{contexto formal}. No obstante, los retículos de conceptos permiten una representación gráfica, mientras que la característica fundamental, desde el punto de vista de esta tesis doctoral, es que los sistemas de implicaciones proporcionan una manipulación simbólica usando la lógica de implicaciones, y por tanto, permiten el razonamiento automático.
@@ -571,7 +571,7 @@ Los Axiomas de Armstrong son un sistema axiomático correcto y completo tanto si 
 Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{sec:razonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd, que se introduce a continuación.
 
 
-\subsection{Lógica \slfd}
+\subsection{Lógica de Simplificación}
 \label{subsec:logicaSLFD}
 \noindent
 La lógica \slfde no toma el paradigma de la transitividad como centro sino que se guía por la idea de simplificar el conjunto de implicaciones mediante la eliminación atributos redundantes de manera eficiente \cite{Enciso2002}. Por consiguiente, la introducción de la lógica \slfde\index{\slfde} abrió la puerta al desarrollo de métodos de razonamiento automatizados directamente basados en su novedoso sistema axiomático \cite{CorderoEMG14, CorderoEMOR15}. La posibilidad de desarrollar estas aplicaciones ha sido la motivación principal para el desarrollo de esta tesis, buscando sobre todo, mejorar la eficacia y la eficiencia. 
@@ -632,7 +632,7 @@ Básicamente, el problema de la implicación es el siguiente: dado un conjunto de 
 
 A continuación se introduce el cierre de atributos, que se utiliza como base para construir el demostrador automático.
 
-\begin{definicion}[Conjunto cerrado]
+\begin{definicion}%[Conjunto cerrado]
 	Dado un conjunto $X\subseteq M$, llamamos cierre de $X$ sobre $\Sigma$ (notado $X^+_\Sigma$) como el mayor subconjunto de $M$ tal que $\Sigma \vdash X \to X^+_\Sigma$.
 	
 	%Dado un conjunto de implicaciones $\Sigma \subseteq \mathcal L_M$, un conjunto $X \subseteq M$ se dice cerrado respecto de $\Sigma$ si, para cada $A\to B\in \Sigma$, se cumple que $A \subseteq X$ implica $B \subseteq X$. 
@@ -649,16 +649,7 @@ A continuación se introduce el cierre de atributos, que se utiliza como base par
 
 La definición anterior de cierre sintáctico de atributos da lugar a un operador de cierre, siempre y cuando el conjunto $\Sigma$ sea un sistema de implicaciones completo (las implicaciones deducibles del contexto formal son todas inferibles desde $\Sigma$). No se entra en detalle sobre estos aspectos formales en estos preliminares puesto que, en todo el trabajo, se parte de la noción de cierre sintáctico como base.
 
-En \cite{Mora2012} los autores presentan un novedoso método para calcular el cierre de atributos sobre un conjunto de implicaciones, basado en la lógica \slfd. Dicho método hace uso del siguiente resultado:
-
-%Además, en \cite{Enciso2002} también se presentó el siguiente teorema, que no sólo es fundamental para calcular cierres sino para introducir un método de razonamiento automático, y que se conoce como Teorema de la deducción.
-
-\begin{theorem}[Teorema de la deducción]\index{Teorema de la deducción}
-\label{empty_set}
-	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
-%\vspace*{-0.2cm}
-	$$\Sigma \vdash A\to B \quad \mbox{si y sólo si} \quad \{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
-\end{theorem}
+En \cite{Mora2012} los autores presentan un novedoso método para calcular el cierre de atributos sobre un conjunto de implicaciones, basado en la lógica \slfd.
 
 %\begin{corolario}
 %	Sea $\Sigma\subseteq \mathcal L_M$. $\forall X\subseteq M$, se tiene que 
@@ -675,7 +666,7 @@ Para abordar el problema de la implicación, se utiliza el cierre sintáctico a mo
 \subsection{Algoritmos para el cálculo del cierre}
 \label{subsec:algoritmosCalculoCierre}
 \noindent
-El problema de la implicación se ha abordado tradicionalmente utilizando un método básico que recibe como entrada un conjunto de atributos $X\subseteq M$ y un conjunto de implicaciones $\Sigma\subseteq \mathcal L_M$ y utiliza de forma exhaustiva la relación de subconjuntos recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
+El problema de la implicación se ha abordado tradicionalmente utilizando un método básico que recibe como entrada un conjunto de atributos $X\subseteq M$ y un conjunto de implicaciones $\Sigma\subseteq \mathcal L_M$ y utiliza de forma exhaustiva la relación de subconjunto recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
 
 \begin{algorithm2e}
 \DontPrintSemicolon
@@ -712,7 +703,16 @@ En \cite{Paredaens1989}, los autores muestran que la complejidad del problema de
 %\noindent
 El método de razonamiento automático en \slfde se basa en el Teorema de la deducción\index{Teorema de la deducción} y un conjunto de equivalencias. Introduciremos ambas cosas antes de presentar el método. 
 
-Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si para toda implicación $A \to B$ de $\Sigma_1$, se tiene que $Sigma_2\vdash A \to B$ y viceversa.
+Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\subseteq \mathcal L_M$ se dicen equivalentes si para toda implicación $A \to B$ de $\Sigma_1$, se tiene que $\Sigma_2\vdash A \to B$ y viceversa.
+
+%Además, en \cite{Enciso2002} también se presentó el siguiente teorema, que no sólo es fundamental para calcular cierres sino para introducir un método de razonamiento automático, y que se conoce como Teorema de la deducción.
+
+\begin{theorem}[Teorema de la deducción]\index{Teorema de la deducción}
+\label{empty_set}
+	Sea $A\to B\in\mathcal L_M$ y $\Sigma\subseteq \mathcal L_M$. Entonces, 
+%\vspace*{-0.2cm}
+	$$\Sigma \vdash A\to B \quad \mbox{si y sólo si} \quad \{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
+\end{theorem}
 
 La siguiente proposición proporciona tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}, que se se aplican y justifican el nombre de la lógica \slfde porque, leídas de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones.
 
@@ -721,7 +721,7 @@ La siguiente proposición proporciona tres equivalencias, denominadas también: \t
 	\begin{enumerate}
 		\item {\small$\{A\to B\}\equiv\{A\to B\smallsetminus A\}$}
 		\item {\small$\footnotesize\{A\to B, A\to C\}\equiv\{A\to B\cup C\}$}
-		\item {\small$A\cap B=\varnothing$ y $A\subseteq C$ implica $\footnotesize\{A\to B, C \to D\}\equiv  \{A\to B, C\smallsetminus B\to D\smallsetminus B\}$}
+		\item {\small$\footnotesize\{A\to B, C \to D\}\equiv  \{A\to B, C\smallsetminus B\to D\smallsetminus B\}$ siendo $A\cap B=\varnothing$ y $A\subseteq C$}
 \end{enumerate}
 %
 %\begin{equation*}
@@ -828,7 +828,69 @@ Formalmente, el algoritmo {\tt Cls} puede verse en \ref{algoritmo:Cls}.
 
 Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier83}), la principal novedad y ventaja que aporta {\tt Cls} es que, aparte del cálculo del cierre, y de manera simultánea, también se calcula el conjunto reducido de implicaciones, guardando de esta forma el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho conduce sin lugar a dudas a una posición privilegiada, ya que evita el elevado coste de minería de datos para extraer el nuevo conjunto de implicaciones para el \textit{dataset} reducido después de cada aplicación del método, algo imprescindible con las implementaciones clásicas. En consecuencia, el proceso supera los costos de minería de datos preservando una complejidad lineal a lo largo del proceso. Esta característica del algoritmo es la que se ha explotado ampliamente en los resultados obtenidos a lo largo de esta tesis doctoral.
 
-Para finalizar este apartado, se encomienda al lector a ver \cite{Benito-Picazo2018} donde se incluye un ejemplo básico de aplicación del algoritmo {\tt Cls} propuesto.
+Para finalizar este apartado, se muestra un ejemplo básico de aplicación del algoritmo {\tt Cls} propuesto.
+
+\begin{ejemplo}
+\label{ejemplo:basico} 
+	Sean $\Sigma=\{ak\to bc, cd\to gh, cij\to kl, de\to f, g\to de, hf\to ia, f\to c\}$ y $A=\{adf\}$. 
+	
+	El algoritmo {\tt Cls} devuelve $A^+_\Sigma=\{a,c,d,e,f,g,h,i\}$ y también $\Sigma^\prime = \{k \to b, j \to kl\}$. 
+	
+	La siguiente tabla muestra la traza de ejecución paso a paso del algoritmo.
+	
+{\small
+$$
+\begin{array}{c|ccccccc}
+\hline
+ & \multicolumn{7}{c}{Iteraci\acute{o}n \quad 0} \\
+%\hline
+\Sigma^\prime & ak\to bc & cd\to gh & cij\to kl & de\to f & g\to de & hf\to ia & f\to c \\
+A^+_\Sigma & adf\\
+\hline
+ & \multicolumn{7}{c}{Iteraci\acute{o}n \quad 1} \\
+\Sigma^\prime & k\to bc & c\to gh & cij\to kl & \times & g\to e & h\to i & \times\\
+Eq & III & III & - & II & III & III & I\\
+A^+_\Sigma & & & & & & & acdf\\
+\hline
+ & \multicolumn{7}{c}{Iteraci\acute{o}n \quad 2} \\
+\Sigma^\prime & k\to b & \times & ij\to kl &  & \times & \times & \\
+Eq & III & I & III & & I & I & \\
+A^+_\Sigma & & acdfgh &  &  & acdefgh & acdefghi & \\
+\hline
+ & \multicolumn{7}{c}{Iteraci\acute{o}n \quad 3} \\
+\Sigma^\prime & k\to b &  & j\to kl &  &  &  & \\
+Eq & - &  & - &  &  &  & \\
+A^+_\Sigma & \textbf{acdefghi} &  &  &  &  &  & \\
+\hline
+\end{array}
+$$
+}%end small
+	
+
+%{\small
+%$$
+%\begin{array}{c|lllllll}
+%\hline
+%A^+_\Sigma & \multicolumn{7}{c}{\Sigma^\prime} \\
+%\hline
+%Iter\. 0 \\
+%\hline
+%\emptyset\to adf & ak\to bc & cd\to gh & cij\to kl & de\to f & g\to de & hf\to ia & f\to c \\
+%Iter. 1 \\
+%Equiv\. & k\to bc & c\to gh & cij\to kl & x & g\to e & h\to i & x\\
+%\hline
+%\hline
+%\emptyset\to ce &   & a\to \!\!\not\! c & b\!\!\not\! c\to d & \!\!\not\! c\to a\!\!\not\! e& d\to \!\!\not\! e \\
+%\emptyset\to ace &   &  & b\to d & & \\
+%%\emptyset\to acef &   &  & b\to d &  & \\
+%\hline
+%\end{array}
+%$$
+%}%end small
+
+%Una vez finalizado la ejecución del algoritmo, se obtiene: ${\tt Cls}(\{c,e\},\{a\to c, bc\to d, c\to ae, d\to e\})=(\{a,c,e\},\{b\to d\})$, donde el cierre es $\{c,e\}^+_\Sigma = \{a,c,e\}$  y el conjunto residual de implicaciones queda como:  $\Sigma^\prime = \{b \to d\}$.
+\end{ejemplo}
+
 
 %\begin{ejemplo}
 %\label{ejemplo:basico} 

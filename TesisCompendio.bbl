@@ -83,13 +83,6 @@
   Conference on Software Engineering and Applications, Vienna, Austria, 29-31
   August, 2014\/} (2014), pp.~512--517.
 
-\bibitem{Benito-PicazoCMMSE2015}
-{\sc Benito-Picazo, F., Cordero, P., Enciso, M., and Mora, A.}
-\newblock Keys for the fusion of heterogeneous information.
-\newblock In {\em Proceedings of the Fifteenth International Conference on
-  Computational and Mathematical Methods in Science and Engineering\/} (Cádiz,
-  Spain, 2015), pp.~201--211.
-
 \bibitem{Benito-PicazoCMMSE2017}
 {\sc Benito-Picazo, F., Cordero, P., Enciso, M., and Mora, A.}
 \newblock Closed sets enumeration: a logical approach.
@@ -510,14 +503,6 @@
   {ICSOFT} 2013, Reykjavik, Iceland, July 29-31, 2013, Revised Selected
   Papers\/} (2013), pp.~290--305.
 
-\bibitem{Levy2005}
-{\sc L\`evy, G., and Baklouti, F.}
-\newblock A distributed version version of the ganter algorithm for general
-  galois lattices.
-\newblock In {\em 3rd. Int. Conf. on Concept Lattices and Their Applications
-  (CLA)\/} (2005), vol.~162, CEUR WS, pp.~207--221.
-\newblock Olomouc (ZC).
-
 \bibitem{linden2003}
 {\sc Linden, G., Smith, B., and York, J.}
 \newblock Amazon.com recommendations: Item-to-item collaborative filtering.
@@ -846,20 +831,6 @@
 \newblock {\em A First Course in Database Systems}.
 \newblock Prentice-Hall, Inc., Upper Saddle River, NJ, USA, 1997.
 
-\bibitem{Valtchev03}
-{\sc Valtchev, P., and Duquenne, V.}
-\newblock Towards scalable divide-and-conquer methods for computing concepts
-  and implications.
-\newblock In {\em 4th Int. Conf. Journ\`ees de l'Informatique Messine (JIM03):
-  Knowledge Discovery and Discrete Mathematics. Metz (FR)\/} (2003), pp.~3--14.
-
-\bibitem{Valtchev08}
-{\sc Valtchev, P., and Duquenne, V.}
-\newblock On the merge of factor canonical bases.
-\newblock In {\em International Conference on Formal Concept Analysis
-  (ICFCA)\/} (2008), vol.~4933 of {\em Lecture Notes in Computer Science},
-  Springer, pp.~182--198.
-
 \bibitem{Vavilis2015}
 {\sc Vavilis, S., Egner, A., Petkovic, M., and Zannone, N.}
 \newblock An anomaly analysis framework for database systems.
@@ -923,11 +894,6 @@
 \newblock Fd mine: Discovering functional dependencies in a database using
   equivalences.
 \newblock In {\em ICDM\/} (2002), IEEE Computer Society, pp.~729--732.
-
-\bibitem{Yevtushenko2006}
-{\sc Yevtushenko, S., Tane, J., Kaiser, T.~B., Obiedkov, S., Hereth, J., and
-  Reppe, H.}
-\newblock Conexp - the concept explorer.
 
 \bibitem{Yulong2011}
 {\sc Ying, Y.}

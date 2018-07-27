@@ -1,8 +1,8 @@
 \begin{theindex}
 
-  \item \slfde, \hyperpage{8}, \hyperpage{10}, \hyperpage{12}, 
-		\hyperpage{15}, \hyperpage{18}, \hyperpage{24}, 
-		\hyperpage{49}, \hyperpage{117}
+  \item \slfde, \hyperpage{8}, \hyperpage{10, 11}, \hyperpage{14}, 
+		\hyperpage{18}, \hyperpage{23}, \hyperpage{48, 49}, 
+		\hyperpage{117}
 
   \indexspace
 
@@ -12,7 +12,7 @@
 
   \indexspace
 
-  \item bases, \hyperpage{14}
+  \item bases, \hyperpage{13}
   \item bases de datos, \hyperpage{3}
   \item Bases de Datos Relacionales, \hyperpage{43}
 
@@ -20,13 +20,13 @@
 
   \item Cierre \slfd, \hyperpage{53}
   \item Cierre cl\'asico, \hyperpage{51}
-  \item CK, \hyperpage{12}
+  \item CK, \hyperpage{11}
   \item clave, \hyperpage{5}
     \subitem claves minimales, \hyperpage{5}
   \item concepto formal, \hyperpage{37}
   \item conjuntos cerrados, \hyperpage{17}, \hyperpage{37}
   \item conjuntos de implicaciones, \hyperpage{3}, \hyperpage{17}, 
-		\hyperpage{22}
+		\hyperpage{21}
   \item contexto formal, \hyperpage{34--36}, \hyperpage{38, 39}, 
 		\hyperpage{42, 43}, \hyperpage{46}
   \item Cuerpo, \hyperpage{44}
@@ -34,7 +34,7 @@
   \indexspace
 
   \item dataset, \hyperpage{4, 5}, \hyperpage{14}, \hyperpage{16}, 
-		\hyperpage{21}, \hyperpage{24}, \hyperpage{28, 29}, 
+		\hyperpage{21}, \hyperpage{24}, \hyperpage{28}, 
 		\hyperpage{124}
   \item datasets, \hyperpage{46}
   \item dependencias funcionales, \hyperpage{4}, \hyperpage{45}
@@ -45,12 +45,12 @@
 
   \indexspace
 
-  \item feature selection, \hyperpage{22}
+  \item feature selection, \hyperpage{21}
 
   \indexspace
 
   \item generadores minimales, \hyperpage{5}
-  \item GenMinGen, \hyperpage{15}, \hyperpage{17}
+  \item GenMinGen, \hyperpage{15, 16}
 
   \indexspace
 
@@ -63,37 +63,37 @@
 
   \indexspace
 
-  \item mapeo $mg_\Sigma$, \hyperpage{15}
-  \item MapReduce, \hyperpage{12}, \hyperpage{17}
-  \item MinGen, \hyperpage{15}, \hyperpage{17}
-  \item MinGenPar, \hyperpage{17}
-  \item MinGenPr, \hyperpage{15--17}
+  \item mapeo $mg_\Sigma$, \hyperpage{14}
+  \item MapReduce, \hyperpage{12}, \hyperpage{16}
+  \item MinGen, \hyperpage{15, 16}
+  \item MinGenPar, \hyperpage{16}
+  \item MinGenPr, \hyperpage{15, 16}
   \item Modelo, \hyperpage{42}
 
   \indexspace
 
-  \item operador de cierre, \hyperpage{12}, \hyperpage{37}, 
+  \item operador de cierre, \hyperpage{11}, \hyperpage{37}, 
 		\hyperpage{42}
   \item operadores de derivaci\'on, \hyperpage{36}
 
   \indexspace
 
-  \item paralelismo, \hyperpage{10, 11}
-  \item problemas SR, \hyperpage{21}
-    \subitem arranque en fr\IeC {\'\i }o, \hyperpage{21}
-    \subitem ataques maliciosos, \hyperpage{21}
-    \subitem dimensionalidad, \hyperpage{21, 22}
+  \item paralelismo, \hyperpage{10}
+  \item problemas SR, \hyperpage{20}
+    \subitem arranque en fr\IeC {\'\i }o, \hyperpage{20}
+    \subitem ataques maliciosos, \hyperpage{20}
+    \subitem dimensionalidad, \hyperpage{21}
     \subitem escalabilidad, \hyperpage{21}
-    \subitem escasez, \hyperpage{21}
-    \subitem oveja-negra, \hyperpage{21}
+    \subitem escasez, \hyperpage{20}
+    \subitem oveja-negra, \hyperpage{20}
     \subitem postergaci\'on, \hyperpage{21}
-    \subitem privacidad, \hyperpage{21}
+    \subitem privacidad, \hyperpage{20}
     \subitem sobreespecializaci\'on, \hyperpage{21}
 
   \indexspace
 
   \item Recuperaci\'on de Informaci\'on, \hyperpage{20}
-  \item reglas de inferencia, \hyperpage{15}, \hyperpage{49}
+  \item reglas de inferencia, \hyperpage{14}, \hyperpage{49}
     \subitem composici\'on, \hyperpage{49}
     \subitem fragmentaci\'on, \hyperpage{49}
     \subitem simplificaci\'on, \hyperpage{49}
@@ -105,22 +105,20 @@
   \item sistema axiom\'atico, \hyperpage{11}, \hyperpage{47}, 
 		\hyperpage{49}
   \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{17}
-    \subitem basados en conocimiento, \hyperpage{19, 20}, 
-		\hyperpage{22}
-    \subitem basados en contenido, \hyperpage{19, 20}, \hyperpage{22}
-    \subitem colaborativos, \hyperpage{19}
+    \subitem basados en conocimiento, \hyperpage{19--21}
+    \subitem basados en contenido, \hyperpage{19--21}
+    \subitem colaborativos, \hyperpage{18}
     \subitem contextuales, \hyperpage{19}
-    \subitem conversacionales, \hyperpage{19, 20}, \hyperpage{22}, 
-		\hyperpage{119}
+    \subitem conversacionales, \hyperpage{19--21}, \hyperpage{119}
     \subitem demogr\'aficos, \hyperpage{19}
   \item SST, \hyperpage{10, 11}
   \item supercomputaci\'on, \hyperpage{5}, \hyperpage{10}, 
-		\hyperpage{13}, \hyperpage{28}
+		\hyperpage{12}, \hyperpage{28}
 
   \indexspace
 
-  \item Tableaux, \hyperpage{9}
-  \item Teorema de la deducci\'on, \hyperpage{51, 52}
-  \item tupla, \hyperpage{6}, \hyperpage{45, 46}
+  \item Tableaux, \hyperpage{8}
+  \item Teorema de la deducci\'on, \hyperpage{52}
+  \item tupla, \hyperpage{6}, \hyperpage{45}
 
 \end{theindex}
