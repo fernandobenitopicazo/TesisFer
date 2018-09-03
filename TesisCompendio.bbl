@@ -42,13 +42,6 @@
 \newblock {\em Relational Database Theory}.
 \newblock Benjamin-Cummings Publishing Co., Inc., Redwood City, CA, USA, 1993.
 
-\bibitem{BeelLNG13}
-{\sc Beel, J., Langer, S., Nurnberger, A., and Genzmehr, M.}
-\newblock The impact of demographics (age and gender) and other
-  user-characteristics on evaluating recommender systems.
-\newblock In {\em TPDL\/} (2013), vol.~8092 of {\em Lecture Notes in Computer
-  Science}, Springer, pp.~396--400.
-
 \bibitem{Beeri1981}
 {\sc Beeri, C., and Vardi, M.~Y.}
 \newblock The implication problem for data dependencies.
@@ -108,23 +101,11 @@
 \newblock {\em Mathematical Methods in the Applied Sciences 41}, 3 (2017),
   1089--1100.
 
-\bibitem{Benito-PicazoCMMSE2016}
-{\sc Benito-Picazo, F., Rossi, C., Enciso, M., and Guevara, A.}
-\newblock Conversational recommendation to avoid the cold-start problem.
-\newblock In {\em Proceedings of the Sixteenth International Conference on
-  Computational and Mathematical Methods in Science and Engineering\/} (Cádiz,
-  Spain, 2016), pp.~184--190.
-
 \bibitem{Bertet2016}
 {\sc Bertet, K., Demko, C., Viaud, J.-F., and Guérin, C.}
 \newblock Lattices, closures systems and implication bases: A survey of
   structural aspects and algorithms.
 \newblock {\em Theoretical Computer Science\/} (2016).
-
-\bibitem{Bobadilla2011}
-{\sc Bobadilla, J., Hernando, A., Ortega, F., and Bernal, J.}
-\newblock A framework for collaborative filtering recommender systems.
-\newblock {\em Expert Syst. Appl. 38}, 12 (Nov. 2011), 14609--14623.
 
 \bibitem{Bobadilla2013}
 {\sc Bobadilla, J., Ortega, F., Hernando, A., and Gutiérrez, A.}
@@ -138,16 +119,18 @@
   regions.
 \newblock R.~Law, M.~Fuchs, and F.~Ricci, Eds., Springer Vienna, pp.~39--50.
 
-\bibitem{Burke2010}
-{\sc Burke, R.}
-\newblock Evaluating the dynamic properties of recommendation algorithms.
-\newblock In {\em Proceedings of the Fourth ACM Conference on Recommender
-  Systems\/} (New York, NY, USA, 2010), RecSys '10, ACM, pp.~225--228.
-
 \bibitem{Burusco1998}
 {\sc Burusco, A., and Fuentes{-}Gonz{\'{a}}lez, R.}
 \newblock Construction of the l-fuzzy concept lattice.
 \newblock {\em Fuzzy Sets and Systems 97}, 1 (1998), 109--114.
+
+\bibitem{Cakir2012}
+{\sc Cakir, O., and Aras, M.~E.}
+\newblock A recommendation engine by using association rules.
+\newblock {\em Procedia - Social and Behavioral Sciences 62\/} (2012), 452 --
+  456.
+\newblock World Conference on Business, Economics and Management (BEM-2012),
+  May 4-6 2012, Antalya, Turkey.
 
 \bibitem{Chen2007}
 {\sc Chen, L., and Pu, P.}
@@ -155,12 +138,6 @@
 \newblock In {\em Proceedings of the 12th International Conference on
   Intelligent User Interfaces\/} (New York, NY, USA, 2007), IUI '07, ACM,
   pp.~22--31.
-
-\bibitem{Chen2012}
-{\sc Chen, L., and Pu, P.}
-\newblock Critiquing-based recommenders: Survey and emerging trends.
-\newblock {\em User Modeling and User-Adapted Interaction 22}, 1-2 (Apr. 2012),
-  125--150.
 
 \bibitem{Codd1970}
 {\sc Codd, E.~F.}
@@ -183,13 +160,6 @@
 {\sc Codd, E.~F.}
 \newblock {\em The Relational Model for Database Management: Version 2}.
 \newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1990.
-
-\bibitem{Codocedo2015}
-{\sc Codocedo, V., and Napoli, A.}
-\newblock Formal concept analysis and information retrieval -- a survey.
-\newblock In {\em Formal Concept Analysis\/} (Cham, 2015), J.~Baixeries,
-  C.~Sacarea, and M.~Ojeda-Aciego, Eds., Springer International Publishing,
-  pp.~61--77.
 
 \bibitem{Cordero2013}
 {\sc Cordero, P., Enciso, M., and Mora, A.}
@@ -311,6 +281,12 @@
   Cooperative Work and Social Computing Companion\/} (New York, NY, USA, 2016),
   CSCW '16 Companion, ACM, pp.~253--256.
 
+\bibitem{Feng2015789}
+{\sc Feng, H., Tian, J., Wang, H.~J., and Li, M.}
+\newblock {Personalized recommendations based on time-weighted overlapping
+  community detection}.
+\newblock {\em Information {\&} Management 52}, 7 (2015), 789--800.
+
 \bibitem{Friedman2015}
 {\sc Friedman, A., Knijnenburg, B.~P., Vanhecke, K., Martens, L., and
   Berkovsky, S.}
@@ -325,10 +301,6 @@
 {\sc Ganter, B., and Wille, R.}
 \newblock {\em Formal Concept Analysis: Mathematical Foundations}, 1st~ed.
 \newblock Springer-Verlag New York, Inc., Secaucus, NJ, USA, 1997.
-
-\bibitem{Giannella99}
-{\sc Giannella, C., and Wyss, C.}
-\newblock Finding minimal keys in a relation instance, 1999.
 
 \bibitem{Goh10}
 {\sc Goh, T.~N.}
@@ -379,15 +351,16 @@
 \newblock {\em Data Mining: Concepts and Techniques}.
 \newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2000.
 
+\bibitem{Harper2016}
+{\sc Harper, F.~M., and Konstan, J.~A.}
+\newblock The movielens datasets: History and context.
+\newblock {\em ACM Trans. Interact. Intell. Syst. 5}, 4 (Jan. 2016),
+  19:1--19:19.
+
 \bibitem{Herlocker2004}
 {\sc Herlocker, J.~L., Konstan, J.~A., Terveen, L.~G., and Riedl, J.~T.}
 \newblock Evaluating collaborative filtering recommender systems.
 \newblock {\em ACM Trans. Inf. Syst. 22}, 1 (Jan. 2004), 5--53.
-
-\bibitem{HernandezdelOlmo2008}
-{\sc Hern\'{a}ndez~del Olmo, F., and Gaudioso, E.}
-\newblock Evaluation of recommender systems: A new approach.
-\newblock {\em Expert Syst. Appl. 35}, 3 (Oct. 2008), 790--804.
 
 \bibitem{Hill1995}
 {\sc Hill, W., Stead, L., Rosenstein, M., and Furnas, G.}
@@ -406,14 +379,6 @@
 {\sc Ibaraki, T., Kogan, A., and Makino, K.}
 \newblock Functional dependencies in horn theories.
 \newblock {\em Artificial Intelligence 108}, 1 (1999), 1 -- 30.
-
-\bibitem{Ignatov2015}
-{\sc Ignatov, D.~I.}
-\newblock Introduction to formal concept analysis and its applications in
-  information retrieval and related fields.
-\newblock In {\em Information Retrieval\/} (Cham, 2015), P.~Braslavski,
-  N.~Karpov, M.~Worring, Y.~Volkovich, and D.~I. Ignatov, Eds., Springer
-  International Publishing, pp.~42--141.
 
 \bibitem{Isinkaye2015}
 {\sc Isinkaye, F., Folajimi, Y., and Ojokoh, B.}
@@ -519,6 +484,11 @@
 \newblock Candidate keys for relations.
 \newblock {\em J. Comput. Syst. Sci. 17}, 2 (1978), 270--279.
 
+\bibitem{Maier1983}
+{\sc Maier, D.}
+\newblock {\em Theory of Relational Databases}.
+\newblock Computer Science Pr, 1983.
+
 \bibitem{Maier83}
 {\sc Maier, D.}
 \newblock {\em The Theory of Relational Databases}.
@@ -552,6 +522,16 @@
 \newblock Minimizing dialog length in interactive case-based reasoning.
 \newblock In {\em Procs of the 17th Int Joint Conf on AI, IJCAI, Seattle,
   Washington, USA, August 4-10, 2001\/} (2001), pp.~993--998.
+
+\bibitem{Medina-Moreira2017}
+{\sc Medina-Moreira, J., Apolinario, O., Luna-Aveiga, H., Lagos-Ortiz, K.,
+  Paredes-Valverde, M.~A., and Valencia-Garc{\'i}a, R.}
+\newblock A collaborative filtering based recommender system for disease
+  self-management.
+\newblock In {\em Technologies and Innovation\/} (Cham, 2017),
+  R.~Valencia-Garc{\'i}a, K.~Lagos-Ortiz, G.~Alcaraz-M{\'a}rmol, J.~Del~Cioppo,
+  N.~Vera-Lucio, and M.~Bucaram-Leverone, Eds., Springer International
+  Publishing, pp.~60--71.
 
 \bibitem{Mican2010}
 {\sc Mican, D., and Tomai, N.}
@@ -624,6 +604,12 @@
   by object-attribute relational data.
 \newblock {\em Information Sciences 185}, 1 (2012), 114 -- 127.
 
+\bibitem{Pan2016}
+{\sc Pan, W.}
+\newblock A survey of transfer learning for collaborative recommendation with
+  auxiliary data.
+\newblock {\em Neurocomput. 177}, C (Feb. 2016), 447--453.
+
 \bibitem{Papadimitriou2012}
 {\sc Papadimitriou, A., Symeonidis, P., and Manolopoulos, Y.}
 \newblock A generalized taxonomy of explanations styles for traditional and
@@ -689,6 +675,16 @@
 \newblock Recommender systems.
 \newblock {\em Commun. ACM 40}, 3 (Mar. 1997), 56--58.
 
+\bibitem{Reusens2018}
+{\sc Reusens, M., Lemahieu, W., Baesens, B., and Sels, L.}
+\newblock Evaluating recommendation and search in the labor market.
+\newblock {\em Knowledge-Based Systems 152\/} (2018), 62 -- 69.
+
+\bibitem{Ricci2015}
+{\sc Ricci, F., Rokach, L., and Shapira, B.}
+\newblock {\em Recommender Systems Handbook}, 2nd~ed.
+\newblock Springer Publishing Company, Incorporated, 2015.
+
 \bibitem{Risch1992}
 {\sc Risch, V., and Schwind, C.}
 \newblock Tableaux-based theorem proving and non-standard reasoning.
@@ -741,18 +737,6 @@
   exfiltration attempts.
 \newblock {\em IEEE Systems Journal 11}, 2 (June 2017), 483--493.
 
-\bibitem{Shalom2016}
-{\sc Sar~Shalom, O., Koenigstein, N., Paquet, U., and Vanchinathan, H.~P.}
-\newblock Beyond collaborative filtering: The list recommendation problem.
-\newblock In {\em Proceedings of the 25th International Conference on World
-  Wide Web\/} (2016), WWW '16, pp.~63--72.
-
-\bibitem{BenSassi2017}
-{\sc Sassi, I.~B., Mellouli, S., and Yahia, S.~B.}
-\newblock Context-aware recommender systems in mobile environment: On the road
-  of future research.
-\newblock {\em Information Systems 72\/} (2017), 27 -- 61.
-
 \bibitem{Senatore2013}
 {\sc Senatore, S., and Pasi, G.}
 \newblock Lattice navigation for collaborative filtering by means of (fuzzy)
@@ -770,12 +754,6 @@
 {\sc Sharma, R., and Ray, S.}
 \newblock Explanations in recommender systems: An overview.
 \newblock {\em Int. J. Bus. Inf. Syst. 23}, 2 (Jan. 2016), 248--262.
-
-\bibitem{Shashkin2017}
-{\sc Shashkin, P., and Karpov, N.}
-\newblock Learning to rank for personalized news recommendation.
-\newblock In {\em Proceedings of the International Conference on Web
-  Intelligence\/} (New York, NY, USA, 2017), WI '17, ACM, pp.~1069--1071.
 
 \bibitem{Simsion2005}
 {\sc Simsion, G.~C., and Witt, G.~C.}
@@ -836,6 +814,11 @@
 \newblock An anomaly analysis framework for database systems.
 \newblock {\em Computers and Security 53\/} (2015), 156 -- 173.
 
+\bibitem{Verstrepen2017}
+{\sc Verstrepen, K., Bhaduriy, K., Cule, B., and Goethals, B.}
+\newblock Collaborative filtering for binary, positiveonly data.
+\newblock {\em SIGKDD Explor. Newsl. 19}, 1 (Sept. 2017), 1--21.
+
 \bibitem{Viegas2018}
 {\sc Viegas, F., Rocha, L., Gonçalves, M., Mourão, F., Sá, G., Salles, T.,
   Andrade, G., and Sandin, I.}
@@ -843,17 +826,10 @@
   dimensional skewed data.
 \newblock {\em Neurocomputing 273\/} (2018), 554 -- 569.
 
-\bibitem{Wang2018}
-{\sc Wang, W., Yin, H., Huang, Z., Wang, Q., Du, X., and Nguyen, Q. V.~H.}
-\newblock Streaming ranking based recommender systems.
-\newblock In {\em The 41st International ACM SIGIR Conference on Research
-  \&\#38; Development in Information Retrieval\/} (New York, NY, USA, 2018),
-  SIGIR '18, ACM, pp.~525--534.
-
 \bibitem{Wastl98a}
 {\sc Wastl, R.}
 \newblock Linear derivations for keys of a database relation schema.
-\newblock {\em Journal of Universal Computer Science 4}, 11 (1998), 883--897.
+\newblock {\em Journal of Universal Computer Science 4}, 12 (1998), 883--897.
 
 \bibitem{Wastl98}
 {\sc Wastl, R.}
@@ -908,9 +884,11 @@
   set of functional dependencies.
 \newblock {\em Inf. Process. Lett. 5}, 4 (1976), 100--101.
 
-\bibitem{Yu2016}
-{\sc Yu, K.}
-\newblock {A Scalable and Accurate Online Feature Selection for Big Data}.
+\bibitem{Zamani2018}
+{\sc Zamani, H., and Shakery, A.}
+\newblock A language model-based framework for multi-publisher content-based
+  recommender systems.
+\newblock {\em Information Retrieval Journal\/} (Feb 2018).
 
 \bibitem{Zhang2015}
 {\sc Zhang, W., Du, Y.~J., and Song, W.}

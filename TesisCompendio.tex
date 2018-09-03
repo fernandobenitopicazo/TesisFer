@@ -32,7 +32,7 @@
 \usepackage{multicol}
 \usepackage{cancel}
 \usepackage{array}
-\usepackage[table]{xcolor}
+\usepackage[table,dvipsnames]{xcolor}
 \usepackage{latexsym}
 \usepackage{mathrsfs}
 \usepackage{url}
@@ -49,6 +49,7 @@
 \newcommand{\Pcpt}{P\thecpt.\stepcounter{cpt}}
 
 \usepackage{afterpage}
+\usepackage{epigraph}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   DEFINITIONS
@@ -108,6 +109,17 @@
 %\renewcommand{\listtablename}{Índice de tablas} 
 %\renewcommand{\tablename}{Tabla} 
 
+%\makeatletter
+%\renewcommand{\@chapapp}{}% Not necessary...
+%\newenvironment{chapquote}[2][2em]
+%  {\setlength{\@tempdima}{#1}%
+%   \def\chapquote@author{#2}%
+%   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+%   \itshape}
+%  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+%\makeatother
+
+
 %==========================================
 %\usepackage{algorithm}
 %\usepackage{algorithmic}
@@ -130,6 +142,10 @@
 \hyphenation{rea-li-zar}
 \hyphenation{ve-ri-fi-can}
 \hyphenation{apro-xi-ma-cio-nes}
+\hyphenation{de-sa-rro-llar}
+\hyphenation{ge-ne-rar}
+\hyphenation{corres-pon-dien-te}
+\hyphenation{scien-ces}
 %\hyphenation{ca-rac-te-rís-ti-cas}
 %\hyphenation{je-rar-quía}
 % ========================================
@@ -245,10 +261,6 @@
 %\clearemptydoublepage
 
 \pagestyle{headings}
-
-%%%%%%%%%%%%%%%%%%%%%% OBJETIVOS, APORTACIONES Y ESTRUCTURA
-
-%%%%%%%%%%%%%%%%%%%%%% PRELIMINARES algebraicos
 
 \selectlanguage{spanish}
 
