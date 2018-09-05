@@ -8,7 +8,7 @@
 
 \bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello se ha dividido en cuatro secciones principales tal como muestra la Figura \ref{figura:esquemaPreliminares}. 
 
-La primera {\color{red}sección} presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de DFs. La tercera parte se dedica a presentar formalmente las lógicas de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dichas lógicas.
+La primera sección presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de DFs. La tercera parte se dedica a presentar formalmente las lógicas de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dichas lógicas.
 
 \begin{figure}[htbp]
 		\begin{center}
@@ -27,7 +27,7 @@ De forma general, se puede considerar FCA como un marco para el análisis de info
 Como principales fortalezas de FCA cabe mencionar: su sólida base matemática y filosófica, una representación gráfica e intuitiva del conocimiento, avalada en más de 2.000 publicaciones científicas, y aplicaciones en cientos de proyectos \cite{Wille2005} en diversos campos de conocimiento, como se ha mencionado en el Capítulo \ref{cap:introduccion}. 
 
 
-\subsection{Contextos formales}
+\subsection{Contextos Formales}
 \label{subsec:contextosFormales}
 \noindent
 El punto de partida de FCA es un \textit{contexto formal}\index{contexto formal}. Es una noción fundamental para el contenido de esta sección y se define a continuación.
@@ -111,7 +111,7 @@ VARIG & \checkmark & \checkmark &  & \checkmark &  & \checkmark & \checkmark &  
 \end{ejemplo}
 
 
-\subsection{Operadores de derivación}
+\subsection{Operadores de Derivación}
 \label{subsec:operadoresDerivacion}
 \noindent
 Dada una selección $A \subseteq G$ de objetos de un contexto formal\index{contexto formal} $K = (G,M,I)$, se desea caracterizar qué atributos de $M$ son comunes a todos estos objetos. Esto define un operador que produce para cada conjunto de objetos $A \subseteq G$, el conjunto $A$ de sus atributos comunes, y dualmente, a partir de un conjunto de atributos, caracterizar el conjunto de atributos que tienen en común a dichos atributos. Estos operadores se denominan operadores de derivación\index{operadores de derivación} para $K$.
@@ -205,7 +205,7 @@ Se introduce ahora la noción formalmente:
 
 La descripción de un concepto a través de su extensión e intensión es redundante, ya que cada una de las dos partes determina la otra debido a que $B\ =\ A'$ y $A\ =\ B'$, sin embargo, pueden existir ocasiones en las cuales esta descripción redundante puede ser conveniente \cite{Ganter2002}.
 
-{\color{red}Una alternativa gráfica de identificar los conceptos formales es la siguiente. A partir de la representación del contexto formal, un concepto formal se puede reconocer por medio de una agrupación de elementos que verifican todas las relaciones contenidas en la misma. De esta forma, en la Tabla \ref{tabla:extractoEjemploContextoFormal}, se ve como, a partir del contexto formal, es posible identificar el concepto formal: \textit{\{Air New Zealand, All Nippon Airways\},\{Europa, Asia, Estados Unidos\}}. }
+Una alternativa gráfica de identificar los conceptos formales es la siguiente. A partir de la representación del contexto formal, un concepto formal se puede reconocer por medio de un conjunto de elementos que comparten exactamente las mismas relaciones. De esta forma, en la Tabla \ref{tabla:extractoEjemploContextoFormal}, se ve como, a partir del contexto formal, es posible identificar el concepto formal: \textit{\{Air New Zealand, All Nippon Airways\},\{Europa, Asia, Estados Unidos\}}.
 
 %\begin{table*}[tb]
 %\caption{Conceptos formales a partir de la representación del contexto formal.}
@@ -246,7 +246,7 @@ $\left [ \ldots \right ]$  &  &  &  &  &  &  &  &  & \\
 \end{table*}
 
 
-\subsection{Retículo de conceptos}
+\subsection{Retículo de Conceptos}
 \label{subsec:reticuloConceptos}
 \noindent
 Un contexto formal\index{contexto formal} puede tener muchos conceptos formales. El conjunto de todos los conceptos formales de un contexto formal $K$ tiene estructura de \textit{retículo} con la relación de orden que se muestra a continuación.
@@ -271,18 +271,18 @@ Dicho lo anterior y teniendo en cuenta la sobrecarga que conllevaría representar
 
 En la parte superior del retículo, encontramos los destinos que ofrecen la mayoría de las aerolíneas: Europa, Asia Pacífico y los Estados Unidos. Por ejemplo, exceptuando British Midland y Ansett Australia, todas las aerolíneas ofrecen vuelos a Estados Unidos. Esas dos líneas aéreas se encuentran en la parte superior del diagrama, ya que tienen la menor oferta de vuelos, operan sólo en Europa y Asia, respectivamente. 
 
-{\color{red} De esta forma, cuanto más se descienda en el retículo de conceptos, más destinos ofrecerán las aerolíneas. Así, la mayor oferta de destinos se encuentra en las aerolíneas de la parte inferior del retículo: Lufthansa y Air Canada. De forma análoga, conforme más se descienda en el retículo, se encontarán los destinos menos ofertados, e.g. África, Oriente Medio y el Caribe.}
+De esta forma, cuanto más se descienda en el retículo de conceptos, más destinos ofrecerán las aerolíneas. Así, la mayor oferta de destinos se encuentra en las aerolíneas de la parte inferior del retículo: Lufthansa y Air Canada. De forma análoga, conforme más se descienda en el retículo, se encontarán los destinos menos ofertados, e.g. África, Oriente Medio y el Caribe.
 
 
 
-\subsection{Sistema de implicaciones}
+\subsection{Sistema de Implicaciones}
 \label{subsec:sistemaImplicaciones}
 \noindent
 Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. 
 
 %Muestran una alternativa sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules}.% con una gestión automatizada de la información.
 
-Para introducir la labor realizada utilizando la lógica sobre los conjuntos de implicaciones, se va a comenzar describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA, bases de datos {\color{red} y sistemas de recomendación}). En consecuencia, en este punto se presenta el elemento de la lógica común a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
+Para introducir la labor realizada utilizando la lógica sobre los conjuntos de implicaciones, se va a comenzar describiendo los componentes habituales de una lógica: su lenguaje, semántica, sistema axiomático y método de razonamiento automático. No obstante, como se ha comentado anteriormente, los conjuntos de implicaciones se han utilizado para diferentes campos de conocimiento (FCA, bases de datos). En consecuencia, en este punto se presenta el elemento de la lógica común a todos ellos, en concreto, el lenguaje. El resto se presentará para cada una de las secciones correspondientes \ref{sec:basesDatosRelacionales} y \ref{sec:logicaSimplificacion}.
 
 \subsection*{Lenguaje}
 \noindent
@@ -335,7 +335,7 @@ Tras la definición del lenguaje se pasa ahora a introducir la semántica utilizad
 La noción de modelo puede extenderse a los sistemas de implicaciones de la siguiente manera. Dado $\Sigma\subseteq \mathcal L_M$, la expresión $K\models \Sigma$ indica que $\Sigma \models A\to B$ para toda $A \to B \in \Sigma$.
 
 \begin{ejemplo}
-	De la información mostrada en el contexto formal del ejemplo \ref{ejemploContextoFormal} se puede identificar que: $K \models Caribe \to Latinoamerica$. Y también que: $K \not\models Caribe \to Mexico$.
+	De la información mostrada en el contexto formal del Ejemplo \ref{ejemploContextoFormal} se puede identificar que: $K \models Caribe \to Latinoamerica$. Y también que: $K \not\models Caribe \to Mexico$.
 \end{ejemplo} 
 
 %\begin{ejemplo}
@@ -401,7 +401,7 @@ Como se ha mencionado anteriormente, se entra ahora en la segunda sección de est
 \section{Bases de Datos Relacionales}\index{Bases de Datos Relacionales}
 \label{sec:basesDatosRelacionales}
 \noindent
-{\color{red} El modelo de base de datos relacional aparece en el reconocido artículo de Edgar Frank Codd en 1970 \cite{Codd1970}. Codd propuso que los sistemas de bases de datos deberían presentarse al usuario mediante una vista de datos organizada en forma de tablas bidimensionales (filas y columnas) que denominó \textit{relaciones}.}% La tabla es una representación de la relación, pero en el modelo de Codd, lo que se introducen son las relaciones.
+El modelo de base de datos relacional aparece en el reconocido artículo de Edgar Frank Codd en 1970 \cite{Codd1970}. Codd propuso que los sistemas de bases de datos deberían presentarse al usuario mediante una vista de datos organizada en forma de tablas bidimensionales (filas y columnas) que denominó \textit{relaciones}.% La tabla es una representación de la relación, pero en el modelo de Codd, lo que se introducen son las relaciones.
 
 Formalmente, en el modelo relacional, una base de datos consiste en una o más relaciones \cite{Elmasri2010}. Una relación $R$ definida sobre un conjunto de dominios $D_1$, $D_2$, ..., $D_n$ está formada por un esquema y un cuerpo como se definen a continuación.
 
@@ -409,7 +409,7 @@ Formalmente, en el modelo relacional, una base de datos consiste en una o más re
 	Un esquema $E$ para una relación $R$ se define como un conjunto fijo de pares \textit{(atributo:dominio)}. Habitualmente se denota como $\{(A_1:D_1),\ (A_2:D_2),\ (A_n:D_n)\}$ donde cada $A_j$ corresponde a un único $D_j$ y los $A_j$ son todos distintos.
 \end{definicion}
 
-En el ejemplo \ref{ejemplo:basicoClaves}, el esquema sería: 
+En el Ejemplo \ref{ejemplo:basicoClaves}, el esquema sería: 
 
 \noindent
 \textit{\{}
@@ -425,7 +425,7 @@ El conjunto de los esquemas para las relaciones de una base de datos se denomina
 	Un cuerpo $C$ para una relación $R$ se define como un conjunto de tuplas de pares \textit{(atributo:valor)}. Habitualmente se denota como $\{(A_1:v_{i1}),\ (A_2:v_{i2}),\ (A_n:v_{in})\}$ con $i = 1,2,...,m$ tal que $m$ es el cardinal de $R$, i.e. el número de tuplas de la relación. En cada $(A_j:v_{ij})$ se tiene que $v_{ij} \in D_j$.
 \end{definicion}
 
-En el ejemplo \ref{ejemplo:basicoClaves}, un extracto del cuerpo sería:
+En el Ejemplo \ref{ejemplo:basicoClaves}, un extracto del cuerpo sería:
 
 \noindent
 \textit{\{}
@@ -536,7 +536,7 @@ La diferencia principal en la interpretación de las DFs y las implicaciones prov
 \noindent
 En esta sección se van a introducir las lógicas de implicaciones que permitirán disponer de sistemas axiomáticos correctos y completos para trabajar con ellas. Para ello, el punto de partida van a ser los axiomas de Armstrong \cite{Armstrong74} como pionero en el campo. Sin embargo, el sistema de Armstrong no es adecuado para el razonamiento automático debido a su fuerte dependencia a la transitividad. En consecuencia, tras los Axiomas de Armstrong se presenta la lógica \slfd, la cual sí va a permitir desarrollar métodos de razonamiento automático.
 
-Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con DFs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica puede verse en sendas Definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones y DFs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Para los siguientes apartados, y por facilitar la redacción y lectura, se utiliza el término implicaciones, siendo igualmente válido para DFs.
+Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con DFs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica puede verse en sendas definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones y DFs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Para los siguientes apartados, y por facilitar la redacción y lectura, se utiliza el término implicaciones, siendo igualmente válido para DFs.
 
 
 \subsection{Axiomas de Armstrong}
@@ -667,7 +667,7 @@ Se pasa ahora a presentar los métodos de razonamiento utilizados en esta tesis d
 Para abordar el problema de la implicación, se utiliza el cierre sintáctico a modo de demostrador automático, pues dado un conjunto de implicaciones $\Sigma$, debido a la definición de cerrado anterior, se tiene que $\Sigma\vdash A\to B$ si y sólo si $B\subseteq A^+_\Sigma$. Este resultado hace que la definición de un método para calcular el cierre sintáctico abra la puerta al tratamiento automático del problema de la implicación. Ello será el centro del siguiente apartado.
 
 
-\subsection{Algoritmos para el cálculo del cierre}
+\subsection{Algoritmos para el Cálculo del Cierre}
 \label{subsec:algoritmosCalculoCierre}
 \noindent
 El problema de la implicación se ha abordado tradicionalmente utilizando un método básico que recibe como entrada un conjunto de atributos $X\subseteq M$ y un conjunto de implicaciones $\Sigma\subseteq \mathcal L_M$ y utiliza de forma exhaustiva la relación de subconjunto recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
@@ -718,7 +718,7 @@ Siguiendo la forma habitual, dos sistemas de implicaciones $\Sigma_1,\Sigma_2\su
 	$$\Sigma \vdash A\to B \quad \mbox{si y sólo si} \quad \{\varnothing\to A\} \cup \Sigma \vdash\{\varnothing\to B\}$$
 \end{theorem}
 
-La siguiente proposición proporciona tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}, que se se aplican y justifican el nombre de la lógica \slfd.% porque, leídas de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones.
+La siguiente proposición proporciona tres equivalencias, denominadas también: \textit{Fragmentación, Composición y Simplificación}.%, que se aplican y justifican el nombre de la lógica \slfd.% porque, leídas de izquierda a derecha, eliminan la información redundante en el sistema de implicaciones.
 
 \begin{proposicion}\label{simpl_equiv}
 	Sean $A,B,C,D\subseteq M$. Se verifican las siguientes equivalencias:
@@ -751,7 +751,7 @@ Los pasos del algoritmo desglosados en lenguaje natural y de forma más detallada
  \item En el momento en el que no sea posible aplicar ninguna de las equivalencias anteriores, el algoritmo termina.% dando como resultado el conjunto cierre $A^+_\Sigma$, es decir, el cierre sintáctico de $A$ con respecto a $\Sigma$, y además, el conjunto residual de implicaciones $\Sigma^\prime$.
 \end{enumerate}
 
-Formalmente, el algoritmo {\tt Cls} puede verse en \ref{algoritmo:Cls}.
+Formalmente, el algoritmo {\tt Cls} puede verse detalladamente en el pseudocódigo \ref{algoritmo:Cls}.
 
 \begin{algorithm2e}
 \DontPrintSemicolon
@@ -867,13 +867,13 @@ A^+_\Sigma & \textbf{acdefghi} &  &  &  &  &  & \\
 \end{array}
 $$
 }%end small
-{\color{red} 
+ 
 El resultado del algoritmo {\tt Cls} es:
 \begin{itemize}
 	\item En primer lugar, el cierre $A^+_\Sigma=\{a,c,d,e,f,g,h,i\}$.
 	\item Y en segundo lugar y muy importante tal y como se ha mencionado, el nuevo conjunto reducido de implicaciones $\Sigma^\prime = \{k \to b, j \to kl\}$, que contiene la información que no pertenece al cierre.
 \end{itemize}
-}
+
 
 %{\small
 %$$
