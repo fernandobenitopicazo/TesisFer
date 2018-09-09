@@ -257,15 +257,15 @@ Si $(X_1,Y_1)$ y $(X_2,Y_2)$ son conceptos, se define un orden parcial, $\leq$, 
 
 La Figura \ref{figura:ejemploReticuloAerolineas} muestra el retículo de conceptos\index{retículo de conceptos} asociado al contexto formal mostrado anteriormente en el Ejemplo \ref{ejemploContextoFormal}. En un diagrama como el de la Figura \ref{figura:ejemploReticuloAerolineas}, cada nodo representa un concepto formal. Un concepto $c_1$ es un subconcepto de un concepto $c_2$ si y solo si hay un camino de  descendente desde el nodo que representa $c_2$ al nodo que representa $c_1$. El nombre de un objeto $g$ se asocia al nodo que representa el concepto más pequeño que contiene $g$ en su extensión; dualmente, el nombre de un atributo $m$ va asociado al nodo que representa el concepto más grande con $m$ en su intensión.
 
-\begin{figure}[htbp]
+Se pueden comprobar fácilmente las relaciones que existen en el contexto ya que un objeto $g$ tiene un atributo $m$ si y sólo si el concepto asociado a $g$ es un \textit{subconcepto} del asociado a $m$. La extensión de un concepto consiste en todos aquellos objetos cuyas etiquetas están asociadas a subconceptos, y, dualmente, la intensión consiste en todos los atributos asociados a \textit{superconceptos}. 
+
+\begin{figure}[!htbp]
 		\begin{center}
-			\includegraphics[height=.5\textheight,width=1\textwidth]{ejemploReticuloAerolineas.png}
+			\includegraphics[height=.5\textheight,width=1.1\textwidth]{ejemploReticuloAerolineas.png}
 		\end{center}
 		\caption{Retículo de conceptos\index{retículo de conceptos} asociado al contexto formal \ref{ejemploContextoFormal}}
 		\label{figura:ejemploReticuloAerolineas}
 \end{figure}
-
-Se pueden comprobar fácilmente las relaciones que existen en el contexto ya que un objeto $g$ tiene un atributo $m$ si y sólo si el concepto asociado a $g$ es un \textit{subconcepto} del asociado a $m$. La extensión de un concepto consiste en todos aquellos objetos cuyas etiquetas están asociadas a subconceptos, y, dualmente, la intensión consiste en todos los atributos asociados a \textit{superconceptos}. 
 
 Dicho lo anterior y teniendo en cuenta la sobrecarga que conllevaría representar cada concepto del retículo en la Figura \ref{figura:ejemploReticuloAerolineas}, se puede mencionar aquí como ejemplo, el concepto etiquetado como `Oriente' \textit{(Oriente Medio)}, el cual tiene como extensión el conjunto \{\textit{Singapore Airlines, The Austrian Airlines Group, Lufthansa, Air Canada}\}, y como intensión \{\textit{Oriente Medio, Canadá, Estados Unidos, Europa, Asia}\}.
 
@@ -460,7 +460,7 @@ Tras haber definido formalmente el cuerpo y el esquema de un relación, se puede 
 \noindent
 Un diseño defectuoso del esquema de base de datos relacional puede provocar lo que se denominan \textit{anomalías} \cite{Ullman1997,Kamra2008,Sallam2015}. Estas anomalías son problemas que aparecen a la hora de operar con la base de datos en términos de actualizaciones, eliminaciones o inserción de información redundante \cite{Costante2017,Vavilis2015}.
 
-La manera de eliminar estas anomalías consiste en descomponer las relaciones \cite{Armstrong1980}. La descomposición de relaciones conduce al campo de la \textit{normalización} \cite{Codd1971} que si bien no forma parte del ámbito principal de esta tesis doctoral, permite dar paso a la introducción del concepto de DF, el cual nace como un recurso para caracterizar la semántica de las relaciones y, por tanto, permitir hacer una aplicación de las transformaciones de normalización \cite{Darwen2012}. Ésta es una de las diferencias del tratamiento de las relaciones entre FCA y bases de datos relacionales, ya que para el primero, lo que se pretende es capturar conocimiento, mientras que en el segundo, las DFs se utilizan para definir formas normales \cite{Armstrong1980,Fagin1981,Kent1983}.
+La manera de eliminar estas anomalías consiste en descomponer las relaciones \cite{Armstrong1980}. La descomposición de relaciones conduce al campo de la \textit{normalización} \cite{Codd1971} que si bien no forma parte del ámbito principal de esta tesis doctoral, permite dar paso a la introducción del concepto de DF, el cual nace como un recurso para caracterizar la semántica de las relaciones y, por consiguiente, permitir hacer una aplicación de las transformaciones de normalización \cite{Darwen2012}. Ésta es una de las diferencias del tratamiento de las relaciones entre FCA y bases de datos relacionales, ya que para el primero, lo que se pretende es capturar conocimiento, mientras que en el segundo, las DFs se utilizan para definir formas normales \cite{Armstrong1980,Fagin1981,Kent1983}.
 
 %Existen muchas restricciones que el modelo relacional permite establecer en las relaciones de los esquemas de la base de datos. Concretamente, esta parte de la tesis está enfocada en las restricciones denominadas dependencias funcionales.
 
@@ -542,7 +542,7 @@ Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con D
 \subsection{Axiomas de Armstrong}
 \label{subsec:axiomasArmstrong}
 \noindent
-Los denominados axiomas de Armstrong\index{Axiomas de Armstrong} son el primer sistema axiomático descrito para tratar sistemas de implicaciones utilizando la lógica \cite{Armstrong74}. Este sistema ha tenido una clara influencia en el diseño de varias lógicas sobre implicaciones, todas ellas construidas alrededor del paradigma de la transitividad \cite{Ibaraki1999,Atzeni1993,Paredaens89}.
+Los denominados axiomas de Armstrong\index{Axiomas de Armstrong} son el primer sistema axiomático descrito para tratar sistemas de implicaciones utilizando la lógica \cite{Armstrong74}. Este sistema ha tenido una clara influencia en el diseño de varias lógicas sobre implicaciones, todas ellas construidas alrededor del paradigma de la transitividad \cite{Ibaraki1999,Atzeni1993,Paredaens1989}.
 
 Este sistema axiomático\index{sistema axiomático} está formado por un esquema de axioma, denominado \textit{Reflexivo}: 
 

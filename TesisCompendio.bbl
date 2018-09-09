@@ -1,5 +1,9 @@
 \begin{thebibliography}{100}
 
+\bibitem{duBoucherRyan2006}
+Collaborative recommending using formal concept analysis.
+\newblock {\em Knowledge-Based Systems 19}, 5 (2006), 309 -- 315.
+
 \bibitem{Adomavicius2005}
 {\sc Adomavicius, G., and Tuzhilin, A.}
 \newblock Toward the next generation of recommender systems: A survey of the
@@ -11,11 +15,6 @@
 {\sc Adomavicius, G., and Tuzhilin, A.}
 \newblock In {\em Recommender Systems Handbook}, F.~Ricci, L.~Rokach,
   B.~Shapira, and P.~B. Kantor, Eds. Springer, 2011, pp.~217--253.
-
-\bibitem{Agrawal1993}
-{\sc Agrawal, R., Imieli\'{n}ski, T., and Swami, A.}
-\newblock Mining association rules between sets of items in large databases.
-\newblock {\em SIGMOD Rec. 22}, 2 (June 1993), 207--216.
 
 \bibitem{AlAli2016}
 {\sc Al-Ali, R., Kathiresan, N., Anbari, M.~E., Schendel, E.~R., and Zaid,
@@ -105,7 +104,7 @@
 {\sc Bertet, K., Demko, C., Viaud, J.-F., and Guérin, C.}
 \newblock Lattices, closures systems and implication bases: A survey of
   structural aspects and algorithms.
-\newblock {\em Theoretical Computer Science\/} (2016).
+\newblock {\em Theoretical Computer Science 743\/} (2018), 93 -- 109.
 
 \bibitem{Bobadilla2013}
 {\sc Bobadilla, J., Ortega, F., Hernando, A., and Gutiérrez, A.}
@@ -124,13 +123,12 @@
 \newblock Construction of the l-fuzzy concept lattice.
 \newblock {\em Fuzzy Sets and Systems 97}, 1 (1998), 109--114.
 
-\bibitem{Cakir2012}
-{\sc Cakir, O., and Aras, M.~E.}
-\newblock A recommendation engine by using association rules.
-\newblock {\em Procedia - Social and Behavioral Sciences 62\/} (2012), 452 --
-  456.
-\newblock World Conference on Business, Economics and Management (BEM-2012),
-  May 4-6 2012, Antalya, Turkey.
+\bibitem{Cano2015}
+{\sc Cano, E., and Morisio, M.}
+\newblock Characterization of public datasets for recommender systems.
+\newblock In {\em 2015 IEEE 1st International Forum on Research and
+  Technologies for Society and Industry Leveraging a better tomorrow (RTSI)\/}
+  (Sept 2015), pp.~249--257.
 
 \bibitem{Chen2007}
 {\sc Chen, L., and Pu, P.}
@@ -230,17 +228,10 @@
   minimum set of implication rules.
 \newblock {\em Artificial Intelligence Research 5\/} (03 2016), 40--54.
 
-\bibitem{Dean2004}
+\bibitem{Dean2008}
 {\sc Dean, J., and Ghemawat, S.}
-\newblock Mapreduce: simplified data processing on large clusters.
-\newblock In {\em OSDI'04: Proceedings of the 6th Conference on Symposium on
-  Operating Systems Design and Implementation\/} (2004), USENIX Association.
-
-\bibitem{duBoucherRyan2006}
-{\sc du~Boucher-Ryan, P., and Bridge, D.}
-\newblock Collaborative recommending using formal concept analysis.
-\newblock {\em Knowledge-Based Systems 19}, 5 (2006), 309 -- 315.
-\newblock \{AI\} 2005 \{SI\}.
+\newblock Mapreduce: Simplified data processing on large clusters.
+\newblock {\em Commun. ACM 51}, 1 (Jan. 2008), 107--113.
 
 \bibitem{Eirinaki2018}
 {\sc Eirinaki, M., Gao, J., Varlamis, I., and Tserpes, K.}
@@ -295,6 +286,8 @@
 
 \bibitem{Ganter2002}
 {\sc Ganter, B., Stumme, G., and Wille, R.}
+\newblock {\em Formal concept analysis: Methods and applications in computer
+  science}.
 \newblock TU Dresden, 2002, pp.~1--85.
 
 \bibitem{Ganter1997}
@@ -337,19 +330,6 @@
 \newblock In {\em Proceedings of the 20th International Conference on User
   Modeling, Adaptation, and Personalization\/} (Berlin, Heidelberg, 2012),
   UMAP'12, Springer-Verlag, pp.~361--364.
-
-\bibitem{Guy2009}
-{\sc Guy, I., Zwerdling, N., Carmel, D., Ronen, I., Uziel, E., Yogev, S., and
-  Ofek-Koifman, S.}
-\newblock Personalized recommendation of social software items based on social
-  relations.
-\newblock In {\em Proceedings of the Third ACM Conference on Recommender
-  Systems\/} (New York, NY, USA, 2009), RecSys '09, ACM, pp.~53--60.
-
-\bibitem{Han2000}
-{\sc Han, J., and Kamber, M.}
-\newblock {\em Data Mining: Concepts and Techniques}.
-\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2000.
 
 \bibitem{Harper2016}
 {\sc Harper, F.~M., and Konstan, J.~A.}
@@ -396,13 +376,6 @@
 \newblock Detecting anomalous access patterns in relational databases.
 \newblock {\em The VLDB Journal 17}, 5 (Aug. 2008), 1063--1077.
 
-\bibitem{Kardan2013}
-{\sc Kardan, A.~A., and Ebrahimi, M.}
-\newblock A novel approach to hybrid recommendation systems based on
-  association rules mining for content recommendation in asynchronous
-  discussion groups.
-\newblock {\em Information Sciences 219\/} (2013), 93 -- 110.
-
 \bibitem{Karnaugh1953}
 {\sc Karnaugh, M.}
 \newblock {The map method for synthesis of combinational logic circuits}.
@@ -425,7 +398,8 @@
 {\sc Kester, Q.-A.}
 \newblock Application of formal concept analysis to visualization of the
   evaluation of risks matrix in software engineering projects.
-\newblock 220--225.
+\newblock {\em International Journal of Science, Engineering and Technology
+  Research (IJSETR) 2\/} (Jan 2013), 220--225.
 
 \bibitem{KIM2018}
 {\sc Kim, K.}
@@ -533,14 +507,6 @@
   N.~Vera-Lucio, and M.~Bucaram-Leverone, Eds., Springer International
   Publishing, pp.~60--71.
 
-\bibitem{Mican2010}
-{\sc Mican, D., and Tomai, N.}
-\newblock Association-rules-based recommender system for personalization in
-  adaptive web-based applications.
-\newblock In {\em Current Trends in Web Engineering\/} (Berlin, Heidelberg,
-  2010), F.~Daniel and F.~M. Facca, Eds., Springer Berlin Heidelberg,
-  pp.~85--90.
-
 \bibitem{Mimouni2015}
 {\sc Mimouni, N., Nazarenko, A., and Salotti, S.}
 \newblock {\em A Conceptual Approach for Relational IR: Application to Legal
@@ -604,22 +570,11 @@
   by object-attribute relational data.
 \newblock {\em Information Sciences 185}, 1 (2012), 114 -- 127.
 
-\bibitem{Pan2016}
-{\sc Pan, W.}
-\newblock A survey of transfer learning for collaborative recommendation with
-  auxiliary data.
-\newblock {\em Neurocomput. 177}, C (Feb. 2016), 447--453.
-
 \bibitem{Papadimitriou2012}
 {\sc Papadimitriou, A., Symeonidis, P., and Manolopoulos, Y.}
 \newblock A generalized taxonomy of explanations styles for traditional and
   social recommender systems.
 \newblock {\em Data Min. Knowl. Discov. 24}, 3 (2012), 555--583.
-
-\bibitem{Paredaens89}
-{\sc Paredaens, J., Bra, P., Gyssens, M., and Gucht, D.~V.}, Eds.
-\newblock {\em The structure of the relational database model}.
-\newblock EATCS Monographs on Theoretical Computer Science, 1989.
 
 \bibitem{Paredaens1989}
 {\sc Paredaens, J., Bra, P., Gyssens, M., and Gucht, D.~V.}, Eds.
@@ -656,13 +611,6 @@
 \newblock Study of decision implications based on formal concept analysis.
 \newblock {\em International Journal of General Systems 36}, 2 (2007),
   147--156.
-
-\bibitem{Rajput2015}
-{\sc Rajput, A., and Chaturvedi, S.~K.}
-\newblock User rating and synonyms based modified ranking technique for
-  recommender systems.
-\newblock In {\em 2015 International Conference on Computational Intelligence
-  and Communication Networks (CICN)\/} (Dec 2015), pp.~989--992.
 
 \bibitem{Metaphor2012}
 {\sc Reda, A., Park, Y., Tiwari, M., Posse, C., and Shah, S.}
@@ -712,15 +660,6 @@
 \newblock {\em Minimal Keys in Higher-Order Datamodels}.
 \newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2004, pp.~242--251.
 
-\bibitem{Salimi2017}
-{\sc Salimi, A., Ziaii, M., Amiri, A., Zadeh, M.~H., Karimpouli, S., and
-  Moradkhani, M.}
-\newblock Using a feature subset selection method and support vector machine to
-  address curse of dimensionality and redundancy in hyperion hyperspectral data
-  classification.
-\newblock {\em The Egyptian Journal of Remote Sensing and Space Science\/}
-  (2017).
-
 \bibitem{Salimi2018}
 {\sc Salimi, A., Ziaii, M., Amiri, A., Zadeh, M.~H., Karimpouli, S., and
   Moradkhani, M.}
@@ -728,7 +667,7 @@
   address curse of dimensionality and redundancy in hyperion hyperspectral data
   classification.
 \newblock {\em The Egyptian Journal of Remote Sensing and Space Science 21}, 1
-  (2018), 27 -- 36.
+  (2018), 27--36.
 
 \bibitem{Sallam2015}
 {\sc Sallam, A., Bertino, E., Hussain, S.~R., Landers, D., Lefler, R.~M., and
@@ -802,7 +741,8 @@
 {\sc Tu, X., Wang, Y., Zhang, M., and Wu, J.}
 \newblock Using formal concept analysis to identify negative correlations in
   gene expression data.
-\newblock 1--1.
+\newblock {\em IEEE-ACM Transactions on Computational Biology and
+  Bioinformatics 13\/} (Jun 2015), 1 -- 1.
 
 \bibitem{Ullman1997}
 {\sc Ullman, J.~D., and Widom, J.}

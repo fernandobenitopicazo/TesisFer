@@ -13,11 +13,17 @@ A level-1 auxiliary file: conclusiones.aux
 The style file: acm.bst
 A level-1 auxiliary file: fraseFinal.aux
 Database file #1: biblioTesis.bib
-I was expecting a `,' or a `}'---line 269 of file biblioTesis.bib
- : keywords = "
- :             Recommender systems, Collaborative filtering, MAE/RMSE, Evaluation",
+Unbalanced braces---line 269 of file biblioTesis.bib
+ : 
+ : }
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 4081 of file biblioTesis.bib
+You're missing a field name---line 2995 of file biblioTesis.bib
+ : 
+ : %note = "\{AI\} 2005 \{SI\} ",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 4068 of file biblioTesis.bib
  : ARTICLE 
  :         NUMBER = {245},
 I'm skipping whatever remains of this entry
@@ -26,16 +32,15 @@ I was expecting a `,' or a `}'---line 4670 of file biblioTesis.bib
  : @inproceedings{Wang2018,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in duBoucherRyan2006
+Warning--empty author in duBoucherRyan2006
 Warning--empty title in AdomaviciusBook11
 Warning--empty publisher in Benito-Picazo2013PFC
 Warning--empty publisher in Benito-Picazo2014TFM
 Warning--empty booktitle in BorrasFPMVIORC11
 Warning--can't use both author and editor fields in Friedman2015
-Warning--empty title in Ganter2002
 Warning--can't use both author and editor fields in Gunawardana2015
-Warning--empty journal in Kester2013
 Warning--can't use both author and editor fields in Mimouni2015
 Warning--can't use both author and editor fields in Sali2004
-Warning--empty journal in Xudong2015
 Warning--can't use both author and editor fields in Wille2005
-(There were 3 error messages)
+(There were 4 error messages)

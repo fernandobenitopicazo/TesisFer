@@ -1,45 +1,45 @@
 \begin{theindex}
 
   \item \slfde, \hyperpage{8--10}, \hyperpage{13}, \hyperpage{18}, 
-		\hyperpage{21}, \hyperpage{47, 48}, \hyperpage{115}
+		\hyperpage{21}, \hyperpage{44, 45}, \hyperpage{113}
 
   \indexspace
 
   \item An\'alisis Formal de Conceptos, \hyperpage{3}
-  \item atributo, \hyperpage{6}, \hyperpage{43}
-  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{46}
+  \item atributo, \hyperpage{6}, \hyperpage{41}
+  \item Axiomas de Armstrong, \hyperpage{5}, \hyperpage{43}
 
   \indexspace
 
   \item bases, \hyperpage{12}
   \item bases de datos, \hyperpage{3}
-  \item Bases de Datos Relacionales, \hyperpage{42}
+  \item Bases de Datos Relacionales, \hyperpage{39}
 
   \indexspace
 
-  \item Cierre \slfd, \hyperpage{51}
-  \item Cierre cl\'asico, \hyperpage{49}
+  \item Cierre \slfd, \hyperpage{48}
+  \item Cierre cl\'asico, \hyperpage{47}
   \item CK, \hyperpage{10}
   \item clave, \hyperpage{6}
     \subitem claves minimales, \hyperpage{5}
-  \item concepto formal, \hyperpage{35}
-  \item conjuntos cerrados, \hyperpage{35}
+  \item concepto formal, \hyperpage{33}
+  \item conjuntos cerrados, \hyperpage{33}
   \item conjuntos de implicaciones, \hyperpage{3}, \hyperpage{17}, 
 		\hyperpage{20}
-  \item contexto formal, \hyperpage{32--34}, \hyperpage{36, 37}, 
-		\hyperpage{41}, \hyperpage{45}
-  \item Cuerpo, \hyperpage{42}
+  \item contexto formal, \hyperpage{30--32}, \hyperpage{34, 35}, 
+		\hyperpage{38, 39}, \hyperpage{42}
+  \item Cuerpo, \hyperpage{40}
 
   \indexspace
 
   \item dataset, \hyperpage{4, 5}, \hyperpage{13}, \hyperpage{19}, 
-		\hyperpage{121}
-  \item datasets, \hyperpage{45}
-  \item dependencias funcionales, \hyperpage{4}, \hyperpage{44}
+		\hyperpage{119}
+  \item datasets, \hyperpage{42}
+  \item dependencias funcionales, \hyperpage{4}, \hyperpage{41}
 
   \indexspace
 
-  \item Esquema, \hyperpage{42}
+  \item Esquema, \hyperpage{40}
 
   \indexspace
 
@@ -48,7 +48,7 @@
 
   \indexspace
 
-  \item Implicaci\'on, \hyperpage{40}
+  \item Implicaci\'on, \hyperpage{38}
   \item implicaciones, \hyperpage{4}
 
   \indexspace
@@ -60,13 +60,13 @@
   \item MapReduce, \hyperpage{11}
   \item MinGen, \hyperpage{13}
   \item MinGenPr, \hyperpage{13}, \hyperpage{15}
-  \item Modelo, \hyperpage{41}
+  \item Modelo, \hyperpage{38}
 
   \indexspace
 
-  \item operador de cierre, \hyperpage{10}, \hyperpage{35}, 
-		\hyperpage{40}
-  \item operadores de derivaci\'on, \hyperpage{34}
+  \item operador de cierre, \hyperpage{10}, \hyperpage{33}, 
+		\hyperpage{38}
+  \item operadores de derivaci\'on, \hyperpage{32}
 
   \indexspace
 
@@ -84,21 +84,21 @@
 
   \indexspace
 
-  \item reglas de inferencia, \hyperpage{13}, \hyperpage{47}
-    \subitem composici\'on, \hyperpage{47}
-    \subitem fragmentaci\'on, \hyperpage{47}
-    \subitem simplificaci\'on, \hyperpage{47}
-  \item ret\IeC {\'\i }culo de conceptos, \hyperpage{37, 38}
+  \item reglas de inferencia, \hyperpage{13}, \hyperpage{45}
+    \subitem composici\'on, \hyperpage{45}
+    \subitem fragmentaci\'on, \hyperpage{45}
+    \subitem simplificaci\'on, \hyperpage{45}
+  \item ret\IeC {\'\i }culo de conceptos, \hyperpage{35, 36}
     \subitem conjuntos cerrados, \hyperpage{12}
 
   \indexspace
 
-  \item sistema axiom\'atico, \hyperpage{46, 47}
+  \item sistema axiom\'atico, \hyperpage{43}, \hyperpage{45}
   \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{17}
     \subitem basados en conocimiento, \hyperpage{18}
     \subitem basados en contenido, \hyperpage{18}
     \subitem colaborativos, \hyperpage{18}
-    \subitem conversacionales, \hyperpage{18}, \hyperpage{117}
+    \subitem conversacionales, \hyperpage{18}, \hyperpage{115}
   \item SST, \hyperpage{10}
   \item supercomputaci\'on, \hyperpage{5}, \hyperpage{10}, 
 		\hyperpage{12}
@@ -106,7 +106,7 @@
   \indexspace
 
   \item Tableaux, \hyperpage{9}
-  \item Teorema de la deducci\'on, \hyperpage{50}
-  \item tupla, \hyperpage{6}, \hyperpage{43, 44}
+  \item Teorema de la deducci\'on, \hyperpage{48}
+  \item tupla, \hyperpage{6}, \hyperpage{41}
 
 \end{theindex}
