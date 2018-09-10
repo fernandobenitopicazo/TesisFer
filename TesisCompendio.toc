@@ -35,6 +35,6 @@
 \contentsline {chapter}{Anexo}{127}{section*.30}
 \contentsline {chapter}{\numberline {A}Closed sets enumeration: a logical approach}{129}{appendix.A}
 \contentsline {chapter}{\numberline {B}Conversational recommendation to avoid the cold-start problem}{137}{appendix.B}
-\contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{146}{appendix.C}
-\contentsline {chapter}{\numberline {D}Increasing the Efficiency of Minimal Key Enumeration Methods by Means of Parallelism}{159}{appendix.D}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{167}{appendix.D}
+\contentsline {chapter}{\numberline {C}Keys for the fusion of heterogeneous information}{147}{appendix.C}
+\contentsline {chapter}{\numberline {D}Increasing the Efficiency of Minimal Key Enumeration Methods by Means of Parallelism}{161}{appendix.D}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{169}{appendix.D}
