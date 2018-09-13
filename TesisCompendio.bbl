@@ -1,9 +1,5 @@
 \begin{thebibliography}{100}
 
-\bibitem{duBoucherRyan2006}
-Collaborative recommending using formal concept analysis.
-\newblock {\em Knowledge-Based Systems 19}, 5 (2006), 309 -- 315.
-
 \bibitem{Adomavicius2005}
 {\sc Adomavicius, G., and Tuzhilin, A.}
 \newblock Toward the next generation of recommender systems: A survey of the
@@ -56,16 +52,16 @@ Collaborative recommending using formal concept analysis.
 {\sc Benito-Picazo, F.}
 \newblock {\em Minimal Key-Par. Una versión paralela de los algoritmos de
   búsqueda de claves minimales basados en Tableaux}.
-\newblock Dpto. Lenguajes y Ciencias de la Computaci\'{o}n, Universidad de
-  M\'{a}laga, 2013.
+\newblock Proyecto Fin de Carrera. Dpto. Lenguajes y Ciencias de la
+  Computaci\'{o}n, Universidad de M\'{a}laga, 2013.
 
 \bibitem{Benito-Picazo2014TFM}
 {\sc Benito-Picazo, F.}
 \newblock {\em Study of minimal keys algorithms based on tableaux methods.
   Increasing the range of treated problems by means of parallelism and prune
   strategies based on minimal subsets}.
-\newblock Languages and Computer Science Department, Universidad de M\'{a}laga,
-  2014.
+\newblock Master Thesis. Languages and Computer Science Department, Universidad
+  de M\'{a}laga, 2014.
 
 \bibitem{Benito-Picazo2014}
 {\sc Benito-Picazo, F., Cordero, P., Enciso, M., and Mora, A.}
@@ -91,7 +87,7 @@ Collaborative recommending using formal concept analysis.
 {\sc Benito-Picazo, F., Cordero, P., Enciso, M., and Mora, A.}
 \newblock Minimal generators, an affordable approach by means of massive
   computation.
-\newblock {\em The Journal of Supercomputing\/} (Jun 2018).
+\newblock {\em The Journal of Supercomputing\/} (Online Jun 2018).
 
 \bibitem{Benito-Picazo2017}
 {\sc Benito-Picazo, F., Enciso, M., Rossi, C., and Guevara, A.}
@@ -109,14 +105,7 @@ Collaborative recommending using formal concept analysis.
 \bibitem{Bobadilla2013}
 {\sc Bobadilla, J., Ortega, F., Hernando, A., and Gutiérrez, A.}
 \newblock Recommender systems survey.
-\newblock {\em Knowledge-Based Systems 46}, 0 (2013), 109 -- 132.
-
-\bibitem{BorrasFPMVIORC11}
-{\sc Borras, J., de~la Flor, J., Pérez, Y., Moreno, A., Valls, A., Isern, D.,
-  Orellana, A., Russo, A., and Clavé, S.~A.}
-\newblock Sigtur/e-destination: A system for the management of complex tourist
-  regions.
-\newblock R.~Law, M.~Fuchs, and F.~Ricci, Eds., Springer Vienna, pp.~39--50.
+\newblock {\em Knowledge-Based Systems 46\/} (2013), 109 -- 132.
 
 \bibitem{Burusco1998}
 {\sc Burusco, A., and Fuentes{-}Gonz{\'{a}}lez, R.}
@@ -233,6 +222,11 @@ Collaborative recommending using formal concept analysis.
 \newblock Mapreduce: Simplified data processing on large clusters.
 \newblock {\em Commun. ACM 51}, 1 (Jan. 2008), 107--113.
 
+\bibitem{duBoucherRyan2006}
+{\sc du~Boucher-Ryan, P., and Bridge, D.}
+\newblock Collaborative recommending using formal concept analysis.
+\newblock {\em Knowledge-Based Systems 19}, 5 (2006), 309 -- 315.
+
 \bibitem{Eirinaki2018}
 {\sc Eirinaki, M., Gao, J., Varlamis, I., and Tserpes, K.}
 \newblock Recommender systems for large-scale social networks: A review of
@@ -294,6 +288,12 @@ Collaborative recommending using formal concept analysis.
 {\sc Ganter, B., and Wille, R.}
 \newblock {\em Formal Concept Analysis: Mathematical Foundations}, 1st~ed.
 \newblock Springer-Verlag New York, Inc., Secaucus, NJ, USA, 1997.
+
+\bibitem{Gavalas2014}
+{\sc Gavalas, D., Konstantopoulos, C., Mastakas, K., and Pantziou, G.}
+\newblock Mobile recommender systems in tourism.
+\newblock {\em Journal of Network and Computer Applications 39\/} (2014), 319
+  -- 333.
 
 \bibitem{Goh10}
 {\sc Goh, T.~N.}
@@ -459,11 +459,6 @@ Collaborative recommending using formal concept analysis.
 \newblock {\em J. Comput. Syst. Sci. 17}, 2 (1978), 270--279.
 
 \bibitem{Maier1983}
-{\sc Maier, D.}
-\newblock {\em Theory of Relational Databases}.
-\newblock Computer Science Pr, 1983.
-
-\bibitem{Maier83}
 {\sc Maier, D.}
 \newblock {\em The Theory of Relational Databases}.
 \newblock Computer Science Press, Rockville, 1983.
@@ -631,7 +626,7 @@ Collaborative recommending using formal concept analysis.
 \bibitem{Ricci2015}
 {\sc Ricci, F., Rokach, L., and Shapira, B.}
 \newblock {\em Recommender Systems Handbook}, 2nd~ed.
-\newblock Springer Publishing Company, Incorporated, 2015.
+\newblock Springer Publishing Company, 2015.
 
 \bibitem{Risch1992}
 {\sc Risch, V., and Schwind, C.}
@@ -828,7 +823,7 @@ Collaborative recommending using formal concept analysis.
 {\sc Zamani, H., and Shakery, A.}
 \newblock A language model-based framework for multi-publisher content-based
   recommender systems.
-\newblock {\em Information Retrieval Journal\/} (Feb 2018).
+\newblock {\em Information Retrieval Journal\/} (Online Feb 2018).
 
 \bibitem{Zhang2015}
 {\sc Zhang, W., Du, Y.~J., and Song, W.}

@@ -6,9 +6,9 @@
 }{\\\textit{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ethan de Athos}\\\textup{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ L. M. Bujold}}
 }
 
-\bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello se ha dividido en cuatro secciones principales tal como muestra la Figura \ref{figura:esquemaPreliminares}. 
+\bigdrop{0pt}{5}{cmr10}A lo largo de este capítulo se van a introducir los principales conceptos, definiciones y resultados sobre los que se sustentan el trabajo de investigación desarrollado. Se parte una vez más de que el objetivo principal de la tesis doctoral es la utilización de los conjuntos de implicaciones\index{conjunto de implicaciones} para generar soluciones a problemas en el ámbito de FCA, bases de datos y sistemas de recomendación. Se ha diseñado este capítulo con la intención de que el texto sea autocontenido en la medida de lo posible y para ello se ha dividido en cuatro secciones principales tal como muestra la Figura \ref{figura:esquemaPreliminares}. 
 
-La primera sección presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales y sistemas de recomendación. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales en esquemas relacionales por medio de DFs. La tercera parte se dedica a presentar formalmente las lógicas de implicaciones. La cuarta y última, se centra en el razonamiento automático usando dichas lógicas.
+La primera sección presenta las nociones de FCA que serán necesarias para las soluciones propuestas para generadores minimales\index{generadores minimales} y sistemas de recomendación\index{sistemas de recomendación}. En la segunda, se recopilan los aspectos fundamentales a tener en cuenta para la enumeración de las claves minimales\index{clave!claves minimales} en esquemas relacionales por medio de DFs. La tercera parte se dedica a presentar formalmente las lógicas de implicaciones\index{implicaciones}. La cuarta y última, se centra en el razonamiento automático usando dichas lógicas.
 
 \begin{figure}[htbp]
 		\begin{center}
@@ -175,7 +175,7 @@ El operador de cierre $''$ (i.e. aplicar el operador de derivación $'$ y su dual
 Por dualidad, el resultado es igualmente válido para $()'' : 2^G \to 2^G$.
 \end{definicion}
 
-Un conjunto $A \subseteq M$ se denomina \textit{conjunto cerrado} para el operador $''$ si es un punto fijo para $''$, es decir, $A''=A$. Los conjuntos cerrados\index{conjuntos cerrados} permiten definir lo que se denominan \textit{conceptos formales}\index{concepto formal}, los cuales son una noción esencial en FCA y a los que se dedica el siguiente apartado. 
+Un conjunto $A \subseteq M$ se denomina \textit{conjunto cerrado} para el operador $''$ si es un punto fijo para $''$, es decir, $A''=A$. Los conjuntos cerrados permiten definir lo que se denominan \textit{conceptos formales}\index{concepto formal}, los cuales son una noción esencial en FCA y a los que se dedica el siguiente apartado. 
 
 \begin{ejemplo}
 	A partir del contexto formal representado en la Tabla \ref{tabla:ejemploContextoFormal} se puede obtener el conjunto cerrado de atributos: 
@@ -278,7 +278,7 @@ De esta forma, cuanto más se descienda en el retículo de conceptos, más destinos
 \subsection{Sistema de Implicaciones}
 \label{subsec:sistemaImplicaciones}
 \noindent
-Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones constituyen el eje fundamental de trabajo en esta tesis doctoral. 
+Una noción equivalente al retículo de conceptos es el denominado sistema de implicaciones \cite{Ganter1997}. Como ya se adelantó en el Capítulo \ref{cap:introduccion}, las implicaciones\index{implicaciones} constituyen el eje fundamental de trabajo en esta tesis doctoral. 
 
 %Muestran una alternativa sencilla de representar las relaciones lógicas que se encuentran entre los atributos que poseen los objetos del contexto formal ya que combinan una forma muy simple y natural de escribir reglas del tipo \textit{si-entonces}\index{if-then rules}.% con una gestión automatizada de la información.
 
@@ -294,7 +294,7 @@ $$
 $$
 \end{definicion}
 
-Las fórmulas $A \to B$ se denominan \emph{implicaciones} y los conjuntos $A$ y $B$ reciben el nombre de \emph{premisa} y \emph{conclusión} de la implicación\index{Implicación} respectivamente. Los conjuntos $\sum \subseteq \mathcal L_M$ se denominan \emph{conjuntos de implicaciones} sobre $M$.
+Las fórmulas $A \to B$ se denominan \emph{implicaciones}\index{implicaciones} y los conjuntos $A$ y $B$ reciben el nombre de \emph{premisa} y \emph{conclusión} de la implicación respectivamente. Los conjuntos $\sum \subseteq \mathcal L_M$ se denominan \emph{conjuntos de implicaciones} sobre $M$.
 
 Se utilizará la siguiente notación:
 \begin{itemize}
@@ -392,7 +392,7 @@ Al comenzar el capítulo se habló de la equivalencia entre la información que mue
 	%\item $Oriente\  Medio \rightarrow Europa,\  Canada,\  Asia,\  Estados\  Unidos$. Ídem al anterior.
 \end{itemize}
 
-Se puede considerar a las implicaciones y el retículo de conceptos como distintas alternativas para tratar la información que se puede extraer de un contexto formal\index{contexto formal}. No obstante, los retículos de conceptos permiten una representación gráfica, mientras que la diferencia fundamental, desde el punto de vista de esta tesis doctoral, es que los sistemas de implicaciones proporcionan una manipulación simbólica usando la lógica de implicaciones, y por tanto, permiten el razonamiento automático.
+Se puede considerar a las implicaciones\index{implicaciones} y el retículo de conceptos\index{retículo de conceptos} como distintas alternativas para tratar la información que se puede extraer de un contexto formal\index{contexto formal}. No obstante, los retículos de conceptos permiten una representación gráfica, mientras que la diferencia fundamental, desde el punto de vista de esta tesis doctoral, es que los sistemas de implicaciones proporcionan una manipulación simbólica usando la lógica de implicaciones, y por tanto, permiten el razonamiento automático.
 
 Como se ha mencionado anteriormente, se entra ahora en la segunda sección de este capítulo en la cual se van a utilizar las implicaciones en el ámbito de las bases de datos relacionales, donde recibirán el nombre de Dependencias Funcionales.
 
@@ -441,7 +441,7 @@ En el Ejemplo \ref{ejemplo:basicoClaves}, un extracto del cuerpo sería:
 
 Tras haber definido formalmente el cuerpo y el esquema de un relación, se puede mencionar que en los sistemas gestores de bases de datos relacionales, las relaciones se representan como una tabla de doble entrada, en la que (con un una terminología más informal) se encuentran los siguientes elementos:
 \begin{itemize}
-	\item \textbf{Atributo}\index{atributo}. Cada una de las columnas de una relación se identifica con un atributo. %En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
+	\item \textbf{Atributo}. Cada una de las columnas de una relación se identifica con un atributo. %En el ejemplo \ref{tabla:ejemploPeliculas} los atributos son: Título, Año, País, Director, Nacionalidad, Actor.
 	\item \textbf{Tupla}\index{tupla}. Se identifica cada tupla de una relación con una fila de la tabla, exceptuando la fila que contiene a los atributos.
 	%\item \textbf{Dominio}\index{dominio}. Un dominio describe un conjunto de posibles valores para cierto atributo.
 	%El modelo relacional requiere que cada componente de cada tupla sea atómico. No se permite que un valor de la tupla sea una estructura de datos (e.g. una lista, una matriz, un conjunto, etc.) cuyos valores puedan dividirse en componentes más pequeños. De esta forma, se establece que cada atributo de la relación está asociado a un dominio, i.e. un tipo particular de dato.
@@ -474,7 +474,7 @@ Teniendo en cuenta que la sintaxis que se va a utilizar para DFs es la misma que
 Una dependencia funcional $X \to Y$ se cumple en una tabla $R$ si y sólo si para cada dos tuplas\index{tupla} de $R$, si sus valores en $X$ coinciden, entonces también coinciden sus valores en $Y$. %Dicho de otro modo, si dos tuplas tienen los mismos valores para cada atributo de $X$, entonces tendrán los mismos valores para cada atributo de $Y$.
 \end{definicion}
 
-Intuitivamente, una DF $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de función (y de ahí su nombre) entre los dominios de $A$ y $B$, $f: A\to B$. Estas funciones son las que se usan para tratar las anomalías mencionadas anteriormente, buscando aquellas funciones que se correspondan con relaciones de forma unívoca. El siguiente ejemplo ilustra cómo la semántica de la DFs y las implicaciones en FCA es diferente.
+Intuitivamente, una DF $X \rightarrow Y$ indica que el conjunto de atributos $X$ determina el conjunto de atributos $Y$, lo cual refleja fielmente la noción de función (y de ahí su nombre) entre los dominios de $A$ y $B$, $f: A\to B$. Estas funciones son las que se usan para tratar las anomalías mencionadas anteriormente, buscando aquellas funciones que se correspondan con relaciones de forma unívoca. El siguiente ejemplo ilustra cómo la semántica de la DFs y las implicaciones\index{implicaciones} en FCA es diferente.
 
 \begin{ejemplo}
 Sea el contexto formal $K=(G,M,I)$ representado a continuación:
@@ -500,7 +500,7 @@ La forma en que las DFs se asemejan a las implicaciones no viene dada porque se 
 
 %Por otro lado, en la Sección \ref{subsec:sistemaImplicaciones} se dijo que una implicación se verifica en un contexto formal\index{contexto formal} $K$ si cada objeto del contexto que contenga los atributos de $X$ también tiene los de $Y$, sin embargo, en una DF, no sólo esos atributos tienen que aparecer en ambos conjuntos sino que además su \textit{valor} ha de ser el mismo.
 
-La diferencia principal en la interpretación de las DFs y las implicaciones proviene de la estructura de los \textit{datasets}\index{datasets} considerados, que en el caso de FCA son binarios mientras que en el modelo relacional son multivaluados. La noción de implicaciones en FCA puede ampliarse para poder tratar con contextos formales donde la relación $I$ toma valores en un conjunto en lugar de ser binaria. Este tipo de contextos formales\index{contexto formal} se denominan multivaluados y su aproximación se realiza a través del llamado análisis de conceptos formales difusos \cite{Burusco1998,Belohlavek2000}, lo que queda fuera del ámbito de esta tesis doctoral.
+La diferencia principal en la interpretación de las DFs y las implicaciones proviene de la estructura de los \textit{datasets}\index{dataset} considerados, que en el caso de FCA son binarios mientras que en el modelo relacional son multivaluados. La noción de implicaciones en FCA puede ampliarse para poder tratar con contextos formales donde la relación $I$ toma valores en un conjunto en lugar de ser binaria. Este tipo de contextos formales\index{contexto formal} se denominan multivaluados y su aproximación se realiza a través del llamado análisis de conceptos formales difusos \cite{Burusco1998,Belohlavek2000}, lo que queda fuera del ámbito de esta tesis doctoral.
 
 %Esta es una diferencia esencial que surge al comparar la semántica implicación en FCA con DF, ya que en contextos formales se trata con una relación binaria $I$ entre los objetos y los atributos del contexto, mientras que en esquemas relacionales, los atributos pueden ser valores \textit{multivaluados} y por tanto, para que una DF se cumpla, han de coincidir los valores de la relación.
 
@@ -536,7 +536,7 @@ La diferencia principal en la interpretación de las DFs y las implicaciones prov
 \noindent
 En esta sección se van a introducir las lógicas de implicaciones que permitirán disponer de sistemas axiomáticos correctos y completos para trabajar con ellas. Para ello, el punto de partida van a ser los axiomas de Armstrong \cite{Armstrong74} como pionero en el campo. Sin embargo, el sistema de Armstrong no es adecuado para el razonamiento automático debido a su fuerte dependencia a la transitividad. En consecuencia, tras los Axiomas de Armstrong se presenta la lógica \slfd, la cual sí va a permitir desarrollar métodos de razonamiento automático.
 
-Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con DFs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica puede verse en sendas definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones y DFs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Para los siguientes apartados, y por facilitar la redacción y lectura, se utiliza el término implicaciones, siendo igualmente válido para DFs.
+Ambas lógicas pueden aplicarse con éxito para trabajar con implicaciones y con DFs. El lenguaje sobre el que van a trabajar ambas lógicas es el mismo (ver Definición \ref{def:lenguaje}). Del mismo modo, la semántica puede verse en sendas definiciones, \ref{def:sintaxisFCA}, \ref{def:sintaxisFD}, para implicaciones\index{implicaciones} y DFs respectivamente. A continuación, se analizarán los sistemas axiomáticos y métodos de razonamiento. Para los siguientes apartados, y por facilitar la redacción y lectura, se utiliza el término implicaciones, siendo igualmente válido para DFs.
 
 
 \subsection{Axiomas de Armstrong}
@@ -572,7 +572,7 @@ La secuencia $\sigma_1,\dots,\sigma_n$ constituye una demostración para $\Sigma\
 
 Los axiomas de Armstrong son un sistema axiomático correcto y completo tanto si se está trabajando con implicaciones en FCA \cite{Armstrong74} como con DFs en bases de datos relacionales \cite{Ganter1997}.
 
-Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{sec:razonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones, en concreto, para la lógica \slfd, que se introduce a continuación.
+Debido al rol central que desempeña la transitividad en ese sistema axiomático, el desarrollo de métodos ejecutables para resolver problemas de implicaciones se ha mostrado infructuoso y se ha tenido que recurrir a métodos indirectos como se verá en la Sección \ref{sec:razonamientoAutomatico}. No obstante, como se ha mencionado, es un buen punto de partida para el desarrollo de nuevas lógicas para el tratamiento de las implicaciones\index{implicaciones}, en concreto, para la lógica \slfd, que se introduce a continuación.
 
 
 \subsection{Lógica de Simplificación}
@@ -624,7 +624,7 @@ Una vez introducido el lenguaje de la lógica, la semántica (en las dos acepcione
 
 %El problema de la implicación es crucial en el diseño de un sistema de razonamiento y como tal, existen desde hace años notables estudios al respecto en diferentes áreas \cite{Armstrong74,Beeri1977,Maier1979}.
 
-Básicamente, el problema de la implicación es el siguiente: dado un conjunto de implicaciones $\Sigma$, determinar mediante la lógica si a partir de ese conjunto se puede inferir la validez de una nueva implicación dada $\Sigma\vdash A\to B$ \cite{Beeri1981,Mitchell1983,Maier1979}. %Dicho de otro modo, si tenemos el conjunto de implicaciones $\Sigma$, el problema consiste en comprobar si se verifica $\Sigma \vdash A \to B$ . %Para ello, se utilizarán los anteriores sistemas axiomáticos junto con una serie de nuevos elementos, como los conjuntos cerrados y los operadores de cierre, que darán paso a la utilización de métodos de razonamiento automático como se introducen a continuación.
+Básicamente, el problema de la implicación es el siguiente: dado un conjunto de implicaciones\index{conjunto de implicaciones} $\Sigma$, determinar mediante la lógica si a partir de ese conjunto se puede inferir la validez de una nueva implicación dada $\Sigma\vdash A\to B$ \cite{Beeri1981,Mitchell1983,Maier1979}. %Dicho de otro modo, si tenemos el conjunto de implicaciones $\Sigma$, el problema consiste en comprobar si se verifica $\Sigma \vdash A \to B$ . %Para ello, se utilizarán los anteriores sistemas axiomáticos junto con una serie de nuevos elementos, como los conjuntos cerrados y los operadores de cierre, que darán paso a la utilización de métodos de razonamiento automático como se introducen a continuación.
 
 
 %\subsection{Método de Razonamiento Automático}
@@ -651,9 +651,9 @@ A continuación se introduce el cierre de atributos, que se utiliza como base par
 
 %Por tanto, el cierre de $X$ con respecto a $\Sigma$ es el mayor subconjunto de $M$ tal que $\Sigma \vdash X \to X^+_\Sigma$.
 
-La definición anterior de cierre sintáctico de atributos da lugar a un operador de cierre, siempre y cuando el conjunto $\Sigma$ sea un sistema de implicaciones completo (las implicaciones deducibles del contexto formal son todas inferibles desde $\Sigma$). No se entra en detalle sobre estos aspectos formales en estos preliminares puesto que, en todo el trabajo, se parte de la noción de cierre sintáctico como base.
+La definición anterior de cierre sintáctico de atributos da lugar a un operador de cierre, siempre y cuando el conjunto $\Sigma$ sea un sistema de implicaciones completo (las implicaciones\index{implicaciones} deducibles del contexto formal son todas inferibles desde $\Sigma$). No se entra en detalle sobre estos aspectos formales en estos preliminares puesto que, en todo el trabajo, se parte de la noción de cierre sintáctico como base.
 
-En \cite{Mora2012} los autores presentan un novedoso método para calcular el cierre de atributos sobre un conjunto de implicaciones, basado en la lógica \slfd.
+En \cite{Mora2012} los autores presentan un novedoso método para calcular el cierre de atributos sobre un conjunto de implicaciones\index{conjunto de implicaciones}, basado en la lógica \slfd.
 
 %\begin{corolario}
 %	Sea $\Sigma\subseteq \mathcal L_M$. $\forall X\subseteq M$, se tiene que 
@@ -662,7 +662,7 @@ En \cite{Mora2012} los autores presentan un novedoso método para calcular el cie
 %	$$
 %\end{corolario}
 
-Se pasa ahora a presentar los métodos de razonamiento utilizados en esta tesis doctoral: el cierre clásico de Maier \cite{Maier83} como trabajo seminal de este área, y a continuación, el cierre \slfd, este último como núcleo principal del funcionamiento de los métodos diseñados y utilizados en las publicaciones que avalan este trabajo de tesis \cite{Benito-Picazo2016,Benito-Picazo2017,Benito-Picazo2018}.
+Se pasa ahora a presentar los métodos de razonamiento utilizados en esta tesis doctoral: el cierre clásico de Maier \cite{Maier1983} como trabajo seminal de este área, y a continuación, el cierre \slfd, este último como núcleo principal del funcionamiento de los métodos diseñados y utilizados en las publicaciones que avalan este trabajo de tesis \cite{Benito-Picazo2016,Benito-Picazo2017,Benito-Picazo2018}.
 
 Para abordar el problema de la implicación, se utiliza el cierre sintáctico a modo de demostrador automático, pues dado un conjunto de implicaciones $\Sigma$, debido a la definición de cerrado anterior, se tiene que $\Sigma\vdash A\to B$ si y sólo si $B\subseteq A^+_\Sigma$. Este resultado hace que la definición de un método para calcular el cierre sintáctico abra la puerta al tratamiento automático del problema de la implicación. Ello será el centro del siguiente apartado.
 
@@ -670,7 +670,7 @@ Para abordar el problema de la implicación, se utiliza el cierre sintáctico a mo
 \subsection{Algoritmos para el Cálculo del Cierre}
 \label{subsec:algoritmosCalculoCierre}
 \noindent
-El problema de la implicación se ha abordado tradicionalmente utilizando un método básico que recibe como entrada un conjunto de atributos $X\subseteq M$ y un conjunto de implicaciones $\Sigma\subseteq \mathcal L_M$ y utiliza de forma exhaustiva la relación de subconjunto recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier83} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
+El problema de la implicación se ha abordado tradicionalmente utilizando un método básico que recibe como entrada un conjunto de atributos $X\subseteq M$ y un conjunto de implicaciones $\Sigma\subseteq \mathcal L_M$ y utiliza de forma exhaustiva la relación de subconjunto recorriendo iterativamente $\Sigma$ y agregando nuevos elementos al cierre. Este método, fue propuesto en la década de 1970 por Maier \cite{Maier1983} y puede considerarse la base principal donde se han sustentado tantos otros. Su funcionamiento puede verse en detalle en el Algoritmo \ref{algoritmo:cierreUllman}\index{Cierre clásico}.
 
 \begin{algorithm2e}
 \DontPrintSemicolon
@@ -830,7 +830,7 @@ Formalmente, el algoritmo {\tt Cls} puede verse detalladamente en el pseudocódig
 %\end{function}
 
 
-Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier83}), la principal novedad y ventaja que aporta {\tt Cls} es que, aparte del cálculo del cierre, y de manera simultánea, también se calcula el conjunto reducido de implicaciones, guardando de esta forma el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho conduce sin lugar a dudas a una posición privilegiada, ya que evita el elevado coste de minería de datos para extraer el nuevo conjunto de implicaciones para el \textit{dataset} reducido después de cada aplicación del método, algo imprescindible con las implementaciones clásicas. Esta característica del algoritmo es la que se ha explotado ampliamente en los resultados obtenidos a lo largo de esta tesis doctoral.
+Aunque es cierto que existen en la literatura numerosas propuestas de algoritmos para calcular el cierre (la mayoría de ellas como modificaciones del cierre clásico de Maier \cite{Maier1983}), la principal novedad y ventaja que aporta {\tt Cls} es que, aparte del cálculo del cierre, y de manera simultánea, también se calcula el conjunto reducido de implicaciones, guardando de esta forma el conocimiento complementario que describe la información que no pertenece al cierre. Este hecho conduce sin lugar a dudas a una posición privilegiada, ya que evita el elevado coste de minería de datos para extraer el nuevo conjunto de implicaciones\index{conjunto de implicaciones} para el \textit{dataset} reducido después de cada aplicación del método, algo imprescindible con las implementaciones clásicas. Esta característica del algoritmo es la que se ha explotado ampliamente en los resultados obtenidos a lo largo de esta tesis doctoral.
 
 Para finalizar este apartado, se muestra el siguiente ejemplo básico de aplicación del algoritmo {\tt Cls} propuesto.
 
