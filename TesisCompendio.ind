@@ -1,7 +1,7 @@
 \begin{theindex}
 
-  \item \slfde, \hyperpage{8--10}, \hyperpage{13}, \hyperpage{18}, 
-		\hyperpage{21}, \hyperpage{44, 45}, \hyperpage{113}
+  \item \slfde, \hyperpage{8--10}, \hyperpage{13}, \hyperpage{16}, 
+		\hyperpage{19}, \hyperpage{44, 45}, \hyperpage{113}
 
   \indexspace
 
@@ -21,11 +21,11 @@
   \item CK, \hyperpage{10}
   \item clave, \hyperpage{6}
     \subitem claves minimales, \hyperpage{5}, \hyperpage{8}, 
-		\hyperpage{10}, \hyperpage{13}, \hyperpage{16}, 
-		\hyperpage{22, 23}, \hyperpage{29}, \hyperpage{111}
+		\hyperpage{10}, \hyperpage{13, 14}, \hyperpage{20}, 
+		\hyperpage{23}, \hyperpage{29}, \hyperpage{111}
   \item concepto formal, \hyperpage{33}
   \item conjunto de implicaciones, \hyperpage{3}, \hyperpage{5}, 
-		\hyperpage{10}, \hyperpage{16, 17}, \hyperpage{20}, 
+		\hyperpage{10}, \hyperpage{14, 15}, \hyperpage{19}, 
 		\hyperpage{23}, \hyperpage{29}, \hyperpage{46}, 
 		\hyperpage{49}, \hyperpage{111}, \hyperpage{116}
   \item contexto formal, \hyperpage{30--32}, \hyperpage{34, 35}, 
@@ -34,7 +34,7 @@
 
   \indexspace
 
-  \item dataset, \hyperpage{4, 5}, \hyperpage{13}, \hyperpage{19}, 
+  \item dataset, \hyperpage{4, 5}, \hyperpage{13}, \hyperpage{18}, 
 		\hyperpage{42}, \hyperpage{119}
   \item dependencias funcionales, \hyperpage{4}, \hyperpage{41}
 
@@ -45,16 +45,15 @@
   \indexspace
 
   \item generadores minimales, \hyperpage{5}, \hyperpage{12}, 
-		\hyperpage{14}, \hyperpage{16}, \hyperpage{23}, 
-		\hyperpage{25}, \hyperpage{29}, \hyperpage{111}, 
-		\hyperpage{113}, \hyperpage{119}
+		\hyperpage{14, 15}, \hyperpage{23}, \hyperpage{29}, 
+		\hyperpage{111}, \hyperpage{113}, \hyperpage{119}
   \item GenMinGen, \hyperpage{14}
 
   \indexspace
 
   \item implicaciones, \hyperpage{4}, \hyperpage{8}, \hyperpage{13}, 
-		\hyperpage{18, 19}, \hyperpage{21}, \hyperpage{23}, 
-		\hyperpage{25}, \hyperpage{29}, \hyperpage{37--39}, 
+		\hyperpage{16}, \hyperpage{18}, \hyperpage{20}, 
+		\hyperpage{23}, \hyperpage{29}, \hyperpage{37--39}, 
 		\hyperpage{42--44}, \hyperpage{46}, \hyperpage{115}, 
 		\hyperpage{120}
 
@@ -64,9 +63,9 @@
 
   \indexspace
 
-  \item MapReduce, \hyperpage{11}, \hyperpage{16}, \hyperpage{114}
+  \item MapReduce, \hyperpage{11}, \hyperpage{15}, \hyperpage{114}
   \item MinGen, \hyperpage{13}
-  \item MinGenPr, \hyperpage{13}, \hyperpage{15}
+  \item MinGenPr, \hyperpage{13, 14}
   \item Modelo, \hyperpage{38}
 
   \indexspace
@@ -77,18 +76,18 @@
 
   \indexspace
 
-  \item paralelismo, \hyperpage{10, 11}, \hyperpage{16}, 
+  \item paralelismo, \hyperpage{10, 11}, \hyperpage{14}, 
 		\hyperpage{113}, \hyperpage{119}
-  \item problemas SR, \hyperpage{19}
-    \subitem arranque en fr\IeC {\'\i }o, \hyperpage{19}
-    \subitem ataques maliciosos, \hyperpage{19}
-    \subitem dimensionalidad, \hyperpage{19, 20}
-    \subitem escalabilidad, \hyperpage{19}
-    \subitem escasez, \hyperpage{19}
-    \subitem oveja-negra, \hyperpage{19}
-    \subitem postergaci\'on, \hyperpage{19}
-    \subitem privacidad, \hyperpage{19}
-    \subitem sobreespecializaci\'on, \hyperpage{19}
+  \item problemas SR, \hyperpage{18}
+    \subitem arranque en fr\IeC {\'\i }o, \hyperpage{18}
+    \subitem ataques maliciosos, \hyperpage{18}
+    \subitem dimensionalidad, \hyperpage{18, 19}
+    \subitem escalabilidad, \hyperpage{18}
+    \subitem escasez, \hyperpage{18}
+    \subitem oveja-negra, \hyperpage{18}
+    \subitem postergaci\'on, \hyperpage{18}
+    \subitem privacidad, \hyperpage{18}
+    \subitem sobreespecializaci\'on, \hyperpage{18}
 
   \indexspace
 
@@ -103,15 +102,15 @@
   \indexspace
 
   \item sistema axiom\'atico, \hyperpage{43}, \hyperpage{45}
-  \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{17}, 
+  \item sistemas de recomendaci\'on, \hyperpage{3}, \hyperpage{15}, 
 		\hyperpage{29}, \hyperpage{111}
-    \subitem basados en conocimiento, \hyperpage{18}
-    \subitem basados en contenido, \hyperpage{18}
-    \subitem colaborativos, \hyperpage{18}
-    \subitem conversacionales, \hyperpage{18}, \hyperpage{115}
+    \subitem basados en conocimiento, \hyperpage{17}
+    \subitem basados en contenido, \hyperpage{17}
+    \subitem colaborativos, \hyperpage{17}
+    \subitem conversacionales, \hyperpage{17}, \hyperpage{115}
   \item SST, \hyperpage{10}
   \item supercomputaci\'on, \hyperpage{5}, \hyperpage{10}, 
-		\hyperpage{12}, \hyperpage{25}, \hyperpage{113}
+		\hyperpage{12}, \hyperpage{24}, \hyperpage{113}
 
   \indexspace
 

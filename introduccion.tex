@@ -35,10 +35,7 @@ Se anticipa que, en cada uno de los casos, se va a aprovechar la información sub
 
 %Son trabajos de suma importancia desde el punto de vista teórico, pero también desde el punto de visto práctico, pues incluyen las implementaciones de las aplicaciones que realizan la extracción de las implicaciones. 
 
-Dicho esto, se retoma el texto pasando a introducir los tres campos de aplicación donde se han utilizado los conjuntos de implicaciones\index{conjunto de implicaciones}
-
-
-.
+Dicho esto, se retoma el texto pasando a introducir los tres campos de aplicación donde se han utilizado los conjuntos de implicaciones\index{conjunto de implicaciones}.
 
 %Sin perjuicio de lo anterior, dado que hemos llegado a crear datasets propios sobre los que poder realizar experimentos como veremos más adelante, si bien no entramos en las técnicas de extracción de implicaciones que utilizan esas aplicaciones, sí hemos tenido que convertirnos en usuarios de estas aplicaciones para poder obtener el conjunto atributos e implicaciones que se verifican. Dicho esto, retomamos el texto pasando a introducir los tres campos de aplicación donde hemos utilizado los conjuntos de implicaciones.
 
@@ -50,26 +47,26 @@ Las DFs especifican una relación entre dos subconjuntos de atributos, e.g. $A$ y
 
 \begin{ejemplo}
 \label{ejemplo:basicoClaves}
-Supongamos que disponemos de la siguiente tabla con información que relaciona títulos de películas, actores, países, directores, nacionalidad y años de estreno:
+Supongamos que disponemos de la siguiente tabla con información que relaciona títulos de películas, actores, países, directores, nacionalidad, valoración y años de estreno:
 
 \vspace{0.3cm}
 \noindent
 {\scriptsize
-\begin{tabular}{lcllll}
+\begin{tabular}{lclllll}
  \hline
- Título & Año & País & Director & Nacionalidad & Actor\\
+ Título & Año & País & Director & Nacionalidad & Actor & Valoración\\
  \hline
- Pulp Fiction & 1994 & USA & Quentin Tarantino & USA & John Travolta\\
- Pulp Fiction & 1994 & USA & Quentin Tarantino & USA & Uma Thurman\\
-  Pulp Fiction & 1994 & USA & Quentin Tarantino & USA &Samuel Jackson \\
- King Kong & 2005 & NZ & Peter Jackson& NZ & Naomi Watts\\
- King Kong & 2005 & NZ & Peter Jackson & NZ & Jack Black\\
- King Kong & 1976 & USA & De Laurentiis & IT & Jessica Lange\\
- King Kong & 1976 & USA & De Laurentiis & IT & Jeff Bridges\\
- Django Unchained & 2012 & USA & Quentin Tarantino  & USA & Jamie Foxx\\
- Django Unchained & 2012 & USA & Quentin Tarantino  & USA & Samuel Jackson\\
- Blade Runner & 1982 & USA & Ridley Scott & UK & Harrison Ford\\
- Blade Runner & 2017 & USA & Denis Villeneuve  & CAN & Harrison Ford\\
+ Pulp Fiction & 1994 & USA & Tarantino & USA & J. Travolta & 8 \\
+ Pulp Fiction & 1994 & USA &  Tarantino & USA & U. Thurman & 9 \\
+ Pulp Fiction & 1994 & USA &  Tarantino & USA & S. Jackson & 8  \\
+ King Kong & 2005 & NZ &  Jackson& NZ & N. Watts & 9 \\
+ King Kong & 2005 & NZ &  Jackson & NZ & J. Black & 6 \\
+ King Kong & 1976 & USA & Laurentiis & IT & J. Lange & 7 \\
+ King Kong & 1976 & USA & Laurentiis & IT & J. Bridges & 6 \\
+ Django Unchained & 2012 & USA &  Tarantino  & USA & J. Foxx & 8 \\
+ Django Unchained & 2012 & USA &  Tarantino  & USA & S. Jackson & 9 \\
+ Blade Runner & 1982 & USA &  Scott & UK & H. Ford & 9 \\
+ Blade Runner & 2017 & USA &  Villeneuve  & CAN & H. Ford & 6 \\
 % El dictador & 2012 & USA & Larry Charles  & USA & Megan Fox\\
 % This is 40 & 2012 & USA & Judd Apatow  & USA & Megan Fox\\
  \hline
@@ -80,14 +77,14 @@ Supongamos que disponemos de la siguiente tabla con información que relaciona tí
 
 De esta información, podemos extraer el siguiente conjunto de DFs: 
 
-$\Sigma = \{Titulo, A\tilde{n}o \rightarrow Pais, Director$; $Director\rightarrow Nacionalidad$\}. 
+$\{Titulo, A\tilde{n}o \rightarrow Pais, Director$; $Director\rightarrow Nacionalidad$\}. 
 
-Esta tabla tiene una única clave: $\{A\tilde{n}o, Actor\}$ que corresponde con el conjunto de atributos necesario para identificar cualquier tupla de la relación.
+Esta tabla tiene una única clave: \{\textit{Título, Año, Actor}\} que corresponde con el conjunto de atributos necesario para identificar cualquier tupla de la relación.
 \end{ejemplo}
 
 La identificación de las claves de una determinada relación es una tarea crucial para muchas áreas de tratamiento de la información: modelos de datos \cite{Simsion2005}, optimización de consultas \cite{Kemper1991}, indexado \cite{Manolopoulos1999}, enlazado de datos \cite{Nikolov2011}, etc. Como muestras de esta importancia, es posible encontrar numerosas citas en la literatura, entre las que se pueden destacar las siguientes. En \cite{Sismanis2006}, los autores afirman que: ``\textit{la identificación de claves es una tarea fundamental en muchas áreas de la gestión moderna de datos, incluyendo modelado de datos, optimización de consultas (proporciona un optimizador de consultas con nuevas rutas de acceso que pueden conducir a mejoras sustanciales en el procesado de consultas), indexación (permite al administrador de la base de datos mejorar la eficiencia del acceso a los datos a través de técnicas como la partición de datos o la creación de índices y vistas), detección de anomalías e integración de datos}''. En \cite{Pernelle2013} los autores delimitan el problema manifestando: \textit{``establecer enlaces semánticos entre los elementos de datos puede ser realmente útil, ya que permite a los rastreadores, navegadores y aplicaciones combinar información de diferentes fuentes.''}.
 
-Como refleja el contenido de esta sección, es evidente la importancia manifiesta de averiguar las claves de una relación, sin embargo, este labor no está exenta de dificultades, por ello, el trabajo realizado en esta parte de la tesis ha consistido en proponer, diseñar e implementar métodos para afrontar el problema de la búsqueda de claves, el cual se presenta a continuación.
+Como refleja el contenido de esta sección, es evidente la importancia manifiesta de averiguar las claves de una relación, sin embargo, esta labor no está exenta de dificultades, por ello, el trabajo realizado en esta parte de la tesis ha consistido en proponer, diseñar e implementar métodos para afrontar el problema de la búsqueda de claves, el cual se presenta a continuación.
 
 
 % El problema de la búsqueda de claves
@@ -235,180 +232,180 @@ Al igual que el algoritmo \textit{CK} para claves minimales, los métodos propues
 %En otro caso, $X$ no es cerrado y $mg_\Sigma(X)=\varnothing$. Nótese que $\varnothing$ es cerrado y $mg_{\Sigma}(\varnothing)=\{\varnothing\}$, i.e. $\varnothing$ es un generador minimal del conjunto cerrado $\varnothing$.
 %\end{ejemplo}
 
-Tras el método presentado en \cite{Cordero2012} (que los autores denominaron MinGen)\index{MinGen} se presenta ahora un nuevo método, MinGenPr\index{MinGenPr}, que aplica una importante mejora con respecto al anterior. Fundamentalmente, consiste en incorporar un mecanismo de poda, basada en un test de inclusión de conjuntos, que involucra a todos los nodos del mismo nivel, para evitar la enumeración de generadores minimales y cierres redundantes. El propósito de esta poda es verificar la información de cada nodo en el espacio de búsqueda, evitando la apertura de una rama completa. Con la intención de ilustrar de forma general el efecto de esta poda se presenta el siguiente ejemplo.
+Tras el método presentado en \cite{Cordero2012} (que los autores denominaron MinGen)\index{MinGen} se presenta ahora un nuevo método, MinGenPr\index{MinGenPr}, que aplica una importante mejora con respecto al anterior. Fundamentalmente, consiste en incorporar un mecanismo de poda, basada en un test de inclusión de conjuntos, que involucra a todos los nodos del mismo nivel, para evitar la enumeración de generadores minimales y cierres redundantes. El propósito de esta poda es verificar la información de cada nodo en el espacio de búsqueda, evitando la apertura de una rama completa. %Con la intención de ilustrar de forma general el efecto de esta poda se presenta el siguiente ejemplo.
 
-\begin{ejemplo}
-Sea $\Sigma=\{a\to c, bc\to d, c\to ae, d\to e\}$. El tableaux generado al aplicar el método MinGenPr sobre $\Sigma$ es:
+%\begin{ejemplo}
+%Sea $\Sigma=\{a\to c, bc\to d, c\to ae, d\to e\}$. El tableaux generado al aplicar el método MinGenPr sobre $\Sigma$ es:
+%
+%%\begin{figure}
+%$$
+%\centerline{\scriptsize\xymatrix@C=0.6cm@R=0.5cm{
+%&&*{
+%\begin{array}{|llll}
+%\varnothing & b &e &be\\
+%\hline
+%\varnothing & b &e &be
+%\end{array}}
+%\ar@{-}[dll]_{a}\ar@{.}[dl]_{\color{Gray}bc}\ar@{-}[d]_{c}\ar@{-}[dr]^d&
+%\\
+%*+[o]{
+%\begin{array}{|ll}
+%ace & acde \\
+%\hline
+%a & ad 
+%\end{array}
+%}\ar@{-}[d]^{ab}
+%&
+%{\color{Gray}%*[Gray]{
+%\begin{array}{|l}
+%abcde \\
+%\hline
+% bc 
+%\end{array}
+%}&
+%*{
+%\begin{array}{|ll}
+%ace & acde \\
+%\hline
+%c & cd 
+%\end{array}
+%}
+%\ar@{-}[d]^{bc}
+%&
+%*{
+%\begin{array}{|ll}
+%de & bde \\
+%\hline
+%d & bd 
+%\end{array}
+%}
+%\ar@{-}[d]^{ad}
+%\ar@{-}[dr]^{cd}
+%\\
+%*{
+%\begin{array}{|l}
+%abcde \\
+%\hline
+% ab 
+%\end{array}
+%}&&
+%*{
+%\begin{array}{|l}
+%abcde \\
+%\hline
+% bc 
+%\end{array}
+%}&
+%*{
+%\begin{array}{|ll}
+%acde & abcde \\
+%\hline
+%ad & abd 
+%\end{array}
+%}
+%&
+%*{
+%\begin{array}{|ll}
+%acde & abcde \\
+%\hline
+%cd & cbd 
+%\end{array}
+%}
+%}}
+%%\caption{Search tree for MinGenPr}\label{branch:fig}
+%%\end{figure}
+%$$
+%
+%De entre toda la información contenida en el árbol, se puede apreciar cómo el método aplica una estrategia de poda en profundidad evitando abrir la rama cuya etiqueta es un superconjunto de otra rama en el mismo nivel. En concreto, la rama etiquetada como \emph{bc} (en color gris) no se abre dado que no es minimal respecto al conjunto \{a,bc,c,d\}.
+%\label{ejemplo:MinGenPr}
+%\end{ejemplo}
 
-%\begin{figure}
-$$
-\centerline{\scriptsize\xymatrix@C=0.6cm@R=0.5cm{
-&&*{
-\begin{array}{|llll}
-\varnothing & b &e &be\\
-\hline
-\varnothing & b &e &be
-\end{array}}
-\ar@{-}[dll]_{a}\ar@{.}[dl]_{\color{Gray}bc}\ar@{-}[d]_{c}\ar@{-}[dr]^d&
-\\
-*+[o]{
-\begin{array}{|ll}
-ace & acde \\
-\hline
-a & ad 
-\end{array}
-}\ar@{-}[d]^{ab}
-&
-{\color{Gray}%*[Gray]{
-\begin{array}{|l}
-abcde \\
-\hline
- bc 
-\end{array}
-}&
-*{
-\begin{array}{|ll}
-ace & acde \\
-\hline
-c & cd 
-\end{array}
-}
-\ar@{-}[d]^{bc}
-&
-*{
-\begin{array}{|ll}
-de & bde \\
-\hline
-d & bd 
-\end{array}
-}
-\ar@{-}[d]^{ad}
-\ar@{-}[dr]^{cd}
-\\
-*{
-\begin{array}{|l}
-abcde \\
-\hline
- ab 
-\end{array}
-}&&
-*{
-\begin{array}{|l}
-abcde \\
-\hline
- bc 
-\end{array}
-}&
-*{
-\begin{array}{|ll}
-acde & abcde \\
-\hline
-ad & abd 
-\end{array}
-}
-&
-*{
-\begin{array}{|ll}
-acde & abcde \\
-\hline
-cd & cbd 
-\end{array}
-}
-}}
-%\caption{Search tree for MinGenPr}\label{branch:fig}
-%\end{figure}
-$$
+Finalmente, se propone un último método, GenMinGen\index{GenMinGen}, que generaliza la estrategia de poda anterior al considerar el test de inclusión del subconjunto no sólo con la información de los nodos del mismo nivel, sino también con todos los generadores minimales\index{generadores minimales} calculados antes de la apertura de cada rama. %Al igual que en el caso anterior, se presenta el siguiente ejemplo para ilustrar el efecto de esta nueva poda.
 
-De entre toda la información contenida en el árbol, se puede apreciar cómo el método aplica una estrategia de poda en profundidad evitando abrir la rama cuya etiqueta es un superconjunto de otra rama en el mismo nivel. En concreto, la rama etiquetada como \emph{bc} (en color gris) no se abre dado que no es minimal respecto al conjunto \{a,bc,c,d\}.
-\label{ejemplo:MinGenPr}
-\end{ejemplo}
-
-Finalmente, se propone un último método, GenMinGen\index{GenMinGen}, que generaliza la estrategia de poda anterior al considerar el test de inclusión del subconjunto no sólo con la información de los nodos del mismo nivel, sino también con todos los generadores minimales\index{generadores minimales} calculados antes de la apertura de cada rama. Al igual que en el caso anterior, se presenta el siguiente ejemplo para ilustrar el efecto de esta nueva poda.
-
-\begin{ejemplo}
-Sea el mismo conjunto $\Sigma$ del Ejemplo \ref{ejemplo:MinGenPr}. El tableaux generado al aplicar el método GenMinGen sobre $\Sigma$ es:
-
-%\begin{figure}
-$$
-\centerline{\scriptsize\xymatrix@C=0.6cm@R=0.5cm{
-&&*{
-\begin{array}{|llll}
-\varnothing & b &e &be\\
-\hline
-\varnothing & b &e &be
-\end{array}}
-\ar@{-}[dll]_{a}\ar@{.}[dl]_{\color{Gray}bc}\ar@{-}[d]_{c}\ar@{-}[dr]^d&
-\\
-*+[o]{
-\begin{array}{|ll}
-ace & acde \\
-\hline
-a & ad 
-\end{array}
-}\ar@{-}[d]^{ab}
-&
-{\color{Gray}%*[Gray]{
-\begin{array}{|l}
-abcde \\
-\hline
- bc 
-\end{array}
-}&
-*{
-\begin{array}{|ll}
-ace & acde \\
-\hline
-c & cd 
-\end{array}
-}
-\ar@{-}[d]^{bc}
-&
-*{
-\begin{array}{|ll}
-de & bde \\
-\hline
-d & bd 
-\end{array}
-}
-\ar@{.}[d]^{\color{Gray}ad}
-\ar@{.}[dr]^{\color{Gray}cd}
-\\
-*{
-\begin{array}{|l}
-abcde \\
-\hline
- ab 
-\end{array}
-}&&
-*{
-\begin{array}{|l}
-abcde \\
-\hline
- bc 
-\end{array}
-}&
-{\color{Gray}%*[Gray]{
-\begin{array}{|ll}
-acde & abcde \\
-\hline
-ad & abd 
-\end{array}
-}
-&
-{\color{Gray}%*[Gray]{
-\begin{array}{|ll}
-acde & abcde \\
-\hline
-cd & cbd 
-\end{array}
-}
-}}
-%\caption{Search tree for MinGenPr}\label{branch:fig}
-%\end{figure}
-$$
-
-En este caso, además de la misma poda en profundidad del ejemplo del método MinGenPr, esta vez, GenMinGen aplica también la poda teniendo en cuenta los resultados alcanzados hasta el momento. Así, las ramas etiquetadas con \emph{ad} y \emph{cd} no se abren debido a que previamente ya se abrieron las ramas etiquetadas como \emph{a} y \emph{c}.
-\end{ejemplo}
+%\begin{ejemplo}
+%Sea el mismo conjunto $\Sigma$ del Ejemplo \ref{ejemplo:MinGenPr}. El tableaux generado al aplicar el método GenMinGen sobre $\Sigma$ es:
+%
+%%\begin{figure}
+%$$
+%\centerline{\scriptsize\xymatrix@C=0.6cm@R=0.5cm{
+%&&*{
+%\begin{array}{|llll}
+%\varnothing & b &e &be\\
+%\hline
+%\varnothing & b &e &be
+%\end{array}}
+%\ar@{-}[dll]_{a}\ar@{.}[dl]_{\color{Gray}bc}\ar@{-}[d]_{c}\ar@{-}[dr]^d&
+%\\
+%*+[o]{
+%\begin{array}{|ll}
+%ace & acde \\
+%\hline
+%a & ad 
+%\end{array}
+%}\ar@{-}[d]^{ab}
+%&
+%{\color{Gray}%*[Gray]{
+%\begin{array}{|l}
+%abcde \\
+%\hline
+% bc 
+%\end{array}
+%}&
+%*{
+%\begin{array}{|ll}
+%ace & acde \\
+%\hline
+%c & cd 
+%\end{array}
+%}
+%\ar@{-}[d]^{bc}
+%&
+%*{
+%\begin{array}{|ll}
+%de & bde \\
+%\hline
+%d & bd 
+%\end{array}
+%}
+%\ar@{.}[d]^{\color{Gray}ad}
+%\ar@{.}[dr]^{\color{Gray}cd}
+%\\
+%*{
+%\begin{array}{|l}
+%abcde \\
+%\hline
+% ab 
+%\end{array}
+%}&&
+%*{
+%\begin{array}{|l}
+%abcde \\
+%\hline
+% bc 
+%\end{array}
+%}&
+%{\color{Gray}%*[Gray]{
+%\begin{array}{|ll}
+%acde & abcde \\
+%\hline
+%ad & abd 
+%\end{array}
+%}
+%&
+%{\color{Gray}%*[Gray]{
+%\begin{array}{|ll}
+%acde & abcde \\
+%\hline
+%cd & cbd 
+%\end{array}
+%}
+%}}
+%%\caption{Search tree for MinGenPr}\label{branch:fig}
+%%\end{figure}
+%$$
+%
+%En este caso, además de la misma poda en profundidad del ejemplo del método MinGenPr, esta vez, GenMinGen aplica también la poda teniendo en cuenta los resultados alcanzados hasta el momento. Así, las ramas etiquetadas con \emph{ad} y \emph{cd} no se abren debido a que previamente ya se abrieron las ramas etiquetadas como \emph{a} y \emph{c}.
+%\end{ejemplo}
 
 
 En definitiva, se han estudiado, diseñado e implementado cada uno de estos métodos en su versión secuencial. Para evaluar el rendimiento e ilustrar las mejoras obtenidas al pasar de un método a otro, se han realizado un gran número de pruebas utilizando información sintética e información real procedente de repositorios de datos utilizados comúnmente en investigación, como son los de la Universidad de California, Irvine (UCI)\footnote{https://archive.ics.uci.edu/ml/datasets.html}.
